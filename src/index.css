@@ -1,0 +1,217 @@
+@import 'tailwindcss';
+
+/* ─────────────── Design system Paysapro AI ───────────────
+   Nature + technologie + SaaS. Couleurs utilisées avec parcimonie :
+   crème et blanc dominent, le vert signale l'action et la marque. */
+
+@theme {
+  --color-forest: #12372a;
+  --color-forest-2: #184534;
+  --color-brand: #2f7d55;
+  --color-brand-strong: #25664a;
+  --color-mint: #dcefe4;
+  --color-mint-2: #edf6f0;
+  --color-leaf: #8fcf9f;
+  --color-cream: #f7f5ef;
+  --color-sand: #efeadf;
+  --color-ink: #17211c;
+  --color-muted: #5f6c64;
+  --color-line: #e4dfd3;
+  --color-amber: #8a5a00;
+  --color-amber-soft: #fcf0d6;
+  --color-sky: #22597a;
+  --color-sky-soft: #e3eff6;
+
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-display: 'Manrope Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-card: 0 1px 2px rgb(23 33 28 / 0.04), 0 8px 24px -8px rgb(23 33 28 / 0.1);
+  --shadow-float: 0 2px 4px rgb(23 33 28 / 0.04), 0 24px 60px -16px rgb(18 55 42 / 0.28);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    color-scheme: light;
+  }
+  body {
+    margin: 0;
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  /* aucun débordement horizontal (effets décoratifs flous, carrousels) */
+  main {
+    overflow-x: clip;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+  input,
+  select,
+  textarea,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+  /* iOS : pas de zoom automatique sur les champs */
+  input,
+  select,
+  textarea {
+    font-size: max(16px, 1rem);
+  }
+  ::selection {
+    background: var(--color-mint);
+    color: var(--color-forest);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes flow-dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgb(47 125 85 / 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 12px rgb(47 125 85 / 0);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(310%);
+    opacity: 0;
+  }
+}
+
+/* Apparition au scroll (composant <Reveal>) */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal[data-visible='true'] {
+  opacity: 1;
+  transform: none;
+}
+
+.flow-line {
+  stroke-dasharray: 4 6;
+  animation: flow-dash 1s linear infinite;
+}
+.animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+.animate-pulse-ring {
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+.animate-scan {
+  animation: scan 3.2s ease-in-out infinite;
+}
+
+/* Défilement horizontal avec accroche (carrousels mobiles) */
+.snap-row {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.snap-row::-webkit-scrollbar {
+  display: none;
+}
+.snap-row > * {
+  scroll-snap-align: center;
+}
+
+/* Grain de fond discret pour les sections sombres */
+.bg-grid-dark {
+  background-image:
+    radial-gradient(circle at 20% 0%, rgb(143 207 159 / 0.14), transparent 45%),
+    radial-gradient(circle at 90% 100%, rgb(47 125 85 / 0.3), transparent 50%),
+    linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  background-size:
+    auto,
+    auto,
+    32px 32px,
+    32px 32px;
+}
+.bg-grid-light {
+  background-image:
+    linear-gradient(rgb(18 55 42 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(18 55 42 / 0.045) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

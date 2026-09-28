@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Les balises marquées data-seo sont réécrites pour chaque page par scripts/postbuild.mjs
+         (et mises à jour à la navigation par usePageMeta). __SITE_URL__ = VITE_SITE_URL. -->
+    <title data-seo>Paysapro AI — Devis et gestion de chantiers pour paysagistes</title>
+    <meta data-seo name="description" content="Paysapro AI aide les professionnels du paysage à préparer leurs devis, organiser leurs chantiers et faire signer leurs clients, directement depuis leur téléphone." />
+    <link data-seo rel="canonical" href="__SITE_URL__/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#12372A" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="Paysapro AI" />
+    <meta data-seo property="og:title" content="Paysapro AI — Devis et gestion de chantiers pour paysagistes" />
+    <meta data-seo property="og:description" content="Paysapro AI aide les professionnels du paysage à préparer leurs devis, organiser leurs chantiers et faire signer leurs clients, directement depuis leur téléphone." />
+    <meta data-seo property="og:url" content="__SITE_URL__/" />
+    <meta property="og:image" content="__SITE_URL__/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Paysapro AI — Du chantier au devis. En quelques minutes." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "__SITE_URL__/#organization",
+            "name": "Paysapro AI",
+            "url": "__SITE_URL__/",
+            "logo": "__SITE_URL__/logo-512.png"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "__SITE_URL__/#website",
+            "name": "Paysapro AI",
+            "url": "__SITE_URL__/",
+            "inLanguage": "fr-FR",
+            "publisher": { "@id": "__SITE_URL__/#organization" }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Paysapro AI",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web, iOS, Android",
+            "description": "Logiciel de devis et de gestion de chantiers pour paysagistes : photos du chantier, métrés, catalogue tarifaire, devis professionnels et signature client.",
+            "url": "__SITE_URL__/",
+            "publisher": { "@id": "__SITE_URL__/#organization" },
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "EUR",
+              "description": "Accès gratuit pendant la phase bêta"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding:24px;font-family:system-ui,sans-serif">
+        Paysapro AI — logiciel de devis et de gestion de chantiers pour paysagistes. Activez JavaScript pour afficher le site.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

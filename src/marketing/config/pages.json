@@ -1,0 +1,67 @@
+{
+  "/": {
+    "title": "Paysapro AI — Devis et gestion de chantiers pour paysagistes",
+    "description": "Paysapro AI aide les professionnels du paysage à préparer leurs devis, organiser leurs chantiers et faire signer leurs clients, directement depuis leur téléphone.",
+    "priority": "1.0"
+  },
+  "/fonctionnalites": {
+    "title": "Fonctionnalités — Logiciel de devis paysagiste | Paysapro AI",
+    "description": "Photos de chantier, calcul des surfaces et quantités, catalogue tarifaire, devis professionnels, signature client et tableau de bord : tout ce qu'il faut pour gérer vos devis de paysagiste.",
+    "priority": "0.9"
+  },
+  "/comment-ca-marche": {
+    "title": "Comment ça marche — Du chantier au devis | Paysapro AI",
+    "description": "Prenez vos photos, ajoutez les dimensions, construisez votre estimation, générez le devis et faites-le signer. Découvrez le parcours Paysapro AI en 6 étapes.",
+    "priority": "0.9"
+  },
+  "/tarifs": {
+    "title": "Tarifs — Accès bêta gratuit | Paysapro AI",
+    "description": "Paysapro AI est actuellement gratuit pendant la phase bêta. Découvrez ce qui est inclus et comment rejoindre la bêta.",
+    "priority": "0.8"
+  },
+  "/faq": {
+    "title": "Questions fréquentes | Paysapro AI",
+    "description": "Réponses aux questions des paysagistes sur Paysapro AI : IA, tarifs, signature en ligne, utilisation sur smartphone et sur chantier.",
+    "priority": "0.7"
+  },
+  "/contact": {
+    "title": "Contact | Paysapro AI",
+    "description": "Une question sur Paysapro AI, le logiciel de devis pour paysagistes ? Écrivez-nous.",
+    "priority": "0.6"
+  },
+  "/a-propos": {
+    "title": "À propos | Paysapro AI",
+    "description": "Paysapro AI est développé avec les professionnels du paysage, à partir de leurs besoins réels sur le terrain.",
+    "priority": "0.5"
+  },
+  "/aide": {
+    "title": "Aide | Paysapro AI",
+    "description": "Besoin d'aide pour utiliser Paysapro AI ? Retrouvez les réponses aux questions fréquentes ou contactez-nous.",
+    "priority": "0.4"
+  },
+  "/blog": {
+    "title": "Blog — Conseils devis et chantiers pour paysagistes | Paysapro AI",
+    "description": "Bientôt : des conseils concrets pour préparer vos devis de paysagiste, calculer vos métrés et organiser vos chantiers.",
+    "priority": "0.4"
+  },
+  "/mentions-legales": {
+    "title": "Mentions légales | Paysapro AI",
+    "description": "Mentions légales du site Paysapro AI.",
+    "priority": "0.2"
+  },
+  "/confidentialite": {
+    "title": "Politique de confidentialité | Paysapro AI",
+    "description": "Comment Paysapro AI traite les données personnelles collectées sur ce site.",
+    "priority": "0.2"
+  },
+  "/cgu": {
+    "title": "Conditions générales d'utilisation | Paysapro AI",
+    "description": "Conditions générales d'utilisation du site et du service Paysapro AI.",
+    "priority": "0.2"
+  },
+  "/cookies": {
+    "title": "Politique cookies | Paysapro AI",
+    "description": "Informations sur l'utilisation des cookies sur le site Paysapro AI.",
+    "priority": "0.2"
+  }
+}

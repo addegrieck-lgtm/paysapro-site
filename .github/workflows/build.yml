@@ -1,0 +1,36 @@
+# Vérifications de chaque pull request (le push sur main est vérifié par deploy.yml) : installation → lint → types → tests → build → secrets.
+# Le build échoue en cas d'erreur TypeScript (tsc -b), de lint ou de test.
+name: Build
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Variables PUBLIQUES (Settings → Secrets and variables → Actions → Variables).
+      VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
+      VITE_APP_URL: ${{ vars.VITE_APP_URL }}
+      VITE_APP_SIGNUP_PATH: ${{ vars.VITE_APP_SIGNUP_PATH }}
+      VITE_APP_LOGIN_PATH: ${{ vars.VITE_APP_LOGIN_PATH }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:secrets
