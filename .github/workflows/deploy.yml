@@ -28,6 +28,7 @@ jobs:
       VITE_APP_URL: ${{ vars.VITE_APP_URL || 'https://addegrieck-lgtm.github.io/paysapro-ai/' }}
       VITE_APP_SIGNUP_PATH: ${{ vars.VITE_APP_SIGNUP_PATH || '#/onboarding' }}
       VITE_APP_LOGIN_PATH: ${{ vars.VITE_APP_LOGIN_PATH || '#/app' }}
+      VITE_GOOGLE_SITE_VERIFICATION: ${{ vars.VITE_GOOGLE_SITE_VERIFICATION }}
       VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
       VITE_LEAD_ENDPOINT: ${{ vars.VITE_LEAD_ENDPOINT }}
     steps:

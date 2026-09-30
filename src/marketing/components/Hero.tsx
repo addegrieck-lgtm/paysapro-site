@@ -27,7 +27,7 @@ export function Hero() {
             <BetaBadge />
             <span>
               <span className="font-semibold text-ink">Accès bêta gratuit</span>
-              <span className="hidden sm:inline"> · construit avec les paysagistes</span>
+              <span className="hidden sm:inline"> · logiciel de devis pour paysagistes</span>
             </span>
           </a>
         </div>

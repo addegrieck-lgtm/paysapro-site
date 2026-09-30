@@ -139,15 +139,17 @@
 }
 
 /* Apparition au scroll (composant <Reveal>) */
-.reveal {
+.anim .reveal {
   opacity: 0;
   transform: translateY(18px);
+}
+.reveal {
   transition:
     opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
     transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
   transition-delay: var(--reveal-delay, 0ms);
 }
-.reveal[data-visible='true'] {
+.anim .reveal[data-visible='true'] {
   opacity: 1;
   transform: none;
 }
@@ -210,7 +212,7 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal {
+  .anim .reveal {
     opacity: 1;
     transform: none;
   }

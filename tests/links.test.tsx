@@ -3,8 +3,11 @@ import { matchRoutes } from 'react-router';
 import { cleanup } from '@testing-library/react';
 import { APP, PAGES, renderPage } from './utils';
 import { ROUTE_PATHS } from '../src/marketing/routes';
+import { publishedArticles } from '../src/marketing/data/blog';
 
-const routes = ROUTE_PATHS.filter((p) => p !== '/blog/:slug').map((path) => ({ path }));
+const published = publishedArticles().map((a) => a.slug);
+
+const routes = ROUTE_PATHS.map((path) => ({ path }));
 
 describe('liens', () => {
   it('aucun lien interne cassé et aucune ancre manquante', async () => {
@@ -27,6 +30,8 @@ describe('liens', () => {
 
     for (const href of internal) {
       const url = new URL(href, 'https://x.test');
+      // un lien vers un article doit viser un article réellement publié
+      if (url.pathname.startsWith('/blog/')) expect(published, `article non publié : ${href}`).toContain(url.pathname.slice(6));
       expect(matchRoutes(routes, url.pathname), `route inconnue : ${href}`).not.toBeNull();
       if (url.hash) {
         const ids = idsByPage.get(url.pathname);

@@ -21,7 +21,7 @@ describe('routes', () => {
   });
 
   it('un article de blog non publié renvoie la 404', async () => {
-    renderAt('/blog/comment-faire-un-devis-paysagiste');
+    renderAt('/blog/organiser-ses-chantiers');
     expect(await screen.findByRole('heading', { level: 1, name: /perdue sur le chantier/ })).toBeInTheDocument();
   });
 

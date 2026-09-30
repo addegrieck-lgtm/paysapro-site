@@ -1,6 +1,10 @@
 import { useEffect, useRef, useState, type CSSProperties, type ElementType, type ReactNode } from 'react';
 
-/** Apparition progressive au scroll. Sans IntersectionObserver ou avec « réduire les animations » : visible d'emblée. */
+/**
+ * Apparition progressive au scroll. Le contenu est toujours présent et visible dans le HTML pré-rendu ;
+ * il n'est masqué avant apparition que si <html class="anim"> (script de index.html : JavaScript actif,
+ * IntersectionObserver disponible, animations non réduites).
+ */
 export function Reveal({
   children,
   delay = 0,
@@ -13,10 +17,10 @@ export function Reveal({
   className?: string;
 }) {
   const ref = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(() => typeof window === 'undefined' || !('IntersectionObserver' in window));
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    if (visible || !ref.current) return;
+    if (visible || !ref.current || !('IntersectionObserver' in window)) return;
     const el = ref.current;
     const io = new IntersectionObserver(
       (entries) => {
@@ -40,13 +44,12 @@ export function Reveal({
 
 /** true quand l'utilisateur a demandé de réduire les animations. */
 export function usePrefersReducedMotion() {
-  const [reduced, setReduced] = useState(() =>
-    typeof window !== 'undefined' && window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)').matches : false,
-  );
+  const [reduced, setReduced] = useState(false);
   useEffect(() => {
     if (!window.matchMedia) return;
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     const on = () => setReduced(mq.matches);
+    on();
     mq.addEventListener?.('change', on);
     return () => mq.removeEventListener?.('change', on);
   }, []);

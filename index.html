@@ -23,6 +23,9 @@
     <meta property="og:image:alt" content="Paysapro AI — Du chantier au devis. En quelques minutes." />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <script>
+      if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('anim');
+    </script>
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -67,7 +70,7 @@
     </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app-html--></div>
     <noscript>
       <p style="padding:24px;font-family:system-ui,sans-serif">
         Paysapro AI — logiciel de devis et de gestion de chantiers pour paysagistes. Activez JavaScript pour afficher le site.

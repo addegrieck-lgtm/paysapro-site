@@ -27,7 +27,7 @@ export const MARKETING_CONFIG = {
   showPricing: true,
   showTestimonials: false,
   showDemo: clean(env.VITE_ENABLE_DEMO_CTA) === 'true',
-  showBlog: false,
+  showBlog: true,
   showAmbassador: false,
 } as const;
 

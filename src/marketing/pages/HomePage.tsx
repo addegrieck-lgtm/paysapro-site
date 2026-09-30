@@ -15,6 +15,7 @@ import { AudienceSection } from '../sections/AudienceSection';
 import { TimeSection } from '../sections/TimeSection';
 import { TrustSection } from '../sections/TrustSection';
 import { AmbassadorSection, BetaSection, FAQSection, PricingSection, TestimonialsSection } from '../sections/MiscSections';
+import { BlogTeaserSection } from '../sections/BlogTeaserSection';
 import { FinalCTA } from '../sections/FinalCTA';
 
 /**
@@ -45,6 +46,7 @@ export function HomePage() {
       <BetaSection />
       <AmbassadorSection />
       <FAQSection />
+      <BlogTeaserSection />
       <FinalCTA />
     </>
   );
