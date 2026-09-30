@@ -114,6 +114,17 @@ export function seoPages(): SeoPage[] {
     }),
   );
 
+  for (const t of TOOLS) {
+    list.push({
+      path: t.path.replace('/outils/', '/integrer/'),
+      title: `${t.name} | Paysapro AI`,
+      description: t.short,
+      priority: '0.1',
+      noindex: true,
+      jsonLd: () => [],
+    });
+  }
+
   if (MARKETING_CONFIG.showBlog) {
     for (const a of publishedArticles()) {
       const path = `/blog/${a.slug}`;

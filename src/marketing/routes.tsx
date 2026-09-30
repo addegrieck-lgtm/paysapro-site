@@ -19,6 +19,7 @@ const LegalPage = lazy(() => import('./pages/LegalPage'));
 const LandingPage = lazy(() => import('./pages/LandingPage'));
 const ToolPage = lazy(() => import('./pages/ToolPage'));
 const ToolsIndexPage = lazy(() => import('./pages/ToolPage').then((m) => ({ default: m.ToolsIndexPage })));
+const EmbedPage = lazy(() => import('./pages/EmbedPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 /** Liste des routes publiques (utilisée aussi par les tests de liens). */
@@ -40,6 +41,7 @@ export const ROUTE_PATHS = [
   '/outils/calcul-surface',
   '/outils/calcul-volume',
   '/outils/calcul-cloture',
+  '/integrer/:tool',
   '/blog',
   '/blog/:slug',
   '/mentions-legales',
@@ -55,6 +57,14 @@ function PageFallback() {
 export function MarketingRoutes() {
   return (
     <Routes>
+      <Route
+        path="integrer/:tool"
+        element={
+          <Suspense fallback={<PageFallback />}>
+            <EmbedPage />
+          </Suspense>
+        }
+      />
       <Route element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="*" element={<Lazy />} />

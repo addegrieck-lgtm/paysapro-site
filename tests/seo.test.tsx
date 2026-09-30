@@ -86,3 +86,20 @@ describe('calculateurs', () => {
     expect(screen.getByRole('status')).toHaveTextContent('18,15 m²');
   });
 });
+
+describe('calculateur intégrable', () => {
+  it('la page outil propose un code d’intégration avec un lien vers le site', async () => {
+    await renderPage('/outils/calcul-cloture');
+    const code = (screen.getByLabelText('Code d’intégration') as HTMLTextAreaElement).value;
+    expect(code).toContain('<iframe src="https://www.example.test/integrer/calcul-cloture"');
+    expect(code).toContain('<a href="https://www.example.test/outils/calcul-cloture">Calcul de clôture</a>');
+    expect(code).toContain('<a href="https://www.example.test/">Paysapro AI</a>');
+  });
+
+  it('la version intégrable affiche le calculateur sans menu, avec le crédit', async () => {
+    await renderPage('/integrer/calcul-cloture');
+    expect(screen.queryByRole('navigation')).not.toBeInTheDocument();
+    expect(screen.getByRole('status')).toHaveTextContent('10');
+    expect(screen.getByRole('link', { name: 'Paysapro AI' })).toHaveAttribute('href', 'https://www.example.test/outils/calcul-cloture');
+  });
+});

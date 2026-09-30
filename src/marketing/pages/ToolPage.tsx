@@ -6,6 +6,7 @@ import { PageHeader } from '../components/PageHeader';
 import { AppCta } from '../components/AppLink';
 import { IconTile } from '../components/FeatureCard';
 import { Calculator } from '../components/tools/Calculators';
+import { EmbedSnippet } from '../components/tools/EmbedSnippet';
 import { Container } from '../components/ui';
 import NotFoundPage from './NotFoundPage';
 
@@ -91,6 +92,8 @@ export default function ToolPage({ path }: { path: string }) {
             </AppCta>
           </div>
         </aside>
+
+        <EmbedSnippet tool={tool} />
 
         <nav aria-label="Voir aussi">
           <h2 className="font-display text-xl font-extrabold text-ink">Voir aussi</h2>
