@@ -1,7 +1,7 @@
 # Mise en ligne gratuite sur GitHub Pages à chaque push sur main :
 # vérifications (lint, types, tests, secrets) → build → publication.
 # Prérequis (une seule fois) : Settings → Pages → Build and deployment → Source : « GitHub Actions ».
-# Adresse : https://addegrieck-lgtm.github.io/paysapro-site/
+# Adresse : https://www.paysapro-ai.fr (domaine personnalisé : Settings → Pages → Custom domain)
 # Les valeurs peuvent être remplacées par des variables du dépôt (Settings → Secrets and variables → Actions → Variables).
 name: Deploy
 
@@ -23,8 +23,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || '/paysapro-site/' }}
-      VITE_SITE_URL: ${{ vars.VITE_SITE_URL || 'https://addegrieck-lgtm.github.io/paysapro-site' }}
+      VITE_BASE_PATH: ${{ vars.VITE_BASE_PATH || '/' }}
+      VITE_SITE_URL: ${{ vars.VITE_SITE_URL || 'https://www.paysapro-ai.fr' }}
       VITE_APP_URL: ${{ vars.VITE_APP_URL || 'https://addegrieck-lgtm.github.io/paysapro-ai/' }}
       VITE_APP_SIGNUP_PATH: ${{ vars.VITE_APP_SIGNUP_PATH || '#/onboarding' }}
       VITE_APP_LOGIN_PATH: ${{ vars.VITE_APP_LOGIN_PATH || '#/app' }}

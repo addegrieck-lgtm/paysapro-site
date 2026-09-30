@@ -41,11 +41,14 @@ En local : copier en `.env.local`. **Ne jamais y mettre de clé secrète** (Stri
 
 ## Mise en ligne gratuite sur GitHub Pages (actuel)
 
-Adresse : **https://addegrieck-lgtm.github.io/paysapro-site/**
+Adresse : **https://www.paysapro-ai.fr** (domaine acheté chez OVH, hébergement GitHub Pages)
+
+DNS chez OVH : `www` en CNAME vers `addegrieck-lgtm.github.io.` ; domaine nu en A vers 185.199.108.153, 185.199.109.153,
+185.199.110.153 et 185.199.111.153. Sur GitHub : *Settings → Pages → Custom domain* = `www.paysapro-ai.fr`, puis *Enforce HTTPS*.
 
 1. Une seule fois : sur GitHub, *Settings → Pages → Build and deployment → Source : **GitHub Actions***.
 2. Ensuite, chaque `git push` sur `main` lance `.github/workflows/deploy.yml` : lint, tests, build, recherche de secrets, puis publication.
-3. Les valeurs par défaut (sous-dossier `/paysapro-site/`, app sur `addegrieck-lgtm.github.io/paysapro-ai`) sont dans le workflow ;
+3. Les valeurs par défaut (domaine `www.paysapro-ai.fr`, app sur `addegrieck-lgtm.github.io/paysapro-ai`) sont dans le workflow ;
    elles se remplacent par des *Variables* du dépôt (`VITE_APP_URL`, `VITE_CONTACT_EMAIL`…), sans toucher au code.
 
 Tester localement le build « GitHub Pages » : `npm run build` avec `VITE_BASE_PATH=/paysapro-site/`, puis `npm run preview:pages`.
@@ -63,7 +66,7 @@ Ce qui est en place :
 À faire une fois, par vous (compte Google nécessaire) :
 
 1. Ouvrir [Google Search Console](https://search.google.com/search-console) → *Ajouter une propriété* → **Préfixe de l'URL** →
-   `https://addegrieck-lgtm.github.io/paysapro-site/`.
+   `https://www.paysapro-ai.fr/`.
 2. Méthode **Balise HTML** : copier le code contenu dans `content="…"`.
 3. Sur GitHub : *Settings → Secrets and variables → Actions → Variables → New repository variable* :
    nom `VITE_GOOGLE_SITE_VERIFICATION`, valeur = le code. Relancer le déploiement (*Actions → Deploy → Run workflow*).
@@ -72,7 +75,7 @@ Ce qui est en place :
 
 Ce qui fait réellement monter dans Google ensuite : publier régulièrement des articles utiles, obtenir des liens
 depuis d'autres sites (annuaires professionnels, partenaires, réseaux sociaux, fiche Google Business) et,
-dès que possible, un nom de domaine propre (`paysapro.ai` / `paysapro.fr`).
+des articles réguliers.
 
 ## Déploiement sur Vercel (domaine www.paysapro.ai, plus tard)
 
