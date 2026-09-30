@@ -12,6 +12,7 @@ import { PhotoAnalysisMockup } from '../components/mockups/PhotoAnalysisMockup';
 import { QuoteMockup } from '../components/mockups/QuoteMockup';
 import { DashboardMockup } from '../components/mockups/DashboardMockup';
 import { CatalogMockup } from '../components/mockups/CatalogMockup';
+import { SapAttestationMockup } from '../components/mockups/SapAttestationMockup';
 import { FinalCTA } from '../sections/FinalCTA';
 import NotFoundPage from './NotFoundPage';
 
@@ -19,6 +20,7 @@ function Visual({ kind }: { kind: LandingVisual }) {
   if (kind === 'quote') return <QuoteMockup />;
   if (kind === 'dashboard') return <DashboardMockup />;
   if (kind === 'catalog') return <CatalogMockup />;
+  if (kind === 'sap') return <SapAttestationMockup />;
   return (
     <PhoneFrame className="mx-auto w-[260px]" label="Application Paysapro AI sur smartphone : photo du chantier et zones repérées">
       <PhotoAnalysisMockup scan={false} />

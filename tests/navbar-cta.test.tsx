@@ -81,7 +81,7 @@ describe('CTA vers l’application', () => {
   it('la page Fonctionnalités a un CTA par fonctionnalité', async () => {
     await renderPage('/fonctionnalites');
     const links = screen.getAllByRole('link', { name: 'Essayer cette fonctionnalité' });
-    expect(links.length).toBe(10);
+    expect(links.length).toBe(11);
     for (const a of links) expect(a).toHaveAttribute('href', SIGNUP);
   });
 });

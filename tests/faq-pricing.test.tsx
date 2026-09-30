@@ -18,9 +18,9 @@ describe('FAQ', () => {
     expect(q).toHaveAttribute('aria-expanded', 'false');
   });
 
-  it('contient les 9 questions', async () => {
+  it('contient les 10 questions', async () => {
     await renderPage('/faq');
-    expect(within(screen.getByRole('main')).getAllByRole('button', { expanded: false })).toHaveLength(9);
+    expect(within(screen.getByRole('main')).getAllByRole('button', { expanded: false })).toHaveLength(10);
   });
 });
 
@@ -36,7 +36,7 @@ describe('Tarifs', () => {
 
   it('les plans futurs sont prêts mais non affichés pendant la bêta', () => {
     expect(visiblePlans()).toEqual([BETA_PLAN]);
-    expect(visiblePlans('plans').map((p) => p.id)).toEqual(['starter', 'pro', 'premium']);
+    expect(visiblePlans('plans').map((p) => p.id)).toEqual(['starter', 'pro', 'business']);
     for (const p of FUTURE_PLANS) {
       expect(p.stripePriceId).toBeFalsy(); // aucun paiement configuré
       expect(formatPlanPrice(p).amount).toBe('Bientôt'); // aucun prix inventé

@@ -34,6 +34,11 @@
     "description": "Exemple de devis paysagiste commenté : en-tête, prestations, quantités, TVA, acompte, gestion des déchets et signature. Un modèle clair à reprendre.",
     "priority": "0.8"
   },
+  "/logiciel-paysagiste-services-a-la-personne": {
+    "title": "Logiciel paysagiste SAP : attestation fiscale | Paysapro AI",
+    "description": "Logiciel pour paysagiste en services à la personne : devis avec mentions SAP et attestation fiscale annuelle générée en PDF pour chaque client.",
+    "priority": "0.8"
+  },
   "/outils": {
     "title": "Calculateurs gratuits pour paysagistes | Paysapro AI",
     "description": "Outils de calcul gratuits pour paysagistes : surface de terrasse ou de gazon, volume de terre et de gravier, poteaux et panneaux de clôture.",

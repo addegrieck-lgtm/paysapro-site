@@ -39,6 +39,12 @@ export const FAQ: FaqItem[] = [
     answer: 'Oui. Chaque client a sa fiche, avec ses chantiers et ses devis.',
   },
   {
+    id: 'sap',
+    question: 'Paysapro AI gère-t-il les services à la personne (SAP) ?',
+    answer:
+      'Oui. Si votre entreprise est déclarée en services à la personne, vous activez le mode SAP : vos devis reprennent votre numéro de déclaration et distinguent les prestations concernées, et l’application génère le PDF de l’attestation fiscale annuelle de chaque client.',
+  },
+  {
     id: 'chantier',
     question: 'Puis-je utiliser Paysapro AI sur un chantier ?',
     answer: 'Oui. L’interface est conçue pour être utilisable directement depuis un smartphone.',

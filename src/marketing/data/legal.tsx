@@ -51,7 +51,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Hébergement',
         body: (
           <p>
-            Le site est hébergé par <Ph>[NOM DE L’HÉBERGEUR]</Ph>, <Ph>[ADRESSE DE L’HÉBERGEUR]</Ph>, <Ph>[TÉLÉPHONE OU CONTACT DE L’HÉBERGEUR]</Ph>.
+            Le site est hébergé par GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (support.github.com). Les messages envoyés par les formulaires sont enregistrés chez Supabase.
           </p>
         ),
       },
@@ -118,8 +118,8 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Destinataires et sous-traitants',
         body: (
           <p>
-            Les données sont destinées à <Ph>[NOM DE L’ENTREPRISE]</Ph>. Sous-traitants techniques : <Ph>[HÉBERGEUR]</Ph>, <Ph>[SERVICE D’ENVOI D’EMAILS]</Ph>,{' '}
-            <Ph>[OUTIL DE MESURE D’AUDIENCE LE CAS ÉCHÉANT]</Ph>. <Ph>[PRÉCISER LES ÉVENTUELS TRANSFERTS HORS UE ET LEURS GARANTIES]</Ph>
+            Les données sont destinées à <Ph>[NOM DE L’ENTREPRISE]</Ph>. Sous-traitants techniques : GitHub, Inc. (hébergement du site, qui peut enregistrer des journaux techniques comme l’adresse IP) et Supabase (enregistrement des messages de contact et des inscriptions aux nouveautés). Aucun outil de mesure d’audience n’est actif à ce jour.{' '}
+            <Ph>[PRÉCISER LA RÉGION D’HÉBERGEMENT SUPABASE ET LES GARANTIES POUR LES TRANSFERTS HORS UE]</Ph>
           </p>
         ),
       },
@@ -204,7 +204,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Mesure d’audience',
         body: (
           <p>
-            Si une mesure d’audience est activée, elle utilise un outil sans cookie qui ne permet pas de vous identifier. <Ph>[NOM DE L’OUTIL LE CAS ÉCHÉANT]</Ph>
+            Aucune mesure d’audience n’est active à ce jour. Si elle était activée, elle utiliserait un outil sans cookie qui ne permet pas de vous identifier.
           </p>
         ),
       },

@@ -4,7 +4,7 @@
  * Règles : n'annoncer que ce que l'application fait ; aucun chiffre de gain inventé ; l'IA assiste, elle ne décide pas.
  * Title / description : src/marketing/config/pages.json.
  */
-export type LandingVisual = 'quote' | 'dashboard' | 'phone' | 'catalog';
+export type LandingVisual = 'quote' | 'dashboard' | 'phone' | 'catalog' | 'sap';
 
 export interface LandingSection {
   heading: string;
@@ -283,6 +283,79 @@ export const LANDINGS: Landing[] = [
       { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
       { label: 'Calculer une surface de terrasse', to: '/outils/calcul-surface' },
       { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
+    ],
+  },
+  {
+    path: '/logiciel-paysagiste-services-a-la-personne',
+    eyebrow: 'Services à la personne (SAP)',
+    h1: 'Devis SAP et attestation fiscale, générés pour vous.',
+    intro:
+      'Vous êtes déclaré en services à la personne pour l’entretien de jardins ? Paysapro AI ajoute les informations SAP sur vos devis et génère lui-même, en PDF, l’attestation fiscale annuelle de chaque client.',
+    visual: 'sap',
+    sections: [
+      {
+        heading: 'Un mode SAP pour les entreprises déclarées',
+        paragraphs: [
+          'Le mode SAP est une option. Vous l’activez dans les réglages de votre entreprise, puis vous renseignez votre numéro de déclaration SAP, sa date d’enregistrement et l’activité déclarée.',
+          'Il est sans effet sur vos devis habituels : si vous ne l’activez pas, ou si un devis ne contient aucune prestation SAP, aucune mention n’apparaît.',
+        ],
+      },
+      {
+        heading: 'Vos prestations éligibles, marquées par vous',
+        paragraphs: [
+          'Dans votre catalogue, vous cochez les prestations qui relèvent de votre déclaration : tonte, taille de haies, désherbage, entretien des massifs… Paysapro AI ne déduit rien à votre place : une prestation est traitée comme SAP uniquement si vous l’avez indiquée.',
+        ],
+      },
+      {
+        heading: 'Des devis qui distinguent le SAP du reste',
+        list: [
+          'Les lignes SAP sont repérées sur le devis.',
+          'Votre numéro de déclaration et sa date d’enregistrement sont repris.',
+          'Le total des prestations SAP est indiqué à part, en HT et en TTC.',
+          'Un même devis peut mêler prestations SAP et travaux hors SAP.',
+        ],
+      },
+      {
+        heading: 'L’attestation fiscale annuelle, en PDF',
+        paragraphs: [
+          'En début d’année, vos clients attendent leur attestation pour déclarer leurs dépenses. Depuis la fiche du client, vous choisissez l’année et Paysapro AI génère le PDF : prestations SAP réalisées, dates d’intervention et montants réellement réglés.',
+          'Avant de générer, l’application vérifie que tout est là : client, entreprise, numéro SAP, prestations, interventions, règlements. S’il manque une information, elle vous la signale au lieu de l’inventer.',
+        ],
+      },
+      {
+        heading: 'Des montants que vous pouvez justifier',
+        paragraphs: [
+          'L’attestation ne reprend que les règlements enregistrés dans l’année, avec leur mode de paiement. Quand un devis mêle SAP et hors SAP, les règlements sont répartis au prorata des prestations SAP, et l’application vous invite à vérifier ce montant.',
+          'Paysapro AI ne remplace ni votre déclaration SAP, ni votre expert-comptable : vous restez responsable des informations portées sur vos documents. L’application ne gère pas l’avance immédiate de crédit d’impôt.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Faut-il être déclaré en services à la personne pour utiliser ce mode ?',
+        answer: 'Oui. Le mode SAP s’adresse aux entreprises qui disposent d’une déclaration SAP. Paysapro AI n’effectue pas cette déclaration : il reprend votre numéro sur vos documents.',
+      },
+      {
+        question: 'Paysapro AI génère-t-il lui-même le PDF de l’attestation fiscale ?',
+        answer: 'Oui. Depuis la fiche du client, vous choisissez l’année : l’application contrôle les informations puis génère le PDF de l’attestation à partir des prestations SAP et des règlements enregistrés.',
+      },
+      {
+        question: 'Que se passe-t-il s’il manque une information ?',
+        answer: 'L’attestation n’est pas générée tant que les points signalés ne sont pas complétés. Aucune donnée n’est inventée.',
+      },
+      {
+        question: 'Un devis peut-il contenir des prestations SAP et non SAP ?',
+        answer: 'Oui. Les prestations SAP sont distinguées sur le devis, et les règlements sont répartis au prorata pour l’attestation.',
+      },
+      {
+        question: 'Le mode SAP est-il payant ?',
+        answer: 'Il est inclus gratuitement pendant la phase bêta.',
+      },
+    ],
+    related: [
+      { label: 'Attestation fiscale SAP jardinage : le guide du paysagiste', to: '/blog/attestation-fiscale-sap-jardinage' },
+      { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
+      { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
     ],
   },
 ];

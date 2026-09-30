@@ -248,6 +248,72 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
   },
   {
+    slug: 'attestation-fiscale-sap-jardinage',
+    title: 'Attestation fiscale SAP jardinage : le guide du paysagiste',
+    excerpt: 'Services à la personne et petits travaux de jardinage : à quoi sert l’attestation fiscale annuelle, ce qu’elle contient et comment la préparer sans y passer vos soirées.',
+    keywords: ['attestation fiscale SAP', 'services à la personne jardinage', 'logiciel paysagiste SAP'],
+    publishedAt: '2026-10-01',
+    readingMinutes: 5,
+    links: [
+      { label: 'Le mode SAP de Paysapro AI : devis et attestation fiscale', to: '/logiciel-paysagiste-services-a-la-personne' },
+      { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Si votre entreprise est déclarée en services à la personne (SAP), vos clients particuliers peuvent bénéficier d’un avantage fiscal sur les petits travaux de jardinage que vous réalisez chez eux. En contrepartie, vous devez leur remettre chaque année une attestation fiscale. C’est souvent la corvée de janvier : voici comment l’aborder sereinement.',
+        ],
+      },
+      {
+        heading: 'À quoi sert l’attestation fiscale ?',
+        paragraphs: [
+          'L’attestation récapitule ce que le client a réellement payé dans l’année pour des prestations de services à la personne. Il s’en sert pour déclarer ses dépenses et obtenir son crédit d’impôt, qui correspond à la moitié des sommes versées, dans la limite d’un plafond annuel propre aux petits travaux de jardinage.',
+          'Les taux et plafonds sont fixés par l’administration et peuvent évoluer : vérifiez les règles en vigueur sur le site officiel des services à la personne ou auprès de votre expert-comptable avant de les annoncer à vos clients.',
+        ],
+      },
+      {
+        heading: 'Quelles prestations sont concernées ?',
+        paragraphs: [
+          'En règle générale, il s’agit des travaux d’entretien courant des jardins de particuliers : tonte, taille de haies et d’arbustes, désherbage, débroussaillage, ramassage des feuilles. Les travaux de création et d’aménagement, comme une terrasse, une clôture ou la conception d’un jardin, n’en font pas partie.',
+          'Ce qui compte, c’est le périmètre de votre propre déclaration SAP. En cas de doute sur une prestation, ne la présentez pas comme éligible sans l’avoir vérifié.',
+        ],
+      },
+      {
+        heading: 'Que contient l’attestation ?',
+        paragraphs: ['Une attestation fiscale reprend habituellement :'],
+        list: [
+          'le nom, l’adresse et le numéro d’identification de votre entreprise, avec votre numéro de déclaration SAP ;',
+          'le nom et l’adresse du client bénéficiaire ;',
+          'la nature des prestations réalisées et les dates d’intervention ;',
+          'le montant effectivement acquitté dans l’année ;',
+          'les sommes réglées par un moyen de paiement préfinancé, comme le CESU, indiquées à part.',
+        ],
+      },
+      {
+        heading: 'Quand la remettre ?',
+        paragraphs: [
+          'L’attestation porte sur une année civile et se remet au début de l’année suivante, à temps pour la déclaration de revenus de vos clients : en pratique, avant la fin du mois de mars. Mieux vaut ne pas attendre leurs relances.',
+        ],
+      },
+      {
+        heading: 'Les erreurs qui coûtent du temps',
+        list: [
+          'Compter ce qui a été facturé au lieu de ce qui a été réellement encaissé dans l’année.',
+          'Mélanger sur un même document des prestations SAP et des travaux d’aménagement.',
+          'Oublier de noter les dates d’intervention au fil de l’année.',
+          'Reconstituer les règlements en janvier à partir de relevés bancaires.',
+        ],
+      },
+      {
+        heading: 'Préparer l’attestation toute l’année, pas en janvier',
+        paragraphs: [
+          'La méthode la plus simple consiste à enregistrer les informations au moment où elles existent : marquer les prestations SAP dès le devis, noter les interventions, saisir chaque règlement avec sa date et son mode de paiement. En fin d’année, l’attestation n’est plus qu’une addition.',
+          'C’est le principe du mode SAP de Paysapro AI : vous cochez vos prestations éligibles dans votre catalogue, le devis distingue les montants concernés, et l’application génère elle-même le PDF de l’attestation de chaque client à partir des règlements enregistrés. S’il manque une information, elle vous la signale au lieu de l’inventer.',
+        ],
+      },
+    ],
+  },
+  {
     slug: 'gagner-du-temps-sur-ses-devis',
     title: 'Comment gagner du temps sur ses devis ?',
     excerpt: 'Catalogue de prestations, modèles, photos rangées : organiser sa préparation commerciale.',

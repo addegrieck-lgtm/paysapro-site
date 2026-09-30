@@ -20,6 +20,7 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
       { label: 'Logiciel de devis', to: '/logiciel-devis-paysagiste' },
       { label: 'Logiciel de gestion', to: '/logiciel-gestion-paysagiste' },
       { label: 'Application mobile', to: '/application-paysagiste' },
+      { label: 'Services à la personne (SAP)', to: '/logiciel-paysagiste-services-a-la-personne' },
       { label: 'Fonctionnalités', to: '/fonctionnalites' },
       { label: 'Tarifs', to: '/tarifs' },
       { label: 'Comment ça marche', to: '/comment-ca-marche' },

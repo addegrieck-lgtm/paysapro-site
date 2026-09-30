@@ -3,6 +3,7 @@ import {
   Camera,
   FileText,
   FolderKanban,
+  HeartHandshake,
   LayoutDashboard,
   PenLine,
   Smartphone,
@@ -12,7 +13,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 
-export type FeatureMockup = 'photos' | 'clients' | 'project' | 'calc' | 'catalog' | 'quote' | 'signature' | 'dashboard' | 'ai' | 'mobile';
+export type FeatureMockup = 'photos' | 'clients' | 'project' | 'calc' | 'catalog' | 'quote' | 'signature' | 'dashboard' | 'ai' | 'mobile' | 'sap';
 
 export interface Feature {
   id: string;
@@ -124,6 +125,17 @@ export const FEATURES: Feature[] = [
     benefit: 'Une vue claire de votre activité commerciale.',
     mockup: 'dashboard',
     home: true,
+  },
+  {
+    id: 'sap',
+    icon: HeartHandshake,
+    title: 'Services à la personne (SAP)',
+    short: 'Devis avec mentions SAP et attestation fiscale annuelle en PDF.',
+    description:
+      'Pour les entreprises déclarées en services à la personne : vous marquez vos prestations éligibles, le devis reprend votre numéro SAP et distingue les montants concernés, et l’application génère elle-même le PDF de l’attestation fiscale annuelle de chaque client, à partir des règlements enregistrés.',
+    benefit: 'Les attestations de début d’année prêtes en quelques gestes.',
+    mockup: 'sap',
+    home: false,
   },
   {
     id: 'ia',

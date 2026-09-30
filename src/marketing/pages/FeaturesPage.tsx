@@ -14,6 +14,7 @@ import { DashboardMockup } from '../components/mockups/DashboardMockup';
 import { ClientQuoteMockup } from '../components/mockups/ClientQuoteMockup';
 import { PhotoAnalysisMockup } from '../components/mockups/PhotoAnalysisMockup';
 import { AISuggestionMockup, CalcMockup, ClientsMockup, PhotosGridMockup, ProjectMockup } from '../components/mockups/FeatureMockups';
+import { SapAttestationMockup } from '../components/mockups/SapAttestationMockup';
 import { FinalCTA } from '../sections/FinalCTA';
 import { useAnalytics } from '../analytics/AnalyticsProvider';
 import { APP_LINKS } from '../config/marketing';
@@ -32,6 +33,7 @@ const MOCKUPS: Record<FeatureMockup, () => ReactNode> = {
   ),
   dashboard: () => <DashboardMockup />,
   ai: () => <AISuggestionMockup />,
+  sap: () => <SapAttestationMockup />,
   mobile: () => (
     <PhoneFrame className="mx-auto w-[250px]" label="Paysapro AI sur smartphone">
       <PhotoAnalysisMockup scan={false} />
