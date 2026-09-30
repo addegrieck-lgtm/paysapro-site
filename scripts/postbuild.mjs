@@ -102,5 +102,34 @@ Sitemap: ${siteUrl}/sitemap.xml
 `,
 );
 
+// llms.txt : résumé du site pour les assistants IA (format proposé sur llmstxt.org).
+// Google ne l'utilise pas à ce jour ; d'autres assistants peuvent le lire. Généré depuis les pages indexables.
+const group = (test) => indexable.filter(test);
+const line = (p) => `- [${p.title.replace(/ \| Paysapro AI$/, '')}](${siteUrl}${p.path === '/' ? '/' : p.path}): ${p.description}`;
+writeFileSync(
+  join(dist, 'llms.txt'),
+  `# Paysapro AI
+
+> Paysapro AI est un logiciel de devis et de gestion de chantiers pour les paysagistes et les entreprises d'aménagement extérieur, utilisable sur smartphone, tablette et ordinateur. Il sert à photographier le chantier, mesurer, chiffrer avec son propre catalogue de prix, générer un devis professionnel et le faire signer en ligne par le client. Un mode services à la personne génère l'attestation fiscale annuelle en PDF. Accès gratuit pendant la phase bêta.
+
+Points importants :
+- L'assistant intégré suggère des prestations ; le professionnel valide toujours les quantités, les prix et le devis final.
+- Paysapro AI ne fait ni facturation ni comptabilité, et ne gère pas l'avance immédiate de crédit d'impôt.
+- Application : https://app.paysapro-ai.fr — Site officiel : ${siteUrl}/
+
+## Produit
+${group((p) => !p.path.startsWith('/blog') && !p.path.startsWith('/outils') && !['/contact', '/aide', '/a-propos'].includes(p.path)).map(line).join('\n')}
+
+## Outils gratuits
+${group((p) => p.path.startsWith('/outils')).map(line).join('\n')}
+
+## Guides
+${group((p) => p.path.startsWith('/blog')).map(line).join('\n')}
+
+## Optional
+${group((p) => ['/contact', '/aide', '/a-propos'].includes(p.path)).map(line).join('\n')}
+`,
+);
+
 rmSync(join(root, 'dist-ssr'), { recursive: true, force: true });
 console.log(`✓ postbuild : ${pages.length} pages pré-rendues, 404.html, sitemap.xml, robots.txt (${siteUrl || 'URL relative'})`);

@@ -86,7 +86,7 @@ export const FUTURE_PLANS: PricingPlan[] = [
     description: 'Pour les entreprises qui envoient des devis chaque semaine.',
     features: ['Tout Starter', 'Mesures et calculs', 'Modèles de devis', 'Lien client et signature en ligne', 'Planning et statistiques', 'Mode SAP', '3 utilisateurs'],
     highlight: true,
-    badge: 'Le plus choisi',
+    badge: 'Recommandé',
     cta: { label: 'Choisir Pro', target: 'signup' },
   },
   {

@@ -38,6 +38,8 @@ export const PAGES: [path: string, h1: RegExp][] = [
   ['/contact', /Une question \? Parlons-en/],
   ['/a-propos', /Un outil moderne/],
   ['/aide', /Comment pouvons-nous vous aider/],
+  ['/quest-ce-que-paysapro-ai', /Qu’est-ce que Paysapro AI/],
+  ['/blog/choisir-logiciel-devis-paysagiste', /choisir un logiciel de devis paysagiste/],
   ['/logiciel-devis-paysagiste', /logiciel de devis pensé pour les paysagistes/],
   ['/logiciel-gestion-paysagiste', /Clients, chantiers, devis/],
   ['/application-paysagiste', /application de chantier du paysagiste/],

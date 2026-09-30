@@ -6,6 +6,7 @@ import { AppCta } from '../components/AppLink';
 import { Container } from '../components/ui';
 import { MARKETING_CONFIG } from '../config/marketing';
 import NotFoundPage from './NotFoundPage';
+import { Essentiel } from '../components/Essentiel';
 
 const dateFmt = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
@@ -62,6 +63,12 @@ function Article({ article }: { article: BlogArticle }) {
             </span>
           )}
         </p>
+
+        {article.summary && (
+          <div className="mt-8">
+            <Essentiel items={article.summary} />
+          </div>
+        )}
 
         <div className="mt-10 space-y-8 text-[1.08rem] leading-[1.75] text-ink">
           {article.body?.map((block, i) => (

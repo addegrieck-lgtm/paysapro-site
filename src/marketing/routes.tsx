@@ -32,6 +32,7 @@ export const ROUTE_PATHS = [
   '/contact',
   '/a-propos',
   '/aide',
+  '/quest-ce-que-paysapro-ai',
   '/logiciel-devis-paysagiste',
   '/logiciel-gestion-paysagiste',
   '/application-paysagiste',

@@ -4,6 +4,11 @@
     "description": "Paysapro AI, le logiciel de devis pour paysagistes : photos du chantier, métrés, catalogue de prix, devis professionnel et signature du client, sur mobile.",
     "priority": "1.0"
   },
+  "/quest-ce-que-paysapro-ai": {
+    "title": "Qu’est-ce que Paysapro AI ? Présentation | Paysapro AI",
+    "description": "Paysapro AI en bref : logiciel de devis pour paysagistes, fonctionnalités, public, fonctionnement, limites et tarifs. Tout ce qu’il faut savoir.",
+    "priority": "0.8"
+  },
   "/fonctionnalites": {
     "title": "Fonctionnalités — Logiciel de devis paysagiste | Paysapro AI",
     "description": "Photos de chantier, calcul des surfaces, catalogue tarifaire, devis professionnels, signature client, tableau de bord : les fonctionnalités de Paysapro AI.",

@@ -14,6 +14,7 @@ import { DashboardMockup } from '../components/mockups/DashboardMockup';
 import { CatalogMockup } from '../components/mockups/CatalogMockup';
 import { SapAttestationMockup } from '../components/mockups/SapAttestationMockup';
 import { FinalCTA } from '../sections/FinalCTA';
+import { Essentiel } from '../components/Essentiel';
 import NotFoundPage from './NotFoundPage';
 
 function Visual({ kind }: { kind: LandingVisual }) {
@@ -42,6 +43,10 @@ export default function LandingPage({ path }: { path: string }) {
           Voir comment ça marche
         </ButtonLink>
       </PageHeader>
+
+      <Container className="max-w-4xl pb-14">
+        <Essentiel items={landing.summary} />
+      </Container>
 
       <Container className="grid gap-12 pb-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div className="space-y-12">

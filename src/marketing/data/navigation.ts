@@ -30,6 +30,7 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
   {
     title: 'Entreprise',
     links: [
+      { label: 'Qu’est-ce que Paysapro AI ?', to: '/quest-ce-que-paysapro-ai' },
       { label: 'À propos', to: '/a-propos' },
       { label: 'Contact', to: '/contact' },
     ],

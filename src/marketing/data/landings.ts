@@ -17,6 +17,8 @@ export interface Landing {
   eyebrow: string;
   h1: string;
   intro: string;
+  /** « L’essentiel » : 3 à 5 phrases qui répondent directement (repris par les moteurs et assistants IA) */
+  summary: string[];
   visual: LandingVisual;
   sections: LandingSection[];
   faq: { question: string; answer: string }[];
@@ -31,6 +33,12 @@ export const LANDINGS: Landing[] = [
     h1: 'Le logiciel de devis pensé pour les paysagistes.',
     intro:
       'Paysapro AI transforme votre visite de chantier en devis professionnel : photos, métrés, prestations issues de votre catalogue, total TTC et signature du client. Le tout depuis votre téléphone.',
+    summary: [
+      "Paysapro AI est un logiciel de devis conçu pour les paysagistes, utilisable depuis un smartphone.",
+      "Il calcule les surfaces, linéaires et volumes à partir de vos mesures, et applique les prix de votre propre catalogue.",
+      "Le devis reprend vos informations d’entreprise, la TVA, l’acompte et vos conditions ; le client peut le signer en ligne.",
+      "L’accès est gratuit pendant la phase bêta."
+    ],
     visual: 'quote',
     sections: [
       {
@@ -102,6 +110,12 @@ export const LANDINGS: Landing[] = [
     h1: 'Clients, chantiers, devis : tout au même endroit.',
     intro:
       'Paysapro AI est un logiciel de gestion simple pour les entreprises du paysage : chaque chantier regroupe son client, ses photos, ses métrés, son devis et son suivi, accessibles depuis le téléphone comme depuis le bureau.',
+    summary: [
+      "Paysapro AI réunit clients, chantiers, photos, catalogue de prix et devis dans un seul outil.",
+      "Un tableau de bord montre les devis en attente et les devis signés.",
+      "Planning des chantiers, statistiques et travail en équipe avec des rôles sont disponibles.",
+      "Il fonctionne sur smartphone, tablette et ordinateur, avec les mêmes données."
+    ],
     visual: 'dashboard',
     sections: [
       {
@@ -160,6 +174,11 @@ export const LANDINGS: Landing[] = [
     h1: 'L’application de chantier du paysagiste.',
     intro:
       'Paysapro AI s’utilise là où vous travaillez : dans le jardin du client. Photos, mesures, prestations et devis se préparent depuis votre smartphone, sans attendre le soir pour tout ressaisir.',
+    summary: [
+      "Paysapro AI s’utilise dans le navigateur du téléphone, sur iPhone comme sur Android, sans installation.",
+      "Sur le chantier : photos, mesures, surfaces calculées et prestations issues de votre catalogue.",
+      "Le devis se prépare sur place et se retrouve ensuite sur ordinateur."
+    ],
     visual: 'phone',
     sections: [
       {
@@ -218,6 +237,12 @@ export const LANDINGS: Landing[] = [
     h1: 'Exemple de devis paysagiste, commenté ligne par ligne.',
     intro:
       'Voici à quoi ressemble un devis de paysagiste complet, et pourquoi chaque rubrique s’y trouve. Vous pouvez vous en inspirer pour votre propre modèle, ou le générer directement dans Paysapro AI avec vos prestations et vos prix.',
+    summary: [
+      "Un devis paysagiste comprend l’en-tête de l’entreprise, le client et le chantier, le détail des prestations, les totaux HT, TVA et TTC, l’acompte, les conditions et la signature.",
+      "Chaque prestation indique une quantité, une unité (m², ml, m³, unité, heure) et un prix.",
+      "Les travaux de jardinage et de maçonnerie paysagère doivent aussi préciser la gestion des déchets du chantier.",
+      "Les quantités incertaines sont signalées comme estimées, à confirmer par un métré."
+    ],
     visual: 'quote',
     sections: [
       {
@@ -291,6 +316,12 @@ export const LANDINGS: Landing[] = [
     h1: 'Devis SAP et attestation fiscale, générés pour vous.',
     intro:
       'Vous êtes déclaré en services à la personne pour l’entretien de jardins ? Paysapro AI ajoute les informations SAP sur vos devis et génère lui-même, en PDF, l’attestation fiscale annuelle de chaque client.',
+    summary: [
+      "Paysapro AI propose un mode SAP pour les entreprises déclarées en services à la personne.",
+      "Vous marquez vos prestations éligibles ; le devis reprend votre numéro SAP et distingue les montants concernés.",
+      "L’application génère elle-même le PDF de l’attestation fiscale annuelle de chaque client, à partir des règlements enregistrés.",
+      "Elle signale les informations manquantes au lieu de les inventer."
+    ],
     visual: 'sap',
     sections: [
       {
@@ -356,6 +387,85 @@ export const LANDINGS: Landing[] = [
       { label: 'Attestation fiscale SAP jardinage : le guide du paysagiste', to: '/blog/attestation-fiscale-sap-jardinage' },
       { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
       { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
+    ],
+  },
+  {
+    path: '/quest-ce-que-paysapro-ai',
+    eyebrow: 'Présentation',
+    h1: 'Qu’est-ce que Paysapro AI ?',
+    intro:
+      'Paysapro AI est un logiciel de devis et de gestion de chantiers pour les paysagistes. Il permet de passer de la visite du chantier à un devis professionnel signé par le client, depuis un smartphone.',
+    summary: [
+      'Paysapro AI est un logiciel de devis en ligne pour les paysagistes et les entreprises d’aménagement extérieur.',
+      'Il sert à photographier le chantier, mesurer, chiffrer avec ses propres prix, générer le devis et le faire signer en ligne.',
+      'Il propose aussi un mode services à la personne qui génère l’attestation fiscale annuelle en PDF.',
+      'Il fonctionne sur smartphone, tablette et ordinateur, sans installation.',
+      'L’accès est gratuit pendant la phase bêta ; des offres payantes sont prévues ensuite.',
+    ],
+    visual: 'phone',
+    sections: [
+      {
+        heading: 'Ce que fait Paysapro AI',
+        list: [
+          'Fiches clients et dossiers de chantier.',
+          'Photos du chantier, rangées avec le bon client.',
+          'Mesures et calcul des surfaces, linéaires et volumes.',
+          'Catalogue de prestations avec vos unités, prix de vente et coûts.',
+          'Devis professionnels en PDF, à vos couleurs, et modèles de devis.',
+          'Lien client : consultation et signature du devis en ligne.',
+          'Planning des chantiers, statistiques, suivi de la marge.',
+          'Mode services à la personne avec attestation fiscale annuelle.',
+          'Travail en équipe, avec plusieurs utilisateurs et des rôles.',
+          'Un assistant qui suggère des prestations, toujours à valider.',
+        ],
+      },
+      {
+        heading: 'À qui s’adresse Paysapro AI ?',
+        paragraphs: [
+          'Aux paysagistes indépendants et aux entreprises du paysage de 1 à 20 personnes : création de jardins, aménagement extérieur, entretien d’espaces verts, terrasses, clôtures, plantations, engazonnement et aménagements minéraux.',
+        ],
+      },
+      {
+        heading: 'Comment fonctionne Paysapro AI ?',
+        list: [
+          'Créez le client et le chantier.',
+          'Prenez les photos et saisissez les dimensions.',
+          'Ajoutez les prestations depuis votre catalogue : les quantités sont reprises des mesures.',
+          'Vérifiez l’aperçu du devis puis envoyez-le.',
+          'Le client consulte le devis et le signe en ligne ; vous suivez son statut.',
+        ],
+      },
+      {
+        heading: 'Ce que Paysapro AI ne fait pas',
+        paragraphs: [
+          'Paysapro AI est centré sur le chantier et le devis : il ne tient pas votre comptabilité et n’établit pas de factures. Il ne gère pas l’avance immédiate de crédit d’impôt des services à la personne. Et son assistant ne fixe pas les prix à votre place : les quantités, les prix et le devis final restent sous votre contrôle.',
+        ],
+      },
+      {
+        heading: 'Combien coûte Paysapro AI ?',
+        paragraphs: [
+          'L’accès est gratuit pendant la phase bêta, avec toutes les fonctionnalités. Des offres payantes sont prévues ensuite (Starter, Pro et Business, au mois ou à l’année) ; les utilisateurs seront informés avant toute évolution payante. Le détail est sur la page Tarifs.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Paysapro AI est-il un logiciel ou une application ?',
+        answer: 'Les deux : c’est un logiciel en ligne qui s’utilise dans le navigateur, sur ordinateur comme sur téléphone, et qui peut être ajouté à l’écran d’accueil du téléphone comme une application.',
+      },
+      {
+        question: 'Qui édite Paysapro AI ?',
+        answer: 'Paysapro AI est développé avec les retours de professionnels du paysage qui testent la bêta. Les informations sur l’éditeur figurent dans les mentions légales.',
+      },
+      {
+        question: 'Où sont stockées les données ?',
+        answer: 'Les données de votre compte sont enregistrées dans une base de données en ligne, accessible uniquement aux membres de votre entreprise.',
+      },
+    ],
+    related: [
+      { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
+      { label: 'Tarifs', to: '/tarifs' },
+      { label: 'Comment choisir un logiciel de devis paysagiste ?', to: '/blog/choisir-logiciel-devis-paysagiste' },
     ],
   },
 ];

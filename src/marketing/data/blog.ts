@@ -21,6 +21,8 @@ export interface BlogArticle {
   /** AAAA-MM-JJ — à renseigner quand l'article est modifié */
   updatedAt?: string;
   readingMinutes?: number;
+  /** « L’essentiel » : réponses directes en tête d’article */
+  summary?: string[];
   /** liens internes affichés en fin d'article */
   links?: { label: string; to: string }[];
   body?: BlogBlock[];
@@ -39,6 +41,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       { label: 'Exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
       { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
       { label: 'Calculateurs gratuits : surface, volume, clôture', to: '/outils' },
+    ],
+    summary: [
+      "Un bon devis paysagiste part d’une visite avec photos et mesures précises.",
+      "Il détaille chaque prestation avec une quantité, une unité et un prix, sans oublier préparation, évacuation et déplacements.",
+      "Il indique les mentions de l’entreprise, les totaux HT, TVA et TTC, l’acompte, la validité, la gestion des déchets et la signature du client."
     ],
     body: [
       {
@@ -127,6 +134,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       { label: 'Calculateur de surface gratuit', to: '/outils/calcul-surface' },
       { label: 'Calculateur de volume : terre, gravier, béton', to: '/outils/calcul-volume' },
     ],
+    summary: [
+      "Rectangle : longueur × largeur. Forme en L : somme de deux rectangles. Triangle : base × hauteur ÷ 2. Cercle : π × rayon².",
+      "Ajoutez une marge de chutes, souvent de 5 à 10 %, pour la quantité à commander.",
+      "Volume de fondation ou de lit de pose : surface × épaisseur en mètres."
+    ],
     body: [
       {
         paragraphs: [
@@ -189,6 +201,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     links: [
       { label: 'Calculateur de clôture : poteaux et panneaux', to: '/outils/calcul-cloture' },
       { label: 'Exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
+    ],
+    summary: [
+      "Nombre de poteaux = longueur ÷ entraxe, arrondi à l’entier supérieur, plus un.",
+      "Le prix total additionne fournitures, travaux annexes (dépose, terrassement, évacuation), main-d’œuvre et déplacements, puis la TVA.",
+      "Partez de vos propres coûts et de votre taux horaire plutôt que d’un prix moyen."
     ],
     body: [
       {
@@ -258,6 +275,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       { label: 'Le mode SAP de Paysapro AI : devis et attestation fiscale', to: '/logiciel-paysagiste-services-a-la-personne' },
       { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
     ],
+    summary: [
+      "L’attestation fiscale récapitule ce que le client a réellement payé dans l’année pour des services à la personne.",
+      "Elle se remet au début de l’année suivante, à temps pour la déclaration de revenus du client.",
+      "Seuls les petits travaux de jardinage couverts par votre déclaration SAP sont concernés, pas les travaux de création."
+    ],
     body: [
       {
         paragraphs: [
@@ -309,6 +331,81 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         paragraphs: [
           'La méthode la plus simple consiste à enregistrer les informations au moment où elles existent : marquer les prestations SAP dès le devis, noter les interventions, saisir chaque règlement avec sa date et son mode de paiement. En fin d’année, l’attestation n’est plus qu’une addition.',
           'C’est le principe du mode SAP de Paysapro AI : vous cochez vos prestations éligibles dans votre catalogue, le devis distingue les montants concernés, et l’application génère elle-même le PDF de l’attestation de chaque client à partir des règlements enregistrés. S’il manque une information, elle vous la signale au lieu de l’inventer.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'choisir-logiciel-devis-paysagiste',
+    title: 'Comment choisir un logiciel de devis paysagiste ?',
+    excerpt: 'Les critères qui comptent vraiment pour un paysagiste : unités métier, usage sur le chantier, catalogue de prix, signature, SAP, prix et données.',
+    keywords: ['logiciel devis paysagiste', 'choisir logiciel paysagiste', 'comparatif logiciel paysagiste'],
+    publishedAt: '2026-10-01',
+    readingMinutes: 6,
+    summary: [
+      'Choisissez un logiciel qui parle le langage du paysage : m², ml, m³, unités et heures.',
+      'Vérifiez qu’il s’utilise vraiment sur le chantier, depuis un téléphone.',
+      'Regardez le catalogue de prix, la présentation du devis, la signature en ligne et, si vous êtes concerné, le mode services à la personne.',
+      'Testez-le sur un vrai devis avant de vous engager, et vérifiez ce qu’il ne fait pas.',
+    ],
+    links: [
+      { label: 'Qu’est-ce que Paysapro AI ?', to: '/quest-ce-que-paysapro-ai' },
+      { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
+      { label: 'Tarifs', to: '/tarifs' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Il existe de nombreux logiciels de devis. Certains sont généralistes, d’autres conçus pour le bâtiment, quelques-uns pour le paysage. Pour choisir, le plus simple est de partir de votre façon de travailler plutôt que de la liste des fonctionnalités.',
+        ],
+      },
+      {
+        heading: '1. Des unités et un vocabulaire de paysagiste',
+        paragraphs: [
+          'Un devis de paysage mélange des surfaces (gazon, terrasse), des linéaires (clôture, bordures), des volumes (terre végétale, gravier), des unités (végétaux) et des heures. Vérifiez que le logiciel gère naturellement ces unités et qu’il calcule les quantités à partir de vos mesures.',
+        ],
+      },
+      {
+        heading: '2. Un vrai usage sur le chantier',
+        paragraphs: [
+          'Si vous préparez vos devis le soir, c’est souvent parce que l’outil n’est pas utilisable sur place. Testez le logiciel sur votre téléphone, en extérieur : prise de photos, saisie des mesures, choix des prestations. Les boutons doivent être grands et la saisie courte.',
+        ],
+      },
+      {
+        heading: '3. Votre catalogue de prix',
+        paragraphs: [
+          'Vos prix sont votre métier. Le logiciel doit vous laisser créer vos prestations, avec leur unité, leur prix de vente et leur coût, puis les réutiliser sur chaque devis. Méfiez-vous des prix « moyens » imposés : ils ne tiennent compte ni de vos charges, ni de votre région.',
+        ],
+      },
+      {
+        heading: '4. Un devis présentable et une signature simple',
+        list: [
+          'Le devis reprend-il votre logo, vos mentions et vos conditions ?',
+          'Peut-on y joindre les photos du chantier ?',
+          'Le client peut-il le consulter et le signer en ligne ?',
+          'Voyez-vous quand le devis a été envoyé, consulté et signé ?',
+        ],
+      },
+      {
+        heading: '5. Les besoins propres à votre activité',
+        list: [
+          'Services à la personne : mentions SAP sur le devis et attestation fiscale annuelle.',
+          'Travail en équipe : plusieurs utilisateurs, avec des droits différents.',
+          'Suivi : planning des chantiers, statistiques, marge par devis.',
+          'Facturation et comptabilité : certains logiciels les intègrent, d’autres non ; vérifiez comment l’outil s’articule avec votre expert-comptable.',
+        ],
+      },
+      {
+        heading: '6. Le prix, l’engagement et vos données',
+        paragraphs: [
+          'Comparez le prix mensuel, le nombre d’utilisateurs inclus et la durée d’engagement. Vérifiez aussi où sont hébergées vos données, si vous pouvez les récupérer, et ce qui se passe si vous arrêtez l’abonnement.',
+        ],
+      },
+      {
+        heading: '7. Tester sur un vrai devis',
+        paragraphs: [
+          'Le meilleur test reste de refaire un devis récent avec le logiciel : combien de temps faut-il, le résultat est-il présentable, le client comprend-il le document ? Une version d’essai ou une bêta gratuite permet de le faire sans risque.',
+          'Paysapro AI est conçu autour de ces critères pour les paysagistes : mesures et unités du métier, usage sur téléphone, catalogue de prix, devis signé en ligne et mode services à la personne. Il ne fait pas de facturation ni de comptabilité. Son accès est gratuit pendant la bêta.',
         ],
       },
     ],
