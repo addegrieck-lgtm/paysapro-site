@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { SIGNUP, renderAt, renderPage } from './utils';
-import { BETA_PLAN, FUTURE_PLANS, formatPlanPrice, visiblePlans } from '../src/marketing/config/pricing';
+import { BETA_PLAN, FUTURE_PLANS, formatPlanPrice, formatYearlyPrice, visiblePlans, yearlyPrice, YEARLY_DISCOUNT_PERCENT } from '../src/marketing/config/pricing';
 
 describe('FAQ', () => {
   it('ouvre une réponse et envoie faq_opened', async () => {
@@ -34,13 +34,24 @@ describe('Tarifs', () => {
     expect(screen.getByText(/informés avant toute évolution payante/)).toBeInTheDocument();
   });
 
-  it('les plans futurs sont prêts mais non affichés pendant la bêta', () => {
+  it('pendant la bêta, l’offre active reste la bêta ; les offres futures sont annoncées avec leurs prix', async () => {
     expect(visiblePlans()).toEqual([BETA_PLAN]);
     expect(visiblePlans('plans').map((p) => p.id)).toEqual(['starter', 'pro', 'business']);
-    for (const p of FUTURE_PLANS) {
-      expect(p.stripePriceId).toBeFalsy(); // aucun paiement configuré
-      expect(formatPlanPrice(p).amount).toBe('Bientôt'); // aucun prix inventé
-    }
+    expect(FUTURE_PLANS.map((p) => formatPlanPrice(p).amount)).toEqual(['19 €', '39 €', '69 €']);
+    for (const p of FUTURE_PLANS) expect(p.stripePriceId).toBeFalsy(); // aucun paiement sur le site
+
+    await renderPage('/tarifs');
+    const pro = screen.getByRole('article', { name: 'Offre Pro' });
+    expect(within(pro).getByText('39 €')).toBeInTheDocument();
+    expect(within(pro).getByText(/351 € HT \/ an \(−25 %\)/)).toBeInTheDocument();
+    expect(within(pro).getByText('soit 29,25 € HT / mois')).toBeInTheDocument();
+    expect(within(pro).queryByRole('link')).toBeNull(); // information seulement
+  });
+
+  it('paiement à l’année : 25 % de réduction sur 12 mois', () => {
+    expect(YEARLY_DISCOUNT_PERCENT).toBe(25);
+    expect(FUTURE_PLANS.map(yearlyPrice)).toEqual([171, 351, 621]);
+    expect(formatYearlyPrice(BETA_PLAN)).toBeNull();
   });
 
   it('aucun lien de paiement sur le site', () => {
