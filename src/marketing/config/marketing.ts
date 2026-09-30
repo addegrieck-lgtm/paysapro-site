@@ -50,7 +50,7 @@ export const CONTACT = {
   email: clean(env.VITE_CONTACT_EMAIL),
   phone: clean(env.VITE_CONTACT_PHONE),
   /** Ajouter ici les réseaux sociaux lorsqu'ils existent réellement. */
-  socials: [] as { label: string; url: string }[],
+  socials: [{ label: 'YouTube', url: 'https://www.youtube.com/@PAYSAPRO-AI' }] as { label: string; url: string }[],
 };
 
 export const DEMO_VIDEO_URL = clean(env.VITE_DEMO_VIDEO_URL);

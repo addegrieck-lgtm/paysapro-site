@@ -1,4 +1,4 @@
-import { Mail, Phone, Sparkles } from 'lucide-react';
+import { Mail, Phone, Play, Sparkles } from 'lucide-react';
 import { useSearchParams } from 'react-router';
 import { usePageMeta } from '../components/usePageMeta';
 import { PageHeader } from '../components/PageHeader';
@@ -50,8 +50,9 @@ export default function ContactPage() {
                 )}
                 {CONTACT.socials.map((s) => (
                   <li key={s.url}>
-                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-ink hover:text-brand">
-                      {s.label}
+                    <a href={s.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-semibold text-ink hover:text-brand">
+                      <Play className="h-5 w-5 text-brand" aria-hidden="true" /> Notre chaîne {s.label}
+                      <span className="sr-only"> (nouvel onglet)</span>
                     </a>
                   </li>
                 ))}

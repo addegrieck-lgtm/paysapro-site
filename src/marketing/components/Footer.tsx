@@ -1,4 +1,5 @@
 import { Link } from 'react-router';
+import { Play } from 'lucide-react';
 import { FOOTER_NAV } from '../data/navigation';
 import { CONTACT, SITE } from '../config/marketing';
 import { AppCta } from './AppLink';
@@ -62,8 +63,10 @@ export function Footer() {
               </a>
             )}
             {CONTACT.socials.map((s) => (
-              <a key={s.url} href={s.url} className="hover:text-white" rel="noopener noreferrer" target="_blank">
+              <a key={s.url} href={s.url} className="inline-flex items-center gap-1.5 hover:text-white" rel="noopener noreferrer" target="_blank">
+                <Play className="h-3.5 w-3.5" aria-hidden="true" />
                 {s.label}
+                <span className="sr-only"> (nouvel onglet)</span>
               </a>
             ))}
             <span>Conçu pour les professionnels du paysage.</span>
