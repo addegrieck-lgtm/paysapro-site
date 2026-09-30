@@ -31,6 +31,9 @@ jobs:
       VITE_GOOGLE_SITE_VERIFICATION: ${{ vars.VITE_GOOGLE_SITE_VERIFICATION || 'AA9_a54XnvsSvQZZcwnFhanI9wXboikO9gnkC8nWukU' }}
       VITE_CONTACT_EMAIL: ${{ vars.VITE_CONTACT_EMAIL }}
       VITE_LEAD_ENDPOINT: ${{ vars.VITE_LEAD_ENDPOINT }}
+      # Formulaires → table Supabase site_messages. Clé PUBLIQUE (publishable) : insertion seule, protégée par RLS.
+      VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL || 'https://zyxnpytmccmllxwhzvih.supabase.co' }}
+      VITE_SUPABASE_PUBLISHABLE_KEY: ${{ vars.VITE_SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_k5i8_JjrfgHDLc9rZiVgqA_1AUTGnSc' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
