@@ -1,4 +1,4 @@
-import { LEAD_ENDPOINT } from '../config/marketing';
+import { LEAD_ENDPOINT, SUPABASE } from '../config/marketing';
 
 /**
  * Abstraction d'envoi des formulaires (contact, nouveautés).
@@ -84,14 +84,60 @@ export class HttpLeadProvider implements LeadProvider {
   }
 }
 
+/**
+ * Enregistre les messages dans la table Supabase `site_messages` (voir supabase/site_messages.sql).
+ * Clé publique + règle RLS « insertion seule » : le site peut écrire, personne ne peut lire avec cette clé.
+ */
+export class SupabaseLeadProvider implements LeadProvider {
+  name = 'supabase';
+  constructor(
+    private url: string,
+    private key: string,
+  ) {}
+
+  private async insert(row: Record<string, unknown>): Promise<LeadResult> {
+    try {
+      const res = await fetch(`${this.url}/rest/v1/site_messages`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', apikey: this.key, Authorization: `Bearer ${this.key}`, Prefer: 'return=minimal' },
+        body: JSON.stringify(row),
+      });
+      if (!res.ok) return { ok: false, error: 'Le message n’a pas pu être envoyé. Réessayez dans un instant.' };
+      return { ok: true };
+    } catch {
+      return { ok: false, error: 'Connexion impossible. Vérifiez votre réseau puis réessayez.' };
+    }
+  }
+  sendContact(p: ContactPayload) {
+    return this.insert({
+      type: 'contact',
+      email: p.email.trim(),
+      name: p.name.trim(),
+      company: p.company.trim(),
+      phone: p.phone?.trim() || null,
+      company_type: p.companyType,
+      employees: p.employees,
+      topic: p.topic ?? null,
+      message: p.message.trim(),
+    });
+  }
+  subscribe(p: NewsletterPayload) {
+    return this.insert({ type: 'newsletter', email: p.email.trim(), consent: p.consent });
+  }
+}
+
 let current: LeadProvider | null = null;
 
 export function getLeadProvider(): LeadProvider {
-  if (!current) current = LEAD_ENDPOINT ? new HttpLeadProvider(LEAD_ENDPOINT) : new MockLeadProvider();
+  if (!current) {
+    if (LEAD_ENDPOINT) current = new HttpLeadProvider(LEAD_ENDPOINT);
+    else if (SUPABASE.url && SUPABASE.publishableKey) current = new SupabaseLeadProvider(SUPABASE.url, SUPABASE.publishableKey);
+    else current = new MockLeadProvider();
+  }
   return current;
 }
 
-/** Pour les tests ou un futur SupabaseLeadProvider / BrevoLeadProvider. */
+/** Pour les tests ou un futur fournisseur (Brevo, Resend…). */
 export function setLeadProvider(provider: LeadProvider) {
   current = provider;
 }

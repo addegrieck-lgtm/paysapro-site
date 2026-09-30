@@ -69,3 +69,33 @@ describe('nouveautés (lead capture)', () => {
     expect(await screen.findByText(/C’est noté, merci/)).toBeInTheDocument();
   });
 });
+
+describe('SupabaseLeadProvider', () => {
+  it('insère dans site_messages avec la clé publique, sans relire la ligne', async () => {
+    const { SupabaseLeadProvider } = await import('../src/marketing/leads/LeadProvider');
+    const calls: { url: string; init: RequestInit }[] = [];
+    const original = globalThis.fetch;
+    globalThis.fetch = (async (url: string, init: RequestInit) => {
+      calls.push({ url, init });
+      return new Response(null, { status: 201 });
+    }) as typeof fetch;
+    try {
+      const p = new SupabaseLeadProvider('https://projet.supabase.co', 'sb_publishable_test');
+      const res = await p.sendContact({ name: ' Jean ', company: 'Jardins', email: 'jean@exemple.fr', phone: '', message: 'Bonjour à vous', companyType: 'Autre', employees: 'Seul(e)' });
+      expect(res).toEqual({ ok: true });
+      expect(calls[0]!.url).toBe('https://projet.supabase.co/rest/v1/site_messages');
+      const headers = calls[0]!.init.headers as Record<string, string>;
+      expect(headers.apikey).toBe('sb_publishable_test');
+      expect(headers.Prefer).toBe('return=minimal');
+      expect(JSON.parse(calls[0]!.init.body as string)).toMatchObject({ type: 'contact', name: 'Jean', phone: null, company_type: 'Autre' });
+
+      await p.subscribe({ email: 'jean@exemple.fr', consent: true });
+      expect(JSON.parse(calls[1]!.init.body as string)).toEqual({ type: 'newsletter', email: 'jean@exemple.fr', consent: true });
+
+      globalThis.fetch = (async () => new Response(null, { status: 401 })) as typeof fetch;
+      expect((await p.subscribe({ email: 'a@b.fr', consent: true })).ok).toBe(false);
+    } finally {
+      globalThis.fetch = original;
+    }
+  });
+});

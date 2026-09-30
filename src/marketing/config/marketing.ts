@@ -57,6 +57,12 @@ export const DEMO_VIDEO_URL = clean(env.VITE_DEMO_VIDEO_URL);
 
 export const LEAD_ENDPOINT = clean(env.VITE_LEAD_ENDPOINT);
 
+/** Supabase : URL du projet + clé PUBLIQUE (publishable/anon). Jamais la clé secrète. */
+export const SUPABASE = {
+  url: clean(env.VITE_SUPABASE_URL).replace(/\/+$/, ''),
+  publishableKey: clean(env.VITE_SUPABASE_PUBLISHABLE_KEY),
+};
+
 export type AnalyticsProviderName = 'none' | 'console' | 'plausible';
 
 export const ANALYTICS = {

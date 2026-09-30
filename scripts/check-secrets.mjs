@@ -13,6 +13,7 @@ const PATTERNS = [
   [/rk_(live|test)_[0-9a-zA-Z]{10,}/, 'Clé restreinte Stripe'],
   [/whsec_[0-9a-zA-Z]{10,}/, 'Secret de webhook Stripe'],
   [/service_role/i, 'Mention de clé Supabase service_role'],
+  [/sb_secret_[A-Za-z0-9_-]{8,}/, 'Clé secrète Supabase'],
   [/eyJ[a-zA-Z0-9_-]{10,}\.eyJ[a-zA-Z0-9_-]{10,}\.[a-zA-Z0-9_-]{10,}/, 'Jeton JWT'],
   [/re_[A-Za-z0-9]{8,}_[A-Za-z0-9]{8,}/, 'Clé API Resend'],
   [/xkeysib-[a-f0-9]{20,}/, 'Clé API Brevo'],
