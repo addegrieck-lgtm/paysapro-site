@@ -5,6 +5,14 @@ import { Reveal } from '../components/Reveal';
 import { Container, Section, SectionHeading } from '../components/ui';
 import { MARKETING_CONFIG } from '../config/marketing';
 
+const RESOURCES = [
+  { label: 'Calcul de surface', to: '/outils/calcul-surface' },
+  { label: 'Calcul de volume', to: '/outils/calcul-volume' },
+  { label: 'Calcul de clôture', to: '/outils/calcul-cloture' },
+  { label: 'Modèle de devis paysagiste', to: '/modele-devis-paysagiste' },
+  { label: 'Logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
+];
+
 /** Derniers articles : maillage interne vers le blog (affiché seulement s'il y a des articles publiés). */
 export function BlogTeaserSection() {
   const articles = MARKETING_CONFIG.showBlog ? publishedArticles().slice(0, 3) : [];
@@ -28,6 +36,15 @@ export function BlogTeaserSection() {
                 </span>
               </Link>
             </Reveal>
+          ))}
+        </ul>
+        <ul className="mt-6 flex flex-wrap justify-center gap-2" aria-label="Ressources gratuites">
+          {RESOURCES.map((r) => (
+            <li key={r.to}>
+              <Link to={r.to} className="inline-flex min-h-11 items-center rounded-full bg-white px-4 text-sm font-semibold text-ink ring-1 ring-line hover:ring-brand/40">
+                {r.label}
+              </Link>
+            </li>
           ))}
         </ul>
       </Container>

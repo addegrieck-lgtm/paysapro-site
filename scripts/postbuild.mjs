@@ -2,7 +2,7 @@
 //  - pré-rend chaque page en HTML statique (le contenu est lisible sans JavaScript → SEO) ;
 //  - écrit title / description / canonical / OpenGraph / données structurées propres à chaque page ;
 //  - génère sitemap.xml, robots.txt et 404.html.
-import { readFileSync, writeFileSync, mkdirSync, rmSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, rmSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadEnv } from 'vite';
@@ -21,10 +21,17 @@ const { render, seoPages } = await import(pathToFileURL(join(root, 'dist-ssr', '
 const template = readFileSync(join(dist, 'index.html'), 'utf8');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
+// Préchargement des deux polices du premier écran (texte affiché plus vite, meilleur LCP).
+const assetBase = (template.match(/href="([^"]*\/assets\/)[^"]+\.css"/) || [])[1] || '/assets/';
+const fontPreloads = readdirSync(join(dist, 'assets'))
+  .filter((f) => /^(inter|manrope)-latin-wght-normal-.*\.woff2$/.test(f))
+  .map((f) => `<link rel="preload" as="font" type="font/woff2" crossorigin href="${assetBase}${f}" />`);
+
 async function page(path, { title, description, jsonLd }, { noindex = false } = {}) {
   const url = `${siteUrl}${path === '/' ? '/' : path}`;
   const appHtml = await render(path);
   const extraHead = [
+    ...fontPreloads,
     googleVerification ? `<meta name="google-site-verification" content="${esc(googleVerification)}" />` : '',
     ...(jsonLd?.(siteUrl) ?? []).map((d) => `<script type="application/ld+json">${JSON.stringify(d).replace(/</g, '\\u003c')}</script>`),
   ]
@@ -50,15 +57,17 @@ const pages = seoPages();
 for (const p of pages) {
   const file = join(dist, p.path === '/' ? 'index.html' : `${p.path.slice(1)}.html`);
   mkdirSync(dirname(file), { recursive: true });
-  const html = await page(p.path, p);
+  const html = await page(p.path, p, { noindex: p.noindex });
   if (!/<h1[\s>]/.test(html)) throw new Error(`Pré-rendu incomplet (pas de <h1>) : ${p.path}`);
   writeFileSync(file, html);
-  // /blog : le dossier blog/ existe (articles) → fournir aussi blog/index.html pour les hébergeurs qui redirigent vers /blog/
-  if (pages.some((o) => o.path.startsWith(p.path + '/')) && p.path !== '/') {
+  // Même page à l'adresse avec « / » final (/tarifs/) : évite une erreur 404 ; la balise canonical
+  // désigne l'adresse sans « / » comme adresse officielle.
+  if (p.path !== '/') {
     mkdirSync(join(dist, p.path.slice(1)), { recursive: true });
     writeFileSync(join(dist, p.path.slice(1), 'index.html'), html);
   }
 }
+const indexable = pages.filter((p) => !p.noindex);
 
 // 404 : servie par l'hébergeur pour les URL inconnues (GitHub Pages, Vercel)
 writeFileSync(
@@ -71,7 +80,7 @@ writeFileSync(
   join(dist, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages
+${indexable
   .map(
     (p) => `  <url>
     <loc>${siteUrl}${p.path === '/' ? '/' : p.path}</loc>

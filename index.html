@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <!-- Les balises marquées data-seo sont réécrites pour chaque page par scripts/postbuild.mjs
          (et mises à jour à la navigation par usePageMeta). __SITE_URL__ = VITE_SITE_URL. -->
-    <title data-seo>Paysapro AI — Devis et gestion de chantiers pour paysagistes</title>
+    <title data-seo>Logiciel de devis pour paysagistes | Paysapro AI</title>
     <meta data-seo name="description" content="Paysapro AI aide les professionnels du paysage à préparer leurs devis, organiser leurs chantiers et faire signer leurs clients, directement depuis leur téléphone." />
     <link data-seo rel="canonical" href="__SITE_URL__/" />
     <meta name="robots" content="index, follow" />
@@ -39,8 +39,10 @@
             "@type": "Organization",
             "@id": "__SITE_URL__/#organization",
             "name": "Paysapro AI",
+            "description": "Éditeur de Paysapro AI, le logiciel de devis pour paysagistes.",
             "url": "__SITE_URL__/",
-            "logo": "__SITE_URL__/logo-512.png"
+            "logo": "__SITE_URL__/logo-512.png",
+            "areaServed": "FR"
           },
           {
             "@type": "WebSite",
@@ -49,21 +51,6 @@
             "url": "__SITE_URL__/",
             "inLanguage": "fr-FR",
             "publisher": { "@id": "__SITE_URL__/#organization" }
-          },
-          {
-            "@type": "SoftwareApplication",
-            "name": "Paysapro AI",
-            "applicationCategory": "BusinessApplication",
-            "operatingSystem": "Web, iOS, Android",
-            "description": "Logiciel de devis et de gestion de chantiers pour paysagistes : photos du chantier, métrés, catalogue tarifaire, devis professionnels et signature client.",
-            "url": "__SITE_URL__/",
-            "publisher": { "@id": "__SITE_URL__/#organization" },
-            "offers": {
-              "@type": "Offer",
-              "price": "0",
-              "priceCurrency": "EUR",
-              "description": "Accès gratuit pendant la phase bêta"
-            }
           }
         ]
       }

@@ -51,6 +51,11 @@ function Article({ article }: { article: BlogArticle }) {
               Publié le <time dateTime={article.publishedAt}>{dateFmt.format(new Date(article.publishedAt))}</time>
             </span>
           )}
+          {article.updatedAt && (
+            <span>
+              Mis à jour le <time dateTime={article.updatedAt}>{dateFmt.format(new Date(article.updatedAt))}</time>
+            </span>
+          )}
           {article.readingMinutes && (
             <span className="flex items-center gap-1">
               <Clock className="h-3.5 w-3.5" aria-hidden="true" /> {article.readingMinutes} min de lecture
@@ -88,10 +93,10 @@ function Article({ article }: { article: BlogArticle }) {
           <nav aria-label="Autres articles" className="mt-14">
             <h2 className="font-display text-xl font-extrabold text-ink">À lire aussi</h2>
             <ul className="mt-4 divide-y divide-line overflow-hidden rounded-3xl bg-white ring-1 ring-line">
-              {others.map((a) => (
-                <li key={a.slug}>
-                  <Link to={`/blog/${a.slug}`} className="group flex items-center justify-between gap-4 p-5 hover:bg-cream/60">
-                    <span className="font-semibold text-ink">{a.title}</span>
+              {[...(article.links ?? []), ...others.map((a) => ({ label: a.title, to: `/blog/${a.slug}` }))].map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="group flex items-center justify-between gap-4 p-5 hover:bg-cream/60">
+                    <span className="font-semibold text-ink">{l.label}</span>
                     <ArrowRight className="h-4 w-4 shrink-0 text-brand transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                   </Link>
                 </li>

@@ -1,12 +1,12 @@
 {
   "/": {
-    "title": "Paysapro AI — Devis et gestion de chantiers pour paysagistes",
-    "description": "Paysapro AI aide les professionnels du paysage à préparer leurs devis, organiser leurs chantiers et faire signer leurs clients, directement depuis leur téléphone.",
+    "title": "Logiciel de devis pour paysagistes | Paysapro AI",
+    "description": "Paysapro AI, le logiciel de devis pour paysagistes : photos du chantier, métrés, catalogue de prix, devis professionnel et signature du client, sur mobile.",
     "priority": "1.0"
   },
   "/fonctionnalites": {
     "title": "Fonctionnalités — Logiciel de devis paysagiste | Paysapro AI",
-    "description": "Photos de chantier, calcul des surfaces et quantités, catalogue tarifaire, devis professionnels, signature client et tableau de bord : tout ce qu'il faut pour gérer vos devis de paysagiste.",
+    "description": "Photos de chantier, calcul des surfaces, catalogue tarifaire, devis professionnels, signature client, tableau de bord : les fonctionnalités de Paysapro AI.",
     "priority": "0.9"
   },
   "/comment-ca-marche": {
@@ -14,13 +14,53 @@
     "description": "Prenez vos photos, ajoutez les dimensions, construisez votre estimation, générez le devis et faites-le signer. Découvrez le parcours Paysapro AI en 6 étapes.",
     "priority": "0.9"
   },
+  "/logiciel-devis-paysagiste": {
+    "title": "Logiciel de devis paysagiste sur mobile | Paysapro AI",
+    "description": "Logiciel de devis pour paysagiste : métrés au m² et au ml, catalogue de prix, devis professionnel et signature du client. Gratuit pendant la bêta.",
+    "priority": "0.9"
+  },
+  "/logiciel-gestion-paysagiste": {
+    "title": "Logiciel de gestion pour paysagiste | Paysapro AI",
+    "description": "Logiciel de gestion pour paysagiste : clients, chantiers, photos, catalogue de prix, devis et tableau de bord réunis dans un seul outil simple.",
+    "priority": "0.8"
+  },
+  "/application-paysagiste": {
+    "title": "Application pour paysagiste : devis sur chantier | Paysapro AI",
+    "description": "Application pour paysagiste utilisable sur le chantier : photos, mesures, prestations et devis depuis votre smartphone, sans installation.",
+    "priority": "0.8"
+  },
+  "/modele-devis-paysagiste": {
+    "title": "Modèle de devis paysagiste : exemple commenté | Paysapro AI",
+    "description": "Exemple de devis paysagiste commenté : en-tête, prestations, quantités, TVA, acompte, gestion des déchets et signature. Un modèle clair à reprendre.",
+    "priority": "0.8"
+  },
+  "/outils": {
+    "title": "Calculateurs gratuits pour paysagistes | Paysapro AI",
+    "description": "Outils de calcul gratuits pour paysagistes : surface de terrasse ou de gazon, volume de terre et de gravier, poteaux et panneaux de clôture.",
+    "priority": "0.8"
+  },
+  "/outils/calcul-surface": {
+    "title": "Calcul de surface terrasse et gazon (m²) | Paysapro AI",
+    "description": "Calculateur gratuit de surface en m² : rectangle, forme en L, triangle, cercle. Ajoutez la marge de chutes pour connaître la quantité à commander.",
+    "priority": "0.7"
+  },
+  "/outils/calcul-volume": {
+    "title": "Calcul de volume terre végétale, gravier (m³) | Paysapro AI",
+    "description": "Calculateur gratuit de volume en m³ pour la terre végétale, le gravier, le paillage ou le béton, avec estimation du poids en tonnes.",
+    "priority": "0.7"
+  },
+  "/outils/calcul-cloture": {
+    "title": "Calcul clôture : nombre de poteaux et panneaux | Paysapro AI",
+    "description": "Calculateur gratuit pour clôture : nombre de poteaux et de panneaux selon la longueur, l’entraxe et les ouvertures (portail, portillon).",
+    "priority": "0.7"
+  },
   "/tarifs": {
-    "title": "Tarifs — Accès bêta gratuit | Paysapro AI",
-    "description": "Paysapro AI est actuellement gratuit pendant la phase bêta. Découvrez ce qui est inclus et comment rejoindre la bêta.",
+    "title": "Tarifs : logiciel paysagiste gratuit en bêta | Paysapro AI",
+    "description": "Paysapro AI est gratuit pendant la phase bêta : clients, chantiers, photos, calculs, catalogue, devis et signature inclus. Sans engagement.",
     "priority": "0.8"
   },
   "/faq": {
-    "title": "Questions fréquentes | Paysapro AI",
+    "title": "FAQ — Logiciel de devis paysagiste | Paysapro AI",
     "description": "Réponses aux questions des paysagistes sur Paysapro AI : IA, tarifs, signature en ligne, utilisation sur smartphone et sur chantier.",
     "priority": "0.7"
   },
@@ -37,31 +77,35 @@
   "/aide": {
     "title": "Aide | Paysapro AI",
     "description": "Besoin d'aide pour utiliser Paysapro AI ? Retrouvez les réponses aux questions fréquentes ou contactez-nous.",
-    "priority": "0.4"
+    "priority": "0.3"
   },
   "/blog": {
     "title": "Blog — Conseils devis et chantiers pour paysagistes | Paysapro AI",
-    "description": "Bientôt : des conseils concrets pour préparer vos devis de paysagiste, calculer vos métrés et organiser vos chantiers.",
+    "description": "Conseils concrets pour les paysagistes : faire un devis, calculer une surface de terrasse, chiffrer une clôture, organiser ses chantiers.",
     "priority": "0.4"
   },
   "/mentions-legales": {
     "title": "Mentions légales | Paysapro AI",
     "description": "Mentions légales du site Paysapro AI.",
-    "priority": "0.2"
+    "priority": "0.2",
+    "noindex": true
   },
   "/confidentialite": {
     "title": "Politique de confidentialité | Paysapro AI",
     "description": "Comment Paysapro AI traite les données personnelles collectées sur ce site.",
-    "priority": "0.2"
+    "priority": "0.2",
+    "noindex": true
   },
   "/cgu": {
     "title": "Conditions générales d'utilisation | Paysapro AI",
     "description": "Conditions générales d'utilisation du site et du service Paysapro AI.",
-    "priority": "0.2"
+    "priority": "0.2",
+    "noindex": true
   },
   "/cookies": {
     "title": "Politique cookies | Paysapro AI",
     "description": "Informations sur l'utilisation des cookies sur le site Paysapro AI.",
-    "priority": "0.2"
+    "priority": "0.2",
+    "noindex": true
   }
 }

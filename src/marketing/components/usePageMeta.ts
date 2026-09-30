@@ -3,7 +3,7 @@ import pages from '../config/pages.json';
 import { SITE } from '../config/marketing';
 
 type PageMeta = { title: string; description: string };
-const PAGES = pages as Record<string, PageMeta & { priority: string }>;
+const PAGES = pages as Record<string, PageMeta & { priority: string; noindex?: boolean }>;
 
 function setMeta(selector: string, attr: 'content' | 'href', value: string) {
   const el = document.head.querySelector(selector);
@@ -17,7 +17,7 @@ function setMeta(selector: string, attr: 'content' | 'href', value: string) {
 export function usePageMeta(path: string, override?: Partial<PageMeta> & { noindex?: boolean }) {
   const title = override?.title ?? PAGES[path]?.title ?? PAGES['/']!.title;
   const description = override?.description ?? PAGES[path]?.description ?? PAGES['/']!.description;
-  const noindex = override?.noindex ?? false;
+  const noindex = override?.noindex ?? PAGES[path]?.noindex ?? false;
 
   useEffect(() => {
     document.title = title;

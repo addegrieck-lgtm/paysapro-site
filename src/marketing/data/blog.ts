@@ -18,7 +18,11 @@ export interface BlogArticle {
   keywords: string[];
   /** AAAA-MM-JJ */
   publishedAt?: string;
+  /** AAAA-MM-JJ — à renseigner quand l'article est modifié */
+  updatedAt?: string;
   readingMinutes?: number;
+  /** liens internes affichés en fin d'article */
+  links?: { label: string; to: string }[];
   body?: BlogBlock[];
 }
 
@@ -29,7 +33,13 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     excerpt: 'Les éléments indispensables d’un devis clair : métrés, prestations, main-d’œuvre, TVA et conditions.',
     keywords: ['devis paysagiste', 'logiciel devis paysagiste'],
     publishedAt: '2026-09-30',
-    readingMinutes: 5,
+    updatedAt: '2026-10-01',
+    readingMinutes: 6,
+    links: [
+      { label: 'Exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
+      { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
+      { label: 'Calculateurs gratuits : surface, volume, clôture', to: '/outils' },
+    ],
     body: [
       {
         paragraphs: [
@@ -82,6 +92,16 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         ],
       },
       {
+        heading: 'La gestion des déchets du chantier',
+        paragraphs: ['Pour les travaux de jardinage et de maçonnerie paysagère, la réglementation issue de la loi AGEC demande que le devis précise :'],
+        list: [
+          'une estimation de la quantité de déchets générés par le chantier ;',
+          'les modalités de gestion et d’enlèvement : tri, broyage sur place, évacuation ;',
+          'le ou les points de collecte prévus, avec leur nom, leur adresse et le type d’installation ;',
+          'une estimation des coûts associés.',
+        ],
+      },
+      {
         heading: '5. Signaler ce qui est estimé',
         paragraphs: [
           'Certaines quantités ne peuvent pas être connues avec certitude avant de commencer : nature du sous-sol, volume réel de déblais, longueur exacte d’une clôture en limite de propriété. Dites-le clairement sur le devis : « quantité estimée, à confirmer par métré avant travaux ». Le client l’accepte bien mieux avant qu’après.',
@@ -103,6 +123,10 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     keywords: ['surface terrasse', 'devis aménagement extérieur'],
     publishedAt: '2026-09-30',
     readingMinutes: 4,
+    links: [
+      { label: 'Calculateur de surface gratuit', to: '/outils/calcul-surface' },
+      { label: 'Calculateur de volume : terre, gravier, béton', to: '/outils/calcul-volume' },
+    ],
     body: [
       {
         paragraphs: [
@@ -162,6 +186,10 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     keywords: ['prix clôture', 'devis jardin'],
     publishedAt: '2026-09-30',
     readingMinutes: 4,
+    links: [
+      { label: 'Calculateur de clôture : poteaux et panneaux', to: '/outils/calcul-cloture' },
+      { label: 'Exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
+    ],
     body: [
       {
         paragraphs: [
