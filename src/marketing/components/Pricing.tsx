@@ -5,7 +5,7 @@ import { ButtonLink } from './ui';
 import { useAnalytics } from '../analytics/AnalyticsProvider';
 
 /**
- * Grille tarifaire générique : 1 plan (bêta) ou plusieurs (Starter / Pro / Premium).
+ * Grille tarifaire : les offres Starter / Pro / Business, chacune avec 15 jours d’essai gratuit.
  * Aucun paiement ici : les CTA mènent à l'application (ou au contact).
  */
 export function Pricing({ plans = visiblePlans(), location = 'pricing' }: { plans?: PricingPlan[]; location?: string }) {
@@ -96,6 +96,11 @@ function PlanCard({ plan, location }: { plan: PricingPlan; location: string }) {
         <span className="font-display text-6xl font-extrabold tracking-tight">{amount}</span>
         {suffix && <span className={hl ? 'text-white/70' : 'text-muted'}>{suffix}</span>}
       </p>
+      {formatYearlyPrice(plan) && (
+        <p className={`mt-1 text-sm ${hl ? 'text-white/75' : 'text-muted'}`}>
+          ou {formatYearlyPrice(plan)!.yearly} (−{YEARLY_DISCOUNT_PERCENT} %), {formatYearlyPrice(plan)!.monthlyEquivalent}
+        </p>
+      )}
       <p className={`mt-2 ${hl ? 'text-white/75' : 'text-muted'}`}>{plan.description}</p>
 
       <ul className="mt-7 grid gap-3 sm:grid-cols-2">

@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageHeader eyebrow="Contact" title="Une question ? Parlons-en." intro="Une question sur Paysapro AI, un besoin particulier, un retour sur la bêta : écrivez-nous." />
+      <PageHeader eyebrow="Contact" title="Une question ? Parlons-en." intro="Une question sur Paysapro AI, un besoin particulier, un retour sur l’outil : écrivez-nous." />
       <Container className="grid gap-8 pb-24 lg:grid-cols-[1.6fr_1fr]">
         <div className="rounded-[2rem] bg-white p-6 ring-1 ring-line sm:p-10">
           <ContactForm topic={topic} />
@@ -62,7 +62,7 @@ export default function ContactPage() {
           <div className="rounded-[2rem] bg-forest p-7 text-white">
             <Sparkles className="h-6 w-6 text-leaf" aria-hidden="true" />
             <h2 className="mt-3 font-display text-lg font-extrabold">Le plus simple : essayer</h2>
-            <p className="mt-2 text-white/75">L’accès bêta est gratuit et sans engagement. Vous pouvez commencer tout de suite depuis votre téléphone.</p>
+            <p className="mt-2 text-white/75">L’essai est gratuit pendant 15 jours, sans carte bancaire ni engagement. Vous pouvez commencer tout de suite depuis votre téléphone.</p>
             <div className="mt-5">
               <AppCta location="contact_aside" variant="light" size="md">
                 Créer mon compte

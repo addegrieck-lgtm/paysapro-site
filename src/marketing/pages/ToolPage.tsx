@@ -85,7 +85,7 @@ export default function ToolPage({ path }: { path: string }) {
 
         <aside className="rounded-3xl bg-forest p-8 text-center text-white">
           <p className="font-display text-2xl font-extrabold">Passez du métré au devis.</p>
-          <p className="mx-auto mt-2 max-w-md text-white/75">Dans Paysapro AI, vos quantités alimentent directement le devis, avec vos prestations et vos prix. Accès bêta gratuit.</p>
+          <p className="mx-auto mt-2 max-w-md text-white/75">Dans Paysapro AI, vos quantités alimentent directement le devis, avec vos prestations et vos prix. Essai gratuit de 15 jours.</p>
           <div className="mt-6 flex justify-center">
             <AppCta location={`tool_${tool.id}`} variant="light">
               Essayer Paysapro AI

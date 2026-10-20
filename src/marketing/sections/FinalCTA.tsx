@@ -28,7 +28,7 @@ export function FinalCTA({
             </ButtonLink>
             <DemoCta location="final_cta" variant="outline-light" />
           </div>
-          <p className="mt-6 text-sm text-white/55">Accès bêta gratuit · Aucun engagement · Accessible sur mobile</p>
+          <p className="mt-6 text-sm text-white/55">Essai gratuit 15 jours · Sans carte bancaire · Sans engagement</p>
         </Container>
       </div>
     </section>

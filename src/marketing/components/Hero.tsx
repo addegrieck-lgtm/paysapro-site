@@ -23,11 +23,11 @@ export function Hero() {
 
       <Container className="pt-10 pb-6 text-center sm:pt-16 lg:pt-20">
         <div className="animate-fade-up flex flex-col items-center gap-3">
-          <a href="#beta" className="inline-flex items-center gap-2 rounded-full bg-white/80 py-1 pr-3.5 pl-1 text-sm text-muted ring-1 ring-line backdrop-blur hover:ring-brand/30">
+          <a href="#tarifs" className="inline-flex items-center gap-2 rounded-full bg-white/80 py-1 pr-3.5 pl-1 text-sm text-muted ring-1 ring-line backdrop-blur hover:ring-brand/30">
             <BetaBadge />
             <span>
-              <span className="font-semibold text-ink">Accès bêta gratuit</span>
-              <span className="hidden sm:inline"> · construit avec les paysagistes</span>
+              <span className="font-semibold text-ink">Essai gratuit 15 jours</span>
+              <span className="hidden sm:inline"> · sans carte bancaire</span>
             </span>
           </a>
         </div>

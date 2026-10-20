@@ -23,7 +23,7 @@ if (!appUrl && env.DEV && env.MODE !== 'test') {
 
 /** Interrupteurs d'affichage : activer / désactiver rapidement des parties du site. */
 export const MARKETING_CONFIG = {
-  betaMode: true,
+  betaMode: false,
   showPricing: true,
   showTestimonials: false,
   showDemo: clean(env.VITE_ENABLE_DEMO_CTA) === 'true',

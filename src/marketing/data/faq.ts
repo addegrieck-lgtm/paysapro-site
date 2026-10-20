@@ -52,13 +52,13 @@ export const FAQ: FaqItem[] = [
   {
     id: 'prix',
     question: 'Combien coûte Paysapro AI ?',
-    answer: 'Pendant la bêta, l’accès est actuellement gratuit pour les utilisateurs bêta.',
+    answer: 'Vous commencez par 15 jours d’essai gratuit, avec toutes les fonctionnalités et sans carte bancaire. Ensuite : Starter 19 €, Pro 39 € ou Business 69 € HT par mois, ou 25 % de moins en payant à l’année. Sans engagement.',
     pricing: true,
   },
   {
     id: 'evolution-tarifs',
-    question: 'Les tarifs vont-ils changer ?',
-    answer: 'Les conditions pourront évoluer après la bêta. Les utilisateurs concernés seront informés avant tout changement tarifaire.',
+    question: 'Que se passe-t-il à la fin des 15 jours d’essai ?',
+    answer: 'Rien n’est prélevé automatiquement : aucune carte n’est demandée. Si vous ne choisissez pas d’offre, votre compte passe en lecture seule : vos clients, devis et PDF restent consultables et exportables, et vous pouvez vous abonner à tout moment pour reprendre là où vous en étiez.',
     pricing: true,
   },
 ];

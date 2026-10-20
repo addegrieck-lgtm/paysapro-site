@@ -11,7 +11,7 @@ export function Testimonials({ items = TESTIMONIALS }: { items?: Testimonial[] }
       <div className="mx-auto max-w-xl rounded-3xl border border-dashed border-line bg-white/60 p-8 text-center">
         <Quote className="mx-auto h-7 w-7 text-brand" aria-hidden="true" />
         <p className="mt-3 font-semibold text-ink">Témoignages de professionnels bientôt disponibles.</p>
-        <p className="mt-1 text-sm text-muted">Nous publierons uniquement des retours réels d’utilisateurs de la bêta, avec leur accord.</p>
+        <p className="mt-1 text-sm text-muted">Nous publierons uniquement des retours réels d’utilisateurs, avec leur accord.</p>
       </div>
     );
   }

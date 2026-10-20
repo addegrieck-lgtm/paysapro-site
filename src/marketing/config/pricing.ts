@@ -1,8 +1,8 @@
 /**
- * Tarifs — SEUL fichier à modifier pour passer de la bêta gratuite aux plans payants.
+ * Tarifs — SEUL fichier à modifier pour les offres affichées sur le site.
  *
- * Pendant la bêta : mode 'beta' → seule l'offre BÊTA est affichée, aucun paiement.
- * Après la bêta : passer mode à 'plans'. Les prix ci-dessous doivent rester identiques à ceux de
+ * Depuis le lancement : mode 'plans' → les trois offres payantes, chacune précédée d'un essai gratuit
+ * de 15 jours sans carte bancaire. Les prix ci-dessous doivent rester identiques à ceux de
  * l'application (paysapro-ai : src/features/plans/plans.ts).
  * Aucun paiement n'est déclenché par le site marketing : le CTA mène à l'application,
  * qui gérera le checkout Stripe côté serveur (clé secrète jamais exposée ici).
@@ -30,8 +30,8 @@ export const BETA_PLAN: PricingPlan = {
   name: 'Bêta',
   price: 0,
   period: null,
-  description: 'Accès gratuit pendant la phase bêta',
-  badge: 'Accès bêta gratuit',
+  description: 'Ancienne offre de la phase bêta (n’est plus affichée)',
+  badge: 'Bêta',
   highlight: true,
   features: [
     'Fonctionnalités Premium Max',
@@ -46,7 +46,7 @@ export const BETA_PLAN: PricingPlan = {
     'Mode SAP et attestation fiscale',
     'Accès mobile',
   ],
-  cta: { label: 'Rejoindre la bêta', target: 'signup' },
+  cta: { label: 'Essayer gratuitement', target: 'signup' },
 };
 
 /** Réduction pour un paiement à l'année (en %). Même valeur que dans l'application. */
@@ -67,16 +67,16 @@ export function formatYearlyPrice(plan: PricingPlan): { yearly: string; monthlyE
   return { yearly: `${euros(yearly)} € HT / an`, monthlyEquivalent: `soit ${euros(Math.round((yearly / 12) * 100) / 100)} € HT / mois` };
 }
 
-/** Offres prévues après la bêta : affichées sous l'offre bêta, à titre d'information. */
+/** Offres payantes (après les 15 jours d’essai gratuit). */
 export const FUTURE_PLANS: PricingPlan[] = [
   {
     id: 'starter',
     name: 'Starter',
     price: 19,
     period: 'mois',
-    description: 'Pour le paysagiste indépendant qui démarre.',
+    description: 'Pour le paysagiste ou l’artisan indépendant qui démarre.',
     features: ['Devis et PDF à vos couleurs', 'Clients et chantiers', 'Photos chantier', 'Catalogue tarifaire', 'Signature du devis', '1 utilisateur'],
-    cta: { label: 'Commencer', target: 'signup' },
+    cta: { label: 'Essayer 15 jours gratuits', target: 'signup' },
   },
   {
     id: 'pro',
@@ -87,7 +87,7 @@ export const FUTURE_PLANS: PricingPlan[] = [
     features: ['Tout Starter', 'Mesures et calculs', 'Modèles de devis', 'Lien client et signature en ligne', 'Planning et statistiques', 'Mode SAP', '3 utilisateurs'],
     highlight: true,
     badge: 'Recommandé',
-    cta: { label: 'Choisir Pro', target: 'signup' },
+    cta: { label: 'Essayer 15 jours gratuits', target: 'signup' },
   },
   {
     id: 'business',
@@ -96,14 +96,14 @@ export const FUTURE_PLANS: PricingPlan[] = [
     period: 'mois',
     description: 'Pour les équipes et le suivi de la rentabilité.',
     features: ['Tout Pro', 'Marge et rentabilité des devis', '10 utilisateurs'],
-    cta: { label: 'Choisir Business', target: 'signup' },
+    cta: { label: 'Essayer 15 jours gratuits', target: 'signup' },
   },
 ];
 
 export const PRICING_CONFIG = {
-  mode: 'beta' as 'beta' | 'plans',
+  mode: 'plans' as 'beta' | 'plans',
   betaNotice:
-    'Les fonctionnalités et conditions tarifaires pourront évoluer après la période bêta. Les premiers utilisateurs seront informés avant toute évolution payante.',
+    'Chaque offre commence par 15 jours d’essai gratuit avec toutes les fonctionnalités, sans carte bancaire. Prix hors taxes, sans engagement : résiliable à tout moment. Sans abonnement, vos données restent consultables et exportables.',
 };
 
 export function visiblePlans(mode: 'beta' | 'plans' = PRICING_CONFIG.mode): PricingPlan[] {

@@ -140,7 +140,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   },
   cgu: {
     path: '/cgu',
-    title: 'Conditions générales d’utilisation',
+    title: 'Conditions générales d’utilisation et de vente',
     updated: <Ph>[DATE DE MISE À JOUR]</Ph>,
     sections: [
       {
@@ -152,12 +152,19 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         ),
       },
       {
-        heading: 'Phase bêta',
+        heading: 'Essai gratuit et abonnements',
         body: (
-          <p>
-            Le service est actuellement proposé en version bêta, gratuitement. Des fonctionnalités peuvent évoluer, être ajoutées ou retirées. Les conditions tarifaires
-            pourront évoluer après la période bêta ; les utilisateurs concernés seront informés avant toute évolution payante.
-          </p>
+          <>
+            <p>
+              Chaque nouvelle entreprise bénéficie d’un essai gratuit de 15 jours, sans carte bancaire, avec toutes les fonctionnalités. Aucun abonnement n’est souscrit
+              automatiquement : sans abonnement à la fin de l’essai, le compte passe en lecture seule (données consultables et exportables).
+            </p>
+            <p>
+              Les offres et leurs prix hors taxes figurent sur la page Tarifs. L’abonnement est payable d’avance, au mois ou à l’année, par carte bancaire via Stripe ;
+              il se renouvelle automatiquement et se résilie à tout moment depuis l’application, avec effet à la fin de la période payée. Toute évolution de prix est
+              annoncée au moins 30 jours à l’avance. Le service est réservé aux professionnels.
+            </p>
+          </>
         ),
       },
       {

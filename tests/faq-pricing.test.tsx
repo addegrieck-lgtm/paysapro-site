@@ -25,27 +25,17 @@ describe('FAQ', () => {
 });
 
 describe('Tarifs', () => {
-  it('bêta : un seul plan à 0 €, CTA « Rejoindre la bêta » vers l’inscription', async () => {
-    await renderPage('/tarifs');
-    const plan = screen.getByRole('article', { name: 'Bêta' });
-    expect(within(plan).getByText('0 €')).toBeInTheDocument();
-    for (const f of ['Clients', 'Chantiers', 'Signature', 'Accès mobile']) expect(within(plan).getByText(f)).toBeInTheDocument();
-    expect(within(plan).getByRole('link', { name: /Rejoindre la bêta/ })).toHaveAttribute('href', SIGNUP);
-    expect(screen.getByText(/informés avant toute évolution payante/)).toBeInTheDocument();
-  });
-
-  it('pendant la bêta, l’offre active reste la bêta ; les offres futures sont annoncées avec leurs prix', async () => {
-    expect(visiblePlans()).toEqual([BETA_PLAN]);
-    expect(visiblePlans('plans').map((p) => p.id)).toEqual(['starter', 'pro', 'business']);
+  it('essai gratuit de 15 jours, puis trois offres avec leurs prix et un CTA vers l’inscription', async () => {
+    expect(visiblePlans().map((p) => p.id)).toEqual(['starter', 'pro', 'business']);
     expect(FUTURE_PLANS.map((p) => formatPlanPrice(p).amount)).toEqual(['19 €', '39 €', '69 €']);
     for (const p of FUTURE_PLANS) expect(p.stripePriceId).toBeFalsy(); // aucun paiement sur le site
 
     await renderPage('/tarifs');
-    const pro = screen.getByRole('article', { name: 'Offre Pro' });
+    const pro = screen.getByRole('article', { name: 'Pro' });
     expect(within(pro).getByText('39 €')).toBeInTheDocument();
-    expect(within(pro).getByText(/351 € HT \/ an \(−25 %\)/)).toBeInTheDocument();
-    expect(within(pro).getByText('soit 29,25 € HT / mois')).toBeInTheDocument();
-    expect(within(pro).queryByRole('link')).toBeNull(); // information seulement
+    expect(within(pro).getByText(/351 € HT \/ an \(−25 %\), soit 29,25 € HT \/ mois/)).toBeInTheDocument();
+    expect(within(pro).getByRole('link', { name: /Essayer 15 jours gratuits/ })).toHaveAttribute('href', SIGNUP);
+    expect(screen.getAllByText(/15 jours d’essai gratuit/).length).toBeGreaterThan(0);
   });
 
   it('paiement à l’année : 25 % de réduction sur 12 mois', () => {

@@ -110,7 +110,7 @@ writeFileSync(
   join(dist, 'llms.txt'),
   `# Paysapro AI
 
-> Paysapro AI est un logiciel de devis et de gestion de chantiers pour les paysagistes et les entreprises d'aménagement extérieur, utilisable sur smartphone, tablette et ordinateur. Il sert à photographier le chantier, mesurer, chiffrer avec son propre catalogue de prix, générer un devis professionnel et le faire signer en ligne par le client. Un mode services à la personne génère l'attestation fiscale annuelle en PDF. Accès gratuit pendant la phase bêta.
+> Paysapro AI est un logiciel de devis et de gestion de chantiers pour les paysagistes, les entreprises d'aménagement extérieur et les artisans du bâtiment (tous corps de métier), utilisable sur smartphone, tablette et ordinateur. Il sert à photographier le chantier, mesurer, chiffrer avec son propre catalogue de prix, générer un devis professionnel et le faire signer en ligne par le client. Un mode services à la personne génère l'attestation fiscale annuelle en PDF. Essai gratuit de 15 jours sans carte bancaire, puis offres Starter (19 €), Pro (39 €) et Business (69 €) HT par mois, sans engagement.
 
 Points importants :
 - L'assistant intégré suggère des prestations ; le professionnel valide toujours les quantités, les prix et le devis final.

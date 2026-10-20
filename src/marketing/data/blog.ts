@@ -404,8 +404,8 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       {
         heading: '7. Tester sur un vrai devis',
         paragraphs: [
-          'Le meilleur test reste de refaire un devis récent avec le logiciel : combien de temps faut-il, le résultat est-il présentable, le client comprend-il le document ? Une version d’essai ou une bêta gratuite permet de le faire sans risque.',
-          'Paysapro AI est conçu autour de ces critères pour les paysagistes : mesures et unités du métier, usage sur téléphone, catalogue de prix, devis signé en ligne et mode services à la personne. Il ne fait pas de facturation ni de comptabilité. Son accès est gratuit pendant la bêta.',
+          'Le meilleur test reste de refaire un devis récent avec le logiciel : combien de temps faut-il, le résultat est-il présentable, le client comprend-il le document ? Une version d’essai gratuite permet de le faire sans risque.',
+          'Paysapro AI est conçu autour de ces critères pour les paysagistes : mesures et unités du métier, usage sur téléphone, catalogue de prix, devis signé en ligne et mode services à la personne. Il ne fait pas de facturation ni de comptabilité. Il s’essaie gratuitement pendant 15 jours.',
         ],
       },
     ],

@@ -140,7 +140,7 @@ export function SectionHeading({
 
 /* ─────────── Badges ─────────── */
 
-export function BetaBadge({ tone = 'dark', children = 'Bêta' }: { tone?: 'dark' | 'light'; children?: ReactNode }) {
+export function BetaBadge({ tone = 'dark', children = 'Gratuit' }: { tone?: 'dark' | 'light'; children?: ReactNode }) {
   return (
     <span
       className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[0.72rem] font-bold uppercase tracking-[0.12em] ${

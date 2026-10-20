@@ -21,13 +21,33 @@
   },
   "/logiciel-devis-paysagiste": {
     "title": "Logiciel de devis paysagiste sur mobile | Paysapro AI",
-    "description": "Logiciel de devis pour paysagiste : métrés au m² et au ml, catalogue de prix, devis professionnel et signature du client. Gratuit pendant la bêta.",
+    "description": "Logiciel de devis pour paysagiste : métrés au m² et au ml, catalogue de prix, devis professionnel et signature du client. Essai gratuit 15 jours.",
     "priority": "0.9"
   },
   "/logiciel-devis-batiment": {
     "title": "Logiciel de devis bâtiment pour artisans du BTP | Paysapro AI",
-    "description": "Logiciel de devis pour artisans du BTP, tous corps de métier : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Gratuit pendant la bêta.",
+    "description": "Logiciel de devis pour artisans du BTP, tous corps de métier : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Essai gratuit 15 jours.",
     "priority": "0.9"
+  },
+  "/logiciel-devis-electricien": {
+    "title": "Logiciel de devis électricien sur mobile | Paysapro AI",
+    "description": "Logiciel de devis pour électricien : points lumineux, prises, tableau, mise en conformité NF C 15-100, TVA 10 % et signature du client. Essai gratuit 15 jours.",
+    "priority": "0.8"
+  },
+  "/logiciel-devis-plombier": {
+    "title": "Logiciel de devis plombier chauffagiste | Paysapro AI",
+    "description": "Devis plombier chauffagiste : salle de bains, points d’eau, chauffe-eau, radiateurs, TVA 10 % ou 5,5 % et signature en ligne. Essai gratuit 15 jours.",
+    "priority": "0.8"
+  },
+  "/logiciel-devis-peintre": {
+    "title": "Logiciel de devis peintre en bâtiment | Paysapro AI",
+    "description": "Devis peintre en bâtiment : surfaces de murs ouvertures déduites, litres de peinture, préparation des supports et signature. Essai gratuit 15 jours.",
+    "priority": "0.8"
+  },
+  "/logiciel-devis-maconnerie": {
+    "title": "Logiciel de devis maçonnerie et gros œuvre | Paysapro AI",
+    "description": "Logiciel de devis pour maçon : dalle, murs en parpaings, chape, ouverture de mur porteur, volume de béton et sacs de ciment, décennale. Essai gratuit 15 jours.",
+    "priority": "0.8"
   },
   "/logiciel-gestion-paysagiste": {
     "title": "Logiciel de gestion pour paysagiste | Paysapro AI",
@@ -70,8 +90,8 @@
     "priority": "0.7"
   },
   "/tarifs": {
-    "title": "Tarifs : logiciel paysagiste gratuit en bêta | Paysapro AI",
-    "description": "Paysapro AI est gratuit pendant la phase bêta : clients, chantiers, photos, calculs, catalogue, devis et signature inclus. Sans engagement.",
+    "title": "Tarifs : essai gratuit 15 jours, dès 19 € HT/mois | Paysapro AI",
+    "description": "Tarifs Paysapro AI : 15 jours d’essai gratuit sans carte bancaire, puis Starter 19 €, Pro 39 € ou Business 69 € HT par mois. Sans engagement.",
     "priority": "0.8"
   },
   "/faq": {

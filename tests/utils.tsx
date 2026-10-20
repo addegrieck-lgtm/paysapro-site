@@ -33,7 +33,7 @@ export const PAGES: [path: string, h1: RegExp][] = [
   ['/', /Du chantier au devis/],
   ['/fonctionnalites', /Tout ce qu’il faut, du chantier au devis signé/],
   ['/comment-ca-marche', /Six étapes/],
-  ['/tarifs', /Commencez gratuitement/],
+  ['/tarifs', /Essayez gratuitement pendant 15 jours/],
   ['/faq', /Questions fréquentes/],
   ['/contact', /Une question \? Parlons-en/],
   ['/a-propos', /Un outil moderne/],

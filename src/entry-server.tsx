@@ -61,16 +61,23 @@ const softwareApplication = (siteUrl: string) => ({
   '@id': `${siteUrl}/#software`,
   name: 'Paysapro AI',
   applicationCategory: 'BusinessApplication',
-  applicationSubCategory: 'Logiciel de devis pour paysagistes',
+  applicationSubCategory: 'Logiciel de devis pour paysagistes et artisans du bâtiment',
   operatingSystem: 'Web, iOS, Android',
   inLanguage: 'fr-FR',
-  description: 'Logiciel de devis et de gestion de chantiers pour paysagistes : photos du chantier, métrés, catalogue tarifaire, devis professionnels et signature client.',
+  description: 'Logiciel de devis et de gestion de chantiers pour paysagistes et artisans du BTP : photos du chantier, métrés, catalogue tarifaire, devis professionnels et signature client.',
   url: `${siteUrl}/`,
   image: `${siteUrl}/og-image.png`,
   featureList: FEATURES.map((f) => f.title),
-  audience: { '@type': 'BusinessAudience', audienceType: 'Paysagistes et entreprises d’aménagement extérieur' },
+  audience: { '@type': 'BusinessAudience', audienceType: 'Paysagistes, entreprises d’aménagement extérieur et artisans du bâtiment' },
   publisher: { '@id': `${siteUrl}/#organization` },
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR', description: 'Accès gratuit pendant la phase bêta' },
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'EUR',
+    lowPrice: '19',
+    highPrice: '69',
+    offerCount: 3,
+    description: 'Essai gratuit de 15 jours sans carte bancaire, puis offres Starter, Pro et Business (prix HT par mois)',
+  },
 });
 
 /** Toutes les pages à pré-rendre. Celles marquées noindex sont exclues du sitemap. */

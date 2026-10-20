@@ -29,7 +29,7 @@ export function PricingSection() {
   return (
     <Section id="tarifs" labelledBy="tarifs-title">
       <Container>
-        <SectionHeading id="tarifs-title" eyebrow="Tarifs" title="Commencez gratuitement." intro="Pendant la bêta, Paysapro AI est accessible gratuitement, avec toutes ses fonctionnalités." />
+        <SectionHeading id="tarifs-title" eyebrow="Tarifs" title="Essayez gratuitement pendant 15 jours." intro="Toutes les fonctionnalités, sans carte bancaire. Ensuite, l’offre qui vous convient, sans engagement." />
         <div className="mt-12">
           <Pricing location="home_pricing" />
         </div>

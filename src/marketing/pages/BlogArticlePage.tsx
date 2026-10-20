@@ -88,7 +88,7 @@ function Article({ article }: { article: BlogArticle }) {
 
         <aside className="mt-14 rounded-3xl bg-forest p-8 text-center text-white">
           <p className="font-display text-2xl font-extrabold">Du chantier au devis, en quelques minutes.</p>
-          <p className="mx-auto mt-2 max-w-md text-white/75">Paysapro AI est le logiciel de devis pensé pour les paysagistes. Accès bêta gratuit.</p>
+          <p className="mx-auto mt-2 max-w-md text-white/75">Paysapro AI est le logiciel de devis pensé pour les paysagistes et les artisans du bâtiment. Essai gratuit de 15 jours.</p>
           <div className="mt-6 flex justify-center">
             <AppCta location={`blog_${article.slug}`} variant="light">
               Essayer Paysapro AI

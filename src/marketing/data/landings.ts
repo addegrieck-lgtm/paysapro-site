@@ -41,7 +41,7 @@ export const LANDINGS: Landing[] = [
       'Le devis est organisé par lots (corps d’état) avec sous-totaux, et chaque ligne peut avoir son taux de TVA : 20 %, 10 % ou 5,5 %.',
       'Les mentions du bâtiment sont reprises sur chaque devis : assurance décennale, immatriculation, qualifications (RGE…), début et durée des travaux, retenue de garantie, autoliquidation.',
       'Métrés de murs avec ouvertures déduites, calculateurs (peinture, carrelage, béton, plaques de plâtre) et catalogue d’environ 50 prestations types sont inclus.',
-      'L’accès est gratuit pendant la phase bêta.',
+      'L’essai est gratuit pendant 15 jours, sans carte bancaire.',
     ],
     visual: 'quote',
     sections: [
@@ -106,9 +106,235 @@ export const LANDINGS: Landing[] = [
       },
     ],
     related: [
-      { label: 'Comment ça marche', to: '/comment-ca-marche' },
-      { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
+      { label: 'Logiciel de devis électricien', to: '/logiciel-devis-electricien' },
+      { label: 'Logiciel de devis plombier', to: '/logiciel-devis-plombier' },
+      { label: 'Logiciel de devis peintre', to: '/logiciel-devis-peintre' },
+      { label: 'Logiciel de devis maçonnerie', to: '/logiciel-devis-maconnerie' },
       { label: 'Tarifs', to: '/tarifs' },
+    ],
+  },
+  {
+    path: '/logiciel-devis-electricien',
+    metier: 'btp',
+    eyebrow: 'Logiciel de devis électricien',
+    h1: 'Le logiciel de devis pensé pour les électriciens.',
+    intro: 'Comptez les points lumineux et les prises pièce par pièce, ajoutez le tableau et les circuits, et envoyez un devis clair, signé en ligne par votre client. Directement depuis le chantier.',
+    summary: [
+      'Paysapro AI est un logiciel de devis utilisable sur smartphone, avec un mode « Artisan du BTP » adapté aux électriciens.',
+      'Le catalogue de départ contient les prestations courantes : point lumineux, prise 16 A, tableau équipé, mise en conformité NF C 15-100, câbles et gaines au mètre.',
+      'Un modèle « Rénovation électrique » prérempli se charge en un geste, puis s’ajuste au chantier.',
+      'La TVA (20 %, 10 % ou 5,5 %), l’assurance décennale et vos qualifications apparaissent sur chaque devis.',
+      'L’essai est gratuit pendant 15 jours, sans carte bancaire.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Un devis d’électricité structuré, sans recopier vos prix',
+        paragraphs: [
+          'Un devis d’électricité se construit à l’unité et au mètre : des points lumineux, des prises, un tableau, des longueurs de câble. Vous enregistrez une fois vos prestations avec leur prix de vente et leur coût, puis vous les ajoutez au devis en quelques touches.',
+          'Le modèle « Rénovation électrique » regroupe tableau, prises, points lumineux, câblage et mise en conformité : vous ajustez les quantités et le devis est prêt.',
+        ],
+      },
+      {
+        heading: 'Rénovation ou neuf : la bonne TVA, ligne par ligne',
+        paragraphs: [
+          'En rénovation d’un logement de plus de deux ans, vos travaux passent à 10 % ; en neuf ou en local professionnel, à 20 %. Paysapro AI applique le taux du type de chantier choisi, affiche le récapitulatif de TVA et rappelle l’attestation à faire remplir par le client en cas de taux réduit.',
+        ],
+      },
+      {
+        heading: 'Ce que votre client reçoit',
+        list: [
+          'Un devis à vos couleurs, organisé par lots (électricité, installation de chantier…).',
+          'Vos mentions : assurance décennale, immatriculation, qualifications (Qualifelec, RGE…).',
+          'La date de début et la durée estimée des travaux.',
+          'Un lien pour consulter et signer le devis sur son téléphone.',
+        ],
+      },
+      {
+        heading: 'Votre marge, visible par vous seul',
+        paragraphs: [
+          'Chaque ligne porte un prix de vente et un coût interne : vous voyez la marge du devis avant de l’envoyer, sans qu’elle n’apparaisse jamais sur le document du client.',
+        ],
+      },
+    ],
+    faq: [
+      { question: 'Paysapro AI gère-t-il l’attestation Consuel ?', answer: 'Non. Paysapro AI prépare et fait signer vos devis ; la mise en conformité et l’attestation Consuel restent à mentionner dans la description des travaux si elles sont prévues.' },
+      { question: 'Puis-je créer mes propres prestations ?', answer: 'Oui. Le catalogue de départ est un exemple à tarifs indicatifs : vous modifiez les prix, ajoutez vos prestations (domotique, borne de recharge, VMC…) et créez vos propres modèles de devis.' },
+    ],
+    related: [
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Tarifs', to: '/tarifs' },
+      { label: 'Logiciel de devis plombier', to: '/logiciel-devis-plombier' },
+      { label: 'Logiciel de devis peintre', to: '/logiciel-devis-peintre' },
+      { label: 'Logiciel de devis maçonnerie', to: '/logiciel-devis-maconnerie' },
+    ],
+  },
+  {
+    path: '/logiciel-devis-plombier',
+    metier: 'btp',
+    eyebrow: 'Logiciel de devis plombier',
+    h1: 'Le logiciel de devis des plombiers et chauffagistes.',
+    intro: 'De la rénovation de salle de bains au remplacement d’un chauffe-eau, chiffrez sur place, appliquez la bonne TVA et faites signer votre client depuis votre téléphone.',
+    summary: [
+      'Paysapro AI propose un mode « Artisan du BTP » adapté aux plombiers et chauffagistes, utilisable sur smartphone.',
+      'Le catalogue de départ comprend la création de points d’eau, le WC suspendu, la douche extra-plate, le meuble vasque, les radiateurs et le chauffe-eau thermodynamique.',
+      'Le modèle « Rénovation de salle de bains » assemble dépose, plomberie, carrelage et évacuation des gravats en un geste.',
+      'Chaque ligne peut avoir son taux de TVA, par exemple 5,5 % pour un chauffe-eau thermodynamique dans une rénovation à 10 %.',
+      'L’essai est gratuit pendant 15 jours, sans carte bancaire.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Une salle de bains chiffrée sur place',
+        paragraphs: [
+          'Relevez le sol et les murs à faïencer (périmètre × hauteur, porte déduite) : chaque ligne du devis choisit sa surface, et les chutes sont ajoutées automatiquement. Les équipements se comptent à l’unité.',
+          'Le devis présente les lots (démolition, plomberie, carrelage) avec leurs sous-totaux : votre client comprend ce qu’il paie.',
+        ],
+      },
+      {
+        heading: 'TVA réduite : 10 % et 5,5 % dans le même devis',
+        paragraphs: [
+          'Pour un logement de plus de deux ans, les travaux de plomberie passent à 10 %, et certains équipements performants peuvent relever du taux de 5,5 %. Paysapro AI calcule la TVA ligne par ligne et affiche un récapitulatif par taux. Vérifiez les conditions d’éligibilité avec votre comptable.',
+        ],
+      },
+      {
+        heading: 'Vos prix, vos marges',
+        paragraphs: [
+          'Chaque prestation porte un prix de vente et un coût d’achat. Ajustez le catalogue de départ à vos tarifs et à vos fournisseurs : la marge de chaque devis s’affiche pour vous seul, jamais sur le document du client.',
+        ],
+      },
+      {
+        heading: 'Du devis signé au chantier',
+        list: [
+          'Le client signe le devis en ligne, vous êtes prévenu.',
+          'Vous planifiez l’intervention et suivez la checklist du chantier.',
+          'Vous enregistrez l’acompte et le solde reçus.',
+          'Les photos avant et après restent rangées avec le chantier.',
+        ],
+      },
+    ],
+    faq: [
+      { question: 'Puis-je faire un devis de dépannage rapide ?', answer: 'Oui : déplacement, main-d’œuvre à l’heure et petites fournitures sont dans le catalogue. Le devis se crée en quelques minutes et se signe sur place.' },
+      { question: 'Les tarifs du catalogue sont-ils ceux du marché ?', answer: 'Ce sont des tarifs indicatifs pour démarrer. Remplacez-les par vos prix d’achat et de vente : ils seront repris sur tous vos devis.' },
+    ],
+    related: [
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Tarifs', to: '/tarifs' },
+      { label: 'Logiciel de devis électricien', to: '/logiciel-devis-electricien' },
+      { label: 'Logiciel de devis peintre', to: '/logiciel-devis-peintre' },
+      { label: 'Logiciel de devis maçonnerie', to: '/logiciel-devis-maconnerie' },
+    ],
+  },
+  {
+    path: '/logiciel-devis-peintre',
+    metier: 'btp',
+    eyebrow: 'Logiciel de devis peintre',
+    h1: 'Le logiciel de devis pour les peintres en bâtiment.',
+    intro: 'Mesurez les murs et les plafonds, déduisez les ouvertures, et obtenez un devis précis au mètre carré, prêt à être signé par votre client.',
+    summary: [
+      'Paysapro AI propose un mode « Artisan du BTP » utilisable sur smartphone pour les peintres en bâtiment.',
+      'Les métrés se saisissent sur place : murs en périmètre × hauteur, plafonds, ouvertures à déduire.',
+      'Un calculateur donne les litres de peinture selon la surface, le nombre de couches et le rendement du produit.',
+      'Le catalogue de départ comprend protection, préparation des supports, peinture des murs et plafonds en deux couches, toile de verre.',
+      'L’essai est gratuit pendant 15 jours, sans carte bancaire.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Des surfaces justes, ouvertures déduites',
+        paragraphs: [
+          'Le devis d’un peintre se joue sur les mètres carrés. Saisissez le périmètre et la hauteur sous plafond de chaque pièce, déduisez portes et fenêtres : la surface nette alimente directement les lignes du devis, préparation comprise.',
+          'Plafonds et murs gardent chacun leur surface : la peinture des plafonds ne se calcule pas sur les murs, et inversement.',
+        ],
+      },
+      {
+        heading: 'Les quantités de produit en un instant',
+        paragraphs: [
+          'Le calculateur de peinture convertit une surface en litres selon le nombre de couches et le rendement indiqué sur le pot. Pratique pour commander juste et vérifier votre coût de fournitures.',
+        ],
+      },
+      {
+        heading: 'Signé sur place, suivi jusqu’à la réception',
+        paragraphs: [
+          'Présentez le devis sur votre téléphone ou envoyez le lien : le client le signe en ligne. Vous planifiez ensuite le chantier, cochez la checklist (protection, préparation, finitions, nettoyage) et gardez les photos avant et après pour vos prochains clients.',
+        ],
+      },
+      {
+        heading: 'Pour les particuliers comme pour les professionnels',
+        list: [
+          'TVA 10 % pour la rénovation d’un logement de plus de deux ans, 20 % pour les locaux professionnels.',
+          'Retenue de garantie de 5 % proposée pour les marchés avec des professionnels.',
+          'Autoliquidation de la TVA en sous-traitance.',
+          'Devis par lots avec sous-totaux.',
+        ],
+      },
+    ],
+    faq: [
+      { question: 'Puis-je chiffrer une pièce entière avec un modèle ?', answer: 'Oui : le modèle « Peinture d’une pièce » ajoute protection, préparation, murs et plafond. Il ne reste qu’à saisir les mesures.' },
+      { question: 'Le calcul des litres tient-il compte des chutes ?', answer: 'Le calcul se base sur la surface, les couches et le rendement. Ajoutez une marge si le support est très absorbant, selon votre expérience.' },
+    ],
+    related: [
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Tarifs', to: '/tarifs' },
+      { label: 'Logiciel de devis électricien', to: '/logiciel-devis-electricien' },
+      { label: 'Logiciel de devis plombier', to: '/logiciel-devis-plombier' },
+      { label: 'Logiciel de devis maçonnerie', to: '/logiciel-devis-maconnerie' },
+    ],
+  },
+  {
+    path: '/logiciel-devis-maconnerie',
+    metier: 'btp',
+    eyebrow: 'Logiciel de devis maçonnerie',
+    h1: 'Le logiciel de devis pour les maçons.',
+    intro: 'Dalles, murs, chapes, ouvertures : chiffrez vos travaux de maçonnerie au m², au m³ et au forfait, avec vos prix, et faites signer le devis depuis le chantier.',
+    summary: [
+      'Paysapro AI propose un mode « Artisan du BTP » utilisable sur smartphone, adapté à la maçonnerie et au gros œuvre.',
+      'Le catalogue de départ comprend dalle béton armé, mur en parpaings, chape ciment, béton prêt à l’emploi au m³, ouverture dans un mur porteur et évacuation des gravats.',
+      'Un calculateur donne le volume de béton et le nombre de sacs de ciment selon la surface, l’épaisseur et le dosage.',
+      'Votre assurance décennale (assureur, contrat, couverture géographique) figure sur chaque devis.',
+      'L’essai est gratuit pendant 15 jours, sans carte bancaire.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Surfaces, volumes et forfaits dans le même devis',
+        paragraphs: [
+          'Une dalle se chiffre au m², le béton fourni au m³ selon l’épaisseur, une ouverture de mur porteur au forfait. Paysapro AI calcule les quantités à partir de vos mesures et applique les pertes prévues.',
+          'L’installation de chantier, la location d’échafaudage et l’évacuation des gravats s’ajoutent en un geste depuis le catalogue.',
+        ],
+      },
+      {
+        heading: 'Un devis qui rassure votre client',
+        list: [
+          'Lots et sous-totaux : installation, démolition, maçonnerie.',
+          'Assurance décennale, immatriculation et qualifications.',
+          'Date de début, durée estimée, acompte et solde.',
+          'Signature en ligne et suivi du chantier jusqu’à la réception.',
+        ],
+      },
+      {
+        heading: 'Des coûts maîtrisés',
+        paragraphs: [
+          'Ciment, granulats, location de matériel : chaque ligne garde son coût d’achat à côté de son prix de vente. Vous voyez la marge du devis avant de l’envoyer, et vous l’ajustez d’un geste si les prix des matériaux ont bougé.',
+        ],
+      },
+      {
+        heading: 'Neuf ou rénovation',
+        paragraphs: [
+          'Construction neuve et agrandissements importants restent à 20 % ; la rénovation d’un logement de plus de deux ans peut relever du taux de 10 %. Le type de chantier choisi fixe le taux, que vous pouvez ajuster ligne par ligne.',
+        ],
+      },
+    ],
+    faq: [
+      { question: 'Puis-je suivre plusieurs chantiers en même temps ?', answer: 'Oui. Chaque chantier a son devis, ses photos, son planning, sa checklist et ses paiements reçus. Le tableau de bord montre ce qui est en cours.' },
+      { question: 'Le logiciel fait-il les situations de travaux ?', answer: 'Pas encore : Paysapro AI couvre le devis, la signature et le suivi du chantier. Les acomptes et le solde reçus s’enregistrent dans le chantier.' },
+    ],
+    related: [
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Tarifs', to: '/tarifs' },
+      { label: 'Logiciel de devis électricien', to: '/logiciel-devis-electricien' },
+      { label: 'Logiciel de devis plombier', to: '/logiciel-devis-plombier' },
+      { label: 'Logiciel de devis peintre', to: '/logiciel-devis-peintre' },
     ],
   },
   {
@@ -121,7 +347,7 @@ export const LANDINGS: Landing[] = [
       "Paysapro AI est un logiciel de devis conçu pour les paysagistes, utilisable depuis un smartphone.",
       "Il calcule les surfaces, linéaires et volumes à partir de vos mesures, et applique les prix de votre propre catalogue.",
       "Le devis reprend vos informations d’entreprise, la TVA, l’acompte et vos conditions ; le client peut le signer en ligne.",
-      "L’accès est gratuit pendant la phase bêta."
+      "L’essai est gratuit pendant 15 jours, sans carte bancaire."
     ],
     visual: 'quote',
     sections: [
@@ -175,7 +401,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         question: 'Combien coûte le logiciel ?',
-        answer: 'L’accès est gratuit pendant la phase bêta. Les utilisateurs seront informés avant toute évolution payante.',
+        answer: 'L’essai est gratuit pendant 15 jours, sans carte bancaire. Ensuite, les offres commencent à 19 € HT par mois, sans engagement.',
       },
       {
         question: 'Mes tarifs sont-ils imposés par le logiciel ?',
@@ -464,7 +690,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         question: 'Le mode SAP est-il payant ?',
-        answer: 'Il est inclus gratuitement pendant la phase bêta.',
+        answer: 'Il est inclus dans les offres Pro et Business, et pendant les 15 jours d’essai gratuit.',
       },
     ],
     related: [
@@ -484,7 +710,7 @@ export const LANDINGS: Landing[] = [
       'Il sert à photographier le chantier, mesurer, chiffrer avec ses propres prix, générer le devis et le faire signer en ligne.',
       'Il propose aussi un mode services à la personne qui génère l’attestation fiscale annuelle en PDF.',
       'Il fonctionne sur smartphone, tablette et ordinateur, sans installation.',
-      'L’accès est gratuit pendant la phase bêta ; des offres payantes sont prévues ensuite.',
+      'L’essai est gratuit pendant 15 jours ; les offres commencent ensuite à 19 € HT par mois, sans engagement.',
     ],
     visual: 'phone',
     sections: [
@@ -528,7 +754,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Combien coûte Paysapro AI ?',
         paragraphs: [
-          'L’accès est gratuit pendant la phase bêta, avec toutes les fonctionnalités. Des offres payantes sont prévues ensuite (Starter, Pro et Business, au mois ou à l’année) ; les utilisateurs seront informés avant toute évolution payante. Le détail est sur la page Tarifs.',
+          'L’essai est gratuit pendant 15 jours, avec toutes les fonctionnalités et sans carte bancaire. Ensuite, trois offres sans engagement (Starter, Pro et Business, au mois ou à l’année) ; les utilisateurs seront informés avant toute évolution payante. Le détail est sur la page Tarifs.',
         ],
       },
     ],
@@ -539,7 +765,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         question: 'Qui édite Paysapro AI ?',
-        answer: 'Paysapro AI est développé avec les retours de professionnels du paysage qui testent la bêta. Les informations sur l’éditeur figurent dans les mentions légales.',
+        answer: 'Paysapro AI est développé avec les retours de professionnels du paysage et du bâtiment qui l’utilisent. Les informations sur l’éditeur figurent dans les mentions légales.',
       },
       {
         question: 'Où sont stockées les données ?',

@@ -9,7 +9,7 @@ import { FinalCTA } from '../sections/FinalCTA';
 const VALUES = [
   { icon: Leaf, title: 'Spécialisé paysage', text: 'Un vocabulaire, des unités et des usages propres à votre métier : chantier, métrés, gazon, clôture, plantations.' },
   { icon: Smartphone, title: 'Conçu pour le terrain', text: 'Le téléphone d’abord, parce que les devis commencent dans le jardin du client, pas derrière un bureau.' },
-  { icon: Users, title: 'Construit avec vous', text: 'Chaque évolution de la bêta part des retours de professionnels qui utilisent l’outil au quotidien.' },
+  { icon: Users, title: 'Construit avec vous', text: 'Chaque évolution part des retours de professionnels qui utilisent l’outil au quotidien.' },
 ];
 
 export default function AboutPage() {

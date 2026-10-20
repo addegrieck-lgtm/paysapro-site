@@ -19,7 +19,7 @@ export function Footer() {
             <p className="mt-4 text-white/70">{SITE.tagline}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <BetaBadge tone="light" />
-              <span className="text-sm text-white/60">Accès bêta gratuit</span>
+              <span className="text-sm text-white/60">15 jours d’essai, sans carte bancaire</span>
             </div>
             <div className="mt-6">
               <AppCta location="footer" variant="light" size="md">
@@ -49,7 +49,7 @@ export function Footer() {
         <div className="mt-14 grid gap-6 rounded-3xl bg-white/[0.06] p-6 ring-1 ring-white/10 sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:items-center">
           <div>
             <h2 className="font-display text-xl font-bold text-white">Recevoir les nouveautés Paysapro AI</h2>
-            <p className="mt-1 text-sm text-white/65">Les nouvelles fonctionnalités de la bêta, directement dans votre boîte mail.</p>
+            <p className="mt-1 text-sm text-white/65">Les nouvelles fonctionnalités, directement dans votre boîte mail.</p>
           </div>
           <NewsletterForm tone="light" />
         </div>
