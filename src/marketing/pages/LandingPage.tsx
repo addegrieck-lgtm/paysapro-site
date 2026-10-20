@@ -4,6 +4,7 @@ import { landingByPath, type LandingVisual } from '../data/landings';
 import { usePageMeta } from '../components/usePageMeta';
 import { PageHeader } from '../components/PageHeader';
 import { AppCta } from '../components/AppLink';
+import { APP_LINKS } from '../config/marketing';
 import { FAQ } from '../components/FAQ';
 import { Reveal } from '../components/Reveal';
 import { ButtonLink, Container } from '../components/ui';
@@ -38,10 +39,18 @@ export default function LandingPage({ path }: { path: string }) {
   return (
     <>
       <PageHeader eyebrow={landing.eyebrow} title={landing.h1} intro={landing.intro}>
-        <AppCta location={`landing_${path.slice(1)}`}>Essayer gratuitement</AppCta>
-        <ButtonLink to="/comment-ca-marche" variant="secondary" size="lg">
-          Voir comment ça marche
-        </ButtonLink>
+        <AppCta location={`landing_${path.slice(1)}`} trade={landing.metier}>
+          Essayer gratuitement
+        </AppCta>
+        {landing.metier === 'btp' && APP_LINKS.configured ? (
+          <ButtonLink to={APP_LINKS.demoBuilding} variant="secondary" size="lg">
+            Voir la démo BTP
+          </ButtonLink>
+        ) : (
+          <ButtonLink to="/comment-ca-marche" variant="secondary" size="lg">
+            Voir comment ça marche
+          </ButtonLink>
+        )}
       </PageHeader>
 
       <Container className="max-w-4xl pb-14">

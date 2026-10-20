@@ -41,6 +41,8 @@ export const SITE = {
 export const APP_LINKS = {
   configured: Boolean(appUrl),
   home: appUrl || '/contact',
+  /** Démo de l'application (données fictives) pour les artisans du BTP */
+  demoBuilding: appUrl ? joinUrl(appUrl, '#/demo/btp') : '/contact',
   signup: appUrl ? joinUrl(appUrl, clean(env.VITE_APP_SIGNUP_PATH)) : '/contact',
   login: appUrl ? joinUrl(appUrl, clean(env.VITE_APP_LOGIN_PATH)) : '/contact',
 } as const;
@@ -79,3 +81,10 @@ export const MICRO_COPY = {
   mobile: 'Accessible depuis votre smartphone.',
   pros: 'Conçu pour les professionnels du paysage.',
 } as const;
+
+/** Ajoute « metier=btp » à un lien de l'application (inscription) : le métier y est présélectionné. */
+export function withTrade(href: string, trade?: 'btp'): string {
+  if (!trade || !/^https?:/.test(href)) return href;
+  if (href.includes('#')) return href + (href.split('#')[1]!.includes('?') ? '&' : '?') + 'metier=' + trade;
+  return href.replace(/\/?$/, '/') + '?metier=' + trade;
+}

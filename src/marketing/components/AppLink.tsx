@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { ArrowRight } from 'lucide-react';
-import { APP_LINKS } from '../config/marketing';
+import { APP_LINKS, withTrade } from '../config/marketing';
 import { useAnalytics } from '../analytics/AnalyticsProvider';
 import type { MarketingEvent } from '../analytics/events';
 import { ButtonLink } from './ui';
@@ -20,6 +20,7 @@ export function AppCta({
   size = 'lg',
   className = '',
   arrow = true,
+  trade,
 }: {
   target?: Target;
   event?: MarketingEvent;
@@ -29,9 +30,11 @@ export function AppCta({
   size?: 'md' | 'lg';
   className?: string;
   arrow?: boolean;
+  /** Métier présélectionné à l'inscription (artisans du BTP) */
+  trade?: 'btp';
 }) {
   const { trackEvent } = useAnalytics();
-  const href = target === 'login' ? APP_LINKS.login : APP_LINKS.signup;
+  const href = target === 'login' ? APP_LINKS.login : withTrade(APP_LINKS.signup, trade);
   return (
     <ButtonLink
       to={href}

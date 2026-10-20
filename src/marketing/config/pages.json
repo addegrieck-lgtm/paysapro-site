@@ -24,6 +24,11 @@
     "description": "Logiciel de devis pour paysagiste : métrés au m² et au ml, catalogue de prix, devis professionnel et signature du client. Gratuit pendant la bêta.",
     "priority": "0.9"
   },
+  "/logiciel-devis-batiment": {
+    "title": "Logiciel de devis bâtiment pour artisans du BTP | Paysapro AI",
+    "description": "Logiciel de devis pour artisans du BTP, tous corps de métier : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Gratuit pendant la bêta.",
+    "priority": "0.9"
+  },
   "/logiciel-gestion-paysagiste": {
     "title": "Logiciel de gestion pour paysagiste | Paysapro AI",
     "description": "Logiciel de gestion pour paysagiste : clients, chantiers, photos, catalogue de prix, devis et tableau de bord réunis dans un seul outil simple.",

@@ -24,9 +24,93 @@ export interface Landing {
   faq: { question: string; answer: string }[];
   /** liens internes « pour aller plus loin » */
   related: { label: string; to: string }[];
+  /** Métier présélectionné à l'inscription + bouton vers la démo correspondante */
+  metier?: 'btp';
 }
 
 export const LANDINGS: Landing[] = [
+  {
+    path: '/logiciel-devis-batiment',
+    metier: 'btp',
+    eyebrow: 'Artisans du BTP · tous corps de métier',
+    h1: 'Le logiciel de devis pour les artisans du bâtiment.',
+    intro:
+      'Rénovation ou neuf, maçonnerie, plâtrerie, électricité, plomberie, peinture, carrelage, couverture : Paysapro AI transforme votre visite technique en devis conforme, chiffré par lot, puis le fait signer par votre client. Depuis votre téléphone.',
+    summary: [
+      'Paysapro AI propose un mode « Artisan du BTP » pour tous les corps de métier du bâtiment, en rénovation comme en neuf.',
+      'Le devis est organisé par lots (corps d’état) avec sous-totaux, et chaque ligne peut avoir son taux de TVA : 20 %, 10 % ou 5,5 %.',
+      'Les mentions du bâtiment sont reprises sur chaque devis : assurance décennale, immatriculation, qualifications (RGE…), début et durée des travaux, retenue de garantie, autoliquidation.',
+      'Métrés de murs avec ouvertures déduites, calculateurs (peinture, carrelage, béton, plaques de plâtre) et catalogue d’environ 50 prestations types sont inclus.',
+      'L’accès est gratuit pendant la phase bêta.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Un devis du bâtiment, organisé par lots',
+        paragraphs: [
+          'Un chantier de rénovation mélange souvent plusieurs corps d’état : démolition, plomberie, électricité, carrelage, peinture. Paysapro AI range chaque prestation dans son lot et affiche un sous-total par lot : votre client comprend ce qu’il paie, et vous retrouvez votre chiffrage d’un coup d’œil.',
+          'Le catalogue de départ contient des prestations types pour chaque lot — installation de chantier, maçonnerie, plâtrerie et isolation, électricité, plomberie et chauffage, menuiserie, peinture, carrelage, couverture, façade — avec unité, prix de vente et coût. Vous les adaptez à vos tarifs.',
+        ],
+      },
+      {
+        heading: 'TVA 20 %, 10 % ou 5,5 % : sans erreur de calcul',
+        paragraphs: [
+          'Sur chaque devis, vous indiquez le type de chantier : neuf ou local professionnel (20 %), rénovation d’un logement de plus de deux ans (10 %), rénovation énergétique (5,5 %). Chaque ligne peut garder son propre taux, par exemple une isolation à 5,5 % dans une rénovation à 10 %.',
+          'Le devis présente un récapitulatif de TVA par taux et rappelle l’attestation que le client doit remplir pour bénéficier d’un taux réduit. L’autoliquidation en sous-traitance et la franchise de TVA des micro-entreprises sont prises en charge.',
+        ],
+      },
+      {
+        heading: 'Les mentions du bâtiment, une fois pour toutes',
+        list: [
+          'Assurance décennale : assureur, coordonnées, numéro de contrat et couverture géographique.',
+          'Immatriculation au répertoire des métiers ou au RCS, SIRET, numéro de TVA.',
+          'Qualifications (RGE, Qualibat…) affichées sous vos coordonnées.',
+          'Date de début et durée estimée des travaux.',
+          'Retenue de garantie de 5 % si vous l’utilisez.',
+          'Vos conditions : acompte, avenants, pénalités de retard, droit de rétractation.',
+        ],
+      },
+      {
+        heading: 'Des métrés justes, directement sur place',
+        paragraphs: [
+          'Relevez les pièces, les murs (périmètre × hauteur) et les ouvertures à déduire. Chaque ligne du devis choisit sa mesure : la faïence sur les murs, le carrelage sur le sol, la peinture sur les plafonds. Les chutes sont ajoutées automatiquement.',
+          'Les calculateurs intégrés donnent en un instant la surface nette d’un mur, les litres de peinture, le nombre de cartons de carrelage, le volume de béton et les sacs de ciment, ou le nombre de plaques de plâtre.',
+        ],
+      },
+      {
+        heading: 'Du devis signé au chantier suivi',
+        paragraphs: [
+          'Le client consulte le devis en ligne et le signe sur son téléphone. Vous suivez ensuite le chantier : planning, checklist (métré confirmé, matériaux commandés, réception), photos avant et après, acompte et solde reçus. Votre marge reste visible par vous seul, ligne par ligne.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Quels corps de métier du bâtiment sont concernés ?',
+        answer:
+          'Tous : rénovation tous corps d’état, maçonnerie et gros œuvre, plâtrerie, isolation, électricité, plomberie, chauffage, menuiserie, peinture, carrelage et sols, couverture, charpente, façade, serrurerie, démolition. Le catalogue de départ couvre les principaux lots et se complète avec vos propres prestations.',
+      },
+      {
+        question: 'Comment Paysapro AI gère-t-il les taux de TVA réduits ?',
+        answer:
+          'Vous choisissez le type de chantier sur le devis (20 %, 10 % ou 5,5 %) et chaque ligne peut avoir son propre taux. Le devis affiche le détail de la TVA par taux et rappelle l’attestation à faire remplir par le client. Vérifiez les cas particuliers avec votre comptable.',
+      },
+      {
+        question: 'Puis-je utiliser Paysapro AI si je suis aussi paysagiste ?',
+        answer: 'Oui. Le métier se choisit à l’inscription et se change à tout moment dans « Mon entreprise » : catalogue, modèles de devis, calculateurs et assistant s’adaptent.',
+      },
+      {
+        question: 'Les mentions de mes devis sont-elles garanties conformes ?',
+        answer:
+          'Paysapro AI reprend les mentions que vous renseignez (assurance décennale, immatriculation, conditions…). Il ne remplace pas un conseil juridique : faites valider vos mentions et vos conditions par votre conseiller.',
+      },
+    ],
+    related: [
+      { label: 'Comment ça marche', to: '/comment-ca-marche' },
+      { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
+      { label: 'Tarifs', to: '/tarifs' },
+    ],
+  },
   {
     path: '/logiciel-devis-paysagiste',
     eyebrow: 'Logiciel de devis paysagiste',

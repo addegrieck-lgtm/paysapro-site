@@ -9,6 +9,7 @@ export const MAIN_NAV: NavItem[] = [
   { label: 'Fonctionnalités', to: '/fonctionnalites' },
   { label: 'Comment ça marche', to: '/comment-ca-marche' },
   { label: 'Pour qui ?', to: '/#pour-qui' },
+  { label: 'Artisans du BTP', to: '/logiciel-devis-batiment' },
   ...(MARKETING_CONFIG.showPricing ? [{ label: 'Tarifs', to: '/tarifs' }] : []),
   { label: 'FAQ', to: '/faq' },
 ];
@@ -18,6 +19,7 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
     title: 'Produit',
     links: [
       { label: 'Logiciel de devis', to: '/logiciel-devis-paysagiste' },
+      { label: 'Devis pour artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Logiciel de gestion', to: '/logiciel-gestion-paysagiste' },
       { label: 'Application mobile', to: '/application-paysagiste' },
       { label: 'Services à la personne (SAP)', to: '/logiciel-paysagiste-services-a-la-personne' },

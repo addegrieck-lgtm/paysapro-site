@@ -28,6 +28,16 @@ export function AudienceSection() {
             </Reveal>
           ))}
         </ul>
+        <Reveal className="mx-auto mt-10 max-w-3xl rounded-3xl bg-cream p-6 text-center ring-1 ring-line/70 sm:p-8">
+          <h3 className="text-lg font-bold text-ink sm:text-xl">Vous êtes artisan du bâtiment ?</h3>
+          <p className="mt-2 text-muted">
+            Rénovation ou neuf, tous corps de métier : devis par lots, TVA 20 / 10 / 5,5 %, assurance décennale et métrés. Choisissez « Artisan du BTP » à l’inscription.
+          </p>
+          <Link to="/logiciel-devis-batiment" className={buttonClass('secondary', 'md', 'group mt-4')}>
+            Paysapro AI pour le BTP
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+          </Link>
+        </Reveal>
         <div className="mt-12 flex justify-center">
           <Link to="/fonctionnalites" className={buttonClass('primary', 'lg', 'group')}>
             Découvrir Paysapro AI
