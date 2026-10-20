@@ -23,26 +23,26 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   mentions: {
     path: '/mentions-legales',
     title: 'Mentions légales',
-    updated: <Ph>[DATE DE MISE À JOUR]</Ph>,
+    updated: <>20 octobre 2026</>,
     sections: [
       {
         heading: 'Éditeur du site',
         body: (
           <>
             <p>
-              <Ph>[NOM DE L’ENTREPRISE]</Ph>, <Ph>[FORME JURIDIQUE]</Ph> au capital de <Ph>[CAPITAL]</Ph> €
+              ADDEG SAAS, <Ph>[FORME JURIDIQUE]</Ph> au capital de <Ph>[CAPITAL]</Ph> €
             </p>
             <p>
               Siège social : <Ph>[ADRESSE]</Ph>
             </p>
             <p>
-              SIRET : <Ph>[SIRET]</Ph> · RCS : <Ph>[VILLE RCS ET NUMÉRO]</Ph> · TVA intracommunautaire : <Ph>[NUMÉRO DE TVA]</Ph>
+              SIRET : 584 674 303 87144 · RCS : <Ph>[VILLE RCS ET NUMÉRO]</Ph> · TVA intracommunautaire : <Ph>[NUMÉRO DE TVA]</Ph>
             </p>
             <p>
-              Email : <Ph>[EMAIL]</Ph> · Téléphone : <Ph>[TÉLÉPHONE]</Ph>
+              Email : contact@paysapro-ai.fr
             </p>
             <p>
-              Directeur de la publication : <Ph>[NOM DU DIRECTEUR DE LA PUBLICATION]</Ph>
+              Directeur de la publication : Adrien Degrieck
             </p>
           </>
         ),
@@ -51,7 +51,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Hébergement',
         body: (
           <p>
-            Le site est hébergé par GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (support.github.com). Les messages envoyés par les formulaires sont enregistrés chez Supabase.
+            Le site est hébergé par GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis (support.github.com). L’application (app.paysapro-ai.fr) est hébergée par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis. Les données de l’application et les messages envoyés par les formulaires sont enregistrés chez Supabase, dans l’Union européenne (Francfort).
           </p>
         ),
       },
@@ -59,7 +59,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Propriété intellectuelle',
         body: (
           <p>
-            L’ensemble des contenus de ce site (textes, interfaces, logo, illustrations) est la propriété de <Ph>[NOM DE L’ENTREPRISE]</Ph>, sauf mention contraire. Toute
+            L’ensemble des contenus de ce site (textes, interfaces, logo, illustrations) est la propriété de ADDEG SAAS, sauf mention contraire. Toute
             reproduction sans autorisation préalable est interdite.
           </p>
         ),
@@ -68,7 +68,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Contact',
         body: (
           <p>
-            Pour toute question, vous pouvez utiliser la page Contact ou écrire à <Ph>[EMAIL]</Ph>.
+            Pour toute question, vous pouvez utiliser la page Contact ou écrire à contact@paysapro-ai.fr.
           </p>
         ),
       },
@@ -77,13 +77,13 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   confidentialite: {
     path: '/confidentialite',
     title: 'Politique de confidentialité',
-    updated: <Ph>[DATE DE MISE À JOUR]</Ph>,
+    updated: <>20 octobre 2026</>,
     sections: [
       {
         heading: 'Responsable du traitement',
         body: (
           <p>
-            <Ph>[NOM DE L’ENTREPRISE]</Ph>, <Ph>[ADRESSE]</Ph>, joignable à <Ph>[EMAIL]</Ph>.
+            ADDEG SAAS, <Ph>[ADRESSE]</Ph>, joignable à contact@paysapro-ai.fr.
           </p>
         ),
       },
@@ -110,7 +110,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Durée de conservation',
         body: (
           <p>
-            <Ph>[DURÉES DE CONSERVATION À DÉFINIR — ex. demandes de contact, liste de diffusion]</Ph>
+            Demandes de contact : 3 ans après le dernier échange. Inscription aux nouveautés : jusqu’à votre désinscription. Comptes de l’application : pendant la durée d’utilisation, puis 3 ans après la dernière activité (sauf suppression du compte, effective sans délai). Pièces comptables liées aux abonnements : 10 ans (obligation légale).
           </p>
         ),
       },
@@ -118,8 +118,8 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Destinataires et sous-traitants',
         body: (
           <p>
-            Les données sont destinées à <Ph>[NOM DE L’ENTREPRISE]</Ph>. Sous-traitants techniques : GitHub, Inc. (hébergement du site, qui peut enregistrer des journaux techniques comme l’adresse IP) et Supabase (enregistrement des messages de contact et des inscriptions aux nouveautés). Aucun outil de mesure d’audience n’est actif à ce jour.{' '}
-            <Ph>[PRÉCISER LA RÉGION D’HÉBERGEMENT SUPABASE ET LES GARANTIES POUR LES TRANSFERTS HORS UE]</Ph>
+            Les données sont destinées à ADDEG SAAS. Sous-traitants techniques : GitHub, Inc. (hébergement du site, qui peut enregistrer des journaux techniques comme l’adresse IP) et Supabase (enregistrement des messages de contact et des inscriptions aux nouveautés). Aucun outil de mesure d’audience n’est actif à ce jour.{' '}
+            Les données de Supabase sont hébergées dans l’Union européenne (Francfort, Allemagne). L’application est servie par Vercel et les paiements sont traités par Stripe, qui peuvent effectuer des transferts hors de l’UE encadrés par les clauses contractuelles types de la Commission européenne.
           </p>
         ),
       },
@@ -127,7 +127,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Vos droits',
         body: (
           <p>
-            Vous disposez d’un droit d’accès, de rectification, d’effacement, d’opposition, de limitation et de portabilité. Pour les exercer : <Ph>[EMAIL]</Ph>. Vous pouvez
+            Vous disposez d’un droit d’accès, de rectification, d’effacement, d’opposition, de limitation et de portabilité. Pour les exercer : contact@paysapro-ai.fr. Vous pouvez
             également introduire une réclamation auprès de la CNIL (cnil.fr).
           </p>
         ),
@@ -141,13 +141,13 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   cgu: {
     path: '/cgu',
     title: 'Conditions générales d’utilisation et de vente',
-    updated: <Ph>[DATE DE MISE À JOUR]</Ph>,
+    updated: <>20 octobre 2026</>,
     sections: [
       {
         heading: 'Objet',
         body: (
           <p>
-            Les présentes conditions encadrent l’utilisation du site et du service Paysapro AI, édité par <Ph>[NOM DE L’ENTREPRISE]</Ph>.
+            Les présentes conditions encadrent l’utilisation du site et du service Paysapro AI, édité par ADDEG SAAS.
           </p>
         ),
       },
@@ -180,7 +180,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Données',
         body: (
           <p>
-            <Ph>[CONDITIONS DE TRAITEMENT DES DONNÉES DU SERVICE — HÉBERGEMENT, SAUVEGARDES, EXPORT, SUPPRESSION]</Ph>
+            Les données saisies dans l’application (clients, chantiers, devis, photos) appartiennent à l’entreprise utilisatrice. Elles sont hébergées dans l’Union européenne (Supabase, Francfort), exportables à tout moment depuis l’application (Paramètres → Données) et supprimées avec le compte. Sans abonnement à l’issue de l’essai, elles restent consultables et exportables.
           </p>
         ),
       },
@@ -188,7 +188,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Droit applicable',
         body: (
           <p>
-            <Ph>[DROIT APPLICABLE ET JURIDICTION COMPÉTENTE]</Ph>
+            Les présentes conditions sont soumises au droit français. Le service est réservé aux professionnels : à défaut d’accord amiable, tout litige relève des tribunaux compétents du ressort du siège d’ADDEG SAAS.
           </p>
         ),
       },
@@ -197,7 +197,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   cookies: {
     path: '/cookies',
     title: 'Politique cookies',
-    updated: <Ph>[DATE DE MISE À JOUR]</Ph>,
+    updated: <>20 octobre 2026</>,
     sections: [
       {
         heading: 'Cookies utilisés',
