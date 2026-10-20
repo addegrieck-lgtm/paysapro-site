@@ -4,6 +4,8 @@
  * Règles : n'annoncer que ce que l'application fait ; aucun chiffre de gain inventé ; l'IA assiste, elle ne décide pas.
  * Title / description : src/marketing/config/pages.json.
  */
+import type { BtpSampleId } from './sampleBtp';
+
 export type LandingVisual = 'quote' | 'dashboard' | 'phone' | 'catalog' | 'sap';
 
 export interface LandingSection {
@@ -26,12 +28,15 @@ export interface Landing {
   related: { label: string; to: string }[];
   /** Métier présélectionné à l'inscription + bouton vers la démo correspondante */
   metier?: 'btp';
+  /** Devis d'exemple du bâtiment affiché à la place du devis de paysagiste */
+  btpSample?: BtpSampleId;
 }
 
 export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-devis-batiment',
     metier: 'btp',
+    btpSample: 'renovation',
     eyebrow: 'Artisans du BTP · tous corps de métier',
     h1: 'Le logiciel de devis pour les artisans du bâtiment.',
     intro:
@@ -116,6 +121,7 @@ export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-devis-electricien',
     metier: 'btp',
+    btpSample: 'electricien',
     eyebrow: 'Logiciel de devis électricien',
     h1: 'Le logiciel de devis pensé pour les électriciens.',
     intro: 'Comptez les points lumineux et les prises pièce par pièce, ajoutez le tableau et les circuits, et envoyez un devis clair, signé en ligne par votre client. Directement depuis le chantier.',
@@ -172,6 +178,7 @@ export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-devis-plombier',
     metier: 'btp',
+    btpSample: 'plombier',
     eyebrow: 'Logiciel de devis plombier',
     h1: 'Le logiciel de devis des plombiers et chauffagistes.',
     intro: 'De la rénovation de salle de bains au remplacement d’un chauffe-eau, chiffrez sur place, appliquez la bonne TVA et faites signer votre client depuis votre téléphone.',
@@ -228,6 +235,7 @@ export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-devis-peintre',
     metier: 'btp',
+    btpSample: 'peintre',
     eyebrow: 'Logiciel de devis peintre',
     h1: 'Le logiciel de devis pour les peintres en bâtiment.',
     intro: 'Mesurez les murs et les plafonds, déduisez les ouvertures, et obtenez un devis précis au mètre carré, prêt à être signé par votre client.',
@@ -284,6 +292,7 @@ export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-devis-maconnerie',
     metier: 'btp',
+    btpSample: 'macon',
     eyebrow: 'Logiciel de devis maçonnerie',
     h1: 'Le logiciel de devis pour les maçons.',
     intro: 'Dalles, murs, chapes, ouvertures : chiffrez vos travaux de maçonnerie au m², au m³ et au forfait, avec vos prix, et faites signer le devis depuis le chantier.',

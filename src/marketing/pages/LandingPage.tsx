@@ -14,6 +14,7 @@ import { QuoteMockup } from '../components/mockups/QuoteMockup';
 import { DashboardMockup } from '../components/mockups/DashboardMockup';
 import { CatalogMockup } from '../components/mockups/CatalogMockup';
 import { SapAttestationMockup } from '../components/mockups/SapAttestationMockup';
+import { BtpQuoteMockup } from '../components/mockups/BtpQuoteMockup';
 import { FinalCTA } from '../sections/FinalCTA';
 import { Essentiel } from '../components/Essentiel';
 import NotFoundPage from './NotFoundPage';
@@ -83,7 +84,7 @@ export default function LandingPage({ path }: { path: string }) {
 
         <aside className="lg:sticky lg:top-28 lg:self-start">
           <div className="mx-auto max-w-md">
-            <Visual kind={landing.visual} />
+            {landing.btpSample ? <BtpQuoteMockup sample={landing.btpSample} /> : <Visual kind={landing.visual} />}
             <p className="mt-4 text-center text-sm text-muted">Exemple : données et tarifs fictifs.</p>
           </div>
         </aside>
