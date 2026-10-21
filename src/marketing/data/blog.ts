@@ -266,7 +266,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   },
   {
     slug: 'attestation-fiscale-sap-jardinage',
-    title: 'Attestation fiscale SAP jardinage : le guide du paysagiste',
+    title: 'Attestation fiscale SAP jardinage : le guide',
     excerpt: 'Services à la personne et petits travaux de jardinage : à quoi sert l’attestation fiscale annuelle, ce qu’elle contient et comment la préparer sans y passer vos soirées.',
     keywords: ['attestation fiscale SAP', 'services à la personne jardinage', 'logiciel paysagiste SAP'],
     publishedAt: '2026-10-01',

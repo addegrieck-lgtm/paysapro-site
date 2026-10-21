@@ -47,7 +47,7 @@ export function Navbar() {
       }`}
     >
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
-        <Link to="/" className="shrink-0 rounded-lg" aria-label="Paysapro AI — accueil">
+        <Link to="/" className="shrink-0 rounded-lg">
           <Logo />
         </Link>
 

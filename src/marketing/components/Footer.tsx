@@ -13,7 +13,7 @@ export function Footer() {
       <Container className="py-16 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div className="max-w-sm">
-            <Link to="/" aria-label="Paysapro AI — accueil" className="inline-block rounded-lg">
+            <Link to="/" className="inline-block rounded-lg">
               <Logo tone="light" />
             </Link>
             <p className="mt-4 text-white/70">{SITE.tagline}</p>
