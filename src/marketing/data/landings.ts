@@ -61,7 +61,7 @@ export const LANDINGS: Landing[] = [
         heading: 'TVA 20 %, 10 % ou 5,5 % : sans erreur de calcul',
         paragraphs: [
           'Sur chaque devis, vous indiquez le type de chantier : neuf ou local professionnel (20 %), rénovation d’un logement de plus de deux ans (10 %), rénovation énergétique (5,5 %). Chaque ligne peut garder son propre taux, par exemple une isolation à 5,5 % dans une rénovation à 10 %.',
-          'Le devis présente un récapitulatif de TVA par taux et rappelle l’attestation que le client doit remplir pour bénéficier d’un taux réduit. L’autoliquidation en sous-traitance et la franchise de TVA des micro-entreprises sont prises en charge.',
+          'Le devis présente un récapitulatif de TVA par taux et porte la mention par laquelle le client certifie, en signant, que son logement remplit les conditions du taux réduit (elle remplace depuis février 2025 les anciennes attestations 1300-SD et 1301-SD). L’autoliquidation en sous-traitance et la franchise de TVA des micro-entreprises sont prises en charge.',
         ],
       },
       {
@@ -98,7 +98,7 @@ export const LANDINGS: Landing[] = [
       {
         question: 'Comment Paysapro AI gère-t-il les taux de TVA réduits ?',
         answer:
-          'Vous choisissez le type de chantier sur le devis (20 %, 10 % ou 5,5 %) et chaque ligne peut avoir son propre taux. Le devis affiche le détail de la TVA par taux et rappelle l’attestation à faire remplir par le client. Vérifiez les cas particuliers avec votre comptable.',
+          'Vous choisissez le type de chantier sur le devis (20 %, 10 % ou 5,5 %) et chaque ligne peut avoir son propre taux. Le devis affiche le détail de la TVA par taux et porte la certification du client exigée pour le taux réduit. Vérifiez les cas particuliers avec votre comptable.',
       },
       {
         question: 'Puis-je utiliser Paysapro AI si je suis aussi paysagiste ?',
@@ -144,7 +144,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Rénovation ou neuf : la bonne TVA, ligne par ligne',
         paragraphs: [
-          'En rénovation d’un logement de plus de deux ans, vos travaux passent à 10 % ; en neuf ou en local professionnel, à 20 %. Paysapro AI applique le taux du type de chantier choisi, affiche le récapitulatif de TVA et rappelle l’attestation à faire remplir par le client en cas de taux réduit.',
+          'En rénovation d’un logement de plus de deux ans, vos travaux passent à 10 % ; en neuf ou en local professionnel, à 20 %. Paysapro AI applique le taux du type de chantier choisi, affiche le récapitulatif de TVA et ajoute la certification du client exigée en cas de taux réduit.',
         ],
       },
       {

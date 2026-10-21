@@ -17,7 +17,7 @@ export default function BlogPage() {
     <>
       <PageHeader
         eyebrow="Blog"
-        title="Conseils pour les paysagistes"
+        title="Conseils pour les paysagistes et les artisans du bâtiment"
         intro="Devis, métrés, organisation des chantiers : des méthodes concrètes pour chiffrer juste et gagner du temps."
       />
       <Container className="max-w-4xl pb-24">

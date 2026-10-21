@@ -90,7 +90,7 @@ export function BtpQuoteMockup({ sample = 'renovation', className = '' }: { samp
         <p className="flex items-start gap-1.5 rounded-lg bg-cream px-2.5 py-2 text-[9.5px] leading-snug text-muted">
           <ShieldCheck className="mt-px h-3 w-3 shrink-0 text-forest" aria-hidden="true" />
           Assurance décennale : assureur, n° de contrat, couverture France métropolitaine.
-          {t.vat.some((v) => v.rate < 20) && ' TVA réduite : attestation du client à conserver.'}
+          {t.vat.some((v) => v.rate < 20) && ' TVA réduite : certification du client portée sur le devis.'}
         </p>
 
         <div className="flex items-end justify-between gap-3 border-t border-line pt-2.5">

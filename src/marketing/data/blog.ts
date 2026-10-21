@@ -1,5 +1,5 @@
 /**
- * Blog — articles pratiques pour les paysagistes (référencement naturel).
+ * Blog — articles pratiques pour les paysagistes et les artisans du bâtiment (référencement naturel).
  * Publier un article : renseigner `publishedAt` et `body`. Il apparaît alors automatiquement
  * sur /blog, dans le sitemap et avec ses données structurées (pré-rendu au build).
  * Règles : conseils concrets, pas de prix de marché inventés, pas de bourrage de mots-clés.
@@ -29,6 +29,253 @@ export interface BlogArticle {
 }
 
 export const BLOG_ARTICLES: BlogArticle[] = [
+  {
+    slug: 'tva-travaux-renovation-taux-reduit',
+    title: 'TVA travaux : 20 %, 10 % ou 5,5 % sur un devis ?',
+    excerpt: 'Quel taux appliquer sur un devis de rénovation, comment combiner 10 % et 5,5 %, et ce qui remplace les attestations 1300-SD depuis 2025.',
+    keywords: ['tva travaux rénovation', 'tva 10 % travaux', 'tva 5,5 % rénovation énergétique', 'attestation tva travaux'],
+    publishedAt: '2026-10-21',
+    readingMinutes: 6,
+    summary: [
+      'Les travaux dans un logement achevé depuis plus de deux ans relèvent en général du taux de 10 %, et les travaux d’amélioration énergétique du taux de 5,5 %.',
+      'La construction neuve, les agrandissements importants et les locaux professionnels restent au taux normal de 20 %.',
+      'Un même devis peut mélanger les taux : chaque ligne porte le sien, avec un récapitulatif de TVA par taux.',
+      'Depuis le 16 février 2025, les attestations 1300-SD et 1301-SD sont supprimées : le client certifie les conditions par une mention portée sur le devis ou la facture.',
+    ],
+    links: [
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Mentions obligatoires d’un devis de travaux', to: '/blog/mentions-obligatoires-devis-travaux' },
+      { label: 'Tarifs', to: '/tarifs' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Appliquer le bon taux de TVA est l’une des questions les plus fréquentes sur un devis de travaux. Une erreur coûte cher : en cas de contrôle, l’entreprise peut devoir payer elle-même le complément de TVA. Voici les règles générales à connaître, à confirmer avec votre comptable pour les cas particuliers.',
+        ],
+      },
+      {
+        heading: 'Le taux normal de 20 %',
+        paragraphs: [
+          'Le taux de 20 % s’applique par défaut : construction neuve, travaux qui aboutissent à la production d’un immeuble neuf, agrandissements qui augmentent la surface de plancher de plus de 10 %, travaux dans des locaux professionnels, et logements achevés depuis moins de deux ans.',
+          'Certains équipements fournis sans pose, ou des équipements dits « de confort » selon leur nature, peuvent aussi rester à 20 % même dans un logement ancien.',
+        ],
+      },
+      {
+        heading: 'Le taux intermédiaire de 10 %',
+        paragraphs: [
+          'Les travaux d’amélioration, de transformation, d’aménagement et d’entretien portant sur des locaux à usage d’habitation achevés depuis plus de deux ans relèvent du taux de 10 %, à condition qu’ils ne produisent pas un immeuble neuf et n’augmentent pas la surface de plancher de plus de 10 %.',
+          'C’est le cas typique d’une rénovation de salle de bains, d’une remise en peinture, d’un remplacement de tableau électrique ou d’une réfection de toiture chez un particulier.',
+        ],
+      },
+      {
+        heading: 'Le taux réduit de 5,5 %',
+        paragraphs: [
+          'Le taux de 5,5 % vise les travaux d’amélioration de la qualité énergétique dans les mêmes logements de plus de deux ans : isolation thermique, certains équipements de chauffage ou de production d’eau chaude performants, ainsi que les travaux induits qui leur sont indissociablement liés. Les critères techniques des matériaux et équipements doivent être respectés.',
+        ],
+      },
+      {
+        heading: 'Plusieurs taux dans le même devis',
+        paragraphs: [
+          'Une rénovation mélange souvent les taux : l’isolation des combles à 5,5 %, le reste des travaux à 10 %. Le devis doit alors indiquer le taux de chaque ligne et un récapitulatif de la TVA par taux, pour que le total TTC soit exact et vérifiable.',
+        ],
+      },
+      {
+        heading: 'Fin des attestations 1300-SD et 1301-SD',
+        list: [
+          'Depuis le 16 février 2025 (loi de finances pour 2025), le client n’a plus à remplir les formulaires d’attestation 1300-SD ou 1301-SD.',
+          'Il certifie désormais, par une mention portée sur le devis, la facture ou le contrat, que le logement est achevé depuis plus de deux ans, qu’il est affecté à l’habitation et que les travaux ne produisent pas un immeuble neuf.',
+          'L’entreprise reste responsable de la nature des travaux et des critères techniques des équipements.',
+          'Le client conserve le devis et les factures jusqu’au 31 décembre de la cinquième année suivant les travaux ; l’entreprise les garde avec sa comptabilité.',
+        ],
+      },
+      {
+        heading: 'Dans Paysapro AI',
+        paragraphs: [
+          'En mode « Artisan du BTP », vous choisissez le type de chantier : neuf ou local professionnel, rénovation d’un logement de plus de deux ans, ou rénovation énergétique. Chaque ligne peut avoir son propre taux, le devis affiche un récapitulatif par taux et ajoute la mention de certification du client, validée par sa signature.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'mentions-obligatoires-devis-travaux',
+    title: 'Mentions obligatoires d’un devis de travaux en 2026',
+    excerpt: 'La liste des informations à faire figurer sur un devis du bâtiment : entreprise, assurance, client, prestations, prix, délais et conditions.',
+    keywords: ['mentions obligatoires devis', 'devis travaux mentions', 'devis artisan obligatoire', 'modèle devis bâtiment'],
+    publishedAt: '2026-10-21',
+    readingMinutes: 5,
+    summary: [
+      'Un devis de travaux identifie l’entreprise (nom, adresse, SIRET, immatriculation, n° de TVA) et le client.',
+      'Il décrit précisément les travaux avec quantités, prix unitaires, totaux HT, TVA et TTC.',
+      'Dans le bâtiment, l’assurance décennale doit être mentionnée : assureur, coordonnées et couverture géographique.',
+      'Il précise la date, la durée de validité, les délais, les conditions de paiement et, pour un particulier démarché, le droit de rétractation.',
+    ],
+    links: [
+      { label: 'TVA des travaux : 20 %, 10 % ou 5,5 %', to: '/blog/tva-travaux-renovation-taux-reduit' },
+      { label: 'L’assurance décennale sur le devis', to: '/blog/assurance-decennale-devis' },
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Un devis signé engage les deux parties : c’est un contrat. Plus il est complet, moins il laisse de place aux litiges. Voici les informations qu’on attend d’un devis de travaux du bâtiment. Les règles exactes dépendent de votre statut et de votre clientèle : faites valider votre modèle par votre conseiller.',
+        ],
+      },
+      {
+        heading: 'L’entreprise',
+        list: [
+          'Nom ou raison sociale, forme juridique et adresse.',
+          'Numéro SIRET et immatriculation (répertoire des métiers ou RCS).',
+          'Numéro de TVA intracommunautaire, ou la mention de franchise de TVA pour une micro-entreprise.',
+          'Assurance décennale (et responsabilité civile professionnelle) : nom et coordonnées de l’assureur, couverture géographique.',
+          'Qualifications éventuelles (RGE, Qualibat…), utiles notamment pour les aides à la rénovation.',
+        ],
+      },
+      {
+        heading: 'Le client et le chantier',
+        list: [
+          'Nom et adresse du client.',
+          'Adresse du chantier si elle est différente.',
+          'Date du devis et numéro.',
+        ],
+      },
+      {
+        heading: 'Les travaux et les prix',
+        list: [
+          'Le détail des prestations, avec quantités, unités et prix unitaires hors taxes.',
+          'Les fournitures et la main-d’œuvre, et les éventuels frais de déplacement.',
+          'Le total hors taxes, le taux et le montant de la TVA, le total TTC.',
+          'Le caractère gratuit ou payant du devis.',
+        ],
+      },
+      {
+        heading: 'Délais et conditions',
+        list: [
+          'La durée de validité de l’offre.',
+          'La date de début et la durée estimée des travaux.',
+          'Les conditions de paiement : acompte, échéances, solde.',
+          'Pour un particulier, en cas de contrat conclu hors établissement : les informations sur le droit de rétractation de 14 jours.',
+          'Pour un particulier : les coordonnées du médiateur de la consommation.',
+        ],
+      },
+      {
+        heading: 'Les mentions selon le chantier',
+        paragraphs: [
+          'Selon les cas, d’autres mentions s’ajoutent : la certification du client pour la TVA à taux réduit, l’autoliquidation de la TVA en sous-traitance, ou la retenue de garantie dans un marché avec un professionnel.',
+        ],
+      },
+      {
+        heading: 'Avec Paysapro AI',
+        paragraphs: [
+          'Vous renseignez une fois l’identité de l’entreprise, l’assurance décennale et vos qualifications : elles apparaissent automatiquement sur chaque devis, avec les dates, la TVA par taux et vos conditions. Le client signe en ligne, et le devis signé reste attaché au chantier.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'assurance-decennale-devis',
+    title: 'Assurance décennale : que mettre sur le devis ?',
+    excerpt: 'Ce qu’un artisan du bâtiment doit indiquer sur ses devis et factures au sujet de son assurance décennale, et pourquoi c’est important.',
+    keywords: ['assurance décennale devis', 'mention décennale devis', 'garantie décennale artisan'],
+    publishedAt: '2026-10-21',
+    readingMinutes: 4,
+    summary: [
+      'Les entreprises du bâtiment soumises à l’assurance décennale doivent la mentionner sur leurs devis et factures.',
+      'Il faut indiquer le nom et les coordonnées de l’assureur, et la couverture géographique du contrat.',
+      'Ajouter le numéro de contrat rassure le client et facilite ses vérifications.',
+      'Vérifiez que les activités assurées correspondent bien aux travaux du devis.',
+    ],
+    links: [
+      { label: 'Mentions obligatoires d’un devis de travaux', to: '/blog/mentions-obligatoires-devis-travaux' },
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'La garantie décennale couvre pendant dix ans les dommages qui compromettent la solidité d’un ouvrage ou le rendent impropre à sa destination. Pour les entreprises concernées, l’assurance est obligatoire, et elle doit apparaître sur les documents remis au client.',
+        ],
+      },
+      {
+        heading: 'Les informations à faire figurer',
+        list: [
+          'Le nom de l’assureur (ou du garant).',
+          'Ses coordonnées.',
+          'La couverture géographique du contrat ou de la garantie.',
+          'De préférence, le numéro de contrat.',
+        ],
+      },
+      {
+        heading: 'Pourquoi c’est important',
+        paragraphs: [
+          'Pour le client, c’est une garantie de sérieux et une protection en cas de sinistre. Pour l’entreprise, l’absence de ces mentions expose à des sanctions et fragilise sa position en cas de litige.',
+          'Pensez aussi à vérifier que les activités déclarées à votre assureur couvrent bien les travaux proposés : une décennale « plâtrerie » ne couvre pas forcément des travaux de charpente.',
+        ],
+      },
+      {
+        heading: 'Une attestation à jour',
+        paragraphs: [
+          'Le client peut demander l’attestation d’assurance de l’année en cours. Gardez-la à portée de main, par exemple en PDF sur votre téléphone, pour l’envoyer avec le devis.',
+        ],
+      },
+      {
+        heading: 'Avec Paysapro AI',
+        paragraphs: [
+          'Dans « Mon entreprise », vous renseignez l’assureur, ses coordonnées, le numéro de contrat et la couverture géographique. Ces informations sont reprises automatiquement dans les mentions de chaque devis et de son PDF.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'facturation-electronique-artisans',
+    title: 'Facture électronique : ce qui change en 2026-2027',
+    excerpt: 'Réception dès septembre 2026, émission en septembre 2027 pour les TPE : le calendrier de la réforme et comment s’y préparer.',
+    keywords: ['facturation électronique artisan', 'facture électronique 2026', 'facture électronique 2027 TPE'],
+    publishedAt: '2026-10-21',
+    readingMinutes: 4,
+    summary: [
+      'Depuis le 1er septembre 2026, toutes les entreprises, artisans compris, doivent pouvoir recevoir des factures électroniques.',
+      'Les TPE et micro-entreprises devront les émettre à partir du 1er septembre 2027, avec la transmission de données à l’administration (e-reporting).',
+      'Les factures passent par une plateforme agréée ; un simple PDF envoyé par e-mail ne suffira plus entre professionnels.',
+      'Le devis n’est pas concerné : il reste un document libre, que vous pouvez continuer à établir et faire signer comme aujourd’hui.',
+    ],
+    links: [
+      { label: 'Mentions obligatoires d’un devis de travaux', to: '/blog/mentions-obligatoires-devis-travaux' },
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'La généralisation de la facturation électronique entre entreprises est en cours en France. Beaucoup d’artisans pensent devoir tout changer dès 2026 : en réalité, le calendrier est progressif. Les dates ci-dessous sont celles annoncées à ce jour ; vérifiez-les auprès de l’administration fiscale ou de votre expert-comptable.',
+        ],
+      },
+      {
+        heading: 'Le calendrier',
+        list: [
+          '1er septembre 2026 : toutes les entreprises doivent être en mesure de recevoir des factures électroniques, y compris les micro-entreprises en franchise de TVA.',
+          '1er septembre 2026 : les grandes entreprises et les ETI doivent les émettre.',
+          '1er septembre 2027 : les PME, TPE et micro-entreprises doivent à leur tour émettre leurs factures au format électronique et transmettre leurs données (e-reporting).',
+        ],
+      },
+      {
+        heading: 'Ce que ça change concrètement',
+        paragraphs: [
+          'Les factures entre professionnels transiteront par une plateforme de dématérialisation agréée, dans un format structuré. Pour recevoir les factures de vos fournisseurs, il faut dès maintenant avoir choisi une plateforme, souvent proposée par votre banque, votre logiciel de comptabilité ou votre expert-comptable.',
+          'Les ventes aux particuliers ne sont pas des factures électroniques au sens de la réforme, mais leurs données font l’objet d’un e-reporting.',
+        ],
+      },
+      {
+        heading: 'Et les devis ?',
+        paragraphs: [
+          'Le devis n’entre pas dans la réforme : vous pouvez continuer à l’établir, l’envoyer et le faire signer en ligne. C’est la facture émise après les travaux qui devra suivre le nouveau circuit.',
+        ],
+      },
+      {
+        heading: 'Où se situe Paysapro AI',
+        paragraphs: [
+          'Paysapro AI couvre aujourd’hui le devis, la signature et le suivi du chantier, avec l’enregistrement des acomptes et soldes reçus. Il ne fait pas de facturation électronique : pour vos factures, utilisez une solution raccordée à une plateforme agréée.',
+        ],
+      },
+    ],
+  },
   {
     slug: 'comment-faire-un-devis-paysagiste',
     title: 'Comment faire un devis paysagiste ?',
