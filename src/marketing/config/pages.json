@@ -24,6 +24,11 @@
     "description": "Logiciel de devis pour paysagiste : métrés au m² et au ml, catalogue de prix, devis professionnel et signature du client. Essai gratuit 15 jours.",
     "priority": "0.9"
   },
+  "/logiciel-facturation-artisan": {
+    "title": "Logiciel devis et factures pour artisans | Paysapro AI",
+    "description": "Devis et factures d’artisan sur mobile : acompte et solde en un clic, numérotation continue, mentions obligatoires, avoirs. Essai gratuit 15 jours.",
+    "priority": "0.9"
+  },
   "/logiciel-devis-batiment": {
     "title": "Logiciel de devis bâtiment pour artisans du BTP | Paysapro AI",
     "description": "Logiciel de devis pour artisans du BTP, tous corps de métier : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Essai gratuit 15 jours.",

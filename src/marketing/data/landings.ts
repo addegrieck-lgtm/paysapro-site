@@ -34,6 +34,71 @@ export interface Landing {
 
 export const LANDINGS: Landing[] = [
   {
+    path: '/logiciel-facturation-artisan',
+    btpSample: 'renovation',
+    eyebrow: 'Devis et factures pour artisans',
+    h1: 'Devis et factures d’artisan, depuis votre téléphone.',
+    intro: 'Le devis signé devient une facture d’acompte, puis une facture de solde, en un clic. Numérotation continue, mentions obligatoires, PDF à vos couleurs et suivi des encaissements : pour les artisans du bâtiment comme pour les paysagistes.',
+    summary: [
+      'Paysapro AI établit vos factures d’acompte, de solde et vos avoirs directement depuis le devis signé, sans ressaisie.',
+      'Les factures sont numérotées automatiquement dans une séquence continue et ne peuvent plus être modifiées une fois émises, comme l’exige la loi.',
+      'Elles reprennent les mentions obligatoires : identité de l’entreprise, assurance décennale, TVA par taux, échéance, pénalités de retard et indemnité de 40 €.',
+      'Vous voyez à tout moment ce qui a été facturé et ce qui reste à encaisser.',
+      'La facture électronique devient obligatoire pour les TPE en septembre 2027 : son format et le raccordement à une plateforme agréée sont en préparation dans Paysapro AI.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Du devis signé à la facture, en un clic',
+        paragraphs: [
+          'Dès que le client a signé, le devis propose deux boutons : « Facture d’acompte » et « Facturer tout le devis ». L’acompte reprend le pourcentage de votre choix, ventilé par taux de TVA. La facture de solde reprend toutes les prestations et déduit automatiquement les acomptes déjà facturés.',
+          'Aucun chiffre n’est ressaisi : quantités, prix, lots et taux de TVA viennent du devis que votre client a accepté.',
+        ],
+      },
+      {
+        heading: 'Une facture conforme, sans y penser',
+        list: [
+          'Numérotation chronologique et continue, attribuée automatiquement (F2026-0001, F2026-0002…).',
+          'Coordonnées de l’entreprise et du client figées au moment de l’émission.',
+          'TVA détaillée par taux, franchise de TVA ou autoliquidation selon votre situation.',
+          'Assurance décennale, date d’échéance, pénalités de retard et indemnité forfaitaire de 40 €.',
+          'SIREN du client professionnel et catégorie de l’opération, demandés par la réforme.',
+          'PDF à vos couleurs, à télécharger, partager ou envoyer par e-mail.',
+        ],
+      },
+      {
+        heading: 'Une erreur ? Un avoir',
+        paragraphs: [
+          'Une facture émise ne se modifie pas et ne se supprime pas : c’est la règle. Paysapro AI le garantit. Pour corriger, vous créez un avoir qui annule la facture, puis vous émettez une facture corrigée. L’historique reste complet et lisible pour votre expert-comptable.',
+        ],
+      },
+      {
+        heading: 'Ce qui reste à encaisser',
+        paragraphs: [
+          'Les acomptes et soldes reçus s’enregistrent sur le chantier. Chaque facture affiche son état : payée, partiellement payée ou à encaisser, et la liste des factures totalise ce qui reste dû.',
+        ],
+      },
+      {
+        heading: 'Prêt pour la facture électronique de 2027',
+        paragraphs: [
+          'À partir du 1er septembre 2027, les TPE et micro-entreprises devront émettre leurs factures entre professionnels au format électronique, via une plateforme agréée. Le format électronique et ce raccordement sont en préparation dans Paysapro AI, pour que vous n’ayez pas à changer d’outil.',
+        ],
+      },
+    ],
+    faq: [
+      { question: 'Puis-je faire une facture sans devis ?', answer: 'Les factures partent d’un devis accepté ou signé : c’est ce qui garantit que les montants correspondent à ce que le client a validé. Pour une petite intervention, créez un devis rapide, faites-le accepter, puis facturez-le.' },
+      { question: 'Puis-je modifier une facture après l’avoir émise ?', answer: 'Non, et c’est voulu : une facture émise est un document comptable définitif. En cas d’erreur, créez un avoir depuis la facture, puis émettez une nouvelle facture corrigée.' },
+      { question: 'Paysapro AI est-il compatible avec la facture électronique 2027 ?', answer: 'Le format électronique et le raccordement à une plateforme agréée sont en préparation, pour l’échéance de septembre 2027 qui concerne les TPE. Aujourd’hui, vos factures sont émises en PDF avec les mentions obligatoires.' },
+      { question: 'Mes factures sont-elles conservées ?', answer: 'Oui : elles sont enregistrées en ligne, ne peuvent être ni modifiées ni supprimées depuis l’application, et restent consultables même sans abonnement actif.' },
+    ],
+    related: [
+      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Facture d’acompte : mode d’emploi', to: '/blog/facture-acompte-travaux' },
+      { label: 'Mentions obligatoires d’une facture', to: '/blog/mentions-obligatoires-facture-artisan' },
+      { label: 'Tarifs', to: '/tarifs' },
+    ],
+  },
+  {
     path: '/logiciel-devis-batiment',
     metier: 'btp',
     btpSample: 'renovation',
@@ -402,7 +467,7 @@ export const LANDINGS: Landing[] = [
       {
         question: 'Paysapro AI remplace-t-il mon logiciel de facturation ?',
         answer:
-          'Paysapro AI est centré sur la préparation du chantier et le devis : photos, métrés, catalogue de prix, devis et signature du client. Il ne remplace pas un logiciel de comptabilité.',
+          'Pour vos devis et vos factures, oui : facture d’acompte et de solde en un clic depuis le devis signé, avoirs, numérotation continue et mentions obligatoires. Paysapro AI ne tient pas votre comptabilité : vos factures se transmettent à votre expert-comptable.',
       },
       {
         question: 'Puis-je faire un devis directement chez le client ?',
@@ -757,7 +822,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Ce que Paysapro AI ne fait pas',
         paragraphs: [
-          'Paysapro AI est centré sur le chantier et le devis : il ne tient pas votre comptabilité et n’établit pas de factures. Il ne gère pas l’avance immédiate de crédit d’impôt des services à la personne. Et son assistant ne fixe pas les prix à votre place : les quantités, les prix et le devis final restent sous votre contrôle.',
+          'Paysapro AI est centré sur le chantier, le devis et la facture : il ne tient pas votre comptabilité. Il ne gère pas l’avance immédiate de crédit d’impôt des services à la personne. Et son assistant ne fixe pas les prix à votre place : les quantités, les prix et le devis final restent sous votre contrôle.',
         ],
       },
       {

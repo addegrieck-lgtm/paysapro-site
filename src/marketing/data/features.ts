@@ -6,6 +6,7 @@ import {
   HeartHandshake,
   LayoutDashboard,
   PenLine,
+  Receipt,
   Smartphone,
   Sparkles,
   Tags,
@@ -71,6 +72,17 @@ export const FEATURES: Feature[] = [
     description:
       'Logo, coordonnées, SIRET, TVA, conditions, acompte : le devis reprend automatiquement vos informations et se présente de façon claire et soignée, en PDF ou en ligne.',
     benefit: 'Un devis qui donne confiance à votre client.',
+    mockup: 'quote',
+    home: true,
+  },
+  {
+    id: 'factures',
+    icon: Receipt,
+    title: 'Factures',
+    short: 'Facturez l’acompte puis le solde en un clic depuis le devis signé.',
+    description:
+      'Depuis un devis accepté ou signé, émettez la facture d’acompte puis la facture de solde, acomptes déduits. Numérotation continue, mentions obligatoires (décennale, TVA, pénalités de retard), PDF à vos couleurs et suivi de ce qui reste à encaisser. Une erreur se corrige par un avoir.',
+    benefit: 'Du devis signé au paiement, sans ressaisir un seul chiffre.',
     mockup: 'quote',
     home: true,
   },

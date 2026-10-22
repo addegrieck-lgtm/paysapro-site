@@ -30,6 +30,194 @@ export interface BlogArticle {
 
 export const BLOG_ARTICLES: BlogArticle[] = [
   {
+    slug: 'facture-acompte-travaux',
+    title: 'Facture d’acompte travaux : mode d’emploi',
+    excerpt: 'Quand émettre une facture d’acompte, ce qu’elle contient, comment gérer la TVA et comment la déduire de la facture de solde.',
+    keywords: ['facture d’acompte travaux', 'facture acompte artisan', 'facture de solde acompte déduit'],
+    publishedAt: '2026-10-22',
+    readingMinutes: 5,
+    summary: [
+      'La facture d’acompte se fait sur la base du devis signé, pour le pourcentage demandé à la commande.',
+      'Pour des travaux (prestations de services), la TVA est due à l’encaissement : l’acompte reçu porte sa part de TVA.',
+      'La facture de solde reprend tout le devis et déduit les acomptes déjà facturés : le client ne paie que le reste.',
+      'Chaque facture d’acompte a son propre numéro, dans la même séquence continue que vos autres factures.',
+    ],
+    links: [
+      { label: 'Devis et factures pour artisans', to: '/logiciel-facturation-artisan' },
+      { label: 'Mentions obligatoires d’une facture', to: '/blog/mentions-obligatoires-facture-artisan' },
+      { label: 'Numérotation des factures et avoirs', to: '/blog/numerotation-factures-avoir' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Demander un acompte à la signature est courant dans le bâtiment : il couvre l’achat des matériaux et engage le client. Encore faut-il le facturer correctement, puis le déduire à la fin du chantier.',
+        ],
+      },
+      {
+        heading: 'Quand faire une facture d’acompte ?',
+        paragraphs: [
+          'Dès que vous demandez ou encaissez un acompte sur un devis accepté. La facture d’acompte reprend la référence du devis, le pourcentage ou le montant demandé, et la TVA correspondante.',
+          'Pour une prestation de services comme des travaux, la TVA est exigible à l’encaissement, sauf si vous avez opté pour la TVA sur les débits : l’acompte encaissé entraîne donc le paiement de la TVA sur ce montant.',
+        ],
+      },
+      {
+        heading: 'Que contient-elle ?',
+        list: [
+          'Les mentions habituelles d’une facture : numéro, date, vos coordonnées, celles du client.',
+          'La référence du devis concerné et le pourcentage facturé.',
+          'Le montant hors taxes, la TVA par taux et le total TTC de l’acompte.',
+          'Si le devis mélange plusieurs taux (10 % et 5,5 % par exemple), l’acompte est réparti au prorata de chaque taux.',
+        ],
+      },
+      {
+        heading: 'La facture de solde',
+        paragraphs: [
+          'À la fin des travaux, la facture de solde reprend l’ensemble des prestations du devis, avec le total HT, la TVA et le total TTC. Elle déduit ensuite les acomptes déjà facturés, en rappelant leur numéro : le « net à payer » correspond à ce qu’il reste à régler.',
+        ],
+      },
+      {
+        heading: 'Avec Paysapro AI',
+        paragraphs: [
+          'Sur un devis signé, le bouton « Facture d’acompte » demande simplement le pourcentage : la facture est créée, ventilée par taux de TVA, numérotée et prête en PDF. À la fin du chantier, « Facture de solde » reprend tout le devis et déduit automatiquement les acomptes.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'mentions-obligatoires-facture-artisan',
+    title: 'Mentions obligatoires d’une facture d’artisan',
+    excerpt: 'La liste des informations à faire figurer sur une facture de travaux, y compris les nouvelles mentions liées à la facture électronique.',
+    keywords: ['mentions obligatoires facture', 'facture artisan obligatoire', 'nouvelles mentions facture 2026'],
+    publishedAt: '2026-10-22',
+    readingMinutes: 5,
+    summary: [
+      'Une facture porte un numéro unique dans une séquence continue, une date, l’identité complète du vendeur et du client.',
+      'Elle détaille les prestations, les prix unitaires hors taxes, la TVA par taux et les totaux.',
+      'Elle indique la date d’échéance, les pénalités de retard et, entre professionnels, l’indemnité forfaitaire de 40 €.',
+      'Avec la réforme de la facture électronique, de nouvelles mentions s’ajoutent : SIREN du client, catégorie de l’opération, adresse de livraison si elle diffère, option pour la TVA sur les débits.',
+    ],
+    links: [
+      { label: 'Devis et factures pour artisans', to: '/logiciel-facturation-artisan' },
+      { label: 'Facture électronique : ce qui change en 2026-2027', to: '/blog/facturation-electronique-artisans' },
+      { label: 'Mentions obligatoires d’un devis de travaux', to: '/blog/mentions-obligatoires-devis-travaux' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Une mention manquante ou inexacte peut coûter cher : l’administration peut appliquer une amende de 15 € par mention, plafonnée au quart du montant de la facture. Voici la liste à vérifier. Faites valider votre modèle par votre expert-comptable.',
+        ],
+      },
+      {
+        heading: 'Le document',
+        list: [
+          'Le mot « Facture » (ou « Avoir »).',
+          'Un numéro unique, dans une séquence chronologique et continue.',
+          'La date d’émission et la date de réalisation des travaux.',
+        ],
+      },
+      {
+        heading: 'Votre entreprise',
+        list: [
+          'Nom ou raison sociale, forme juridique et capital pour une société, adresse.',
+          'SIREN ou SIRET, immatriculation au répertoire des métiers ou au RCS.',
+          'Numéro de TVA intracommunautaire, ou la mention de franchise de TVA.',
+          'Dans le bâtiment : l’assurance décennale (assureur, coordonnées, couverture géographique).',
+        ],
+      },
+      {
+        heading: 'Le client',
+        list: [
+          'Nom et adresse de facturation.',
+          'Pour un client professionnel : son numéro de TVA intracommunautaire s’il en a un, et son SIREN.',
+          'L’adresse du chantier si elle diffère.',
+        ],
+      },
+      {
+        heading: 'Les montants',
+        list: [
+          'Pour chaque prestation : désignation, quantité, prix unitaire hors taxes.',
+          'Les réductions éventuelles.',
+          'Le taux de TVA de chaque ligne, le montant de TVA par taux, le total HT et le total TTC.',
+          'Les acomptes déjà facturés, déduits sur la facture de solde.',
+          'Selon les cas : TVA non applicable (article 293 B du CGI), autoliquidation, ou certification du client pour le taux réduit.',
+        ],
+      },
+      {
+        heading: 'Le paiement',
+        list: [
+          'La date d’échéance du paiement.',
+          'Le taux des pénalités de retard.',
+          'Entre professionnels : l’indemnité forfaitaire de 40 € pour frais de recouvrement.',
+          'Les conditions d’escompte, ou la mention « pas d’escompte pour paiement anticipé ».',
+        ],
+      },
+      {
+        heading: 'Les nouvelles mentions de la réforme',
+        paragraphs: [
+          'Avec la généralisation de la facture électronique, quatre mentions s’ajoutent : le SIREN du client, la catégorie de l’opération (livraison de biens, prestation de services ou les deux), l’adresse de livraison si elle diffère de celle du client, et l’option pour le paiement de la TVA d’après les débits si vous l’avez choisie.',
+        ],
+      },
+      {
+        heading: 'Avec Paysapro AI',
+        paragraphs: [
+          'Les factures reprennent automatiquement ces mentions à partir de votre fiche entreprise, du client et du devis signé : numérotation continue, TVA par taux, décennale, échéance, pénalités, SIREN du client professionnel et catégorie de l’opération.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'numerotation-factures-avoir',
+    title: 'Numérotation des factures et avoirs : les règles',
+    excerpt: 'Séquence continue, pas de trou, pas de suppression : comment numéroter ses factures et corriger une erreur avec un avoir.',
+    keywords: ['numérotation factures', 'avoir facture erreur', 'annuler une facture artisan'],
+    publishedAt: '2026-10-22',
+    readingMinutes: 4,
+    summary: [
+      'Les factures sont numérotées dans une séquence chronologique et continue, sans trou ni doublon.',
+      'Plusieurs séries sont possibles (par exemple une par année : F2026-0001), à condition que chacune reste continue.',
+      'Une facture émise ne se modifie pas et ne se supprime pas.',
+      'Pour corriger une erreur, on émet un avoir qui annule la facture, puis une nouvelle facture.',
+    ],
+    links: [
+      { label: 'Devis et factures pour artisans', to: '/logiciel-facturation-artisan' },
+      { label: 'Mentions obligatoires d’une facture', to: '/blog/mentions-obligatoires-facture-artisan' },
+      { label: 'Facture d’acompte : mode d’emploi', to: '/blog/facture-acompte-travaux' },
+    ],
+    body: [
+      {
+        paragraphs: [
+          'La numérotation est la colonne vertébrale de votre facturation. En cas de contrôle, un trou dans la séquence ou une facture supprimée attire immédiatement l’attention.',
+        ],
+      },
+      {
+        heading: 'Une séquence continue',
+        paragraphs: [
+          'Chaque facture reçoit un numéro unique, attribué dans l’ordre chronologique. Vous pouvez utiliser des séries distinctes, par exemple en préfixant par l’année (F2026-0001, puis F2027-0001 au 1er janvier), mais chaque série doit rester continue.',
+        ],
+      },
+      {
+        heading: 'Pourquoi une facture ne se supprime pas',
+        paragraphs: [
+          'Une facture émise est une pièce comptable : elle doit être conservée dix ans. La supprimer ou la modifier après l’avoir envoyée casserait la séquence et l’historique.',
+        ],
+      },
+      {
+        heading: 'Corriger avec un avoir',
+        list: [
+          'L’avoir est une facture « négative » qui reprend la facture d’origine et l’annule, en totalité ou en partie.',
+          'Il porte son propre numéro dans la séquence et fait référence à la facture annulée.',
+          'Vous émettez ensuite une nouvelle facture, corrigée.',
+        ],
+      },
+      {
+        heading: 'Avec Paysapro AI',
+        paragraphs: [
+          'Le numéro est attribué automatiquement au moment de l’émission, dans une séquence continue propre à votre entreprise, même si plusieurs personnes facturent en même temps. Une facture émise ne peut plus être modifiée ni supprimée : le bouton « Annuler cette facture par un avoir » crée l’avoir en un clic.',
+        ],
+      },
+    ],
+  },
+  {
     slug: 'tva-travaux-renovation-taux-reduit',
     title: 'TVA travaux : 20 %, 10 % ou 5,5 % sur un devis ?',
     excerpt: 'Quel taux appliquer sur un devis de rénovation, comment combiner 10 % et 5,5 %, et ce qui remplace les attestations 1300-SD depuis 2025.',
@@ -271,7 +459,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       {
         heading: 'Où se situe Paysapro AI',
         paragraphs: [
-          'Paysapro AI couvre aujourd’hui le devis, la signature et le suivi du chantier, avec l’enregistrement des acomptes et soldes reçus. Il ne fait pas de facturation électronique : pour vos factures, utilisez une solution raccordée à une plateforme agréée.',
+          'Paysapro AI établit vos factures d’acompte, de solde et vos avoirs directement depuis le devis signé, avec une numérotation continue et les mentions obligatoires. Le format électronique et le raccordement à une plateforme agréée sont en préparation pour l’échéance de septembre 2027 : vos factures, clients et chantiers sont déjà au bon endroit.',
         ],
       },
     ],
@@ -652,7 +840,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         heading: '7. Tester sur un vrai devis',
         paragraphs: [
           'Le meilleur test reste de refaire un devis récent avec le logiciel : combien de temps faut-il, le résultat est-il présentable, le client comprend-il le document ? Une version d’essai gratuite permet de le faire sans risque.',
-          'Paysapro AI est conçu autour de ces critères pour les paysagistes : mesures et unités du métier, usage sur téléphone, catalogue de prix, devis signé en ligne et mode services à la personne. Il ne fait pas de facturation ni de comptabilité. Il s’essaie gratuitement pendant 15 jours.',
+          'Paysapro AI est conçu autour de ces critères pour les paysagistes : mesures et unités du métier, usage sur téléphone, catalogue de prix, devis signé en ligne, factures d’acompte et de solde, et mode services à la personne. Il ne tient pas votre comptabilité. Il s’essaie gratuitement pendant 15 jours.',
         ],
       },
     ],

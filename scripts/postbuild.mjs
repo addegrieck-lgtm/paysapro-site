@@ -114,7 +114,7 @@ writeFileSync(
 
 Points importants :
 - L'assistant intégré suggère des prestations ; le professionnel valide toujours les quantités, les prix et le devis final.
-- Paysapro AI ne fait ni facturation ni comptabilité, et ne gère pas l'avance immédiate de crédit d'impôt.
+- Paysapro AI établit les factures d'acompte, de solde et les avoirs (numérotation continue, mentions obligatoires) ; il ne tient pas la comptabilité et ne gère pas l'avance immédiate de crédit d'impôt. Le format électronique de la réforme 2027 est en préparation.
 - Application : https://app.paysapro-ai.fr — Site officiel : ${siteUrl}/
 
 ## Produit
