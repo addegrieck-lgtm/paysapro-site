@@ -28,7 +28,7 @@ function ScrollManager() {
 export function Layout() {
   const brand = useSiteBrand();
   return (
-    // Pages des artisans du BTP : habillage Batipro (couleurs dans index.css)
+    // Pages des artisans du BTP : habillage Batipro AI (couleurs dans index.css)
     <div data-brand={brand} className="min-h-dvh bg-cream">
       <a
         href="#contenu"

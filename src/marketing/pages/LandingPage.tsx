@@ -45,7 +45,7 @@ export default function LandingPage({ path }: { path: string }) {
         </AppCta>
         {APP_LINKS.configured ? (
           <ButtonLink to={landing.metier === 'btp' ? APP_LINKS.demoBuilding : APP_LINKS.demoLandscaping} variant="secondary" size="lg">
-            {landing.metier === 'btp' ? 'Voir la démo Batipro' : 'Voir la démo'}
+            {landing.metier === 'btp' ? 'Voir la démo Batipro AI' : 'Voir la démo'}
           </ButtonLink>
         ) : (
           <ButtonLink to="/comment-ca-marche" variant="secondary" size="lg">

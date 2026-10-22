@@ -12,7 +12,7 @@ export function DemoChoice({ location, tone = 'dark', className = '' }: { locati
   if (!APP_LINKS.configured) return null;
   const demos = [
     { href: APP_LINKS.demoLandscaping, metier: 'paysage', title: 'Démo paysagiste', text: 'Paysapro : jardins, terrasses, clôtures, entretien.', mark: <LogoMark className="h-12 w-12 shrink-0" /> },
-    { href: APP_LINKS.demoBuilding, metier: 'btp', title: 'Démo artisan du BTP', text: 'Batipro : rénovation, salle de bains, électricité, maçonnerie.', mark: <BatiproMark className="h-12 w-12 shrink-0" /> },
+    { href: APP_LINKS.demoBuilding, metier: 'btp', title: 'Démo artisan du BTP', text: 'Batipro AI : rénovation, salle de bains, électricité, maçonnerie.', mark: <BatiproMark className="h-12 w-12 shrink-0" /> },
   ];
   const card =
     tone === 'light'

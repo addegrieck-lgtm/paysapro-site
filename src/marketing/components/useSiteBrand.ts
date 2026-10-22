@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router';
 import { landingByPath } from '../data/landings';
 
-/** Paysapro sur tout le site, Batipro sur les pages des artisans du BTP (landings `metier: 'btp'`). */
+/** Paysapro sur tout le site, Batipro AI sur les pages des artisans du BTP (landings `metier: 'btp'`). */
 export type SiteBrand = 'paysapro' | 'batipro';
 
 export function brandOfPath(pathname: string): SiteBrand {

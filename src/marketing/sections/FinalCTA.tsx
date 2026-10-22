@@ -21,7 +21,7 @@ export function FinalCTA({
           <h2 id="final-cta-title" className="mx-auto mt-8 max-w-4xl font-display text-[2.4rem] leading-[1.02] font-extrabold tracking-[-0.04em] sm:text-6xl lg:text-7xl">
             {title}
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-white/75 sm:text-xl">{brand === 'batipro' ? subtitle.replace('Paysapro AI', 'Batipro') : subtitle}</p>
+          <p className="mx-auto mt-6 max-w-xl text-lg text-white/75 sm:text-xl">{brand === 'batipro' ? subtitle.replace('Paysapro AI', 'Batipro AI') : subtitle}</p>
           <div className="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
             <AppCta location="final_cta" variant="light">
               Commencer gratuitement

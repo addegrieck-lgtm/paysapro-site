@@ -3,7 +3,7 @@
  * et un point « signal » (technologie). Fonctionne en couleur, en noir/blanc,
  * sur fond clair ou sombre (variant) et en favicon (public/favicon.svg).
  *
- * Batipro (pages des artisans du BTP) : une maison au toit jaune sur fond anthracite,
+ * Batipro AI (pages des artisans du BTP) : une maison au toit jaune sur fond anthracite,
  * la même que dans l'application.
  */
 import type { SiteBrand } from './useSiteBrand';
@@ -48,7 +48,9 @@ export function Logo({ tone = 'dark', className = '', brand = 'paysapro' }: { to
       <span className={`inline-flex items-center gap-2.5 ${className}`}>
         <BatiproMark variant={tone === 'light' ? 'light' : 'color'} />
         <span className="leading-none">
-          <span className={`block font-display text-[1.15rem] font-extrabold tracking-tight ${tone === 'light' ? 'text-white' : 'text-ink'}`}>Batipro</span>
+          <span className={`block font-display text-[1.15rem] font-extrabold tracking-tight ${tone === 'light' ? 'text-white' : 'text-ink'}`}>
+            Batipro<span className={tone === 'light' ? 'text-leaf' : 'text-brand'}> AI</span>
+          </span>
           <span className={`block text-[0.7rem] font-medium ${tone === 'light' ? 'text-white/60' : 'text-muted'}`}>par Paysapro AI</span>
         </span>
       </span>
