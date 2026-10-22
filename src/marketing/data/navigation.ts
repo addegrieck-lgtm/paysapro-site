@@ -20,6 +20,7 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
     links: [
       { label: 'Logiciel de devis', to: '/logiciel-devis-paysagiste' },
       { label: 'Devis et factures', to: '/logiciel-facturation-artisan' },
+      { label: 'Facture électronique Factur-X', to: '/logiciel-facture-electronique' },
       { label: 'Devis pour artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Devis électricien', to: '/logiciel-devis-electricien' },
       { label: 'Devis plombier', to: '/logiciel-devis-plombier' },

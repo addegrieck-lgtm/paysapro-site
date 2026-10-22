@@ -29,6 +29,11 @@
     "description": "Devis et factures d’artisan sur mobile : acompte et solde en un clic, numérotation continue, mentions obligatoires, avoirs. Essai gratuit 15 jours.",
     "priority": "0.9"
   },
+  "/logiciel-facture-electronique": {
+    "title": "Facture électronique Factur-X pour artisans | Paysapro AI",
+    "description": "Factures d’artisan au format électronique Factur-X (EN 16931), prêtes pour la réforme de 2027 : PDF lisible et données structurées. Essai gratuit 15 jours.",
+    "priority": "0.9"
+  },
   "/logiciel-devis-batiment": {
     "title": "Logiciel de devis bâtiment pour artisans du BTP | Paysapro AI",
     "description": "Logiciel de devis pour artisans du BTP, tous corps de métier : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Essai gratuit 15 jours.",

@@ -44,7 +44,7 @@ export const LANDINGS: Landing[] = [
       'Les factures sont numérotées automatiquement dans une séquence continue et ne peuvent plus être modifiées une fois émises, comme l’exige la loi.',
       'Elles reprennent les mentions obligatoires : identité de l’entreprise, assurance décennale, TVA par taux, échéance, pénalités de retard et indemnité de 40 €.',
       'Vous voyez à tout moment ce qui a été facturé et ce qui reste à encaisser.',
-      'La facture électronique devient obligatoire pour les TPE en septembre 2027 : son format et le raccordement à une plateforme agréée sont en préparation dans Paysapro AI.',
+      'Chaque facture est produite au format électronique Factur-X (profil EN 16931), l’un des formats de la réforme de 2026-2027 ; le raccordement à une plateforme agréée est en préparation pour septembre 2027.',
     ],
     visual: 'quote',
     sections: [
@@ -64,6 +64,7 @@ export const LANDINGS: Landing[] = [
           'Assurance décennale, date d’échéance, pénalités de retard et indemnité forfaitaire de 40 €.',
           'SIREN du client professionnel et catégorie de l’opération, demandés par la réforme.',
           'PDF à vos couleurs, à télécharger, partager ou envoyer par e-mail.',
+          'Format Factur-X : le PDF contient aussi les données structurées de la facture, lisibles par les logiciels comptables.',
         ],
       },
       {
@@ -81,20 +82,90 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Prêt pour la facture électronique de 2027',
         paragraphs: [
-          'À partir du 1er septembre 2027, les TPE et micro-entreprises devront émettre leurs factures entre professionnels au format électronique, via une plateforme agréée. Le format électronique et ce raccordement sont en préparation dans Paysapro AI, pour que vous n’ayez pas à changer d’outil.',
+          'À partir du 1er septembre 2027, les TPE et micro-entreprises devront émettre leurs factures entre professionnels au format électronique, via une plateforme agréée. Vos factures Paysapro AI sont déjà au format Factur-X (profil EN 16931) : un PDF lisible qui contient aussi les données structurées de la facture. Le raccordement à une plateforme agréée est en préparation, pour que vous n’ayez pas à changer d’outil.',
         ],
       },
     ],
     faq: [
       { question: 'Puis-je faire une facture sans devis ?', answer: 'Les factures partent d’un devis accepté ou signé : c’est ce qui garantit que les montants correspondent à ce que le client a validé. Pour une petite intervention, créez un devis rapide, faites-le accepter, puis facturez-le.' },
       { question: 'Puis-je modifier une facture après l’avoir émise ?', answer: 'Non, et c’est voulu : une facture émise est un document comptable définitif. En cas d’erreur, créez un avoir depuis la facture, puis émettez une nouvelle facture corrigée.' },
-      { question: 'Paysapro AI est-il compatible avec la facture électronique 2027 ?', answer: 'Le format électronique et le raccordement à une plateforme agréée sont en préparation, pour l’échéance de septembre 2027 qui concerne les TPE. Aujourd’hui, vos factures sont émises en PDF avec les mentions obligatoires.' },
+      { question: 'Paysapro AI est-il compatible avec la facture électronique 2027 ?', answer: 'Oui pour le format : chaque facture est produite en Factur-X, profil EN 16931, l’un des formats retenus par la réforme. Le raccordement à une plateforme agréée, nécessaire pour transmettre les factures et les données à l’administration, est en préparation pour l’échéance de septembre 2027 qui concerne les TPE.' },
       { question: 'Mes factures sont-elles conservées ?', answer: 'Oui : elles sont enregistrées en ligne, ne peuvent être ni modifiées ni supprimées depuis l’application, et restent consultables même sans abonnement actif.' },
     ],
     related: [
+      { label: 'Facture électronique Factur-X', to: '/logiciel-facture-electronique' },
       { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Facture d’acompte : mode d’emploi', to: '/blog/facture-acompte-travaux' },
       { label: 'Mentions obligatoires d’une facture', to: '/blog/mentions-obligatoires-facture-artisan' },
+      { label: 'Tarifs', to: '/tarifs' },
+    ],
+  },
+  {
+    path: '/logiciel-facture-electronique',
+    btpSample: 'renovation',
+    eyebrow: 'Facture électronique Factur-X',
+    h1: 'Vos factures d’artisan au format électronique Factur-X.',
+    intro: 'La facture électronique devient obligatoire entre professionnels pour les TPE et micro-entreprises le 1er septembre 2027. Paysapro AI produit déjà chaque facture au format Factur-X : un PDF que votre client lit normalement, avec les données de la facture intégrées pour les logiciels.',
+    summary: [
+      'Paysapro AI produit chaque facture, facture d’acompte et avoir au format Factur-X, profil EN 16931, l’un des formats retenus par la réforme française.',
+      'Une facture Factur-X est un PDF lisible (PDF/A-3) qui contient un fichier XML : les montants, la TVA, le SIREN et l’échéance y sont lisibles par les logiciels comptables et les plateformes.',
+      'Les fichiers sont contrôlés avec un outil de validation de référence du format Factur-X : PDF/A-3 et règles de la norme européenne EN 16931.',
+      'Pour transmettre les factures et les données à l’administration, il faudra passer par une plateforme agréée : ce raccordement est en préparation dans Paysapro AI pour septembre 2027.',
+      'Vous n’avez rien à faire de plus : la facture électronique est créée depuis le devis signé, comme la facture habituelle.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Factur-X, c’est quoi ?',
+        paragraphs: [
+          'Factur-X est un format de facture électronique franco-allemand (appelé ZUGFeRD en Allemagne). C’est un fichier PDF au format d’archivage PDF/A-3, dans lequel est joint un fichier XML qui décrit la facture de façon structurée : vendeur, client, lignes, taux de TVA, totaux, date d’échéance, coordonnées bancaires.',
+          'Votre client voit une facture ordinaire. Son logiciel comptable, lui, lit directement les données, sans ressaisie. C’est l’un des trois formats de base acceptés par la réforme de la facturation électronique, avec UBL et CII.',
+        ],
+      },
+      {
+        heading: 'Ce que Paysapro AI produit déjà',
+        list: [
+          'Facture, facture d’acompte et avoir au format Factur-X, profil EN 16931 (le profil complet de la norme européenne).',
+          'TVA ventilée par taux (20 %, 10 %, 5,5 %), franchise en base de TVA ou autoliquidation en sous-traitance, avec le motif d’exonération attendu.',
+          'SIREN du vendeur et du client professionnel, numéro de TVA intracommunautaire, adresse et e-mail.',
+          'Numéro du devis, date de réalisation des travaux, échéance, IBAN, acomptes déjà facturés et net à payer.',
+          'Avoir relié à la facture qu’il annule.',
+          'Unités du bâtiment et du paysage converties dans les codes officiels : m², ml, m³, heure, forfait.',
+        ],
+      },
+      {
+        heading: 'Contrôlé, pas seulement « compatible »',
+        paragraphs: [
+          'Un fichier Factur-X mal formé peut être refusé par la plateforme de votre client. Les factures de Paysapro AI sont contrôlées avec un outil de validation de référence du format, qui vérifie à la fois l’archivage PDF/A-3 et les règles métier de la norme EN 16931 : totaux cohérents, TVA, identifiants, références.',
+        ],
+      },
+      {
+        heading: 'Le calendrier de la réforme',
+        list: [
+          '1er septembre 2026 : toutes les entreprises doivent pouvoir recevoir des factures électroniques.',
+          '1er septembre 2026 : les grandes entreprises et les ETI doivent les émettre.',
+          '1er septembre 2027 : les PME, TPE et micro-entreprises doivent les émettre et transmettre leurs données à l’administration (e-reporting).',
+        ],
+      },
+      {
+        heading: 'Et la plateforme agréée ?',
+        paragraphs: [
+          'Entre professionnels, la facture électronique ne s’envoie plus par simple e-mail : elle transite par une plateforme agréée par l’administration, qui la transmet au client et déclare les données au fisc. Paysapro AI prépare ce raccordement pour l’échéance de septembre 2027. Les factures étant déjà au bon format, vous n’aurez pas à changer d’outil.',
+          'Pour vos clients particuliers, la facture n’est pas une facture électronique au sens de la réforme : vous continuez à l’envoyer en PDF ; seules ses données font l’objet d’un e-reporting.',
+        ],
+      },
+    ],
+    faq: [
+      { question: 'Une facture Factur-X, est-ce un PDF ?', answer: 'Oui : c’est un PDF lisible par tout le monde, au format d’archivage PDF/A-3, qui contient en plus un fichier XML avec les données de la facture. Votre client particulier peut l’ouvrir comme n’importe quel PDF.' },
+      { question: 'Le format Factur-X est-il accepté par la réforme ?', answer: 'Oui, Factur-X fait partie des trois formats de base de la facturation électronique en France, avec UBL et CII. Paysapro AI utilise le profil EN 16931, qui couvre toutes les données de la norme européenne.' },
+      { question: 'Faut-il une plateforme agréée en plus ?', answer: 'Oui, pour transmettre les factures entre professionnels et déclarer les données à l’administration à partir de septembre 2027. Le raccordement de Paysapro AI à une plateforme agréée est en préparation pour cette échéance.' },
+      { question: 'Les micro-entrepreneurs sont-ils concernés ?', answer: 'Oui. Ils doivent pouvoir recevoir des factures électroniques depuis septembre 2026 et les émettre à partir de septembre 2027. Paysapro AI gère la franchise en base de TVA dans le format Factur-X.' },
+      { question: 'Dois-je faire quelque chose de spécial pour obtenir une facture Factur-X ?', answer: 'Non : le bouton PDF de chaque facture produit directement le fichier Factur-X. Pensez seulement à renseigner votre SIRET et, pour vos clients professionnels, leur SIREN.' },
+    ],
+    related: [
+      { label: 'Factur-X expliqué aux artisans', to: '/blog/factur-x-artisan' },
+      { label: 'Facture électronique : ce qui change en 2026-2027', to: '/blog/facturation-electronique-artisans' },
+      { label: 'Devis et factures pour artisans', to: '/logiciel-facturation-artisan' },
       { label: 'Tarifs', to: '/tarifs' },
     ],
   },
