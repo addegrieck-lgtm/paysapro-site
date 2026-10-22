@@ -94,7 +94,7 @@ export const LANDINGS: Landing[] = [
     ],
     related: [
       { label: 'Facture électronique Factur-X', to: '/logiciel-facture-electronique' },
-      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Batipro, pour les artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Facture d’acompte : mode d’emploi', to: '/blog/facture-acompte-travaux' },
       { label: 'Mentions obligatoires d’une facture', to: '/blog/mentions-obligatoires-facture-artisan' },
       { label: 'Tarifs', to: '/tarifs' },
@@ -176,9 +176,9 @@ export const LANDINGS: Landing[] = [
     eyebrow: 'Artisans du BTP · tous corps de métier',
     h1: 'Le logiciel de devis pour les artisans du bâtiment.',
     intro:
-      'Rénovation ou neuf, maçonnerie, plâtrerie, électricité, plomberie, peinture, carrelage, couverture : Paysapro AI transforme votre visite technique en devis conforme, chiffré par lot, puis le fait signer par votre client. Depuis votre téléphone.',
+      'Rénovation ou neuf, maçonnerie, plâtrerie, électricité, plomberie, peinture, carrelage, couverture : Batipro transforme votre visite technique en devis conforme, chiffré par lot, puis le fait signer par votre client. Depuis votre téléphone.',
     summary: [
-      'Paysapro AI propose un mode « Artisan du BTP » pour tous les corps de métier du bâtiment, en rénovation comme en neuf.',
+      'Batipro, la version BTP de Paysapro AI, est un logiciel de devis pour tous les corps de métier du bâtiment, en rénovation comme en neuf.',
       'Le devis est organisé par lots (corps d’état) avec sous-totaux, et chaque ligne peut avoir son taux de TVA : 20 %, 10 % ou 5,5 %.',
       'Les mentions du bâtiment sont reprises sur chaque devis : assurance décennale, immatriculation, qualifications (RGE…), début et durée des travaux, retenue de garantie, autoliquidation.',
       'Métrés de murs avec ouvertures déduites, calculateurs (peinture, carrelage, béton, plaques de plâtre) et catalogue d’environ 50 prestations types sont inclus.',
@@ -189,7 +189,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Un devis du bâtiment, organisé par lots',
         paragraphs: [
-          'Un chantier de rénovation mélange souvent plusieurs corps d’état : démolition, plomberie, électricité, carrelage, peinture. Paysapro AI range chaque prestation dans son lot et affiche un sous-total par lot : votre client comprend ce qu’il paie, et vous retrouvez votre chiffrage d’un coup d’œil.',
+          'Un chantier de rénovation mélange souvent plusieurs corps d’état : démolition, plomberie, électricité, carrelage, peinture. Batipro range chaque prestation dans son lot et affiche un sous-total par lot : votre client comprend ce qu’il paie, et vous retrouvez votre chiffrage d’un coup d’œil.',
           'Le catalogue de départ contient des prestations types pour chaque lot — installation de chantier, maçonnerie, plâtrerie et isolation, électricité, plomberie et chauffage, menuiserie, peinture, carrelage, couverture, façade — avec unité, prix de vente et coût. Vous les adaptez à vos tarifs.',
         ],
       },
@@ -232,18 +232,18 @@ export const LANDINGS: Landing[] = [
           'Tous : rénovation tous corps d’état, maçonnerie et gros œuvre, plâtrerie, isolation, électricité, plomberie, chauffage, menuiserie, peinture, carrelage et sols, couverture, charpente, façade, serrurerie, démolition. Le catalogue de départ couvre les principaux lots et se complète avec vos propres prestations.',
       },
       {
-        question: 'Comment Paysapro AI gère-t-il les taux de TVA réduits ?',
+        question: 'Comment Batipro gère-t-il les taux de TVA réduits ?',
         answer:
           'Vous choisissez le type de chantier sur le devis (20 %, 10 % ou 5,5 %) et chaque ligne peut avoir son propre taux. Le devis affiche le détail de la TVA par taux et porte la certification du client exigée pour le taux réduit. Vérifiez les cas particuliers avec votre comptable.',
       },
       {
-        question: 'Puis-je utiliser Paysapro AI si je suis aussi paysagiste ?',
-        answer: 'Oui. Le métier se choisit à l’inscription et se change à tout moment dans « Mon entreprise » : catalogue, modèles de devis, calculateurs et assistant s’adaptent.',
+        question: 'Puis-je utiliser Batipro si je suis aussi paysagiste ?',
+        answer: 'Oui : Batipro et Paysapro sont le même logiciel, avec un compte et un abonnement. Le métier se choisit à l’inscription et se change à tout moment dans « Mon entreprise » : catalogue, modèles de devis, calculateurs, assistant et habillage s’adaptent.',
       },
       {
         question: 'Les mentions de mes devis sont-elles garanties conformes ?',
         answer:
-          'Paysapro AI reprend les mentions que vous renseignez (assurance décennale, immatriculation, conditions…). Il ne remplace pas un conseil juridique : faites valider vos mentions et vos conditions par votre conseiller.',
+          'Batipro reprend les mentions que vous renseignez (assurance décennale, immatriculation, conditions…). Il ne remplace pas un conseil juridique : faites valider vos mentions et vos conditions par votre conseiller.',
       },
     ],
     related: [
@@ -262,7 +262,7 @@ export const LANDINGS: Landing[] = [
     h1: 'Le logiciel de devis pensé pour les électriciens.',
     intro: 'Comptez les points lumineux et les prises pièce par pièce, ajoutez le tableau et les circuits, et envoyez un devis clair, signé en ligne par votre client. Directement depuis le chantier.',
     summary: [
-      'Paysapro AI est un logiciel de devis utilisable sur smartphone, avec un mode « Artisan du BTP » adapté aux électriciens.',
+      'Batipro est un logiciel de devis utilisable sur smartphone, conçu pour les artisans du BTP et adapté aux électriciens.',
       'Le catalogue de départ contient les prestations courantes : point lumineux, prise 16 A, tableau équipé, mise en conformité NF C 15-100, câbles et gaines au mètre.',
       'Un modèle « Rénovation électrique » prérempli se charge en un geste, puis s’ajuste au chantier.',
       'La TVA (20 %, 10 % ou 5,5 %), l’assurance décennale et vos qualifications apparaissent sur chaque devis.',
@@ -280,7 +280,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Rénovation ou neuf : la bonne TVA, ligne par ligne',
         paragraphs: [
-          'En rénovation d’un logement de plus de deux ans, vos travaux passent à 10 % ; en neuf ou en local professionnel, à 20 %. Paysapro AI applique le taux du type de chantier choisi, affiche le récapitulatif de TVA et ajoute la certification du client exigée en cas de taux réduit.',
+          'En rénovation d’un logement de plus de deux ans, vos travaux passent à 10 % ; en neuf ou en local professionnel, à 20 %. Batipro applique le taux du type de chantier choisi, affiche le récapitulatif de TVA et ajoute la certification du client exigée en cas de taux réduit.',
         ],
       },
       {
@@ -300,11 +300,11 @@ export const LANDINGS: Landing[] = [
       },
     ],
     faq: [
-      { question: 'Paysapro AI gère-t-il l’attestation Consuel ?', answer: 'Non. Paysapro AI prépare et fait signer vos devis ; la mise en conformité et l’attestation Consuel restent à mentionner dans la description des travaux si elles sont prévues.' },
+      { question: 'Batipro gère-t-il l’attestation Consuel ?', answer: 'Non. Batipro prépare et fait signer vos devis ; la mise en conformité et l’attestation Consuel restent à mentionner dans la description des travaux si elles sont prévues.' },
       { question: 'Puis-je créer mes propres prestations ?', answer: 'Oui. Le catalogue de départ est un exemple à tarifs indicatifs : vous modifiez les prix, ajoutez vos prestations (domotique, borne de recharge, VMC…) et créez vos propres modèles de devis.' },
     ],
     related: [
-      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Batipro, pour les artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Tarifs', to: '/tarifs' },
       { label: 'Logiciel de devis plombier', to: '/logiciel-devis-plombier' },
       { label: 'Logiciel de devis peintre', to: '/logiciel-devis-peintre' },
@@ -319,7 +319,7 @@ export const LANDINGS: Landing[] = [
     h1: 'Le logiciel de devis des plombiers et chauffagistes.',
     intro: 'De la rénovation de salle de bains au remplacement d’un chauffe-eau, chiffrez sur place, appliquez la bonne TVA et faites signer votre client depuis votre téléphone.',
     summary: [
-      'Paysapro AI propose un mode « Artisan du BTP » adapté aux plombiers et chauffagistes, utilisable sur smartphone.',
+      'Batipro, la version BTP de Paysapro AI, est un logiciel de devis adapté aux plombiers et chauffagistes, utilisable sur smartphone.',
       'Le catalogue de départ comprend la création de points d’eau, le WC suspendu, la douche extra-plate, le meuble vasque, les radiateurs et le chauffe-eau thermodynamique.',
       'Le modèle « Rénovation de salle de bains » assemble dépose, plomberie, carrelage et évacuation des gravats en un geste.',
       'Chaque ligne peut avoir son taux de TVA, par exemple 5,5 % pour un chauffe-eau thermodynamique dans une rénovation à 10 %.',
@@ -337,7 +337,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'TVA réduite : 10 % et 5,5 % dans le même devis',
         paragraphs: [
-          'Pour un logement de plus de deux ans, les travaux de plomberie passent à 10 %, et certains équipements performants peuvent relever du taux de 5,5 %. Paysapro AI calcule la TVA ligne par ligne et affiche un récapitulatif par taux. Vérifiez les conditions d’éligibilité avec votre comptable.',
+          'Pour un logement de plus de deux ans, les travaux de plomberie passent à 10 %, et certains équipements performants peuvent relever du taux de 5,5 %. Batipro calcule la TVA ligne par ligne et affiche un récapitulatif par taux. Vérifiez les conditions d’éligibilité avec votre comptable.',
         ],
       },
       {
@@ -361,7 +361,7 @@ export const LANDINGS: Landing[] = [
       { question: 'Les tarifs du catalogue sont-ils ceux du marché ?', answer: 'Ce sont des tarifs indicatifs pour démarrer. Remplacez-les par vos prix d’achat et de vente : ils seront repris sur tous vos devis.' },
     ],
     related: [
-      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Batipro, pour les artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Tarifs', to: '/tarifs' },
       { label: 'Logiciel de devis électricien', to: '/logiciel-devis-electricien' },
       { label: 'Logiciel de devis peintre', to: '/logiciel-devis-peintre' },
@@ -376,7 +376,7 @@ export const LANDINGS: Landing[] = [
     h1: 'Le logiciel de devis pour les peintres en bâtiment.',
     intro: 'Mesurez les murs et les plafonds, déduisez les ouvertures, et obtenez un devis précis au mètre carré, prêt à être signé par votre client.',
     summary: [
-      'Paysapro AI propose un mode « Artisan du BTP » utilisable sur smartphone pour les peintres en bâtiment.',
+      'Batipro, la version BTP de Paysapro AI, est un logiciel de devis utilisable sur smartphone pour les peintres en bâtiment.',
       'Les métrés se saisissent sur place : murs en périmètre × hauteur, plafonds, ouvertures à déduire.',
       'Un calculateur donne les litres de peinture selon la surface, le nombre de couches et le rendement du produit.',
       'Le catalogue de départ comprend protection, préparation des supports, peinture des murs et plafonds en deux couches, toile de verre.',
@@ -418,7 +418,7 @@ export const LANDINGS: Landing[] = [
       { question: 'Le calcul des litres tient-il compte des chutes ?', answer: 'Le calcul se base sur la surface, les couches et le rendement. Ajoutez une marge si le support est très absorbant, selon votre expérience.' },
     ],
     related: [
-      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Batipro, pour les artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Tarifs', to: '/tarifs' },
       { label: 'Logiciel de devis électricien', to: '/logiciel-devis-electricien' },
       { label: 'Logiciel de devis plombier', to: '/logiciel-devis-plombier' },
@@ -433,7 +433,7 @@ export const LANDINGS: Landing[] = [
     h1: 'Le logiciel de devis pour les maçons.',
     intro: 'Dalles, murs, chapes, ouvertures : chiffrez vos travaux de maçonnerie au m², au m³ et au forfait, avec vos prix, et faites signer le devis depuis le chantier.',
     summary: [
-      'Paysapro AI propose un mode « Artisan du BTP » utilisable sur smartphone, adapté à la maçonnerie et au gros œuvre.',
+      'Batipro, la version BTP de Paysapro AI, est un logiciel de devis utilisable sur smartphone, adapté à la maçonnerie et au gros œuvre.',
       'Le catalogue de départ comprend dalle béton armé, mur en parpaings, chape ciment, béton prêt à l’emploi au m³, ouverture dans un mur porteur et évacuation des gravats.',
       'Un calculateur donne le volume de béton et le nombre de sacs de ciment selon la surface, l’épaisseur et le dosage.',
       'Votre assurance décennale (assureur, contrat, couverture géographique) figure sur chaque devis.',
@@ -444,7 +444,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Surfaces, volumes et forfaits dans le même devis',
         paragraphs: [
-          'Une dalle se chiffre au m², le béton fourni au m³ selon l’épaisseur, une ouverture de mur porteur au forfait. Paysapro AI calcule les quantités à partir de vos mesures et applique les pertes prévues.',
+          'Une dalle se chiffre au m², le béton fourni au m³ selon l’épaisseur, une ouverture de mur porteur au forfait. Batipro calcule les quantités à partir de vos mesures et applique les pertes prévues.',
           'L’installation de chantier, la location d’échafaudage et l’évacuation des gravats s’ajoutent en un geste depuis le catalogue.',
         ],
       },
@@ -472,10 +472,10 @@ export const LANDINGS: Landing[] = [
     ],
     faq: [
       { question: 'Puis-je suivre plusieurs chantiers en même temps ?', answer: 'Oui. Chaque chantier a son devis, ses photos, son planning, sa checklist et ses paiements reçus. Le tableau de bord montre ce qui est en cours.' },
-      { question: 'Le logiciel fait-il les situations de travaux ?', answer: 'Pas encore : Paysapro AI couvre le devis, la signature et le suivi du chantier. Les acomptes et le solde reçus s’enregistrent dans le chantier.' },
+      { question: 'Le logiciel fait-il les situations de travaux ?', answer: 'Pas encore : Batipro couvre le devis, la signature, le suivi du chantier et la facturation (facture d’acompte, facture de solde, avoirs). Les acomptes et le solde reçus s’enregistrent dans le chantier.' },
     ],
     related: [
-      { label: 'Paysapro AI pour les artisans du BTP', to: '/logiciel-devis-batiment' },
+      { label: 'Batipro, pour les artisans du BTP', to: '/logiciel-devis-batiment' },
       { label: 'Tarifs', to: '/tarifs' },
       { label: 'Logiciel de devis électricien', to: '/logiciel-devis-electricien' },
       { label: 'Logiciel de devis plombier', to: '/logiciel-devis-plombier' },

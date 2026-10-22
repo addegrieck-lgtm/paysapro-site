@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
+import { useSiteBrand } from './useSiteBrand';
 
 /** Remonte en haut à chaque page ; fait défiler jusqu'à l'ancre (#pour-qui…) si présente. */
 function ScrollManager() {
@@ -25,8 +26,10 @@ function ScrollManager() {
 }
 
 export function Layout() {
+  const brand = useSiteBrand();
   return (
-    <>
+    // Pages des artisans du BTP : habillage Batipro (couleurs dans index.css)
+    <div data-brand={brand} className="min-h-dvh bg-cream">
       <a
         href="#contenu"
         className="sr-only z-[100] rounded-full bg-ink px-4 py-2 font-semibold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
@@ -39,6 +42,6 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -6,9 +6,11 @@ import { APP_LINKS } from '../config/marketing';
 import { useAnalytics } from '../analytics/AnalyticsProvider';
 import { AppCta } from './AppLink';
 import { Logo } from './Logo';
+import { useSiteBrand } from './useSiteBrand';
 import { Container } from './ui';
 
 export function Navbar() {
+  const brand = useSiteBrand();
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { pathname, hash } = useLocation();
@@ -48,7 +50,7 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
         <Link to="/" className="shrink-0 rounded-lg">
-          <Logo />
+          <Logo brand={brand} />
         </Link>
 
         <nav aria-label="Navigation principale" className="hidden lg:block">

@@ -31,6 +31,25 @@
   --animate-fade-up: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
 }
 
+/* ─────────────── Habillage Batipro (pages des artisans du BTP) ───────────────
+   Anthracite et jaune chantier, comme dans l'application. Activé par data-brand="batipro"
+   sur le conteneur de la page (components/Layout.tsx, d'après components/useSiteBrand.ts). */
+[data-brand='batipro'] {
+  --color-forest: #23262b;
+  --color-forest-2: #2e3238;
+  --color-brand: #2b2f36;
+  --color-brand-strong: #16181c;
+  --color-mint: #fff2bf;
+  --color-mint-2: #fff8dc;
+  --color-leaf: #f5c400;
+  --color-cream: #f4f4f2;
+  --color-sand: #ebebe8;
+  --color-ink: #1c1e21;
+  --color-muted: #5c6168;
+  --color-line: #dededb;
+  --shadow-float: 0 2px 4px rgb(28 30 33 / 0.04), 0 24px 60px -16px rgb(28 30 33 / 0.3);
+}
+
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
@@ -193,6 +212,13 @@
     auto,
     32px 32px,
     32px 32px;
+}
+[data-brand='batipro'] .bg-grid-dark {
+  background-image:
+    radial-gradient(circle at 20% 0%, rgb(245 196 0 / 0.12), transparent 45%),
+    radial-gradient(circle at 90% 100%, rgb(245 196 0 / 0.1), transparent 50%),
+    linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
 }
 .bg-grid-light {
   background-image:

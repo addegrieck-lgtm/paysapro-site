@@ -43,9 +43,9 @@ export default function LandingPage({ path }: { path: string }) {
         <AppCta location={`landing_${path.slice(1)}`} trade={landing.metier}>
           Essayer gratuitement
         </AppCta>
-        {landing.metier === 'btp' && APP_LINKS.configured ? (
-          <ButtonLink to={APP_LINKS.demoBuilding} variant="secondary" size="lg">
-            Voir la démo BTP
+        {APP_LINKS.configured ? (
+          <ButtonLink to={landing.metier === 'btp' ? APP_LINKS.demoBuilding : APP_LINKS.demoLandscaping} variant="secondary" size="lg">
+            {landing.metier === 'btp' ? 'Voir la démo Batipro' : 'Voir la démo'}
           </ButtonLink>
         ) : (
           <ButtonLink to="/comment-ca-marche" variant="secondary" size="lg">

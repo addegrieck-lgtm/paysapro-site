@@ -41,7 +41,8 @@ export const SITE = {
 export const APP_LINKS = {
   configured: Boolean(appUrl),
   home: appUrl || '/contact',
-  /** Démo de l'application (données fictives) pour les artisans du BTP */
+  /** Démos de l'application (données fictives, sans inscription) : paysagiste (Paysapro) et BTP (Batipro) */
+  demoLandscaping: appUrl ? joinUrl(appUrl, '#/demo') : '/contact',
   demoBuilding: appUrl ? joinUrl(appUrl, '#/demo/btp') : '/contact',
   signup: appUrl ? joinUrl(appUrl, clean(env.VITE_APP_SIGNUP_PATH)) : '/contact',
   login: appUrl ? joinUrl(appUrl, clean(env.VITE_APP_LOGIN_PATH)) : '/contact',

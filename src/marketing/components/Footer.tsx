@@ -4,19 +4,21 @@ import { FOOTER_NAV } from '../data/navigation';
 import { CONTACT, SITE } from '../config/marketing';
 import { AppCta } from './AppLink';
 import { Logo } from './Logo';
+import { useSiteBrand } from './useSiteBrand';
 import { NewsletterForm } from './NewsletterForm';
 import { BetaBadge, Container } from './ui';
 
 export function Footer() {
+  const brand = useSiteBrand();
   return (
     <footer className="bg-forest text-white">
       <Container className="py-16 sm:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div className="max-w-sm">
             <Link to="/" className="inline-block rounded-lg">
-              <Logo tone="light" />
+              <Logo tone="light" brand={brand} />
             </Link>
-            <p className="mt-4 text-white/70">{SITE.tagline}</p>
+            <p className="mt-4 text-white/70">{brand === 'batipro' ? 'Devis, chantiers et factures pour les artisans du BTP.' : SITE.tagline}</p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <BetaBadge tone="light" />
               <span className="text-sm text-white/60">15 jours d’essai, sans carte bancaire</span>
@@ -69,7 +71,7 @@ export function Footer() {
                 <span className="sr-only"> (nouvel onglet)</span>
               </a>
             ))}
-            <span>Conçu pour les professionnels du paysage.</span>
+            <span>{brand === 'batipro' ? 'Conçu pour les artisans du bâtiment.' : 'Conçu pour les professionnels du paysage.'}</span>
           </p>
         </div>
       </Container>

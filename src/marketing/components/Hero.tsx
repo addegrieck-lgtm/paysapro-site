@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Check, FileText, PenLine, Camera, Sparkles, ArrowRight, ArrowDown } from 'lucide-react';
 import { AppCta } from './AppLink';
 import { DemoCta } from './DemoCta';
+import { DemoChoice } from './DemoChoice';
 import { BetaBadge, ButtonLink, Container } from './ui';
 import { PhoneFrame } from './mockups/PhoneFrame';
 import { PhotoAnalysisMockup } from './mockups/PhotoAnalysisMockup';
@@ -54,6 +55,11 @@ export function Hero() {
             Voir comment ça marche
           </ButtonLink>
           <DemoCta location="hero" />
+        </div>
+
+        <div className="animate-fade-up mx-auto mt-8 max-w-2xl [animation-delay:280ms]">
+          <p className="mb-3 text-sm font-semibold text-ink">Essayez l’application tout de suite, sans inscription :</p>
+          <DemoChoice location="hero" />
         </div>
 
         <ul className="animate-fade-up mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm font-medium text-muted [animation-delay:300ms]">
