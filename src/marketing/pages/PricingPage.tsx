@@ -17,6 +17,8 @@ export default function PricingPage() {
         </span>
       </PageHeader>
       <Container className="pb-20">
+        {/* Titre pour la structure (H1 → H2 → H3 des offres), invisible à l'écran */}
+        <h2 className="sr-only">Nos offres</h2>
         <Pricing location="pricing_page" />
       </Container>
       <BetaSection />

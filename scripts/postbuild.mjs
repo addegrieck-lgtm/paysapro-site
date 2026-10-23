@@ -49,6 +49,9 @@ async function page(path, { title, description, jsonLd }, { noindex = false } = 
     .replace('</head>', `${extraHead ? '  ' + extraHead + '\n  ' : ''}</head>`);
   if (noindex) html = html.replace('<meta name="robots" content="index, follow" />', '<meta name="robots" content="noindex, follow" />');
   if (!html.includes('<!--app-html-->')) throw new Error('Repère <!--app-html--> introuvable dans index.html');
+  // Contenu reporté après le pied de page (bloc caché remis en place par JavaScript) : illisible pour les robots
+  // qui n'exécutent pas JavaScript. Voir progressiveChunkSize dans src/entry-server.tsx.
+  if (appHtml.includes('<div hidden id="S:')) throw new Error(`${path} : contenu pré-rendu reporté après le pied de page`);
   // fonction de remplacement : le HTML rendu peut contenir des « $ » (motifs spéciaux de replace)
   return html.replace('<!--app-html-->', () => appHtml);
 }

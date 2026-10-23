@@ -4,27 +4,37 @@ import userEvent from '@testing-library/user-event';
 import pages from '../src/marketing/config/pages.json';
 import { LANDINGS } from '../src/marketing/data/landings';
 import { TOOLS } from '../src/marketing/data/tools';
+import { articleSeoTitle, publishedArticles } from '../src/marketing/data/blog';
 import { computeFence, computeSurface, computeVolume, parseNumber } from '../src/marketing/components/tools/Calculators';
 import { renderPage } from './utils';
 
 const entries = Object.entries(pages as Record<string, { title: string; description: string; noindex?: boolean }>);
 
 describe('balises SEO', () => {
-  it('titres uniques, de longueur raisonnable, avec la marque', () => {
+  it('titres uniques, 30 à 60 caractères (au-delà, Google tronque), avec la marque', () => {
     const titles = entries.map(([, p]) => p.title);
     expect(new Set(titles).size).toBe(titles.length);
-    for (const [path, p] of entries) {
-      expect(p.title.length, `${path} : ${p.title}`).toBeLessThanOrEqual(65);
+    for (const [path, p] of entries.filter(([, p]) => !p.noindex)) {
+      expect(p.title.length, `${path} : ${p.title}`).toBeGreaterThanOrEqual(30);
+      expect(p.title.length, `${path} : ${p.title}`).toBeLessThanOrEqual(60);
       expect(p.title, path).toContain('Paysapro AI');
     }
   });
 
-  it('descriptions uniques, entre 50 et 165 caractères pour les pages indexées', () => {
+  it('descriptions uniques, entre 110 et 160 caractères pour les pages indexées', () => {
     const descs = entries.map(([, p]) => p.description);
     expect(new Set(descs).size).toBe(descs.length);
     for (const [path, p] of entries.filter(([, p]) => !p.noindex)) {
-      expect(p.description.length, `${path} (${p.description.length})`).toBeGreaterThanOrEqual(50);
-      expect(p.description.length, `${path} (${p.description.length})`).toBeLessThanOrEqual(165);
+      expect(p.description.length, `${path} (${p.description.length})`).toBeGreaterThanOrEqual(110);
+      expect(p.description.length, `${path} (${p.description.length})`).toBeLessThanOrEqual(160);
+    }
+  });
+
+  it('articles publiés : title de 60 caractères au plus, extrait de 110 à 160 caractères', () => {
+    for (const a of publishedArticles()) {
+      expect(articleSeoTitle(a).length, a.slug).toBeLessThanOrEqual(60);
+      expect(a.excerpt.length, `${a.slug} (${a.excerpt.length})`).toBeGreaterThanOrEqual(110);
+      expect(a.excerpt.length, `${a.slug} (${a.excerpt.length})`).toBeLessThanOrEqual(160);
     }
   });
 

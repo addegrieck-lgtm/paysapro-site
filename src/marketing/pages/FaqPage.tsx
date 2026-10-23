@@ -14,6 +14,8 @@ export default function FaqPage() {
     <>
       <PageHeader eyebrow="FAQ" title="Questions fréquentes" intro="Tout ce que les paysagistes nous demandent avant d’essayer Paysapro AI." />
       <Container className="max-w-3xl pb-24">
+        {/* Titre pour la structure (H1 → H2 → H3 des questions), invisible à l'écran */}
+        <h2 className="sr-only">Toutes les questions</h2>
         <FAQ items={FAQ_DATA} />
         <div className="mt-12 rounded-3xl bg-white p-8 text-center ring-1 ring-line">
           <h2 className="font-display text-2xl font-extrabold text-ink">Vous avez une autre question ?</h2>

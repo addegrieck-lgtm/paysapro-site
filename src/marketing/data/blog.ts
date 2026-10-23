@@ -542,7 +542,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     slug: 'comment-faire-un-devis-paysagiste',
     title: 'Comment faire un devis paysagiste ?',
-    excerpt: 'Les éléments indispensables d’un devis clair : métrés, prestations, main-d’œuvre, TVA et conditions.',
+    excerpt: 'Les éléments indispensables d’un devis paysagiste clair : métrés, prestations, main-d’œuvre, TVA, acompte et conditions, avec un exemple chiffré.',
     keywords: ['devis paysagiste', 'logiciel devis paysagiste'],
     publishedAt: '2026-09-30',
     updatedAt: '2026-10-01',
@@ -636,7 +636,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     slug: 'calculer-surface-terrasse',
     title: 'Comment calculer la surface d’une terrasse ?',
-    excerpt: 'Méthode simple pour mesurer une terrasse, y compris les formes irrégulières, et en déduire les matériaux.',
+    excerpt: 'Méthode simple pour mesurer une terrasse en m², y compris les formes irrégulières (L, cercle, triangle), et en déduire les matériaux à commander.',
     keywords: ['surface terrasse', 'devis aménagement extérieur'],
     publishedAt: '2026-09-30',
     readingMinutes: 4,
@@ -704,7 +704,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     slug: 'calculer-prix-cloture',
     title: 'Comment calculer le prix d’une clôture ?',
-    excerpt: 'Mètres linéaires, poteaux, portail, pose : les postes à ne pas oublier.',
+    excerpt: 'Mètres linéaires, poteaux, panneaux, portail, terrassement et pose : la méthode pour chiffrer une clôture sans oublier de poste sur le devis.',
     keywords: ['prix clôture', 'devis jardin'],
     publishedAt: '2026-09-30',
     readingMinutes: 4,
@@ -777,7 +777,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     slug: 'attestation-fiscale-sap-jardinage',
     title: 'Attestation fiscale SAP jardinage : le guide',
-    excerpt: 'Services à la personne et petits travaux de jardinage : à quoi sert l’attestation fiscale annuelle, ce qu’elle contient et comment la préparer sans y passer vos soirées.',
+    excerpt: 'Services à la personne et jardinage : à quoi sert l’attestation fiscale annuelle, ce qu’elle contient et comment la préparer sans y passer vos soirées.',
     keywords: ['attestation fiscale SAP', 'services à la personne jardinage', 'logiciel paysagiste SAP'],
     publishedAt: '2026-10-01',
     readingMinutes: 5,
@@ -939,6 +939,12 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     keywords: ['devis paysagiste logiciel'],
   },
 ];
+
+/** Title de la page : « Titre | Paysapro AI », sans la marque si l'ensemble dépasse 60 caractères (sinon Google le tronque). */
+export function articleSeoTitle(a: Pick<BlogArticle, 'title'>): string {
+  const full = `${a.title} | Paysapro AI`;
+  return full.length <= 60 ? full : a.title;
+}
 
 export function publishedArticles() {
   return BLOG_ARTICLES.filter((a) => a.publishedAt && a.body?.length);
