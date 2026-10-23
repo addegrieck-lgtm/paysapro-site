@@ -35,7 +35,7 @@
     "priority": "0.9"
   },
   "/logiciel-devis-batiment": {
-    "title": "Logiciel de devis bâtiment pour artisans du BTP | Paysapro AI",
+    "title": "Logiciel de devis bâtiment pour artisans BTP | Paysapro AI",
     "description": "Logiciel de devis pour artisans du BTP, tous corps de métier : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Essai gratuit 15 jours.",
     "priority": "0.9"
   },
@@ -65,7 +65,7 @@
     "priority": "0.8"
   },
   "/application-paysagiste": {
-    "title": "Application pour paysagiste : devis sur chantier | Paysapro AI",
+    "title": "Application paysagiste : devis sur chantier | Paysapro AI",
     "description": "Application pour paysagiste utilisable sur le chantier : photos, mesures, prestations et devis depuis votre smartphone, sans installation.",
     "priority": "0.8"
   },
@@ -100,7 +100,7 @@
     "priority": "0.7"
   },
   "/tarifs": {
-    "title": "Tarifs : essai gratuit 15 jours, dès 19 € HT/mois | Paysapro AI",
+    "title": "Tarifs : essai gratuit, dès 19 € HT/mois | Paysapro AI",
     "description": "Tarifs Paysapro AI : 15 jours d’essai gratuit sans carte bancaire, puis Starter 19 €, Pro 39 € ou Business 69 € HT par mois. Sans engagement.",
     "priority": "0.8"
   },
@@ -110,22 +110,22 @@
     "priority": "0.7"
   },
   "/contact": {
-    "title": "Contact | Paysapro AI",
-    "description": "Une question sur Paysapro AI, le logiciel de devis pour paysagistes ? Écrivez-nous.",
+    "title": "Contact : une question sur nos devis ? | Paysapro AI",
+    "description": "Une question sur Paysapro AI, le logiciel de devis pour paysagistes et artisans du bâtiment ? Fonctionnalités, tarifs, démo : écrivez-nous.",
     "priority": "0.6"
   },
   "/a-propos": {
-    "title": "À propos | Paysapro AI",
-    "description": "Paysapro AI est développé avec les professionnels du paysage, à partir de leurs besoins réels sur le terrain.",
+    "title": "À propos : un outil pensé avec les pros | Paysapro AI",
+    "description": "Paysapro AI est développé avec les paysagistes et artisans du bâtiment, à partir de leurs besoins réels sur le terrain : devis, chantiers, signature.",
     "priority": "0.5"
   },
   "/aide": {
-    "title": "Aide | Paysapro AI",
-    "description": "Besoin d'aide pour utiliser Paysapro AI ? Retrouvez les réponses aux questions fréquentes ou contactez-nous.",
+    "title": "Aide et support : bien démarrer | Paysapro AI",
+    "description": "Besoin d’aide pour utiliser Paysapro AI ? Premiers pas, devis, catalogue, signature, factures : les réponses aux questions fréquentes, ou contactez-nous.",
     "priority": "0.3"
   },
   "/blog": {
-    "title": "Blog — Devis et chantiers : paysage et bâtiment | Paysapro AI",
+    "title": "Blog : devis, TVA et chantiers d’artisans | Paysapro AI",
     "description": "Conseils concrets pour paysagistes et artisans du BTP : faire un devis, TVA des travaux, mentions obligatoires, décennale, facture électronique.",
     "priority": "0.4"
   },

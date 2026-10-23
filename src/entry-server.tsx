@@ -11,7 +11,7 @@ import { FAQ } from './marketing/data/faq';
 import { FEATURES } from './marketing/data/features';
 import { LANDINGS } from './marketing/data/landings';
 import { TOOLS } from './marketing/data/tools';
-import { publishedArticles } from './marketing/data/blog';
+import { articleSeoTitle, publishedArticles } from './marketing/data/blog';
 import { MARKETING_CONFIG } from './marketing/config/marketing';
 
 const noop = { name: 'none', requiresConsent: false, track: () => {} };
@@ -25,6 +25,10 @@ export async function render(path: string): Promise<string> {
         <MarketingRoutes />
       </AnalyticsProvider>
     </StaticRouter>,
+    // Sans limite de taille par bloc : par défaut, React place le contenu d'une page de plus de ~12 Ko APRÈS le
+    // pied de page, dans un bloc caché remis en place par JavaScript. Les robots qui n'exécutent pas JavaScript
+    // (Bing en partie, robots des assistants IA) voyaient alors le menu et le pied de page avant le contenu.
+    { progressiveChunkSize: Number.POSITIVE_INFINITY },
   );
   return await new Response(prelude).text();
 }
@@ -137,7 +141,7 @@ export function seoPages(): SeoPage[] {
       const path = `/blog/${a.slug}`;
       list.push({
         path,
-        title: `${a.title} | Paysapro AI`,
+        title: articleSeoTitle(a),
         description: a.excerpt,
         priority: '0.7',
         jsonLd: (siteUrl) => [

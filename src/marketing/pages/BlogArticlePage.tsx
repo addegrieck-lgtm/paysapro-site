@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router';
 import { ArrowRight, ChevronRight, Clock } from 'lucide-react';
-import { publishedArticles, type BlogArticle } from '../data/blog';
+import { articleSeoTitle, publishedArticles, type BlogArticle } from '../data/blog';
 import { usePageMeta } from '../components/usePageMeta';
 import { AppCta } from '../components/AppLink';
 import { Container } from '../components/ui';
@@ -18,7 +18,7 @@ export default function BlogArticlePage() {
 }
 
 function Article({ article }: { article: BlogArticle }) {
-  usePageMeta(`/blog/${article.slug}`, { title: `${article.title} | Paysapro AI`, description: article.excerpt });
+  usePageMeta(`/blog/${article.slug}`, { title: articleSeoTitle(article), description: article.excerpt });
   const others = publishedArticles().filter((a) => a.slug !== article.slug);
 
   return (
