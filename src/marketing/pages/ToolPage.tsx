@@ -1,12 +1,13 @@
 import { ArrowRight, Calculator as CalcIcon, Fence, Layers, Ruler } from 'lucide-react';
 import { Link } from 'react-router';
-import { TOOLS, toolByPath, type ToolId } from '../data/tools';
+import { TOOLS, TOOLS_FAQ, toolByPath, type ToolId } from '../data/tools';
 import { usePageMeta } from '../components/usePageMeta';
 import { PageHeader } from '../components/PageHeader';
 import { AppCta } from '../components/AppLink';
 import { IconTile } from '../components/FeatureCard';
 import { Calculator } from '../components/tools/Calculators';
 import { EmbedSnippet } from '../components/tools/EmbedSnippet';
+import { FAQ } from '../components/FAQ';
 import { Container } from '../components/ui';
 import NotFoundPage from './NotFoundPage';
 
@@ -38,6 +39,41 @@ export function ToolsIndexPage() {
             </li>
           ))}
         </ul>
+        <section className="mx-auto mt-16 max-w-3xl">
+          <h2 className="font-display text-2xl font-extrabold text-ink sm:text-3xl">Quel calculateur pour quel chantier ?</h2>
+          <div className="mt-4 space-y-3 text-[1.05rem] leading-[1.75] text-muted">
+            <p>
+              Le <strong className="text-ink">calcul de surface</strong> sert à chiffrer tout ce qui se pose au mètre carré : dallage ou platelage de terrasse, gazon en rouleau ou
+              semé, toile de paillage, massifs. Il gère le rectangle, la forme en L, le triangle et le cercle, puis ajoute la marge de chutes que vous choisissez.
+            </p>
+            <p>
+              Le <strong className="text-ink">calcul de volume</strong> répond à la question « combien en commander ? » pour la terre végétale, le gravier, le paillage ou le béton : il
+              part de la surface et de l’épaisseur, et donne un poids estimé pour anticiper la livraison.
+            </p>
+            <p>
+              Le <strong className="text-ink">calcul de clôture</strong> part du linéaire à clôturer et de l’entraxe des poteaux pour obtenir le nombre de poteaux et de panneaux.
+            </p>
+            <p>
+              Sur le terrain, mesurez chaque côté deux fois et découpez les formes complexes en formes simples. Les articles{' '}
+              <Link to="/blog/calculer-surface-terrasse" className="font-semibold text-brand hover:underline">
+                calculer la surface d’une terrasse
+              </Link>{' '}
+              et{' '}
+              <Link to="/blog/calculer-prix-cloture" className="font-semibold text-brand hover:underline">
+                calculer le prix d’une clôture
+              </Link>{' '}
+              détaillent la méthode.
+            </p>
+          </div>
+        </section>
+
+        <section className="mx-auto mt-14 max-w-3xl">
+          <h2 className="font-display text-2xl font-extrabold text-ink sm:text-3xl">Questions sur les calculateurs</h2>
+          <div className="mt-6">
+            <FAQ items={TOOLS_FAQ} />
+          </div>
+        </section>
+
         <div className="mt-12 flex flex-col items-start gap-5 rounded-3xl bg-mint p-8 sm:flex-row sm:items-center">
           <CalcIcon className="h-10 w-10 shrink-0 text-forest" aria-hidden="true" />
           <div className="flex-1">

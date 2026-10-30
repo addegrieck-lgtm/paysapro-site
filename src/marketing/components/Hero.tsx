@@ -33,15 +33,18 @@ export function Hero() {
           </a>
         </div>
 
+        {/* H1 court avec la requête visée ; l'accroche, visuellement dominante, est un paragraphe. */}
         <h1
           id="hero-title"
-          className="animate-fade-up mx-auto mt-7 max-w-5xl font-display text-[2.9rem] leading-[0.98] font-extrabold tracking-[-0.045em] text-ink [animation-delay:80ms] min-[390px]:text-[3.2rem] sm:text-7xl lg:text-[5.6rem]"
+          className="animate-fade-up mx-auto mt-7 font-sans text-[0.95rem] leading-normal font-semibold text-brand [animation-delay:80ms] sm:text-lg"
         >
-          <span className="mb-4 block font-sans text-[0.95rem] leading-normal font-semibold tracking-normal text-brand sm:text-lg">Logiciel de devis pour paysagistes</span>
+          Logiciel de devis pour paysagistes
+        </h1>
+        <p className="animate-fade-up mx-auto mt-4 max-w-5xl font-display text-[2.9rem] leading-[0.98] font-extrabold tracking-[-0.045em] text-ink [animation-delay:80ms] min-[390px]:text-[3.2rem] sm:text-7xl lg:text-[5.6rem]">
           Du chantier au devis.
           <br />
           <span className="bg-gradient-to-r from-brand to-forest bg-clip-text text-transparent">En quelques minutes.</span>
-        </h1>
+        </p>
 
         <p className="animate-fade-up mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted [animation-delay:160ms] sm:text-xl">
           Photographiez votre chantier, renseignez les quelques informations nécessaires et construisez un devis professionnel prêt à envoyer à votre client.

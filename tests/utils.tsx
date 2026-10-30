@@ -30,7 +30,7 @@ export const SIGNUP = `${APP}/inscription`;
 export const LOGIN = `${APP}/connexion`;
 
 export const PAGES: [path: string, h1: RegExp][] = [
-  ['/', /Du chantier au devis/],
+  ['/', /Logiciel de devis pour paysagistes/],
   ['/fonctionnalites', /Tout ce qu’il faut, du chantier au devis signé/],
   ['/comment-ca-marche', /Six étapes/],
   ['/tarifs', /Essayez gratuitement pendant 15 jours/],
