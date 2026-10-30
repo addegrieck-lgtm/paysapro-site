@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, type ReactNode } from 'react';
 import { createAdapter } from './adapters';
 import { hasConsent } from './consent';
+import { trackSiteEvent } from './siteStats';
 import type { AnalyticsAdapter, EventProps, MarketingEvent } from './events';
 
 interface AnalyticsContextValue {
@@ -19,6 +20,12 @@ export function AnalyticsProvider({ children, adapter }: { children: ReactNode; 
 
   const trackEvent = useCallback(
     (event: MarketingEvent, props?: EventProps) => {
+      // Mesure maison (back-office) : sans cookie, indépendante de l'outil configuré.
+      try {
+        trackSiteEvent(event, typeof props?.location === 'string' ? props.location : undefined);
+      } catch {
+        /* jamais bloquant */
+      }
       if (!allowed) return;
       try {
         active.track(event, props);
