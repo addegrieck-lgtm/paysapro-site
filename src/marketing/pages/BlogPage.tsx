@@ -11,7 +11,10 @@ import { MARKETING_CONFIG } from '../config/marketing';
 export default function BlogPage() {
   usePageMeta('/blog');
   const published = MARKETING_CONFIG.showBlog ? publishedArticles() : [];
-  const upcoming = BLOG_ARTICLES.filter((a) => !published.includes(a));
+  // Les trois prochains articles programmés, dans l'ordre de parution.
+  const upcoming = BLOG_ARTICLES.filter((a) => !published.includes(a))
+    .sort((a, b) => (a.publishedAt ?? '9999').localeCompare(b.publishedAt ?? '9999'))
+    .slice(0, 3);
 
   return (
     <>

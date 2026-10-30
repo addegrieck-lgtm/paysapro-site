@@ -1,6 +1,7 @@
 /**
  * Blog — articles pratiques pour les paysagistes et les artisans du bâtiment (référencement naturel).
  * Publier un article : renseigner `publishedAt` et `body`. Il apparaît alors automatiquement
+ * (un `publishedAt` futur programme la parution : l'article reste « À paraître » jusqu'au build de ce jour-là)
  * sur /blog, dans le sitemap et avec ses données structurées (pré-rendu au build).
  * Règles : conseils concrets, pas de prix de marché inventés, pas de bourrage de mots-clés.
  */
@@ -1165,6 +1166,569 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
     ],
   },
+  {
+    slug: 'comment-chiffrer-creation-pelouse',
+    title: 'Comment chiffrer la création d’une pelouse ?',
+    excerpt: 'Préparation du sol, apport de terre, semis ou gazon en rouleau, arrosage : les postes à prévoir pour un devis de pelouse juste et complet.',
+    keywords: ['devis création pelouse', 'devis paysagiste'],
+    publishedAt: '2026-11-03',
+    readingMinutes: 6,
+    links: [
+      { label: 'Calculateur de surface gratuit', to: '/outils/calcul-surface' },
+      { label: 'Combien de terre végétale commander ?', to: '/blog/calculer-terre-vegetale' },
+      { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
+    ],
+    summary: [
+      'Un devis de pelouse se construit à partir de la surface réelle, mesurée zone par zone, et de l’état du sol en place.',
+      'Les postes oubliés coûtent le plus cher : désherbage, évacuation, apport de terre, nivellement, premier arrosage et première tonte.',
+      'Précisez le choix entre semis et gazon en rouleau, la période de réalisation et ce qui reste à la charge du client après les travaux.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'La création d’une pelouse paraît simple à chiffrer : une surface, un prix au mètre carré. En pratique, c’est l’un des devis où les écarts entre le prévu et le réalisé sont les plus fréquents, parce que le résultat dépend surtout de ce qui se passe sous la future pelouse.',
+          'Voici les postes à passer en revue pour un devis qui tient la route, sans mauvaise surprise ni pour vous ni pour le client.',
+        ],
+      },
+      {
+        heading: '1. Mesurer la vraie surface',
+        paragraphs: [
+          'Mesurez zone par zone et découpez les formes irrégulières en rectangles, triangles et cercles. Déduisez les massifs, les allées et les terrasses qui resteront en place. Notez aussi les bordures : leur longueur sert à chiffrer les finitions.',
+          'Une erreur de quelques mètres carrés se répercute sur toutes les lignes du devis : terre, semences ou rouleaux, main-d’œuvre. C’est la mesure qu’il faut vérifier deux fois.',
+        ],
+      },
+      {
+        heading: '2. Évaluer le sol en place',
+        paragraphs: ['Avant de chiffrer, regardez et notez :'],
+        list: [
+          'la végétation existante : ancienne pelouse, mauvaises herbes, souches, racines ;',
+          'la nature du sol : terre lourde et compacte, sol caillouteux, remblai de construction ;',
+          'la pente et l’écoulement de l’eau après une pluie ;',
+          'l’accès au terrain pour le matériel et la livraison.',
+        ],
+      },
+      {
+        paragraphs: [
+          'Ces observations déterminent la préparation nécessaire. Un remblai de chantier ou une terre très compacte demandent bien plus de travail qu’un ancien potager. Photographiez-les : elles justifieront les postes de préparation auprès du client.',
+        ],
+      },
+      {
+        heading: '3. Détailler la préparation du sol',
+        paragraphs: ['C’est le cœur du devis. Prévoyez une ligne pour chaque étape réellement nécessaire :'],
+        list: [
+          'débroussaillage ou décapage de l’ancienne végétation ;',
+          'évacuation des déchets verts et des cailloux ;',
+          'travail du sol : bêchage, rotobêchage ou décompactage ;',
+          'apport de terre végétale ou d’amendement, en m³ ;',
+          'nivellement et ratissage fin ;',
+          'roulage avant semis ou avant pose.',
+        ],
+      },
+      {
+        heading: '4. Semis ou gazon en rouleau',
+        paragraphs: [
+          'Les deux solutions ne se chiffrent pas de la même façon. Le semis demande moins de fournitures mais un délai avant d’obtenir une pelouse utilisable, et sa réussite dépend de la saison et de l’arrosage. Le gazon en rouleau donne un résultat immédiat, avec un coût de fournitures plus élevé et une pose à organiser dès la livraison.',
+          'Si le client hésite, proposez les deux options sur le même devis, en lignes séparées. Il compare clairement, et vous évitez un second rendez-vous.',
+        ],
+      },
+      {
+        heading: '5. Ne pas oublier l’après-chantier',
+        paragraphs: [
+          'Indiquez qui assure l’arrosage les premières semaines, si la première tonte est comprise, et ce qui se passe en cas de levée irrégulière. Ces points évitent la plupart des litiges sur une création de pelouse : le client sait ce qui relève de votre travail et ce qui relève de l’entretien.',
+        ],
+      },
+      {
+        heading: '6. Préciser les conditions',
+        paragraphs: [
+          'Mentionnez la période prévue pour les travaux, car la météo conditionne la réussite d’un semis. Signalez comme estimées les quantités qui dépendent de ce que vous découvrirez au décapage, notamment l’apport de terre. Ajoutez les mentions habituelles : validité du devis, acompte, conditions de paiement.',
+          'Dans Paysapro AI, les surfaces mesurées sur le chantier alimentent directement les lignes du devis, avec vos prix pour chaque poste, et vous pouvez enregistrer une création de pelouse comme modèle pour ne plus repartir de zéro.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'relancer-un-devis-sans-reponse',
+    title: 'Comment relancer un devis sans réponse ?',
+    excerpt: 'Quand relancer, par quel moyen et avec quels mots : une méthode simple pour obtenir une réponse sans paraître insistant.',
+    keywords: ['relance devis', 'suivi devis artisan'],
+    publishedAt: '2026-11-10',
+    readingMinutes: 5,
+    links: [
+      { label: 'Comment présenter un devis professionnel ?', to: '/blog/presenter-un-devis-professionnel' },
+      { label: 'Comment gagner du temps sur ses devis ?', to: '/blog/gagner-du-temps-sur-ses-devis' },
+      { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
+    ],
+    summary: [
+      'Un devis sans réponse n’est pas un refus : le client a souvent simplement remis sa décision à plus tard.',
+      'Relancez quelques jours après l’envoi, puis avant la fin de validité du devis, avec un message court qui apporte quelque chose.',
+      'Savoir si le devis a été ouvert permet de relancer au bon moment et avec le bon ton.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Vous avez visité le chantier, préparé un devis soigné, l’avez envoyé… et plus rien. C’est une situation que tous les artisans connaissent. Beaucoup n’osent pas relancer, de peur de paraître insistants. Pourtant, une relance bien faite est perçue comme du sérieux, et elle transforme une part non négligeable des devis restés en suspens.',
+        ],
+      },
+      {
+        heading: 'Pourquoi un client ne répond pas',
+        paragraphs: ['Le silence a rarement une seule cause :'],
+        list: [
+          'le client n’a pas encore ouvert ou pas encore lu le devis ;',
+          'il attend d’autres devis pour comparer ;',
+          'il doit en parler à son conjoint ou attendre un financement ;',
+          'une ligne ou un montant l’a fait hésiter, et il n’ose pas poser la question ;',
+          'le projet est simplement reporté.',
+        ],
+      },
+      {
+        paragraphs: ['Une bonne relance aide à lever le doute sur chacune de ces situations, sans mettre le client mal à l’aise.'],
+      },
+      {
+        heading: 'Quand relancer',
+        paragraphs: [
+          'Une première relance quelques jours après l’envoi laisse au client le temps de lire, sans que le projet sorte de sa tête. Une seconde, une semaine ou deux plus tard, peut s’appuyer sur une information utile : un créneau qui se libère dans votre planning, une précision technique, la date de fin de validité du devis.',
+          'Au-delà, mieux vaut une dernière prise de nouvelles avant l’expiration du devis, puis classer le dossier. Un client qui revient plus tard appréciera d’avoir été suivi sans être harcelé.',
+        ],
+      },
+      {
+        heading: 'Par quel moyen',
+        paragraphs: [
+          'Le téléphone reste le plus efficace pour un devis important : il permet d’entendre les hésitations et d’y répondre tout de suite. Un SMS ou un e-mail court convient pour une première relance ou pour un client difficile à joindre. Dans tous les cas, joignez ou rappelez le lien vers le devis : le client ne doit pas avoir à le chercher.',
+        ],
+      },
+      {
+        heading: 'Que dire',
+        paragraphs: ['Restez bref, aimable, et apportez quelque chose. Par exemple :'],
+        list: [
+          '« Bonjour, je reviens vers vous au sujet du devis pour votre terrasse. Avez-vous pu le consulter ? Je reste disponible si une ligne mérite une explication. »',
+          '« Bonjour, j’ai un créneau qui se libère début du mois prochain pour votre clôture. Souhaitez-vous que je vous le réserve ? »',
+          '« Bonjour, votre devis arrive à la fin de sa validité. Si le projet est reporté, je peux tout à fait l’actualiser plus tard. »',
+        ],
+      },
+      {
+        paragraphs: [
+          'Évitez la pression commerciale ou les remises proposées d’emblée. Si le prix pose problème, le client le dira ; vous pourrez alors proposer une variante, par exemple en retirant une option, plutôt que de baisser vos tarifs.',
+        ],
+      },
+      {
+        heading: 'Relancer au bon moment grâce au suivi',
+        paragraphs: [
+          'Savoir si le devis a été ouvert change tout. Un devis jamais consulté appelle une relance du type « l’avez-vous bien reçu ? ». Un devis ouvert plusieurs fois montre un client intéressé, qui a peut-être une question.',
+          'Avec Paysapro AI, le client consulte le devis en ligne et vous voyez son statut évoluer : envoyé, vu, accepté, signé. Vous êtes prévenu quand il l’ouvre, et un devis qui arrive à expiration vous est signalé : vous relancez au bon moment, avec le lien vers le devis à portée de main.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'calculer-taux-horaire-paysagiste',
+    title: 'Comment calculer son taux horaire de paysagiste ?',
+    excerpt: 'Charges, heures réellement facturables, marge : la méthode pour fixer un taux horaire qui couvre vos coûts et fait vivre l’entreprise.',
+    keywords: ['taux horaire paysagiste', 'prix main d’oeuvre paysagiste'],
+    publishedAt: '2026-11-17',
+    readingMinutes: 6,
+    links: [
+      { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
+      { label: 'Contrat d’entretien de jardin : que prévoir ?', to: '/blog/contrat-entretien-jardin' },
+      { label: 'Fonctionnalités : catalogue, coûts et marges', to: '/fonctionnalites' },
+    ],
+    summary: [
+      'Le taux horaire se calcule à partir de vos coûts réels, pas du prix pratiqué par le voisin.',
+      'Les heures facturables sont bien moins nombreuses que les heures travaillées : déplacements, devis, administratif et intempéries ne se facturent pas directement.',
+      'Taux horaire = (charges annuelles + rémunération visée + marge) ÷ heures facturables dans l’année.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Beaucoup de paysagistes fixent leur taux horaire en regardant ce que pratiquent les autres. C’est un repère utile, mais insuffisant : deux entreprises n’ont ni les mêmes charges, ni le même matériel, ni le même nombre d’heures réellement facturées. Un taux mal calculé se voit rarement sur un chantier, mais toujours en fin d’année.',
+          'La méthode ci-dessous vous permet de calculer votre propre taux, puis de le comparer au marché en connaissance de cause.',
+        ],
+      },
+      {
+        heading: '1. Additionner les charges de l’année',
+        paragraphs: ['Listez tout ce que l’entreprise paie sur une année, hors fournitures refacturées sur les chantiers :'],
+        list: [
+          'véhicules : crédit ou location, carburant, assurance, entretien ;',
+          'matériel : achat amorti sur sa durée d’utilisation, entretien, réparations, consommables ;',
+          'local, stockage, énergie ;',
+          'assurances professionnelles, comptable, banque, téléphone, logiciels ;',
+          'cotisations et charges sociales ;',
+          'salaires chargés des salariés, le cas échéant.',
+        ],
+      },
+      {
+        heading: '2. Fixer la rémunération visée',
+        paragraphs: [
+          'Ajoutez ce que vous souhaitez vous verser sur l’année. C’est souvent la ligne que l’on oublie, ou que l’on considère comme « ce qui reste ». En l’intégrant au calcul, votre taux horaire devient le prix qui permet réellement de vous payer.',
+        ],
+      },
+      {
+        heading: '3. Compter les heures vraiment facturables',
+        paragraphs: [
+          'Partez des heures travaillées dans l’année, puis retirez tout ce qui ne se facture pas directement : déplacements entre chantiers, visites et préparation des devis, administratif, chargement du matériel, entretien des machines, jours d’intempéries, congés.',
+          'Le résultat est souvent nettement inférieur à ce que l’on imagine. Si vous ne savez pas l’estimer, notez pendant quelques semaines vos heures facturées et vos heures non facturées : la proportion obtenue sera bien plus juste qu’une estimation.',
+        ],
+      },
+      {
+        heading: '4. Calculer le taux',
+        paragraphs: [
+          'Taux horaire de revient = (charges annuelles + rémunération visée) ÷ heures facturables. C’est le prix en dessous duquel chaque heure vendue vous fait perdre de l’argent.',
+          'Ajoutez ensuite une marge pour les imprévus, les investissements et les périodes creuses. Le taux obtenu est votre taux horaire de vente.',
+        ],
+      },
+      {
+        heading: '5. Comparer, puis ajuster',
+        paragraphs: [
+          'Comparez maintenant ce taux aux prix pratiqués dans votre secteur. S’il est nettement plus élevé, cherchez où agir : réduire les déplacements en regroupant les chantiers par secteur, augmenter la part d’heures facturées, revoir un poste de charge important. S’il est plus bas, vous avez peut-être une marge de manœuvre que vous n’exploitez pas.',
+          'Recalculez votre taux au moins une fois par an, et à chaque changement important : embauche, nouveau véhicule, nouvel équipement.',
+        ],
+      },
+      {
+        heading: '6. Main-d’œuvre à l’heure ou au forfait',
+        paragraphs: [
+          'Le taux horaire sert aussi à construire vos prix au forfait ou au mètre carré : temps estimé pour la prestation multiplié par le taux, plus les fournitures. Le client voit un prix par prestation, et vous savez qu’il couvre vos heures.',
+          'Dans Paysapro AI, chaque prestation de votre catalogue a un prix de vente et un coût interne, et la main-d’œuvre se chiffre à l’heure ou à la journée. La marge de chaque devis s’affiche en euros et en pourcentage, visible uniquement par vous.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'contrat-entretien-jardin',
+    title: 'Contrat d’entretien de jardin : que prévoir ?',
+    excerpt: 'Prestations, fréquence, période, révision du prix, résiliation : les points à écrire noir sur blanc pour un contrat d’entretien clair et rentable.',
+    keywords: ['contrat entretien jardin', 'devis entretien jardin'],
+    publishedAt: '2026-11-24',
+    readingMinutes: 6,
+    links: [
+      { label: 'Attestation fiscale SAP pour le jardinage', to: '/blog/attestation-fiscale-sap-jardinage' },
+      { label: 'Logiciel paysagiste et services à la personne', to: '/logiciel-paysagiste-services-a-la-personne' },
+      { label: 'Comment calculer son taux horaire ?', to: '/blog/calculer-taux-horaire-paysagiste' },
+    ],
+    summary: [
+      'Un contrat d’entretien régulier sécurise le chiffre d’affaires, à condition que son contenu soit précis.',
+      'Il détaille les prestations, leur fréquence et la période, ce qui est inclus et ce qui sera facturé en plus.',
+      'Il prévoit les modalités de paiement, la révision du prix, la durée et les conditions de résiliation.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Les contrats d’entretien sont précieux pour un paysagiste : ils remplissent le planning de façon régulière et lissent le chiffre d’affaires sur l’année. Mais un contrat flou devient vite une source de tension : le client attend plus que prévu, ou le temps passé dépasse largement ce qui a été chiffré.',
+          'Voici les points à préciser pour un contrat clair, à la fois pour le client et pour vous.',
+        ],
+      },
+      {
+        heading: '1. Décrire chaque prestation',
+        paragraphs: ['Listez précisément ce qui est compris, par exemple :'],
+        list: [
+          'tonte de la pelouse, avec ou sans ramassage de l’herbe ;',
+          'taille des haies, en précisant lesquelles, leur hauteur et le nombre de passages par an ;',
+          'désherbage des massifs et des allées ;',
+          'ramassage des feuilles ;',
+          'taille des arbustes et des rosiers ;',
+          'évacuation des déchets verts.',
+        ],
+      },
+      {
+        paragraphs: [
+          'Plus la description est précise, moins il y a de discussions. « Entretien du jardin » ne suffit pas : le client et vous n’imaginez probablement pas la même chose.',
+        ],
+      },
+      {
+        heading: '2. Fixer la fréquence et la période',
+        paragraphs: [
+          'Indiquez le nombre de passages et leur rythme selon les saisons : la tonte est fréquente au printemps, rare en hiver. Précisez si les dates sont fixées à l’avance ou adaptées à la météo, et comment le client est prévenu de votre passage.',
+        ],
+      },
+      {
+        heading: '3. Dire ce qui n’est pas compris',
+        paragraphs: [
+          'Ce qui sort du contrat doit être écrit aussi clairement que ce qui y entre : abattage, élagage en hauteur, remplacement de végétaux, traitement d’une maladie, réparation de l’arrosage. Ces travaux feront l’objet d’un devis séparé. Le client sait à quoi s’attendre, et vous évitez les « petits services » non facturés qui s’accumulent.',
+        ],
+      },
+      {
+        heading: '4. Prix et paiement',
+        paragraphs: [
+          'Le prix peut être calculé par passage, au mois ou à l’année. Un forfait mensuel lissé sur l’année est apprécié des clients et régularise votre trésorerie, même si les passages sont plus nombreux en été. Précisez le mode et la date de paiement.',
+          'Prévoyez une clause de révision du prix, par exemple une actualisation annuelle à la date anniversaire du contrat, communiquée à l’avance au client.',
+        ],
+      },
+      {
+        heading: '5. Durée et résiliation',
+        paragraphs: [
+          'Indiquez la date de début, la durée du contrat, son éventuelle reconduction et le délai de préavis pour y mettre fin, de part et d’autre. Avec un particulier, des conditions de résiliation simples et équilibrées inspirent confiance et facilitent la signature.',
+        ],
+      },
+      {
+        heading: '6. Services à la personne',
+        paragraphs: [
+          'Si votre entreprise est déclarée en services à la personne, les petits travaux de jardinage chez les particuliers peuvent ouvrir droit à un avantage fiscal pour vos clients. Le contrat et les factures doivent alors distinguer les prestations concernées, et vous devez remettre à chaque client une attestation fiscale annuelle. Vérifiez les conditions et plafonds en vigueur avec votre comptable.',
+          'Paysapro AI gère ce mode : vos prestations sont marquées éligibles ou non, les devis affichent les informations SAP, et l’attestation fiscale annuelle de chaque client est générée en PDF à partir des paiements enregistrés.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'devis-taille-de-haie',
+    title: 'Comment faire un devis de taille de haie ?',
+    excerpt: 'Longueur, hauteur, épaisseur, accès et évacuation : comment mesurer une haie et détailler son devis pour chiffrer juste.',
+    keywords: ['devis taille de haie', 'prix taille haie'],
+    publishedAt: '2026-12-01',
+    readingMinutes: 5,
+    links: [
+      { label: 'Calculateur de surface gratuit', to: '/outils/calcul-surface' },
+      { label: 'Contrat d’entretien de jardin : que prévoir ?', to: '/blog/contrat-entretien-jardin' },
+      { label: 'Comment calculer son taux horaire ?', to: '/blog/calculer-taux-horaire-paysagiste' },
+    ],
+    summary: [
+      'Une haie se chiffre au mètre linéaire, mais sa hauteur, son épaisseur et les faces à tailler changent tout.',
+      'L’accès, le matériel nécessaire et l’évacuation des déchets verts sont des postes à part entière.',
+      'Des photos et des mesures précises évitent les contestations, surtout pour une haie haute ou négligée.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'La taille de haie fait partie des prestations les plus demandées, et des plus souvent sous-estimées. Deux haies de même longueur peuvent demander un temps de travail très différent selon leur hauteur, leur épaisseur, l’essence et la date de la dernière taille.',
+        ],
+      },
+      {
+        heading: '1. Mesurer la haie',
+        paragraphs: ['Relevez sur place :'],
+        list: [
+          'la longueur en mètres linéaires, haie par haie ;',
+          'la hauteur actuelle et la hauteur souhaitée après taille ;',
+          'l’épaisseur, et le nombre de faces à tailler : un côté, deux côtés, le dessus ;',
+          'l’essence : certaines se taillent vite, d’autres demandent plus de soin ou produisent plus de volume.',
+        ],
+      },
+      {
+        heading: '2. Observer l’état et l’accès',
+        paragraphs: [
+          'Une haie entretenue chaque année se taille bien plus vite qu’une haie laissée plusieurs saisons sans entretien, où il faut parfois réduire fortement la hauteur ou l’épaisseur. Regardez aussi ce qu’il y a autour : massifs à protéger, clôture, terrasse, voisinage, voie publique.',
+          'L’accès conditionne le matériel : une haie haute peut nécessiter un escabeau, un échafaudage ou une nacelle ; une haie en limite de propriété peut demander l’accord du voisin pour tailler l’autre face. Notez-le dans le devis.',
+        ],
+      },
+      {
+        heading: '3. Détailler le devis',
+        paragraphs: ['Plutôt qu’un forfait global, détaillez :'],
+        list: [
+          'la taille, au mètre linéaire, en distinguant les haies de hauteurs différentes ;',
+          'la réduction de hauteur ou d’épaisseur, si elle est nécessaire ;',
+          'la location ou l’utilisation de matériel spécifique ;',
+          'le ramassage et l’évacuation des déchets verts, ou leur broyage sur place ;',
+          'le déplacement, si votre tarif le prévoit.',
+        ],
+      },
+      {
+        paragraphs: [
+          'Le volume de déchets verts est souvent sous-estimé. Il dépend de la longueur, mais aussi de l’épaisseur retirée. Précisez le mode de gestion prévu : évacuation, broyage, paillage sur place.',
+        ],
+      },
+      {
+        heading: '4. Choisir la bonne période',
+        paragraphs: [
+          'La période de taille dépend des essences et de la réglementation locale. Évitez de programmer une taille importante pendant la période de nidification des oiseaux, et renseignez-vous sur les règles applicables dans votre secteur. Indiquez la période prévue sur le devis.',
+        ],
+      },
+      {
+        heading: '5. Proposer un entretien régulier',
+        paragraphs: [
+          'Une haie taillée chaque année revient moins cher au client qu’une haie reprise tous les trois ans. C’est l’occasion de proposer un passage annuel ou un contrat d’entretien : vous fidélisez le client et lissez votre planning.',
+          'Dans Paysapro AI, les longueurs relevées sur le chantier alimentent directement les lignes au mètre linéaire, et vous pouvez joindre au devis les photos de la haie avant travaux.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'travaux-supplementaires-avenant',
+    title: 'Travaux supplémentaires : comment les faire accepter ?',
+    excerpt: 'Une souche imprévue, une demande du client en cours de chantier : comment chiffrer et faire valider un supplément avant de le réaliser.',
+    keywords: ['travaux supplémentaires devis', 'avenant devis travaux'],
+    publishedAt: '2026-12-08',
+    readingMinutes: 5,
+    links: [
+      { label: 'Comment organiser ses chantiers ?', to: '/blog/organiser-ses-chantiers' },
+      { label: 'Mentions obligatoires d’un devis de travaux', to: '/blog/mentions-obligatoires-devis-travaux' },
+      { label: 'Facture d’acompte : comment la faire ?', to: '/blog/facture-acompte-travaux' },
+    ],
+    summary: [
+      'Un travail non prévu au devis signé doit être chiffré et accepté par écrit avant d’être réalisé.',
+      'Le plus simple est un devis complémentaire, court et précis, signé par le client.',
+      'Signaler les quantités estimées dès le devis initial réduit fortement les discussions en cours de chantier.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Sur un chantier d’aménagement extérieur, les imprévus sont fréquents : une souche plus grosse que prévu, un sous-sol rocheux, une canalisation à contourner. Et le client a souvent de nouvelles idées une fois les travaux commencés : « tant que vous êtes là, pourriez-vous aussi… ».',
+          'Réaliser ces travaux sans accord écrit, c’est prendre le risque de ne pas être payé, ou de devoir négocier en fin de chantier, au pire moment.',
+        ],
+      },
+      {
+        heading: 'La règle : écrire avant de faire',
+        paragraphs: [
+          'Le devis signé fixe ce qui a été convenu. Tout ce qui s’y ajoute doit faire l’objet d’un accord du client sur le contenu et le prix, avant la réalisation. Un accord oral, même de bonne foi, se discute facilement quelques semaines plus tard.',
+        ],
+      },
+      {
+        heading: 'Le devis complémentaire',
+        paragraphs: [
+          'La solution la plus claire est un devis complémentaire, qui fait référence au devis initial. Il reprend la même présentation et détaille uniquement les travaux ajoutés : désignation, quantité, prix, et l’impact éventuel sur le délai. Le client le signe comme le premier.',
+          'Si un travail prévu est retiré, indiquez-le aussi, avec le montant correspondant en moins : le client voit que vous jouez la transparence dans les deux sens.',
+        ],
+      },
+      {
+        heading: 'Expliquer pourquoi',
+        paragraphs: [
+          'Un supplément est mieux accepté quand le client comprend sa cause. Montrez-lui le problème sur place, ou envoyez une photo avec quelques mots d’explication : « En décaissant pour la terrasse, nous avons trouvé une ancienne dalle béton à casser et évacuer. » Proposez si possible plusieurs options, par exemple contourner l’obstacle plutôt que le supprimer.',
+        ],
+      },
+      {
+        heading: 'Anticiper dès le devis initial',
+        paragraphs: ['La meilleure façon de limiter les discussions est de les prévoir :'],
+        list: [
+          'signaler les quantités estimées, « à confirmer après décapage » par exemple ;',
+          'écrire ce qui n’est pas compris dans le prix ;',
+          'prévoir dans vos conditions que tout travail supplémentaire fera l’objet d’un devis complémentaire ;',
+          'photographier l’état initial du terrain.',
+        ],
+      },
+      {
+        heading: 'Facturer proprement',
+        paragraphs: [
+          'Une fois le supplément accepté, intégrez-le à la facture de solde en faisant apparaître le devis initial, le devis complémentaire et les acomptes déjà versés. Le client retrouve chaque montant et comprend le total.',
+          'Avec Paysapro AI, le devis complémentaire se prépare en quelques minutes depuis le chantier, avec les photos du problème, et le client le signe en ligne depuis son téléphone : l’accord est obtenu avant de reprendre les travaux.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'calculer-terre-vegetale',
+    title: 'Combien de terre végétale commander ?',
+    excerpt: 'Surface, épaisseur, tassement et livraison : la méthode pour calculer le volume de terre végétale et éviter le camion de trop… ou de moins.',
+    keywords: ['calcul terre végétale', 'volume terre végétale m3'],
+    publishedAt: '2026-12-15',
+    readingMinutes: 5,
+    links: [
+      { label: 'Calculateur de volume gratuit', to: '/outils/calcul-volume' },
+      { label: 'Comment chiffrer la création d’une pelouse ?', to: '/blog/comment-chiffrer-creation-pelouse' },
+      { label: 'Comment calculer la surface d’une terrasse ?', to: '/blog/calculer-surface-terrasse' },
+    ],
+    summary: [
+      'Volume (m³) = surface (m²) × épaisseur (m) : 48 m² sur 10 cm représentent 4,8 m³.',
+      'Prévoyez une marge pour le tassement de la terre après mise en place, selon le matériau et vos habitudes.',
+      'Le poids dépend de la densité et de l’humidité : demandez la valeur à votre fournisseur avant de commander ou de charger.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Commander trop peu de terre végétale, c’est une seconde livraison et une demi-journée perdue. Commander trop, c’est un surplus à stocker ou à évacuer, payé par vous ou par le client. Le calcul est simple, à condition de ne pas oublier quelques paramètres.',
+        ],
+      },
+      {
+        heading: '1. Mesurer la surface',
+        paragraphs: [
+          'Mesurez chaque zone à recouvrir et découpez les formes complexes en formes simples. Additionnez les surfaces, en déduisant les parties qui ne recevront pas de terre : allées, terrasses, massifs existants.',
+        ],
+      },
+      {
+        heading: '2. Choisir l’épaisseur',
+        paragraphs: [
+          'L’épaisseur dépend du projet et du sol en place : un simple regarnissage demande peu de terre, une création de pelouse ou de massif sur un sol pauvre ou un remblai en demande beaucoup plus. Mesurez-la en plusieurs points si le terrain n’est pas plan : les creux consomment plus de terre qu’on ne l’imagine.',
+        ],
+      },
+      {
+        heading: '3. Calculer le volume',
+        paragraphs: [
+          'Volume (m³) = surface (m²) × épaisseur (m). Attention à l’unité : 10 cm s’écrivent 0,10 m. Pour 48 m² sur 10 cm, il faut 48 × 0,10 = 4,8 m³. Pour 48 m² sur 20 cm, 9,6 m³.',
+        ],
+      },
+      {
+        heading: '4. Prévoir le tassement',
+        paragraphs: [
+          'Une terre livrée est foisonnée : elle contient de l’air et se tasse une fois mise en place, arrosée et roulée. Ajoutez une marge selon le matériau, l’humidité et vos habitudes de chantier. Notez après chaque chantier la quantité réellement utilisée : vous affinerez votre marge au fil du temps.',
+        ],
+      },
+      {
+        heading: '5. Du volume au poids',
+        paragraphs: [
+          'Les fournisseurs vendent au m³ ou à la tonne. Le poids dépend de la densité, qui varie selon la composition de la terre et son humidité : une terre mouillée pèse nettement plus lourd. Demandez la densité réelle à votre fournisseur, surtout si vous transportez la terre vous-même : la charge utile du véhicule est vite atteinte.',
+        ],
+      },
+      {
+        heading: '6. Organiser la livraison',
+        paragraphs: [
+          'Vérifiez l’accès du camion, l’endroit où la terre sera déposée et la protection du sol à cet endroit. Un dépôt mal placé peut ajouter des heures de brouette. Pensez aussi à la météo : une terre détrempée se travaille mal.',
+          'Le calculateur de volume gratuit du site fait ce calcul en quelques secondes, avec une estimation du poids. Dans Paysapro AI, la surface mesurée sur le chantier et l’épaisseur prévue donnent directement la quantité de la ligne « apport de terre végétale » du devis.',
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'photos-de-chantier-paysagiste',
+    title: 'Photos de chantier : comment bien les utiliser ?',
+    excerpt: 'Avant, pendant, après : quelles photos prendre, comment les ranger et à quoi elles servent, du devis à la communication.',
+    keywords: ['photos chantier paysagiste', 'application paysagiste'],
+    publishedAt: '2026-12-22',
+    readingMinutes: 5,
+    links: [
+      { label: 'Comment organiser ses chantiers ?', to: '/blog/organiser-ses-chantiers' },
+      { label: 'Comment présenter un devis professionnel ?', to: '/blog/presenter-un-devis-professionnel' },
+      { label: 'L’application de chantier du paysagiste', to: '/application-paysagiste' },
+    ],
+    summary: [
+      'Les photos servent à chiffrer, à convaincre le client, à se protéger en cas de litige et à montrer son savoir-faire.',
+      'Prenez-les toujours dans le même ordre : vue d’ensemble, zones de travaux, contraintes, puis les mêmes angles après travaux.',
+      'Rangées dans le dossier du chantier au moment de la prise, elles restent utilisables ; perdues dans la galerie du téléphone, elles ne servent plus.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Tous les paysagistes prennent des photos de chantier. Mais elles finissent souvent mélangées aux photos personnelles, difficiles à retrouver au moment où elles seraient utiles. Bien prises et bien rangées, elles deviennent pourtant un outil de travail à part entière.',
+        ],
+      },
+      {
+        heading: 'À quoi servent les photos',
+        list: [
+          'chiffrer au calme, après la visite, sans oublier un détail du terrain ;',
+          'illustrer le devis : le client retrouve son jardin et comprend où chaque prestation s’applique ;',
+          'garder une trace de l’état initial, utile en cas de contestation ;',
+          'informer le client de l’avancement, surtout s’il est absent pendant les travaux ;',
+          'montrer vos réalisations : une galerie avant-après est votre meilleure vitrine.',
+        ],
+      },
+      {
+        heading: 'Lors de la visite',
+        paragraphs: ['Suivez toujours le même ordre :'],
+        list: [
+          'une ou deux vues d’ensemble du jardin, depuis la maison et depuis le fond du terrain ;',
+          'chaque zone de travaux, de face et en biais ;',
+          'les contraintes : accès, portail, pente, réseaux visibles, arbres à protéger ;',
+          'les détails qui influencent le prix : souches, état d’une clôture, nature du sol.',
+        ],
+      },
+      {
+        heading: 'Pendant et après les travaux',
+        paragraphs: [
+          'Photographiez les étapes clés, notamment ce qui sera caché une fois le chantier terminé : fondations, drainage, géotextile, réseaux. À la fin, reprenez les mêmes angles qu’à la visite : la comparaison avant-après est bien plus parlante quand le point de vue est identique.',
+        ],
+      },
+      {
+        heading: 'Quelques règles de prise de vue',
+        list: [
+          'photographiez en plein jour, le soleil dans le dos si possible ;',
+          'tenez le téléphone à l’horizontale pour les vues d’ensemble ;',
+          'placez un repère dans l’image, un mètre déplié ou un outil, pour donner l’échelle ;',
+          'évitez de photographier les voisins, les plaques d’immatriculation ou les personnes sans leur accord.',
+        ],
+      },
+      {
+        heading: 'Ranger au bon endroit',
+        paragraphs: [
+          'Le vrai problème n’est pas la prise de vue, mais le rangement. Classez chaque photo dans le dossier du chantier au moment où vous la prenez, avec une étiquette : avant, pendant, après. Triées plus tard, elles finissent rarement au bon endroit.',
+          'Avant de publier une réalisation sur votre site ou vos réseaux, demandez l’accord du client, et évitez tout ce qui permettrait de localiser sa maison.',
+          'Dans Paysapro AI, les photos sont prises ou importées directement dans le chantier, étiquetées avant ou après, et vous choisissez celles qui apparaissent dans le devis. Un curseur avant-après permet de montrer le résultat au client en un geste.',
+        ],
+      },
+    ],
+  },
 ];
 
 /** Title de la page : « Titre | Paysapro AI », sans la marque si l'ensemble dépasse 60 caractères (sinon Google le tronque). */
@@ -1173,6 +1737,7 @@ export function articleSeoTitle(a: Pick<BlogArticle, 'title'>): string {
   return full.length <= 60 ? full : a.title;
 }
 
-export function publishedArticles() {
-  return BLOG_ARTICLES.filter((a) => a.publishedAt && a.body?.length);
+/** Articles en ligne : rédigés et dont la date de parution est atteinte (date du build, heure de Paris). */
+export function publishedArticles(today: string = import.meta.env.VITE_BUILD_DATE) {
+  return BLOG_ARTICLES.filter((a) => a.publishedAt && a.publishedAt <= today && a.body?.length).sort((a, b) => b.publishedAt!.localeCompare(a.publishedAt!));
 }
