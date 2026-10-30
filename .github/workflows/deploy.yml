@@ -8,6 +8,9 @@ name: Deploy
 on:
   push:
     branches: [main]
+  # Chaque matin (≈ 6 h-7 h à Paris) : publie les articles du blog dont la date de parution est arrivée.
+  schedule:
+    - cron: '23 4 * * *'
   workflow_dispatch:
 
 permissions:

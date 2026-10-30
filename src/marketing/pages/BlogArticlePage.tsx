@@ -19,7 +19,13 @@ export default function BlogArticlePage() {
 
 function Article({ article }: { article: BlogArticle }) {
   usePageMeta(`/blog/${article.slug}`, { title: articleSeoTitle(article), description: article.excerpt });
-  const others = publishedArticles().filter((a) => a.slug !== article.slug);
+  const published = publishedArticles();
+  const others = published.filter((a) => a.slug !== article.slug);
+  // Liens choisis pour l'article (sauf vers un article pas encore paru), puis les autres articles, sans doublon.
+  const live = new Set(published.map((a) => `/blog/${a.slug}`));
+  const related = [...(article.links ?? []).filter((l) => !l.to.startsWith('/blog/') || live.has(l.to)), ...others.map((a) => ({ label: a.title, to: `/blog/${a.slug}` }))].filter(
+    (l, i, all) => all.findIndex((x) => x.to === l.to) === i,
+  );
 
   return (
     <article>
@@ -100,7 +106,7 @@ function Article({ article }: { article: BlogArticle }) {
           <nav aria-label="Autres articles" className="mt-14">
             <h2 className="font-display text-xl font-extrabold text-ink">À lire aussi</h2>
             <ul className="mt-4 divide-y divide-line overflow-hidden rounded-3xl bg-white ring-1 ring-line">
-              {[...(article.links ?? []), ...others.map((a) => ({ label: a.title, to: `/blog/${a.slug}` }))].map((l) => (
+              {related.map((l) => (
                 <li key={l.to}>
                   <Link to={l.to} className="group flex items-center justify-between gap-4 p-5 hover:bg-cream/60">
                     <span className="font-semibold text-ink">{l.label}</span>
