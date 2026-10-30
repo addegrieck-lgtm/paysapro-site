@@ -152,5 +152,10 @@
     "description": "Informations sur l'utilisation des cookies sur le site Paysapro AI.",
     "priority": "0.2",
     "noindex": true
+  },
+  "/comparatif-logiciel-devis-paysagiste": {
+    "title": "Comparatif logiciel devis paysagiste 2026 | Paysapro AI",
+    "description": "Paysapro AI, Robbin, Extrabat Paysage, Obat, Tolteck, Henrri : fonctions, usage sur chantier, SAP et prix publics des logiciels de devis paysagiste.",
+    "priority": "0.8"
   }
 }

@@ -58,7 +58,8 @@ export default function LandingPage({ path }: { path: string }) {
         <Essentiel items={landing.summary} />
       </Container>
 
-      <Container className="grid gap-12 pb-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+      {/* grid-cols-1 (minmax(0, 1fr)) : sinon la colonne prend la largeur de l’illustration et le texte déborde sur mobile. */}
+      <Container className="grid grid-cols-1 gap-12 pb-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div className="space-y-12">
           {landing.sections.map((s) => (
             <Reveal as="section" key={s.heading}>

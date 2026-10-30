@@ -860,6 +860,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       'Testez-le sur un vrai devis avant de vous engager, et vérifiez ce qu’il ne fait pas.',
     ],
     links: [
+      { label: 'Comparatif 2026 des logiciels de devis pour paysagistes', to: '/comparatif-logiciel-devis-paysagiste' },
       { label: 'Qu’est-ce que Paysapro AI ?', to: '/quest-ce-que-paysapro-ai' },
       { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
       { label: 'Tarifs', to: '/tarifs' },

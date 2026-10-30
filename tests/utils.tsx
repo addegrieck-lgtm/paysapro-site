@@ -44,6 +44,7 @@ export const PAGES: [path: string, h1: RegExp][] = [
   ['/logiciel-gestion-paysagiste', /Clients, chantiers, devis/],
   ['/application-paysagiste', /application de chantier du paysagiste/],
   ['/modele-devis-paysagiste', /Exemple de devis paysagiste/],
+  ['/comparatif-logiciel-devis-paysagiste', /le comparatif 2026/],
   ['/logiciel-paysagiste-services-a-la-personne', /attestation fiscale/],
   ['/blog/attestation-fiscale-sap-jardinage', /Attestation fiscale SAP/],
   ['/outils', /Calculateurs pour paysagistes/],
