@@ -44,6 +44,7 @@ export const ROUTE_PATHS = [
   '/logiciel-gestion-paysagiste',
   '/application-paysagiste',
   '/modele-devis-paysagiste',
+  '/comparatif-logiciel-devis-paysagiste',
   '/logiciel-paysagiste-services-a-la-personne',
   '/outils',
   '/outils/calcul-surface',

@@ -554,6 +554,7 @@ export const LANDINGS: Landing[] = [
       },
     ],
     related: [
+      { label: 'Comparatif 2026 des logiciels de devis pour paysagistes', to: '/comparatif-logiciel-devis-paysagiste' },
       { label: 'Voir un exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
       { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
       { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
@@ -921,6 +922,121 @@ export const LANDINGS: Landing[] = [
       { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
       { label: 'Tarifs', to: '/tarifs' },
       { label: 'Comment choisir un logiciel de devis paysagiste ?', to: '/blog/choisir-logiciel-devis-paysagiste' },
+    ],
+  },
+  {
+    // Comparatif : uniquement des informations publiées par les éditeurs, datées et sourcées ; aucun avis
+    // client repris, aucun dénigrement (publicité comparative, art. L122-1 du Code de la consommation).
+    path: '/comparatif-logiciel-devis-paysagiste',
+    eyebrow: 'Comparatif 2026',
+    h1: 'Logiciel de devis pour paysagiste : le comparatif 2026',
+    intro: 'Six logiciels de devis et de facturation utilisés par les paysagistes, comparés sur ce qui compte au quotidien : spécialisation paysage, usage sur le chantier, signature en ligne, services à la personne et prix publics. Comparatif rédigé par l’éditeur de Paysapro AI, à partir des informations publiées par chaque éditeur et vérifiées le 30 octobre 2026.',
+    summary: [
+      'Trois logiciels sont pensés pour le paysage : Paysapro AI, Robbin et Extrabat Paysage. Obat et Tolteck visent les artisans du bâtiment, Henrri la facturation de toutes les petites entreprises.',
+      'Paysapro AI se distingue par le devis fait sur le chantier : photos, mesures au m² et au mètre linéaire qui calculent les quantités, puis signature du client en ligne.',
+      'Robbin est un logiciel de devis et facturation en ligne pour jardiniers paysagistes, avec attestation SAP et avance immédiate ; Extrabat Paysage est une suite de gestion plus large (CRM, interventions, contrats d’entretien).',
+      'Prix publics d’entrée : de la version gratuite d’Henrri à 49 € HT par mois pour Extrabat Paysage ; Paysapro AI commence à 19 € HT par mois, avec 15 jours d’essai gratuit.',
+      'Le meilleur choix dépend de votre activité : taille de l’équipe, part d’entretien et de services à la personne, besoin d’une gestion complète ou d’un outil de devis rapide.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Comment nous avons comparé',
+        paragraphs: [
+          'Nous sommes l’éditeur de Paysapro AI : ce comparatif n’est donc pas neutre, et nous le disons. Pour qu’il reste utile, il ne s’appuie que sur des éléments vérifiables publiés par chaque éditeur sur son site (fonctionnalités annoncées, prix publics, durée d’essai), relevés le 30 octobre 2026. Les prix sont hors taxes ; ils peuvent évoluer et des promotions ponctuelles peuvent s’appliquer : vérifiez-les sur le site de chaque éditeur avant de choisir.',
+          'Une information est inexacte ou a changé ? Écrivez-nous depuis la page Contact : nous la corrigeons rapidement.',
+        ],
+      },
+      {
+        heading: 'Paysapro AI',
+        paragraphs: ['Logiciel de devis en ligne pour paysagistes et artisans du bâtiment, conçu pour être utilisé sur le chantier depuis un téléphone.'],
+        list: [
+          'Points forts : photos et mesures du chantier (surfaces, longueurs, volumes) qui calculent les quantités du devis ; catalogue de prix avec coût et marge ; devis en ligne que le client signe sur son téléphone ; factures d’acompte et de solde au format Factur-X ; mode services à la personne avec attestation fiscale annuelle.',
+          'Pour qui : paysagistes seuls ou petites équipes qui veulent faire leurs devis plus vite, sur place.',
+          'Prix publics : Starter 19 €, Pro 39 €, Business 69 € HT par mois, 25 % de moins à l’année ; essai gratuit de 15 jours sans carte bancaire. Le mode SAP est inclus à partir de l’offre Pro.',
+        ],
+      },
+      {
+        heading: 'Robbin',
+        paragraphs: ['Logiciel de devis et facturation 100 % en ligne pour jardiniers paysagistes, édité par ISAGRI.'],
+        list: [
+          'Points forts annoncés : bibliothèque d’ouvrages, devis avec signature électronique, factures, dossiers clients, planning de l’équipe, marges et temps de chantier, attestation de services à la personne et avance immédiate, attestation de TVA, contrats d’entretien.',
+          'Pour qui : jardiniers paysagistes, notamment ceux qui ont une activité importante en services à la personne.',
+          'Prix publics : Essentiel 19 € HT par mois (15 € à l’année), Pro 49 € HT par mois (39 € à l’année) ; essai gratuit de 14 jours sans carte bancaire.',
+        ],
+      },
+      {
+        heading: 'Extrabat Paysage',
+        paragraphs: ['Suite de gestion en ligne d’Extrabat déclinée pour les paysagistes, avec des applications pour les équipes de terrain.'],
+        list: [
+          'Points forts annoncés : CRM, devis et factures, signature électronique, planning et charge de travail, rapports d’intervention avec photos sur mobile, y compris hors connexion, suivi des contrats d’entretien, commandes fournisseurs, compatibilité avec les services à la personne.',
+          'Pour qui : entreprises du paysage structurées, avec plusieurs équipes et une part importante d’entretien.',
+          'Prix publics : à partir de 49 € HT par mois, sans engagement de durée ; démonstration sur demande.',
+        ],
+      },
+      {
+        heading: 'Obat',
+        paragraphs: ['Logiciel de devis et facturation pour les artisans et entreprises du bâtiment.'],
+        list: [
+          'Points forts annoncés : devis et factures illimités, modèles de devis et bibliothèque d’ouvrages chiffrés, signature électronique, facture électronique, applications iOS et Android, agenda et planning dans les offres supérieures.',
+          'Pour qui : artisans du bâtiment ; le paysage n’est pas présenté comme un métier ciblé.',
+          'Prix publics : de 32 € HT par mois pour une micro-entreprise non assujettie à la TVA, et 49 € HT par mois pour un artisan assujetti (moins cher à l’année) ; essai gratuit de 14 jours.',
+        ],
+      },
+      {
+        heading: 'Tolteck',
+        paragraphs: ['Logiciel de devis et factures pour le bâtiment, utilisable sur ordinateur, tablette et téléphone.'],
+        list: [
+          'Points forts annoncés : devis et factures personnalisés, bibliothèque d’ouvrages, suivi des documents, fonctionnement même sans connexion internet, accompagnement à la prise en main.',
+          'Pour qui : artisans du bâtiment qui veulent un outil de devis simple ; le paysage n’est pas présenté comme un métier ciblé.',
+          'Prix publics : 25 € HT par mois, ou 19 € HT par mois à l’année ; un mois d’essai gratuit.',
+        ],
+      },
+      {
+        heading: 'Henrri',
+        paragraphs: ['Logiciel de facturation en ligne généraliste, pour les petites entreprises de tous secteurs.'],
+        list: [
+          'Points forts annoncés : devis et factures illimités dans la version gratuite, facture électronique, validation des devis en ligne ; options payantes pour la signature, le multi-utilisateur et les relances automatiques.',
+          'Pour qui : entreprises qui cherchent avant tout une facturation simple et peu coûteuse, sans fonctions propres au paysage.',
+          'Prix publics : version gratuite, puis offres payantes Expert, Smart et VIP.',
+        ],
+      },
+      {
+        heading: 'Quel logiciel choisir ?',
+        list: [
+          'Vous faites vos devis sur le chantier et voulez les envoyer le jour même : un outil pensé pour le téléphone, avec photos, mesures et signature en ligne, comme Paysapro AI.',
+          'Votre activité repose surtout sur les services à la personne : vérifiez l’attestation fiscale et l’avance immédiate, proposées par Robbin et Extrabat Paysage, l’attestation par Paysapro AI.',
+          'Vous dirigez plusieurs équipes et beaucoup de contrats d’entretien : une suite de gestion complète comme Extrabat Paysage.',
+          'Vous faites aussi beaucoup de maçonnerie ou de rénovation : Obat ou Tolteck couvrent le bâtiment, Paysapro AI propose aussi un mode bâtiment.',
+          'Vous voulez seulement facturer au moindre coût : Henrri et sa version gratuite.',
+        ],
+        paragraphs: [
+          'Dans tous les cas, profitez des essais gratuits : refaites un vrai devis récent avec chaque logiciel et comparez le temps passé et le résultat envoyé au client.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Quel est le meilleur logiciel de devis pour paysagiste ?',
+        answer: 'Il n’existe pas de meilleur logiciel pour tous : un paysagiste seul qui chiffre sur le chantier, une entreprise centrée sur les services à la personne et une entreprise avec plusieurs équipes d’entretien n’ont pas les mêmes besoins. Comparez la spécialisation paysage, l’usage sur téléphone, la signature en ligne, la gestion des services à la personne et le prix, puis testez sur un vrai devis pendant l’essai gratuit.',
+      },
+      {
+        question: 'Existe-t-il un logiciel de devis paysagiste gratuit ?',
+        answer: 'Henrri propose une version gratuite de facturation, sans fonctions propres au paysage. Les logiciels spécialisés comme Paysapro AI ou Robbin sont payants mais proposent un essai gratuit, de 15 jours pour Paysapro AI et de 14 jours pour Robbin, sans carte bancaire.',
+      },
+      {
+        question: 'Ce comparatif est-il indépendant ?',
+        answer: 'Non : il est rédigé par l’éditeur de Paysapro AI. Il se limite aux informations publiées par chaque éditeur, vérifiées le 30 octobre 2026, et toute erreur signalée est corrigée.',
+      },
+      {
+        question: 'Quel logiciel gère l’attestation fiscale des services à la personne ?',
+        answer: 'Parmi les logiciels comparés, Paysapro AI, Robbin et Extrabat Paysage annoncent la gestion des services à la personne. Paysapro AI génère l’attestation fiscale annuelle de chaque client à partir des paiements enregistrés ; Robbin et Extrabat Paysage annoncent aussi l’avance immédiate.',
+      },
+    ],
+    related: [
+      { label: 'Comment choisir un logiciel de devis paysagiste ?', to: '/blog/choisir-logiciel-devis-paysagiste' },
+      { label: 'Le logiciel de devis paysagiste Paysapro AI', to: '/logiciel-devis-paysagiste' },
+      { label: 'Tarifs et essai gratuit', to: '/tarifs' },
     ],
   },
 ];
