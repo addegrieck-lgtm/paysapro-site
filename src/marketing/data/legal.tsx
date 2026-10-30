@@ -77,7 +77,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   confidentialite: {
     path: '/confidentialite',
     title: 'Politique de confidentialité',
-    updated: <>20 octobre 2026</>,
+    updated: <>30 octobre 2026</>,
     sections: [
       {
         heading: 'Responsable du traitement',
@@ -93,7 +93,11 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
           <ul className="list-disc space-y-1 pl-5">
             <li>Formulaire de contact : nom, entreprise, email, téléphone (facultatif), type d’entreprise, nombre de salariés, message.</li>
             <li>Inscription aux nouveautés : adresse email et consentement.</li>
-            <li>Aucune donnée n’est collectée à votre insu : le site ne dépose pas de cookie publicitaire.</li>
+            <li>
+              Mesure d’audience : pages consultées, site ou moteur de recherche d’origine, campagne (paramètres utm), type d’appareil, langue du navigateur et clics sur
+              les boutons principaux. Sans cookie, sans adresse IP ni identifiant durable : une visite est un numéro aléatoire effacé à la fermeture de l’onglet.
+            </li>
+            <li>Le site ne dépose pas de cookie publicitaire.</li>
           </ul>
         ),
       },
@@ -103,6 +107,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
           <ul className="list-disc space-y-1 pl-5">
             <li>Répondre à vos demandes de contact (intérêt légitime / mesures précontractuelles).</li>
             <li>Vous envoyer les nouveautés Paysapro AI (consentement, retirable à tout moment).</li>
+            <li>Produire des statistiques anonymes de fréquentation pour améliorer le site (intérêt légitime ; usage exclusivement interne).</li>
           </ul>
         ),
       },
@@ -110,7 +115,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Durée de conservation',
         body: (
           <p>
-            Demandes de contact : 3 ans après le dernier échange. Inscription aux nouveautés : jusqu’à votre désinscription. Comptes de l’application : pendant la durée d’utilisation, puis 3 ans après la dernière activité (sauf suppression du compte, effective sans délai). Pièces comptables liées aux abonnements : 10 ans (obligation légale).
+            Demandes de contact : 3 ans après le dernier échange. Inscription aux nouveautés : jusqu’à votre désinscription. Comptes de l’application : pendant la durée d’utilisation, puis 3 ans après la dernière activité (sauf suppression du compte, effective sans délai). Pièces comptables liées aux abonnements : 10 ans (obligation légale). Statistiques de fréquentation : 13 mois.
           </p>
         ),
       },
@@ -118,7 +123,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Destinataires et sous-traitants',
         body: (
           <p>
-            Les données sont destinées à ADDEG SAAS. Sous-traitants techniques : GitHub, Inc. (hébergement du site, qui peut enregistrer des journaux techniques comme l’adresse IP) et Supabase (enregistrement des messages de contact et des inscriptions aux nouveautés). Aucun outil de mesure d’audience n’est actif à ce jour.{' '}
+            Les données sont destinées à ADDEG SAAS. Sous-traitants techniques : GitHub, Inc. (hébergement du site, qui peut enregistrer des journaux techniques comme l’adresse IP) et Supabase (enregistrement des messages de contact, des inscriptions aux nouveautés et des statistiques de fréquentation).{' '}
             Les données de Supabase sont hébergées dans l’Union européenne (Francfort, Allemagne). L’application est servie par Vercel et les paiements sont traités par Stripe, qui peuvent effectuer des transferts hors de l’UE encadrés par les clauses contractuelles types de la Commission européenne.
           </p>
         ),
@@ -197,7 +202,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   cookies: {
     path: '/cookies',
     title: 'Politique cookies',
-    updated: <>20 octobre 2026</>,
+    updated: <>30 octobre 2026</>,
     sections: [
       {
         heading: 'Cookies utilisés',
@@ -211,7 +216,11 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
         heading: 'Mesure d’audience',
         body: (
           <p>
-            Aucune mesure d’audience n’est active à ce jour. Si elle était activée, elle utiliserait un outil sans cookie qui ne permet pas de vous identifier.
+            Le site mesure sa fréquentation sans cookie : pages vues, site d’origine, type d’appareil et clics sur les boutons principaux. Une visite est identifiée par un
+            numéro aléatoire conservé dans l’onglet du navigateur puis effacé à sa fermeture ; aucune adresse IP n’est enregistrée et les données ne servent qu’à des
+            statistiques internes, conservées 13 mois. Ce dispositif est exempté de consentement selon les recommandations de la CNIL. Le signal « Do Not Track » ou
+            « Global Privacy Control » de votre navigateur est respecté ; vous pouvez aussi désactiver la mesure sur votre appareil en ajoutant{' '}
+            <code>?stats=off</code> à l’adresse d’une page du site.
           </p>
         ),
       },

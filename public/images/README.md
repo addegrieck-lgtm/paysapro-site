@@ -1,7 +1,8 @@
 # Images du site
 
-Les interfaces (téléphones, devis, tableau de bord) et la « photo » de jardin sont des
-composants React/SVG : aucune image externe n'est nécessaire.
+Les interfaces (téléphones, devis, tableau de bord) sont des composants React/SVG. La « photo » de
+jardin est un dessin unique, `jardin-avant-travaux.svg`, affiché par `GardenPhoto` (fichier séparé pour
+ne pas alourdir le HTML : il apparaît jusqu'à 9 fois sur l'accueil). Aucune image externe n'est nécessaire.
 
 Pour ajouter de vraies photos (hero, témoignages, blog) :
 

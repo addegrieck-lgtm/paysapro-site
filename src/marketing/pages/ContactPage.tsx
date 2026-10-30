@@ -1,5 +1,5 @@
 import { Mail, Phone, Play, Sparkles } from 'lucide-react';
-import { useSearchParams } from 'react-router';
+import { Link, useSearchParams } from 'react-router';
 import { usePageMeta } from '../components/usePageMeta';
 import { PageHeader } from '../components/PageHeader';
 import { ContactForm } from '../components/ContactForm';
@@ -7,6 +7,30 @@ import { AppCta } from '../components/AppLink';
 import { Container } from '../components/ui';
 import { CONTACT } from '../config/marketing';
 import { useAnalytics } from '../analytics/AnalyticsProvider';
+
+/** Les demandes les plus fréquentes, avec la page qui y répond déjà. */
+const SHORTCUTS = [
+  {
+    title: 'Vous découvrez Paysapro AI',
+    text: 'Le parcours complet, de la visite du chantier au devis signé, est décrit étape par étape. L’espace de démonstration permet aussi de tout essayer avec des données fictives.',
+    link: { label: 'Comment ça marche', to: '/comment-ca-marche' },
+  },
+  {
+    title: 'Une question sur les tarifs',
+    text: 'Les trois offres, l’essai gratuit de 15 jours sans carte bancaire et ce qui se passe à la fin de l’essai sont détaillés sur la page des tarifs.',
+    link: { label: 'Voir les tarifs', to: '/tarifs' },
+  },
+  {
+    title: 'Vous utilisez déjà l’application',
+    text: 'Logo, catalogue, signature du client, équipe, attestation de services à la personne : les réponses pratiques sont regroupées dans le centre d’aide.',
+    link: { label: 'Centre d’aide', to: '/aide' },
+  },
+  {
+    title: 'Vos données personnelles',
+    text: 'Ce que nous collectons, pourquoi, combien de temps nous le conservons et comment exercer vos droits d’accès, de rectification ou de suppression.',
+    link: { label: 'Politique de confidentialité', to: '/confidentialite' },
+  },
+];
 
 export default function ContactPage() {
   usePageMeta('/contact');
@@ -70,6 +94,25 @@ export default function ContactPage() {
             </div>
           </div>
         </aside>
+      </Container>
+
+      <Container className="pb-24">
+        <h2 className="font-display text-2xl font-extrabold text-ink sm:text-3xl">Avant de nous écrire</h2>
+        <p className="mt-2 max-w-2xl text-muted">
+          Votre réponse est peut-être déjà en ligne. Pour tout le reste, une démonstration, un besoin propre à votre entreprise, un problème dans l’application ou une idée
+          d’amélioration, le formulaire ci-dessus est le bon chemin : précisez votre métier et la taille de votre équipe, nous répondrons plus précisément.
+        </p>
+        <ul className="mt-8 grid gap-5 md:grid-cols-2">
+          {SHORTCUTS.map((s) => (
+            <li key={s.link.to} className="rounded-3xl bg-white p-7 ring-1 ring-line">
+              <h3 className="text-lg font-bold text-ink">{s.title}</h3>
+              <p className="mt-2 leading-relaxed text-muted">{s.text}</p>
+              <Link to={s.link.to} className="mt-4 inline-block font-semibold text-brand hover:underline">
+                {s.link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </Container>
     </>
   );

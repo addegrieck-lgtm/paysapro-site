@@ -20,8 +20,8 @@ describe('routes', () => {
     expect(screen.getByRole('link', { name: 'Retour à l’accueil' })).toHaveAttribute('href', '/');
   });
 
-  it('un article de blog non publié renvoie la 404', async () => {
-    renderAt('/blog/organiser-ses-chantiers');
+  it('un article de blog inconnu ou non publié renvoie la 404', async () => {
+    renderAt('/blog/article-inexistant');
     expect(await screen.findByRole('heading', { level: 1, name: /perdue sur le chantier/ })).toBeInTheDocument();
   });
 

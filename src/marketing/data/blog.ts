@@ -923,20 +923,247 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   {
     slug: 'gagner-du-temps-sur-ses-devis',
     title: 'Comment gagner du temps sur ses devis ?',
-    excerpt: 'Catalogue de prestations, modèles, photos rangées : organiser sa préparation commerciale.',
+    excerpt: 'Catalogue de prestations, modèles, photos rangées : organiser sa préparation commerciale pour chiffrer plus vite sans perdre en précision.',
     keywords: ['application paysagiste', 'logiciel gestion paysagiste'],
+    publishedAt: '2026-10-30',
+    readingMinutes: 6,
+    links: [
+      { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
+      { label: 'L’application de chantier du paysagiste', to: '/application-paysagiste' },
+      { label: 'Calculateurs gratuits : surface, volume, clôture', to: '/outils' },
+    ],
+    summary: [
+      'Le temps perdu sur un devis vient surtout des ressaisies : prix recherchés, mesures recopiées, textes réécrits.',
+      'Un catalogue de prestations à jour et quelques modèles de devis suppriment l’essentiel de ce travail répétitif.',
+      'Prendre photos et mesures de façon méthodique sur place, puis envoyer le devis rapidement, raccourcit tout le cycle de vente.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Beaucoup de paysagistes font leurs devis le soir, après la journée de chantier. Une heure par devis, parfois plus, multipliée par le nombre de visites de la semaine : la préparation commerciale finit par prendre une soirée sur deux.',
+          'Pourtant, en regardant de près où passe ce temps, on retrouve presque toujours les mêmes causes. Bonne nouvelle : elles se corrigent avec un peu d’organisation, une fois pour toutes.',
+        ],
+      },
+      {
+        heading: 'Où passe vraiment le temps d’un devis ?',
+        paragraphs: ['Rarement dans le calcul lui-même. Le temps se perd plutôt :'],
+        list: [
+          'à chercher un prix dans un ancien devis ou un tarif fournisseur ;',
+          'à recopier les mesures notées sur un carnet ou au dos d’une enveloppe ;',
+          'à réécrire les mêmes désignations et les mêmes conditions à chaque fois ;',
+          'à retrouver les photos du chantier au milieu de celles du téléphone ;',
+          'à remettre en page le document pour qu’il soit présentable.',
+        ],
+      },
+      {
+        heading: '1. Construire son catalogue de prestations',
+        paragraphs: [
+          'C’est le levier le plus efficace. Listez les prestations que vous chiffrez le plus souvent : tonte, taille de haie, engazonnement, pose de clôture, dallage, plantation, évacuation des déchets verts. Pour chacune, fixez une désignation claire, une unité (m², mètre linéaire, m³, heure, unité, forfait) et votre prix de vente.',
+          'Ajoutez votre coût interne : fournitures et temps passé. Vous verrez ainsi votre marge ligne par ligne, et vous saurez immédiatement si une remise demandée par un client reste raisonnable.',
+          'Un catalogue n’a pas besoin d’être parfait le premier jour. Commencez par une vingtaine de lignes, puis complétez-le au fil des devis : chaque nouvelle prestation chiffrée une fois n’aura plus à l’être.',
+        ],
+      },
+      {
+        heading: '2. Préparer des modèles pour les chantiers types',
+        paragraphs: [
+          'Une création de pelouse, une terrasse, une clôture ou un contrat d’entretien se ressemblent d’un client à l’autre. Enregistrez pour chacun un modèle avec les lignes habituelles : préparation du sol, fournitures, pose, évacuation. Il ne reste alors qu’à ajuster les quantités et à retirer ce qui ne s’applique pas.',
+          'Faites de même pour les textes : description des travaux, conditions de paiement, durée de validité, mention sur les quantités estimées. Rédigés une fois avec soin, ils seront repris sur chaque devis.',
+        ],
+      },
+      {
+        heading: '3. Prendre les bonnes informations sur place',
+        paragraphs: [
+          'Un devis rapide se prépare pendant la visite. Suivez toujours le même ordre : vue d’ensemble du jardin, puis chaque zone de travaux, puis les contraintes (accès, pente, portail, réseaux visibles). Mesurez chaque surface et chaque linéaire, et notez-les directement à côté de la photo correspondante.',
+          'Pour les formes compliquées, découpez-les en rectangles, triangles et cercles. Un calculateur de surface ou de volume sur le téléphone évite les erreurs de calcul mental au milieu du jardin.',
+        ],
+      },
+      {
+        heading: '4. Chiffrer pendant que le projet est frais',
+        paragraphs: [
+          'Plus le devis attend, plus il prend de temps : il faut se remémorer le terrain, retrouver les notes, revoir les photos. Quand c’est possible, préparez au moins une première version le jour même, voire dans la voiture après le rendez-vous.',
+          'C’est aussi un argument commercial : un client qui reçoit son devis le lendemain de la visite a un projet encore précis en tête, et il compare souvent moins.',
+        ],
+      },
+      {
+        heading: '5. Envoyer et relancer sans y passer la journée',
+        paragraphs: [
+          'Un devis envoyé en PDF par e-mail se perd facilement. Un lien que le client ouvre sur son téléphone, avec la possibilité d’accepter et de signer directement, raccourcit le délai de réponse. Savoir quand le devis a été consulté permet aussi de relancer au bon moment plutôt qu’au hasard.',
+        ],
+      },
+      {
+        heading: 'Ce qu’il ne faut pas sacrifier',
+        paragraphs: [
+          'Aller plus vite ne doit pas rendre le devis moins précis. Gardez le détail poste par poste, signalez clairement les quantités estimées et vérifiez les mentions obligatoires. Le temps gagné sur la ressaisie est justement celui qui permet de soigner ces points.',
+          'Paysapro AI est construit autour de cette organisation : catalogue avec prix de vente et coût, modèles de devis, photos et mesures prises sur le chantier qui alimentent directement les lignes du devis, puis envoi d’un lien que le client signe en ligne.',
+        ],
+      },
+    ],
   },
   {
     slug: 'organiser-ses-chantiers',
     title: 'Comment organiser ses chantiers ?',
-    excerpt: 'Centraliser les informations de chaque chantier pour moins d’oublis et moins d’allers-retours.',
+    excerpt: 'Centraliser les informations de chaque chantier pour moins d’oublis, moins d’allers-retours et des clients mieux informés.',
     keywords: ['logiciel chantier paysagiste'],
+    publishedAt: '2026-10-30',
+    readingMinutes: 6,
+    links: [
+      { label: 'Le logiciel de gestion pour paysagistes', to: '/logiciel-gestion-paysagiste' },
+      { label: 'Facture d’acompte : comment la faire ?', to: '/blog/facture-acompte-travaux' },
+      { label: 'Comment ça marche', to: '/comment-ca-marche' },
+    ],
+    summary: [
+      'Un chantier bien organisé tient dans un seul dossier : devis signé, photos, notes, matériel, paiements.',
+      'La préparation se fait avant le premier jour : commande des fournitures, accès, déchets, planning de l’équipe.',
+      'Des photos avant, pendant et après, et des statuts à jour, évitent les malentendus et facilitent la facturation.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Une fois le devis signé, le vrai travail commence. Et c’est souvent là que les petits oublis coûtent cher : une fourniture manquante qui impose un aller-retour, un accès mal anticipé, une précision du client notée quelque part mais introuvable le jour J.',
+          'Organiser ses chantiers ne demande pas un outil compliqué. Il s’agit surtout de réunir les bonnes informations au même endroit et de suivre toujours la même méthode.',
+        ],
+      },
+      {
+        heading: '1. Un seul dossier par chantier',
+        paragraphs: ['Pour chaque chantier, rassemblez au même endroit :'],
+        list: [
+          'les coordonnées du client et l’adresse exacte du chantier ;',
+          'le devis signé, qui fait référence sur ce qui a été vendu ;',
+          'les photos prises lors de la visite et les mesures relevées ;',
+          'les notes internes : code du portail, contraintes d’accès, souhaits particuliers du client ;',
+          'les paiements attendus et reçus : acompte, situations, solde.',
+        ],
+      },
+      {
+        paragraphs: [
+          'Quand ces informations sont dispersées entre un carnet, des SMS, la galerie du téléphone et un tableur, chaque question du client ou de l’équipe devient une recherche. Centralisées, elles se retrouvent en quelques secondes, y compris par un collègue.',
+        ],
+      },
+      {
+        heading: '2. Préparer avant le premier jour',
+        paragraphs: ['Quelques jours avant le démarrage, reprenez le devis ligne par ligne et vérifiez :'],
+        list: [
+          'les fournitures à commander et leurs délais de livraison ;',
+          'le matériel à prévoir ou à louer, et son accès au chantier ;',
+          'l’évacuation des déchets verts et des gravats prévue au devis ;',
+          'la date confirmée avec le client et les personnes mobilisées ;',
+          'l’encaissement de l’acompte si vos conditions le prévoient.',
+        ],
+      },
+      {
+        paragraphs: [
+          'Une liste de vérification propre à chaque type de chantier (engazonnement, terrasse, clôture, plantation) évite de repartir de zéro et réduit les oublis.',
+        ],
+      },
+      {
+        heading: '3. Planifier sans surcharger',
+        paragraphs: [
+          'Classez vos chantiers en trois groupes : à planifier, à venir et en cours. Cette vue simple suffit pour voir où en est la semaine et repérer les chantiers signés qui attendent encore une date.',
+          'Gardez une marge pour les aléas : météo, retard de livraison, travaux plus longs que prévu. Un planning rempli à 100 % se décale au premier imprévu, et c’est souvent le client suivant qui en fait les frais.',
+        ],
+      },
+      {
+        heading: '4. Documenter le chantier en photos',
+        paragraphs: [
+          'Photographiez l’état initial avant de commencer, puis les étapes clés et le résultat final. Ces photos protègent l’entreprise en cas de contestation, montrent au client le travail réalisé, et alimentent votre communication : une galerie avant-après vaut mieux qu’un long discours.',
+          'Prenez l’habitude de les classer dans le dossier du chantier au moment où vous les prenez. Triées plus tard, elles finissent rarement au bon endroit.',
+        ],
+      },
+      {
+        heading: '5. Tenir le client informé',
+        paragraphs: [
+          'Un client qui sait où en est son chantier pose moins de questions et fait davantage confiance. Prévenez-le de la date de démarrage, signalez rapidement tout imprévu qui modifie le devis, et faites valider par écrit les travaux supplémentaires avant de les réaliser.',
+        ],
+      },
+      {
+        heading: '6. Clôturer proprement',
+        paragraphs: [
+          'Le chantier n’est vraiment terminé qu’une fois la facture de solde émise et payée. Faites le tour du chantier avec le client, prenez les photos finales, notez les éventuelles réserves, puis facturez rapidement : plus la facture tarde, plus le paiement tarde aussi.',
+          'Dans Paysapro AI, chaque chantier rassemble le client, le devis signé, les photos avant et après, les notes internes visibles uniquement par votre équipe, la liste de suivi des travaux et les paiements reçus, avec un planning qui distingue les chantiers à planifier, à venir, en cours et terminés.',
+        ],
+      },
+    ],
   },
   {
     slug: 'presenter-un-devis-professionnel',
     title: 'Comment présenter un devis professionnel ?',
-    excerpt: 'Mise en page, photos, conditions : ce qui rassure un client au moment de signer.',
+    excerpt: 'Mise en page, photos, conditions : ce qui rassure un client au moment de signer, et les erreurs qui font hésiter.',
     keywords: ['devis paysagiste logiciel'],
+    publishedAt: '2026-10-30',
+    readingMinutes: 6,
+    links: [
+      { label: 'Exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
+      { label: 'Les mentions obligatoires d’un devis de travaux', to: '/blog/mentions-obligatoires-devis-travaux' },
+      { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
+    ],
+    summary: [
+      'Le client juge le sérieux de l’entreprise sur la présentation du devis autant que sur son prix.',
+      'Un devis rassurant est clair, détaillé poste par poste, illustré par des photos du chantier et lisible sur téléphone.',
+      'Des conditions explicites (acompte, validité, délais, quantités estimées) et une signature simple facilitent la décision.',
+    ],
+    body: [
+      {
+        paragraphs: [
+          'Face à deux devis de montant proche, un client choisit souvent celui qui lui inspire le plus confiance. Et cette confiance se construit en grande partie sur la présentation : un document clair donne l’image d’une entreprise organisée, un document brouillon fait craindre un chantier qui le sera aussi.',
+          'Voici les éléments qui font la différence au moment de signer.',
+        ],
+      },
+      {
+        heading: '1. Une identité visible dès le premier coup d’œil',
+        paragraphs: [
+          'En haut du devis : votre logo, le nom de l’entreprise, vos coordonnées complètes et votre numéro SIRET. Utilisez toujours la même couleur et la même mise en page, sur le devis comme sur les factures. Cette cohérence paraît anodine, elle signale pourtant une entreprise installée.',
+        ],
+      },
+      {
+        heading: '2. Rappeler le projet du client',
+        paragraphs: [
+          'Avant le détail des prix, résumez le projet en quelques lignes : ce que le client souhaite, l’adresse du chantier et la nature des travaux. Le client vérifie ainsi que vous avez bien compris sa demande, et le devis se lit comme une réponse à son projet plutôt que comme une liste de prix.',
+        ],
+      },
+      {
+        heading: '3. Des photos du chantier',
+        paragraphs: [
+          'Quelques photos prises lors de la visite, idéalement annotées (zone de la future terrasse, clôture à remplacer), rendent le devis concret. Le client retrouve son jardin, comprend où chaque prestation s’applique, et le document se distingue nettement de ceux des concurrents.',
+          'Choisissez deux à quatre photos parlantes plutôt que toute la galerie : le devis doit rester lisible.',
+        ],
+      },
+      {
+        heading: '4. Un détail compréhensible',
+        paragraphs: ['Chaque ligne doit pouvoir être comprise sans explication orale :'],
+        list: [
+          'une désignation claire, sans abréviations internes ;',
+          'une quantité et une unité cohérentes avec les mesures du chantier ;',
+          'un prix unitaire et un total par ligne ;',
+          'des regroupements par zone ou par étape quand le chantier est important ;',
+          'les quantités estimées signalées comme telles, à confirmer avant travaux.',
+        ],
+      },
+      {
+        paragraphs: [
+          'Évitez à l’inverse le forfait global sans détail : il oblige le client à vous faire confiance aveuglément, et rend toute discussion sur le prix plus difficile.',
+        ],
+      },
+      {
+        heading: '5. Des conditions claires',
+        paragraphs: [
+          'Le bas du devis compte autant que le haut. Indiquez sans ambiguïté le total HT, la TVA et le total TTC, le montant de l’acompte et le moment où il est dû, la durée de validité du devis, la période prévue pour les travaux et les conditions de paiement du solde. Ajoutez les mentions obligatoires propres à votre activité.',
+          'Un client qui comprend exactement ce qu’il paie et quand hésite beaucoup moins à signer.',
+        ],
+      },
+      {
+        heading: '6. Lisible sur téléphone',
+        paragraphs: [
+          'La plupart des clients ouvrent leur devis sur leur smartphone. Un PDF minuscule qu’il faut zoomer dans tous les sens nuit à la lecture. Vérifiez votre devis sur un écran de téléphone : les totaux, les conditions et le bouton ou l’emplacement de signature doivent se trouver facilement.',
+        ],
+      },
+      {
+        heading: '7. Faciliter la signature',
+        paragraphs: [
+          'Imprimer, signer, scanner, renvoyer : chaque étape est une occasion de remettre la décision à plus tard. Proposer au client d’accepter et de signer en ligne, directement depuis le devis, supprime ces frictions.',
+          'Paysapro AI applique ces principes à chaque devis : logo et couleur de l’entreprise, photos du chantier, détail des prestations issues de votre catalogue, totaux et conditions, PDF prêt à envoyer, et page en ligne où le client consulte le devis sur son téléphone, l’accepte et le signe.',
+        ],
+      },
+    ],
   },
 ];
 

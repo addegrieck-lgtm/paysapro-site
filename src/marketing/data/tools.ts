@@ -117,3 +117,36 @@ export const TOOLS: Tool[] = [
 export function toolByPath(path: string) {
   return TOOLS.find((t) => t.path === path);
 }
+
+/** Page /outils : questions sur les calculateurs (balisées FAQPage). */
+export const TOOLS_FAQ: { id: string; question: string; answer: string }[] = [
+  {
+    id: 'outils-gratuits',
+    question: 'Les calculateurs sont-ils vraiment gratuits ?',
+    answer: 'Oui. Ils sont gratuits, sans inscription et sans limite d’utilisation. Aucune donnée saisie n’est enregistrée : le calcul se fait dans votre navigateur.',
+  },
+  {
+    id: 'outils-precision',
+    question: 'Quelle confiance accorder aux résultats ?',
+    answer:
+      'Les formules sont exactes pour les formes simples (rectangle, triangle, cercle). Le résultat dépend surtout de la qualité des mesures prises sur le terrain : mesurez deux fois, découpez les formes complexes et ajoutez une marge de chutes adaptée à la pose.',
+  },
+  {
+    id: 'outils-chutes',
+    question: 'Pourquoi la quantité à commander est-elle supérieure à la surface ?',
+    answer:
+      'Les découpes en bordure, autour d’un regard ou le long d’un mur génèrent des pertes. Le calculateur de surface ajoute une marge de chutes que vous réglez vous-même ; elle est souvent de l’ordre de 5 à 10 %, davantage pour une pose en diagonale.',
+  },
+  {
+    id: 'outils-integrer',
+    question: 'Puis-je intégrer un calculateur sur mon site ?',
+    answer:
+      'Oui. Chaque calculateur propose un bloc « Intégrer ce calculateur sur votre site » : copiez le code fourni et collez-le dans votre page. Le calculateur s’affiche chez vous, avec un lien vers Paysapro AI.',
+  },
+  {
+    id: 'outils-devis',
+    question: 'Comment reporter le résultat dans un devis ?',
+    answer:
+      'Dans Paysapro AI, les mesures saisies sur le chantier calculent directement les quantités des lignes du devis, avec vos propres tarifs. Plus besoin de recopier les chiffres d’un outil à l’autre.',
+  },
+];
