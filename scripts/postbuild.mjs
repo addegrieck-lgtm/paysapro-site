@@ -78,6 +78,10 @@ writeFileSync(
   await page('/404', { title: 'Page introuvable | Paysapro AI', description: 'Cette page n’existe pas ou a été déplacée.' }, { noindex: true }),
 );
 
+// Tous les articles (publiés et programmés) au format du site : le back-office de l'application les lit
+// pour l'import initial dans la base (« Importer les articles du site »).
+writeFileSync(join(dist, 'blog-articles.json'), readFileSync(join(root, 'src/marketing/data/blog.generated.json'), 'utf8'));
+
 const today = new Date().toISOString().slice(0, 10);
 writeFileSync(
   join(dist, 'sitemap.xml'),
