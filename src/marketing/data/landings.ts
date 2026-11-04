@@ -484,12 +484,12 @@ export const LANDINGS: Landing[] = [
   },
   {
     path: '/logiciel-devis-paysagiste',
-    eyebrow: 'Logiciel de devis paysagiste',
-    h1: 'Le logiciel de devis pensé pour les paysagistes.',
+    eyebrow: 'Logiciel de devis et facturation paysagiste',
+    h1: 'Le logiciel de devis et factures pensé pour les paysagistes.',
     intro:
-      'Paysapro AI transforme votre visite de chantier en devis professionnel : photos, métrés, prestations issues de votre catalogue, total TTC et signature du client. Le tout depuis votre téléphone.',
+      'Paysapro AI transforme votre visite de chantier en devis professionnel : photos, métrés, prestations issues de votre catalogue, total TTC et signature du client, puis facture en un clic. Le tout depuis votre téléphone.',
     summary: [
-      "Paysapro AI est un logiciel de devis conçu pour les paysagistes, utilisable depuis un smartphone.",
+      "Paysapro AI est un logiciel de devis et de facturation conçu pour les paysagistes, utilisable depuis un smartphone.",
       "Il calcule les surfaces, linéaires et volumes à partir de vos mesures, et applique les prix de votre propre catalogue.",
       "Le devis reprend vos informations d’entreprise, la TVA, l’acompte et vos conditions ; le client peut le signer en ligne.",
       "L’essai est gratuit pendant 15 jours, sans carte bancaire."
