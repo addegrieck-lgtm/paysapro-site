@@ -95,8 +95,8 @@
     "priority": "0.7"
   },
   "/outils/calcul-cloture": {
-    "title": "Calcul clôture : nombre de poteaux et panneaux | Paysapro AI",
-    "description": "Calculateur gratuit pour clôture : nombre de poteaux et de panneaux selon la longueur, l’entraxe et les ouvertures (portail, portillon).",
+    "title": "Calcul clôture grillage ou panneaux : poteaux | Paysapro AI",
+    "description": "Calculateur gratuit pour clôture en panneaux ou en grillage : nombre de poteaux, de panneaux et de rouleaux, puis méthode pour calculer le prix.",
     "priority": "0.7"
   },
   "/tarifs": {

@@ -86,15 +86,23 @@ export const TOOLS: Tool[] = [
     id: 'cloture',
     path: '/outils/calcul-cloture',
     name: 'Calcul de clôture',
-    short: 'Nombre de poteaux et de panneaux à partir du linéaire et de l’entraxe.',
-    h1: 'Calculateur de clôture : poteaux et panneaux',
-    intro: 'Indiquez la longueur à clôturer et l’entraxe entre poteaux : l’outil calcule le nombre d’intervalles, de panneaux et de poteaux à prévoir.',
+    short: 'Nombre de poteaux, de panneaux ou de rouleaux de grillage à partir du linéaire.',
+    h1: 'Calculateur de clôture : poteaux, panneaux et grillage',
+    intro: 'Indiquez la longueur à clôturer et l’entraxe entre poteaux : l’outil calcule le nombre d’intervalles, de panneaux et de poteaux à prévoir. Pour une clôture en grillage, la méthode ci-dessous donne aussi les rouleaux et le prix.',
     method: [
       {
         heading: 'La méthode de calcul',
         paragraphs: [
           'On retire d’abord la largeur des ouvertures (portail, portillon) de la longueur totale. On divise ensuite la longueur restante par l’entraxe et on arrondit à l’entier supérieur : c’est le nombre d’intervalles, donc de panneaux. Il faut un poteau de plus que d’intervalles.',
           'Exemple : 22 m avec un entraxe de 2,5 m donnent 22 ÷ 2,5 = 8,8, soit 9 panneaux et 10 poteaux.',
+        ],
+      },
+      {
+        heading: 'Clôture en grillage : rouleaux, poteaux et prix',
+        paragraphs: [
+          'Le grillage soudé ou simple torsion se vend en rouleaux, le plus souvent de 25 m. Nombre de rouleaux = longueur à clôturer ÷ longueur d’un rouleau, arrondi à l’entier supérieur. Les poteaux se calculent comme ci-dessus, avec un entraxe de 2 à 2,5 m ; ajoutez une jambe de force à chaque angle et à chaque extrémité.',
+          'Exemple : 60 m de grillage avec un entraxe de 2,5 m donnent 3 rouleaux de 25 m (60 ÷ 25 = 2,4) et 25 poteaux (60 ÷ 2,5 = 24 intervalles, plus un).',
+          'Pour calculer le prix, additionnez : les fournitures (rouleaux, poteaux, jambes de force, fil de tension, tendeurs, ligatures), le scellement (béton par poteau), la main-d’œuvre (heures de pose × votre taux horaire), la préparation du terrain (débroussaillage, dépose de l’ancienne clôture, évacuation) et le déplacement. Divisez le total HT par la longueur pour obtenir votre prix au mètre linéaire posé, puis ajoutez la TVA.',
         ],
       },
       {
