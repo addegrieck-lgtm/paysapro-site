@@ -11,7 +11,7 @@ Tout ce qui suit est gratuit. Comptez 3 à 4 heures réparties sur deux semaines
 
 | # | Où | Adresse | Ce qu'il faut |
 |---|---|---|---|
-| 1 | Google Business Profile | https://business.google.com | Compte Google, adresse de l'entreprise (vérification par Google) |
+| 1 | Google Business Profile — **fait** | https://business.google.com | Vérifier le nom, le lien du site, la catégorie et la description |
 | 2 | Page LinkedIn entreprise | https://www.linkedin.com/company/setup/new/ | Compte LinkedIn personnel |
 | 3 | Page Facebook | https://www.facebook.com/pages/create | Compte Facebook |
 | 4 | Compte Instagram professionnel | https://www.instagram.com | Photos de chantiers et captures de l'application |

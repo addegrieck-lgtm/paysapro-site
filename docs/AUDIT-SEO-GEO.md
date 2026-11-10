@@ -55,7 +55,7 @@ Documents liés : [MOTS-CLES.md](MOTS-CLES.md) · [PLAN-EDITORIAL.md](PLAN-EDITO
 | 7 | FAQ : réponse vague sur la signature en ligne ; rien sur les factures, l'équipe, la micro-entreprise | Faible | **Corrigé** : 13 questions |
 | 8 | Articles de blog déclarés comme `website` dans Open Graph | Faible | **Corrigé** : `article` + dates |
 | 9 | Page « À propos » : 150 mots, pas d'histoire ni d'équipe ; articles signés par l'organisation seulement | Moyenne (confiance, E-E-A-T) | À compléter par vous : rien ne doit être inventé |
-| 10 | `sameAs` ne contient que YouTube ; pas de fiche Google Business ni de page LinkedIn | Moyenne | À faire par vous (PLAN-LIENS.md, étape 1) |
+| 10 | `sameAs` ne contient que YouTube ; la fiche Google Business existe mais n'y est pas déclarée ; pas de page LinkedIn | Moyenne | Fiche Google à relier au site, LinkedIn à créer (PLAN-LIENS.md, étape 1) |
 | 11 | Fichier JavaScript principal de 520 Ko (151 Ko compressé) | Faible : la page s'affiche sans lui, grâce au pré-rendu | Non traité : à mesurer d'abord (§ 8) |
 | 12 | Les inscriptions, essais et abonnements ne sont pas rattachés à la source du visiteur | Élevée pour le pilotage | Proposition au § 7, **en attente de votre accord** |
 | 13 | Positionnement partagé entre paysage et bâtiment (7 pages bâtiment ou artisans sur 30 pages hors blog) | À surveiller | Aucune page bâtiment ajoutée ; priorité au paysage |
@@ -140,7 +140,9 @@ Déjà mesuré, sans cookie et sans donnée personnelle (back-office → Site) :
 
 ### Prioritaire
 
-- [ ] **Fiches de marque** : Google Business Profile, LinkedIn, lien du site sur YouTube (PLAN-LIENS.md, étape 1). Puis ajouter ces adresses dans `sameAs` (`index.html`) et `CONTACT.socials`.
+- [x] Fiche Google Business Profile : déjà créée.
+- [ ] **Fiche Google Business** : vérifier qu'elle porte exactement le nom « Paysapro AI », l'adresse `https://www.paysapro-ai.fr`, la catégorie « Éditeur de logiciels » et la description courte de PLAN-LIENS.md.
+- [ ] **Autres fiches de marque** : LinkedIn, lien du site sur YouTube (PLAN-LIENS.md, étape 1). Puis ajouter l'adresse publique de chaque fiche, Google comprise, dans `sameAs` (`index.html`).
 - [ ] **Comparatifs tiers** : Appvizer, Capterra, Tool Advisor, Logiciels.pro (PLAN-LIENS.md, étape 4).
 - [ ] **Décider de l'attribution des inscriptions** (§ 7).
 - [ ] **Back-office** : compléter l'article sur le prix d'une clôture (ACTIONS-SEO.md, étape C) et ajouter les liens internes listés dans PLAN-EDITORIAL.md, § 2.

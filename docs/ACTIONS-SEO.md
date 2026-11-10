@@ -80,7 +80,7 @@ Utilisez partout **exactement** le même nom, la même adresse et la même descr
 
 | Ordre | Fiche | Adresse |
 |---|---|---|
-| 1 | Google Business Profile (catégorie « Éditeur de logiciels ») | https://business.google.com |
+| 1 | Google Business Profile (catégorie « Éditeur de logiciels ») — **fait**, à vérifier | https://business.google.com |
 | 2 | Page LinkedIn entreprise | https://www.linkedin.com/company/setup/new/ |
 | 3 | Chaîne YouTube : mettre le lien du site dans « À propos » | https://www.youtube.com/@PAYSAPRO-AI |
 | 4 | Appvizer | https://www.appvizer.fr/partenaires |
