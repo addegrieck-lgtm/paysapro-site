@@ -8,7 +8,7 @@ React 19 · TypeScript · Vite · Tailwind CSS 4 · Lucide. Aucune dépendance s
 ```bash
 npm install          # installation
 npm run dev          # développement (http://localhost:5173)
-npm run build        # vérif. TypeScript + build + pré-rendu HTML de chaque page, sitemap.xml, robots.txt
+npm run build        # vérif. TypeScript + build + pré-rendu HTML de chaque page, sitemap.xml, robots.txt, llms.txt
 npm run preview      # tester le build
 npm run lint         # ESLint
 npm test             # tests (routes, liens, CTA, FAQ, formulaires, tarifs, 404, accessibilité axe)
@@ -61,6 +61,12 @@ Ce qui est en place :
 - **Balises par page** : title, description, canonical, OpenGraph (`src/marketing/config/pages.json`).
 - **Données structurées** : Organization, WebSite, SoftwareApplication, fil d'Ariane, FAQPage (/faq), BlogPosting (articles).
 - **sitemap.xml** généré automatiquement (pages + articles publiés).
+- **lastmod du sitemap** : date réelle uniquement. Articles : parution ou mise à jour. Pages : champ `updated` (AAAA-MM-JJ)
+  de `pages.json`, à changer quand le contenu de la page change vraiment ; sans ce champ, pas de `lastmod`.
+- **llms.txt et llms-full.txt** : résumé et contenu de référence pour les assistants IA, générés au build. La présentation
+  de référence est la constante `REFERENCE` de `src/entry-server.tsx`.
+- **Suivi** : audit et actions dans [`docs/AUDIT-SEO-GEO.md`](docs/AUDIT-SEO-GEO.md), mots-clés dans [`docs/MOTS-CLES.md`](docs/MOTS-CLES.md),
+  blog dans [`docs/PLAN-EDITORIAL.md`](docs/PLAN-EDITORIAL.md), liens dans [`docs/PLAN-LIENS.md`](docs/PLAN-LIENS.md).
 - **Blog** : `src/marketing/data/blog.ts` — renseigner `publishedAt` + `body` pour publier un article.
 
 À faire une fois, par vous (compte Google nécessaire) :

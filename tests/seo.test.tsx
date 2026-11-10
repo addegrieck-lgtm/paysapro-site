@@ -5,7 +5,7 @@ import pages from '../src/marketing/config/pages.json';
 import { LANDINGS } from '../src/marketing/data/landings';
 import { TOOLS } from '../src/marketing/data/tools';
 import { articleSeoTitle, publishedArticles } from '../src/marketing/data/blog';
-import { computeFence, computeSurface, computeVolume, parseNumber } from '../src/marketing/components/tools/Calculators';
+import { computeFence, computeMargin, computeSurface, computeVolume, parseNumber, priceForMarkRate } from '../src/marketing/components/tools/Calculators';
 import { renderPage } from './utils';
 
 const entries = Object.entries(pages as Record<string, { title: string; description: string; noindex?: boolean }>);
@@ -83,6 +83,33 @@ describe('calculateurs', () => {
     expect(computeFence(20, 2.5)).toEqual({ net: 20, panels: 8, posts: 9 });
     expect(computeFence(22, 2.5, 4)).toEqual({ net: 18, panels: 8, posts: 9 });
     expect(computeFence(0, 2.5)).toEqual({ net: 0, panels: 0, posts: 0 });
+  });
+
+  it('marge : taux de marge sur le coût, taux de marque sur le prix de vente', () => {
+    const r = computeMargin(1400, 2000);
+    expect(r.margin).toBe(600);
+    expect(r.marginRate).toBeCloseTo(42.857, 3);
+    expect(r.markRate).toBeCloseTo(30, 6);
+    expect(r.coefficient).toBeCloseTo(1.4286, 4);
+    expect(priceForMarkRate(1400, 30)).toBeCloseTo(2000, 6);
+    expect(priceForMarkRate(1400, 100)).toBeNaN();
+    expect(computeMargin(0, 100).marginRate).toBeNaN();
+  });
+
+  it('le calculateur de marge donne la marge, puis le prix de vente pour un taux visé', async () => {
+    const user = userEvent.setup();
+    await renderPage('/outils/calcul-marge');
+    expect(screen.getByRole('status')).toHaveTextContent('600 €');
+    expect(screen.getByRole('status')).toHaveTextContent('30 %');
+    expect(screen.getByRole('status')).toHaveTextContent('42,9 %');
+    await user.click(screen.getByLabelText('Trouver mon prix'));
+    const taux = screen.getByLabelText(/Taux de marque visé/);
+    await user.clear(taux);
+    await user.type(taux, '20');
+    expect(screen.getByRole('status')).toHaveTextContent('1 750 €');
+    await user.clear(taux);
+    await user.type(taux, '100');
+    expect(screen.getByRole('status')).toHaveTextContent('—');
   });
 
   it('le calculateur de surface se met à jour à la saisie', async () => {

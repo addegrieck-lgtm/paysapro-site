@@ -9,6 +9,7 @@ const RESOURCES = [
   { label: 'Calcul de surface', to: '/outils/calcul-surface' },
   { label: 'Calcul de volume', to: '/outils/calcul-volume' },
   { label: 'Calcul de clôture', to: '/outils/calcul-cloture' },
+  { label: 'Calcul de marge', to: '/outils/calcul-marge' },
   { label: 'Modèle de devis paysagiste', to: '/modele-devis-paysagiste' },
   { label: 'Logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
 ];

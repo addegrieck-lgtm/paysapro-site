@@ -2,7 +2,7 @@
  * Outils de calcul gratuits (référencement + utilité réelle sur le chantier).
  * Title / description : src/marketing/config/pages.json. Calculs : components/tools/Calculators.tsx.
  */
-export type ToolId = 'surface' | 'volume' | 'cloture';
+export type ToolId = 'surface' | 'volume' | 'cloture' | 'marge';
 
 export interface Tool {
   id: ToolId;
@@ -118,6 +118,56 @@ export const TOOLS: Tool[] = [
     related: [
       { label: 'Comment calculer le prix d’une clôture ?', to: '/blog/calculer-prix-cloture' },
       { label: 'Exemple de devis paysagiste', to: '/modele-devis-paysagiste' },
+      { label: 'Calculer la marge et le prix de vente', to: '/outils/calcul-marge' },
+    ],
+  },
+  {
+    id: 'marge',
+    path: '/outils/calcul-marge',
+    name: 'Calcul de marge',
+    short: 'Marge d’un chantier, taux de marge, taux de marque et prix de vente à partir du coût de revient.',
+    h1: 'Calculateur de marge : chantier, prestation, prix de vente',
+    intro: 'Saisissez le coût de revient et le prix de vente d’une prestation ou d’un chantier : l’outil calcule la marge, le taux de marge, le taux de marque et le coefficient. Dans l’autre sens, il donne le prix de vente à pratiquer pour atteindre la marge que vous visez.',
+    method: [
+      {
+        heading: 'Taux de marge ou taux de marque : la différence',
+        paragraphs: [
+          'La marge est la différence entre le prix de vente hors taxes et le coût de revient. Elle s’exprime de deux façons, que l’on confond souvent : le taux de marge la rapporte au coût, le taux de marque la rapporte au prix de vente.',
+          'Exemple : un chantier vendu 2 000 € HT qui vous coûte 1 400 € dégage 600 € de marge. Le taux de marge est de 600 ÷ 1 400 = 42,9 % ; le taux de marque est de 600 ÷ 2 000 = 30 %. Les deux chiffres décrivent la même marge.',
+        ],
+      },
+      {
+        heading: 'Les formules utilisées',
+        list: [
+          'Marge = prix de vente HT − coût de revient.',
+          'Taux de marge = marge ÷ coût de revient × 100.',
+          'Taux de marque = marge ÷ prix de vente HT × 100.',
+          'Coefficient = prix de vente HT ÷ coût de revient.',
+          'Prix de vente pour un taux de marque visé = coût de revient ÷ (1 − taux de marque).',
+        ],
+      },
+      {
+        heading: 'Ce que le coût de revient doit contenir',
+        paragraphs: ['Une marge calculée sur un coût incomplet est toujours trop belle. Pour un chantier de paysage, le coût de revient additionne au minimum :'],
+        list: [
+          'les fournitures et les végétaux, pertes et chutes comprises ;',
+          'la main-d’œuvre : heures prévues × coût horaire chargé, trajets compris ;',
+          'la location de matériel et le carburant ;',
+          'le déplacement et la livraison ;',
+          'l’évacuation et le traitement des déchets.',
+        ],
+      },
+      {
+        heading: 'Ce que le calcul ne dit pas',
+        paragraphs: [
+          'La marge d’un chantier n’est pas votre bénéfice. Elle doit encore payer les frais généraux de l’entreprise : assurances, véhicule, outillage, comptabilité, téléphone, temps passé à faire les devis. Additionnez ces frais sur une année et comparez-les à la marge totale de vos chantiers : c’est ce qui indique si votre niveau de marge suffit.',
+          'Une erreur fréquente : ajouter 30 % à un coût ne donne pas 30 % de marge sur le prix de vente. 1 400 € + 30 % = 1 820 €, soit un taux de marque de 23,1 %. Pour obtenir 30 % du prix de vente, il faut vendre 1 400 ÷ 0,70 = 2 000 €.',
+        ],
+      },
+    ],
+    related: [
+      { label: 'Comment chiffrer la création d’une pelouse ?', to: '/blog/comment-chiffrer-creation-pelouse' },
+      { label: 'Le logiciel de devis paysagiste Paysapro AI', to: '/logiciel-devis-paysagiste' },
     ],
   },
 ];

@@ -17,7 +17,7 @@ if (!siteUrl) {
   console.warn('⚠  VITE_SITE_URL non défini : canonical/sitemap utiliseront des URL relatives. Voir .env.example.');
 }
 
-const { render, seoPages } = await import(pathToFileURL(join(root, 'dist-ssr', 'entry-server.js')).href);
+const { render, seoPages, llmsFull, REFERENCE } = await import(pathToFileURL(join(root, 'dist-ssr', 'entry-server.js')).href);
 const template = readFileSync(join(dist, 'index.html'), 'utf8');
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
@@ -27,7 +27,7 @@ const fontPreloads = readdirSync(join(dist, 'assets'))
   .filter((f) => /^(inter|manrope)-latin-wght-normal-.*\.woff2$/.test(f))
   .map((f) => `<link rel="preload" as="font" type="font/woff2" crossorigin href="${assetBase}${f}" />`);
 
-async function page(path, { title, description, jsonLd }, { noindex = false } = {}) {
+async function page(path, { title, description, jsonLd, article }, { noindex = false } = {}) {
   const url = `${siteUrl}${path === '/' ? '/' : path}`;
   const appHtml = await render(path);
   const extraHead = [
@@ -46,6 +46,12 @@ async function page(path, { title, description, jsonLd }, { noindex = false } = 
     .replace(/<meta data-seo property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(description)}" />`)
     .replace(/<meta data-seo property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${esc(url)}" />`)
     .replaceAll('__SITE_URL__', siteUrl)
+    .replace(
+      '<meta property="og:type" content="website" />',
+      article
+        ? `<meta property="og:type" content="article" />\n    <meta property="article:published_time" content="${esc(article.published)}" />\n    <meta property="article:modified_time" content="${esc(article.modified)}" />`
+        : '<meta property="og:type" content="website" />',
+    )
     .replace('</head>', `${extraHead ? '  ' + extraHead + '\n  ' : ''}</head>`);
   if (noindex) html = html.replace('<meta name="robots" content="index, follow" />', '<meta name="robots" content="noindex, follow" />');
   if (!html.includes('<!--app-html-->')) throw new Error('Repère <!--app-html--> introuvable dans index.html');
@@ -82,7 +88,9 @@ writeFileSync(
 // pour l'import initial dans la base (« Importer les articles du site »).
 writeFileSync(join(dist, 'blog-articles.json'), readFileSync(join(root, 'src/marketing/data/blog.generated.json'), 'utf8'));
 
-const today = new Date().toISOString().slice(0, 10);
+// lastmod : uniquement une date réelle de modification (article : parution ou mise à jour ; page : champ « updated »
+// de pages.json). Le site est reconstruit chaque matin : y mettre la date du build ferait croire à Google que tout
+// change tous les jours, et il cesserait de tenir compte de cette balise.
 writeFileSync(
   join(dist, 'sitemap.xml'),
   `<?xml version="1.0" encoding="UTF-8"?>
@@ -90,8 +98,7 @@ writeFileSync(
 ${indexable
   .map(
     (p) => `  <url>
-    <loc>${siteUrl}${p.path === '/' ? '/' : p.path}</loc>
-    <lastmod>${today}</lastmod>
+    <loc>${siteUrl}${p.path === '/' ? '/' : p.path}</loc>${p.lastmod ? `\n    <lastmod>${p.lastmod}</lastmod>` : ''}
     <priority>${p.priority ?? '0.5'}</priority>
   </url>`,
   )
@@ -117,11 +124,12 @@ writeFileSync(
   join(dist, 'llms.txt'),
   `# Paysapro AI
 
-> Paysapro AI est un logiciel de devis et de gestion de chantiers pour les paysagistes, les entreprises d'aménagement extérieur et les artisans du bâtiment (tous corps de métier), utilisable sur smartphone, tablette et ordinateur. Il sert à photographier le chantier, mesurer, chiffrer avec son propre catalogue de prix, générer un devis professionnel et le faire signer en ligne par le client. Un mode services à la personne génère l'attestation fiscale annuelle en PDF. Essai gratuit de 15 jours sans carte bancaire, puis offres Starter (19 €), Pro (39 €) et Business (69 €) HT par mois, sans engagement.
+> ${REFERENCE}
 
 Points importants :
 - L'assistant intégré suggère des prestations ; le professionnel valide toujours les quantités, les prix et le devis final.
-- Paysapro AI établit les factures d'acompte, de solde et les avoirs (numérotation continue, mentions obligatoires) ; il ne tient pas la comptabilité et ne gère pas l'avance immédiate de crédit d'impôt. Le format électronique de la réforme 2027 est en préparation.
+- Paysapro AI établit les factures d'acompte, de solde et les avoirs (numérotation continue, mentions obligatoires, format électronique Factur-X) ; il ne tient pas la comptabilité et ne gère pas l'avance immédiate de crédit d'impôt. Le raccordement à une plateforme agréée de facturation électronique est en préparation.
+- Version complète de ce résumé (fonctionnalités, tarifs, FAQ) : ${siteUrl}/llms-full.txt
 - Application : https://app.paysapro-ai.fr — Site officiel : ${siteUrl}/
 
 ## Produit
@@ -138,5 +146,7 @@ ${group((p) => ['/contact', '/aide', '/a-propos'].includes(p.path)).map(line).jo
 `,
 );
 
+writeFileSync(join(dist, 'llms-full.txt'), llmsFull(siteUrl));
+
 rmSync(join(root, 'dist-ssr'), { recursive: true, force: true });
-console.log(`✓ postbuild : ${pages.length} pages pré-rendues, 404.html, sitemap.xml, robots.txt (${siteUrl || 'URL relative'})`);
+console.log(`✓ postbuild : ${pages.length} pages pré-rendues, 404.html, sitemap.xml, robots.txt, llms.txt, llms-full.txt (${siteUrl || 'URL relative'})`);
