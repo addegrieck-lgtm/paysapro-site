@@ -14,6 +14,7 @@ import { TOOLS, TOOLS_FAQ } from './marketing/data/tools';
 import { HELP_FAQ } from './marketing/data/help';
 import { articleSeoTitle, publishedArticles } from './marketing/data/blog';
 import { MARKETING_CONFIG } from './marketing/config/marketing';
+import { FUTURE_PLANS, YEARLY_DISCOUNT_PERCENT } from './marketing/config/pricing';
 
 const noop = { name: 'none', requiresConsent: false, track: () => {} };
 
@@ -41,6 +42,10 @@ export interface SeoPage {
   priority: string;
   /** page exclue de l'index Google et du sitemap */
   noindex?: boolean;
+  /** AAAA-MM-JJ : date réelle de dernière modification (sitemap). Absente si inconnue : jamais la date du build. */
+  lastmod?: string;
+  /** article de blog : og:type « article » et dates de parution / modification */
+  article?: { published: string; modified: string };
   /** données structurées propres à la page (schema.org) */
   jsonLd: (siteUrl: string) => object[];
 }
@@ -90,10 +95,14 @@ export function seoPages(): SeoPage[] {
   const landingFaq = new Map(LANDINGS.map((l) => [l.path, l.faq]));
   const toolPaths = new Map(TOOLS.map((t) => [t.path, t]));
 
-  const list: SeoPage[] = Object.entries(pages as Record<string, { title: string; description: string; priority: string; noindex?: boolean }>).map(
-    ([path, meta]) => ({
+  const articles = MARKETING_CONFIG.showBlog ? publishedArticles() : [];
+  const lastArticleDate = articles.map((a) => a.updatedAt ?? a.publishedAt!).sort().at(-1);
+
+  const list: SeoPage[] = Object.entries(pages as Record<string, { title: string; description: string; priority: string; noindex?: boolean; updated?: string }>).map(
+    ([path, { updated, ...meta }]) => ({
       path,
       ...meta,
+      lastmod: path === '/blog' ? [updated, lastArticleDate].filter(Boolean).sort().at(-1) : updated,
       jsonLd: (siteUrl) => {
         const out: object[] = [];
         const label = meta.title.split(/ [—|:] | : /)[0]!;
@@ -139,14 +148,16 @@ export function seoPages(): SeoPage[] {
     });
   }
 
-  if (MARKETING_CONFIG.showBlog) {
-    for (const a of publishedArticles()) {
+  {
+    for (const a of articles) {
       const path = `/blog/${a.slug}`;
       list.push({
         path,
         title: articleSeoTitle(a),
         description: a.excerpt,
         priority: '0.7',
+        lastmod: a.updatedAt ?? a.publishedAt,
+        article: { published: a.publishedAt!, modified: a.updatedAt ?? a.publishedAt! },
         jsonLd: (siteUrl) => [
           crumbs(siteUrl, [['Accueil', '/'], ['Blog', '/blog'], [a.title, path]]),
           {
@@ -168,4 +179,74 @@ export function seoPages(): SeoPage[] {
     }
   }
   return list;
+}
+
+/**
+ * Présentation de référence de Paysapro AI : même formulation dans llms.txt, llms-full.txt et les fiches externes
+ * (docs/PLAN-LIENS.md). À mettre à jour ici quand le produit ou les tarifs changent.
+ */
+export const REFERENCE =
+  'Paysapro AI est un logiciel en ligne (SaaS) de devis, de facturation et de suivi de chantier pour les paysagistes, les jardiniers et les entreprises d’aménagement extérieur, conçu pour le marché français et utilisable sur smartphone, tablette et ordinateur. Il sert à photographier le chantier, mesurer, chiffrer avec son propre catalogue de prix, générer un devis professionnel en PDF, le faire signer en ligne par le client, puis facturer et suivre le chantier. Un mode bâtiment existe pour les artisans du BTP et un mode services à la personne génère l’attestation fiscale annuelle en PDF. Essai gratuit de 15 jours sans carte bancaire, puis offres Starter (19 €), Pro (39 €) et Business (69 €) HT par mois, sans engagement.';
+
+/**
+ * llms-full.txt : le contenu de référence du site en un seul fichier texte, pour les assistants IA.
+ * Construit depuis les mêmes données que les pages (fonctionnalités, tarifs, FAQ, « L’essentiel » de chaque page) :
+ * rien n’y figure qui ne soit pas affiché sur le site.
+ */
+export function llmsFull(siteUrl: string): string {
+  const url = (path: string) => siteUrl + (path === '/' ? '/' : path);
+  const meta = pages as Record<string, { title: string; noindex?: boolean }>;
+  const name = (path: string) => meta[path]?.title.replace(/ \| Paysapro AI$/, '') ?? path;
+  const yearly = (price: number) => String(Math.round(price * 12 * (100 - YEARLY_DISCOUNT_PERCENT)) / 100).replace('.', ',');
+  const out: string[] = [
+    '# Paysapro AI',
+    '',
+    `> ${REFERENCE}`,
+    '',
+    `Site officiel : ${url('/')} — Application : https://app.paysapro-ai.fr — Langue : français.`,
+    '',
+    '## À qui s’adresse Paysapro AI',
+    '',
+    'Paysagistes indépendants, jardiniers, entreprises de création de jardins, d’entretien d’espaces verts et d’aménagement extérieur (terrasses, clôtures, plantations, engazonnement), seuls ou en petite équipe (1 à 10 utilisateurs). Un mode bâtiment couvre aussi les artisans du BTP.',
+    '',
+    '## Fonctionnalités',
+    '',
+    ...FEATURES.map((f) => `- **${f.title}** : ${f.description}`),
+    '',
+    '## Tarifs',
+    '',
+    'Essai gratuit de 15 jours avec toutes les fonctionnalités, sans carte bancaire. Prix hors taxes, sans engagement.',
+    '',
+    ...FUTURE_PLANS.filter((p) => p.price !== null).map(
+      (p) => `- **${p.name}** : ${p.price} € HT par mois, ou ${yearly(p.price!)} € HT par an (−${YEARLY_DISCOUNT_PERCENT} %). ${p.description} Inclus : ${p.features.join(' ; ')}.`,
+    ),
+    '',
+    `Détail : ${url('/tarifs')}`,
+    '',
+    '## Ce que Paysapro AI ne fait pas',
+    '',
+    '- L’assistant IA suggère des prestations ; il ne produit pas un devis exact à partir d’une photo. Le professionnel valide toujours les quantités, les prix et le devis final.',
+    '- Paysapro AI établit devis, factures d’acompte et de solde et avoirs (format Factur-X) ; il ne tient pas la comptabilité. Le raccordement à une plateforme agréée de facturation électronique est en préparation.',
+    '- Il ne gère pas l’avance immédiate de crédit d’impôt des services à la personne.',
+    '- Il ne fait ni pointage des heures, ni géolocalisation des équipes, ni campagnes d’e-mails.',
+    '',
+    '## Questions fréquentes',
+    '',
+    ...FAQ.flatMap((f) => [`### ${f.question}`, '', f.answer, '']),
+    '## L’essentiel, page par page',
+    '',
+    ...LANDINGS.filter((l) => !meta[l.path]?.noindex).flatMap((l) => [`### ${name(l.path)}`, '', url(l.path), '', ...l.summary.map((x) => `- ${x}`), '']),
+    '## Outils de calcul gratuits',
+    '',
+    ...TOOLS.map((t) => `- [${t.name}](${url(t.path)}) : ${t.short}`),
+    '',
+  ];
+  const articles = MARKETING_CONFIG.showBlog ? publishedArticles() : [];
+  if (articles.length) {
+    out.push('## Guides pratiques', '');
+    for (const a of articles) {
+      out.push(`### ${a.title}`, '', `${url(`/blog/${a.slug}`)} — publié le ${a.publishedAt}${a.updatedAt ? `, mis à jour le ${a.updatedAt}` : ''}`, '', ...(a.summary?.length ? a.summary.map((x) => `- ${x}`) : [a.excerpt]), '');
+    }
+  }
+  return out.join('\n');
 }

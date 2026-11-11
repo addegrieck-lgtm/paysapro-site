@@ -41,6 +41,25 @@ export function computeFence(length: number, spacing: number, openings = 0) {
   return { net, panels, posts: panels + 1 };
 }
 
+/**
+ * Marge d'une prestation ou d'un chantier, à partir du coût de revient et du prix de vente (hors taxes).
+ * Taux de marge = marge ÷ coût ; taux de marque = marge ÷ prix de vente ; coefficient = prix ÷ coût.
+ */
+export function computeMargin(cost: number, price: number) {
+  const margin = price - cost;
+  return {
+    margin,
+    marginRate: cost > 0 ? (margin / cost) * 100 : NaN,
+    markRate: price > 0 ? (margin / price) * 100 : NaN,
+    coefficient: cost > 0 ? price / cost : NaN,
+  };
+}
+
+/** Prix de vente HT qui donne le taux de marque visé (marge ÷ prix de vente). Impossible à partir de 100 %. */
+export function priceForMarkRate(cost: number, markRate: number): number {
+  return cost > 0 && markRate < 100 ? cost / (1 - markRate / 100) : NaN;
+}
+
 /* ─── interface ─── */
 const inputCls =
   'mt-1.5 block min-h-12 w-full rounded-2xl bg-white px-4 py-3 text-ink tabular-nums ring-1 ring-line outline-none transition focus:ring-2 focus:ring-brand';
@@ -197,7 +216,82 @@ function FenceCalculator() {
   );
 }
 
+type MarginMode = 'verifier' | 'fixer';
+
+const MARGIN_MODES: { id: MarginMode; label: string }[] = [
+  { id: 'verifier', label: 'Vérifier ma marge' },
+  { id: 'fixer', label: 'Trouver mon prix' },
+];
+
+function MarginCalculator() {
+  const [mode, setMode] = useState<MarginMode>('verifier');
+  const [cost, setCost] = useState('1 400');
+  const [price, setPrice] = useState('2 000');
+  const [target, setTarget] = useState('30');
+  const c = parseNumber(cost);
+  const sell = mode === 'verifier' ? parseNumber(price) : priceForMarkRate(c, parseNumber(target));
+  const r = computeMargin(c, sell);
+  const ready = c > 0 && Number.isFinite(sell) && sell > 0;
+  const euro = (n: number) => (ready ? `${fmt(n)} €` : '—');
+  const pct = (n: number) => (ready ? `${fmt(n, 1)} %` : '—');
+
+  return (
+    <div className="grid gap-6 lg:grid-cols-2">
+      <div className="space-y-5">
+        <fieldset>
+          <legend className="text-sm font-semibold text-ink">Calcul</legend>
+          <div className="mt-2 grid grid-cols-2 gap-2">
+            {MARGIN_MODES.map((m) => (
+              <label
+                key={m.id}
+                className={`flex min-h-12 cursor-pointer items-center justify-center rounded-2xl px-3 text-center text-sm font-semibold ring-1 transition has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand ${
+                  mode === m.id ? 'bg-forest text-white ring-forest' : 'bg-white text-ink ring-line hover:ring-ink/30'
+                }`}
+              >
+                <input type="radio" name="calcul-marge" value={m.id} checked={mode === m.id} onChange={() => setMode(m.id)} className="sr-only" />
+                {m.label}
+              </label>
+            ))}
+          </div>
+        </fieldset>
+        <div className="grid grid-cols-2 gap-4">
+          <div className="col-span-2">
+            <Field label="Coût de revient" unit="€ HT" value={cost} onChange={setCost} />
+            <p className="mt-1.5 text-sm text-muted">Fournitures, main-d’œuvre, location, déplacement, évacuation.</p>
+          </div>
+          <div className="col-span-2">
+            {mode === 'verifier' ? (
+              <Field label="Prix de vente" unit="€ HT" value={price} onChange={setPrice} />
+            ) : (
+              <Field label="Taux de marque visé" unit="% du prix de vente" value={target} onChange={setTarget} />
+            )}
+          </div>
+        </div>
+      </div>
+      <Result
+        items={
+          mode === 'verifier'
+            ? [
+                { label: 'Marge', value: euro(r.margin), strong: true },
+                { label: 'Taux de marque (marge ÷ prix de vente)', value: pct(r.markRate) },
+                { label: 'Taux de marge (marge ÷ coût)', value: pct(r.marginRate) },
+                { label: 'Coefficient', value: ready ? fmt(r.coefficient) : '—' },
+              ]
+            : [
+                { label: 'Prix de vente HT', value: euro(sell), strong: true },
+                { label: 'Marge', value: euro(r.margin) },
+                { label: 'Taux de marge (marge ÷ coût)', value: pct(r.marginRate) },
+                { label: 'Coefficient', value: ready ? fmt(r.coefficient) : '—' },
+              ]
+        }
+        note="Montants hors taxes. La marge n’est pas le bénéfice : elle doit encore couvrir vos frais généraux."
+      />
+    </div>
+  );
+}
+
 export function Calculator({ id }: { id: ToolId }) {
+  if (id === 'marge') return <MarginCalculator />;
   if (id === 'surface') return <SurfaceCalculator />;
   if (id === 'volume') return <VolumeCalculator />;
   return <FenceCalculator />;

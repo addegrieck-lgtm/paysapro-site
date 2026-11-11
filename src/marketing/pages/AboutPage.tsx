@@ -1,4 +1,5 @@
 import { Leaf, Smartphone, Users } from 'lucide-react';
+import { Link } from 'react-router';
 import { usePageMeta } from '../components/usePageMeta';
 import { PageHeader } from '../components/PageHeader';
 import { IconTile } from '../components/FeatureCard';
@@ -32,6 +33,13 @@ export default function AboutPage() {
             </li>
           ))}
         </ul>
+        <p className="mx-auto mt-10 max-w-3xl text-center text-[1.05rem] leading-[1.75] text-muted">
+          Paysapro AI est un logiciel de devis, de facturation et de suivi de chantier pour les paysagistes, les jardiniers et les entreprises d’aménagement extérieur.{' '}
+          <Link to="/quest-ce-que-paysapro-ai" className="font-semibold text-brand underline underline-offset-4">
+            Lire la présentation complète de Paysapro AI
+          </Link>
+          , ses fonctionnalités, ses limites et ses tarifs.
+        </p>
       </Container>
       <BetaSection />
       <FinalCTA />

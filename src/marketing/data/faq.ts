@@ -31,7 +31,8 @@ export const FAQ: FaqItem[] = [
   {
     id: 'signature',
     question: 'Mon client peut-il signer en ligne ?',
-    answer: 'Oui, selon les fonctionnalités activées dans votre compte.',
+    answer:
+      'Oui. Vous lui envoyez un lien : il consulte le devis sur son téléphone, avec les photos et le détail des prestations, puis le signe en ligne. Ce lien client est inclus dans l’essai gratuit et à partir de l’offre Pro ; l’offre Starter comprend la signature du devis, sans lien client.',
   },
   {
     id: 'plusieurs-clients',
@@ -43,6 +44,23 @@ export const FAQ: FaqItem[] = [
     question: 'Paysapro AI gère-t-il les services à la personne (SAP) ?',
     answer:
       'Oui. Si votre entreprise est déclarée en services à la personne, vous activez le mode SAP : vos devis reprennent votre numéro de déclaration et distinguent les prestations concernées, et l’application génère le PDF de l’attestation fiscale annuelle de chaque client.',
+  },
+  {
+    id: 'factures',
+    question: 'Paysapro AI fait-il aussi les factures ?',
+    answer:
+      'Oui. Depuis un devis signé, vous émettez la facture d’acompte puis la facture de solde, acomptes déduits, ainsi que les avoirs. La numérotation est continue et les mentions obligatoires sont reprises. Paysapro AI ne tient pas la comptabilité : les factures se transmettent à votre expert-comptable.',
+  },
+  {
+    id: 'equipe',
+    question: 'Peut-on utiliser Paysapro AI à plusieurs ?',
+    answer: 'Oui. L’offre Starter comprend un utilisateur, l’offre Pro trois et l’offre Business dix, avec un rôle pour chacun. Tous travaillent sur les mêmes clients, chantiers et devis.',
+  },
+  {
+    id: 'franchise-tva',
+    question: 'Paysapro AI convient-il à un jardinier en micro-entreprise ?',
+    answer:
+      'Oui. Le devis peut être établi sans TVA, avec la mention « TVA non applicable, art. 293 B du CGI » prévue pour la franchise en base. Vous utilisez vos propres prestations et vos propres prix, à l’heure, à la journée ou au mètre carré.',
   },
   {
     id: 'chantier',

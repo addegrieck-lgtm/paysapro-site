@@ -1,4 +1,4 @@
-import { ArrowRight, Calculator as CalcIcon, Fence, Layers, Ruler } from 'lucide-react';
+import { ArrowRight, Calculator as CalcIcon, Fence, Layers, Percent, Ruler } from 'lucide-react';
 import { Link } from 'react-router';
 import { TOOLS, TOOLS_FAQ, toolByPath, type ToolId } from '../data/tools';
 import { usePageMeta } from '../components/usePageMeta';
@@ -11,7 +11,7 @@ import { FAQ } from '../components/FAQ';
 import { Container } from '../components/ui';
 import NotFoundPage from './NotFoundPage';
 
-const ICONS: Record<ToolId, typeof Ruler> = { surface: Ruler, volume: Layers, cloture: Fence };
+const ICONS: Record<ToolId, typeof Ruler> = { surface: Ruler, volume: Layers, cloture: Fence, marge: Percent };
 
 /** Sommaire des outils gratuits. */
 export function ToolsIndexPage() {
@@ -21,10 +21,10 @@ export function ToolsIndexPage() {
       <PageHeader
         eyebrow="Outils gratuits"
         title="Calculateurs pour paysagistes"
-        intro="Des outils simples pour vos métrés : surfaces, volumes, clôtures. Gratuits, sans inscription, utilisables sur le chantier depuis votre téléphone."
+        intro="Des outils simples pour vos métrés et vos prix : surfaces, volumes, clôtures, marges. Gratuits, sans inscription, utilisables sur le chantier depuis votre téléphone."
       />
       <Container className="pb-24">
-        <ul className="grid gap-5 md:grid-cols-3">
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {TOOLS.map((t) => (
             <li key={t.id}>
               <Link to={t.path} className="group flex h-full flex-col rounded-3xl bg-white p-7 ring-1 ring-line transition hover:-translate-y-1 hover:shadow-card">
@@ -52,6 +52,10 @@ export function ToolsIndexPage() {
             </p>
             <p>
               Le <strong className="text-ink">calcul de clôture</strong> part du linéaire à clôturer et de l’entraxe des poteaux pour obtenir le nombre de poteaux et de panneaux.
+            </p>
+            <p>
+              Le <strong className="text-ink">calcul de marge</strong> sert au moment de fixer le prix : à partir du coût de revient, il donne la marge, le taux de marge, le taux de
+              marque et le prix de vente à pratiquer pour atteindre la marge visée.
             </p>
             <p>
               Sur le terrain, mesurez chaque côté deux fois et découpez les formes complexes en formes simples. Les articles{' '}

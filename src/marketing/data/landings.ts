@@ -557,6 +557,7 @@ export const LANDINGS: Landing[] = [
       { label: 'Comparatif 2026 des logiciels de devis pour paysagistes', to: '/comparatif-logiciel-devis-paysagiste' },
       { label: 'Voir un exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
       { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
+      { label: 'Calculer la marge d’un chantier (outil gratuit)', to: '/outils/calcul-marge' },
       { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
     ],
   },
@@ -619,9 +620,171 @@ export const LANDINGS: Landing[] = [
       },
     ],
     related: [
+      { label: 'Le suivi de chantier du paysagiste', to: '/logiciel-gestion-chantier-paysagiste' },
+      { label: 'Le fichier clients (CRM) du paysagiste', to: '/crm-paysagiste' },
       { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
-      { label: 'Comment ça marche, étape par étape', to: '/comment-ca-marche' },
+      { label: 'Comparatif 2026 des logiciels pour paysagistes', to: '/comparatif-logiciel-devis-paysagiste' },
       { label: 'L’application sur le terrain', to: '/application-paysagiste' },
+    ],
+  },
+  {
+    path: '/logiciel-gestion-chantier-paysagiste',
+    eyebrow: 'Suivi de chantier pour paysagiste',
+    h1: 'Le suivi de chantier du paysagiste, du devis signé à la fin des travaux.',
+    intro:
+      'Une fois le devis signé, le chantier reste à planifier, à réaliser et à encaisser. Dans Paysapro AI, chaque chantier garde son devis, ses photos, ses notes, sa liste de tâches et ses paiements au même endroit, sur le téléphone comme au bureau.',
+    summary: [
+      'Paysapro AI suit chaque chantier de paysage par étapes : devis signé, planifié, en cours, terminé.',
+      'La fiche du chantier réunit le devis, les photos avant et après, les notes internes, une liste de tâches à cocher et les paiements reçus.',
+      'Le planning classe les chantiers en cours, à venir, à planifier et terminés ; il est inclus à partir de l’offre Pro.',
+      'Paysapro AI ne fait ni le pointage des heures ni la géolocalisation des équipes : c’est un suivi de chantier simple, pensé pour les petites entreprises.',
+    ],
+    visual: 'dashboard',
+    sections: [
+      {
+        heading: 'Après la signature, où en est chaque chantier ?',
+        paragraphs: [
+          'Tant qu’il y a deux ou trois chantiers, tout tient dans la tête. Au-delà, les questions s’accumulent : quel chantier démarre la semaine prochaine, lequel attend encore une date, quel client n’a pas réglé son acompte, où sont les photos prises avant les travaux ?',
+          'Dans Paysapro AI, le chantier change d’étape à mesure qu’il avance : le devis passe de brouillon à envoyé, consulté puis signé ; le chantier devient ensuite planifié, en cours, puis terminé. Vous voyez d’un coup d’œil ce qui est à faire.',
+        ],
+      },
+      {
+        heading: 'Ce que contient la fiche d’un chantier',
+        list: [
+          'Le client, l’adresse et le devis signé, avec ses prestations et ses quantités.',
+          'Les photos du chantier, étiquetées avant et après, avec un curseur de comparaison.',
+          'Des notes internes, visibles uniquement par votre entreprise.',
+          'Une liste de tâches à cocher pour suivre l’avancement des travaux.',
+          'Les paiements reçus : acompte, règlements intermédiaires, solde.',
+          'L’historique du chantier, étape par étape.',
+        ],
+      },
+      {
+        heading: 'Un planning simple à lire',
+        paragraphs: [
+          'Le planning range vos chantiers en quatre groupes : en cours, à venir, à planifier et terminés. Un devis signé sans date apparaît dans « à planifier » : aucun chantier vendu ne reste oublié.',
+          'Des alertes vous préviennent quand un devis est signé, quand un chantier commence et quand un devis arrive à expiration. Chaque type d’alerte se règle dans les préférences.',
+        ],
+      },
+      {
+        heading: 'Du chantier terminé à la facture',
+        paragraphs: [
+          'Le chantier et la facturation partagent les mêmes données. Depuis le devis signé, vous émettez la facture d’acompte, puis la facture de solde, acomptes déduits. Vous voyez ce qui a été facturé et ce qui reste à encaisser, chantier par chantier.',
+          'Les photos après travaux restent dans le dossier : elles servent de preuve en cas de question du client, et d’exemples pour vos prochains devis.',
+        ],
+      },
+      {
+        heading: 'À plusieurs sur les mêmes chantiers',
+        paragraphs: [
+          'L’offre Pro permet de travailler à trois utilisateurs, l’offre Business à dix, avec un rôle pour chacun. Tout le monde consulte les mêmes chantiers depuis son téléphone.',
+          'Paysapro AI reste volontairement simple : il ne remplace pas un outil de pointage des heures, de géolocalisation ou d’optimisation de tournées d’entretien. Si c’est votre besoin principal, une suite de gestion plus large sera mieux adaptée ; notre comparatif en présente plusieurs.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Comment suivre plusieurs chantiers de paysage en même temps ?',
+        answer:
+          'Donnez à chaque chantier un état clair (à planifier, planifié, en cours, terminé) et regroupez au même endroit son devis, ses photos, ses notes et ses paiements. Dans Paysapro AI, le planning classe les chantiers par état et le tableau de bord montre les chantiers actifs et les devis en attente.',
+      },
+      {
+        question: 'Le suivi de chantier est-il inclus dans toutes les offres ?',
+        answer:
+          'Les clients, les chantiers et les photos sont inclus dès l’offre Starter (19 € HT par mois). Le planning des chantiers, les statistiques et le travail à plusieurs sont inclus à partir de l’offre Pro (39 € HT par mois). L’essai gratuit de 15 jours donne accès à toutes les fonctionnalités.',
+      },
+      {
+        question: 'Puis-je consulter mes chantiers depuis mon téléphone ?',
+        answer: 'Oui. Paysapro AI s’utilise dans le navigateur du téléphone, sur iPhone comme sur Android, et sur ordinateur avec les mêmes données.',
+      },
+      {
+        question: 'Paysapro AI gère-t-il le pointage des heures des équipes ?',
+        answer: 'Non. Paysapro AI suit l’avancement, les photos, les tâches et les paiements d’un chantier, mais ne fait pas le pointage des heures ni la géolocalisation des équipes.',
+      },
+    ],
+    related: [
+      { label: 'Comment organiser ses chantiers ?', to: '/blog/organiser-ses-chantiers' },
+      { label: 'Le fichier clients du paysagiste', to: '/crm-paysagiste' },
+      { label: 'Le logiciel de gestion pour paysagiste', to: '/logiciel-gestion-paysagiste' },
+      { label: 'Comparatif des logiciels pour paysagistes', to: '/comparatif-logiciel-devis-paysagiste' },
+    ],
+  },
+  {
+    path: '/crm-paysagiste',
+    eyebrow: 'CRM et gestion des clients pour paysagiste',
+    h1: 'Le fichier clients du paysagiste, relié à ses devis et à ses chantiers.',
+    intro:
+      'Un CRM de paysagiste n’a pas besoin d’être compliqué : il doit dire qui est le client, ce qui lui a été proposé, ce qu’il a signé et quand le rappeler. Dans Paysapro AI, chaque fiche client rassemble ses chantiers, ses devis, ses montants et son historique.',
+    summary: [
+      'Paysapro AI tient lieu de CRM simple pour les paysagistes : une fiche par client, reliée à ses chantiers et à ses devis.',
+      'Chaque fiche montre les coordonnées, les chantiers, les devis et leurs montants, l’historique et la dernière activité.',
+      'Vous savez quand un client a consulté son devis et vous le relancez avec un message prêt à envoyer par SMS, WhatsApp ou e-mail, depuis votre téléphone.',
+      'Ce n’est pas un outil de prospection ni d’e-mailing : aucune campagne n’est envoyée automatiquement.',
+    ],
+    visual: 'dashboard',
+    sections: [
+      {
+        heading: 'Un CRM, pour un paysagiste, c’est quoi ?',
+        paragraphs: [
+          'CRM signifie « gestion de la relation client ». Pour une entreprise du paysage, cela recouvre des besoins très concrets : retrouver un numéro de téléphone, savoir quel devis a été envoyé à qui, se souvenir de ce qui a été fait dans un jardin il y a deux ans, et ne pas oublier de rappeler un client qui hésite.',
+          'Les CRM généralistes sont conçus pour des équipes commerciales : tunnels de vente, campagnes, prévisions. Paysapro AI part de votre quotidien : un client, des chantiers, des devis.',
+        ],
+      },
+      {
+        heading: 'Ce que contient la fiche d’un client',
+        list: [
+          'Ses coordonnées et l’adresse de ses chantiers.',
+          'Tous ses chantiers, avec leurs photos et leur état d’avancement.',
+          'Tous ses devis, avec leur statut : brouillon, envoyé, consulté, signé.',
+          'Le montant de ses devis.',
+          'L’historique de ses chantiers et la date de la dernière activité.',
+          'Pour les entreprises en services à la personne : son attestation fiscale annuelle en PDF.',
+        ],
+      },
+      {
+        heading: 'Relancer au bon moment',
+        paragraphs: [
+          'Quand vous envoyez un devis par lien, vous voyez s’il a été consulté. Une alerte vous prévient lorsqu’un devis approche de sa date d’expiration.',
+          'Pour relancer, Paysapro AI prépare un message que vous pouvez modifier, puis l’ouvre dans votre application de SMS, WhatsApp ou e-mail, ou lance l’appel. Le message part de votre téléphone, à votre nom : rien n’est envoyé automatiquement à vos clients.',
+        ],
+      },
+      {
+        heading: 'Savoir ce que chaque client représente',
+        paragraphs: [
+          'La fiche additionne les devis d’un client : vous distinguez le client d’entretien régulier du chantier unique. Les statistiques donnent le nombre de devis émis et signés, le taux de transformation et le montant du devis moyen.',
+        ],
+      },
+      {
+        heading: 'Ce que Paysapro AI n’est pas',
+        paragraphs: [
+          'Paysapro AI n’est pas un outil de prospection : il n’envoie pas de campagnes d’e-mails, ne gère pas de tunnel de vente à étapes personnalisées et ne se connecte pas à une régie publicitaire. Il gère les clients que vous avez déjà, et ceux à qui vous faites un devis.',
+          'Vos données restent les vôtres : sans abonnement, elles demeurent consultables et exportables.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Quel CRM choisir pour une entreprise de paysage ?',
+        answer:
+          'Pour un paysagiste indépendant ou une petite équipe, un fichier clients relié aux devis et aux chantiers suffit le plus souvent : c’est ce que propose Paysapro AI. Une entreprise avec des commerciaux, de nombreux contrats d’entretien et des campagnes de prospection aura intérêt à regarder une suite de gestion plus complète.',
+      },
+      {
+        question: 'Puis-je retrouver tous les devis et chantiers d’un client ?',
+        answer: 'Oui. La fiche de chaque client liste ses chantiers, ses devis avec leur statut et leurs montants, ainsi que l’historique.',
+      },
+      {
+        question: 'Paysapro AI envoie-t-il des relances automatiques à mes clients ?',
+        answer: 'Non. Paysapro AI vous signale les devis à relancer et prépare le message, mais c’est vous qui l’envoyez, depuis votre téléphone, par SMS, WhatsApp ou e-mail.',
+      },
+      {
+        question: 'La gestion des clients est-elle incluse dans l’offre Starter ?',
+        answer: 'Oui. Les clients et les chantiers sont inclus dans toutes les offres, dès Starter à 19 € HT par mois. Le lien client avec signature en ligne et les statistiques sont inclus à partir de l’offre Pro.',
+      },
+    ],
+    related: [
+      { label: 'Comment relancer un devis sans réponse ?', to: '/blog/relancer-un-devis-sans-reponse' },
+      { label: 'Le suivi de chantier du paysagiste', to: '/logiciel-gestion-chantier-paysagiste' },
+      { label: 'Le logiciel de gestion pour paysagiste', to: '/logiciel-gestion-paysagiste' },
+      { label: 'Tarifs et essai gratuit', to: '/tarifs' },
     ],
   },
   {

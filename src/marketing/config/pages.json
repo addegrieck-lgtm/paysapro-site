@@ -2,7 +2,8 @@
   "/": {
     "title": "Paysapro AI : logiciel de devis pour paysagistes",
     "description": "Paysapro AI, le logiciel de devis pour paysagistes : photos du chantier, métrés, catalogue de prix, devis professionnel et signature du client, sur mobile.",
-    "priority": "1.0"
+    "priority": "1.0",
+    "updated": "2026-11-04"
   },
   "/quest-ce-que-paysapro-ai": {
     "title": "Qu’est-ce que Paysapro AI ? Présentation | Paysapro AI",
@@ -22,7 +23,8 @@
   "/logiciel-devis-paysagiste": {
     "title": "Logiciel devis et facture paysagiste | Paysapro AI",
     "description": "Logiciel de devis et facturation pour paysagiste : métrés au m² et au ml, catalogue de prix, devis signé puis facture en un clic. Essai gratuit 15 jours.",
-    "priority": "0.9"
+    "priority": "0.9",
+    "updated": "2026-11-04"
   },
   "/logiciel-facturation-artisan": {
     "title": "Logiciel devis et factures pour artisans | Paysapro AI",
@@ -62,7 +64,20 @@
   "/logiciel-gestion-paysagiste": {
     "title": "Logiciel de gestion pour paysagiste | Paysapro AI",
     "description": "Logiciel de gestion pour paysagiste : clients, chantiers, photos, catalogue de prix, devis et tableau de bord réunis dans un seul outil simple.",
-    "priority": "0.8"
+    "priority": "0.8",
+    "updated": "2026-11-10"
+  },
+  "/logiciel-gestion-chantier-paysagiste": {
+    "title": "Logiciel de suivi de chantier paysagiste | Paysapro AI",
+    "description": "Suivi de chantier pour paysagiste : planning, photos avant et après, notes, liste de tâches et paiements reçus, du devis signé à la fin des travaux.",
+    "priority": "0.8",
+    "updated": "2026-11-10"
+  },
+  "/crm-paysagiste": {
+    "title": "CRM paysagiste : gestion des clients | Paysapro AI",
+    "description": "CRM simple pour paysagiste : une fiche par client reliée à ses chantiers et à ses devis, historique, devis consultés et relances depuis votre téléphone.",
+    "priority": "0.8",
+    "updated": "2026-11-10"
   },
   "/application-paysagiste": {
     "title": "Application paysagiste : devis sur chantier | Paysapro AI",
@@ -81,8 +96,9 @@
   },
   "/outils": {
     "title": "Calculateurs gratuits pour paysagistes | Paysapro AI",
-    "description": "Outils de calcul gratuits pour paysagistes : surface de terrasse ou de gazon, volume de terre et de gravier, poteaux et panneaux de clôture.",
-    "priority": "0.8"
+    "description": "Outils de calcul gratuits pour paysagistes : surface de terrasse ou de gazon, volume de terre et de gravier, poteaux de clôture, marge et prix de vente.",
+    "priority": "0.8",
+    "updated": "2026-11-10"
   },
   "/outils/calcul-surface": {
     "title": "Calcul de surface terrasse et gazon (m²) | Paysapro AI",
@@ -97,7 +113,14 @@
   "/outils/calcul-cloture": {
     "title": "Calcul clôture grillage ou panneaux : poteaux | Paysapro AI",
     "description": "Calculateur gratuit pour clôture en panneaux ou en grillage : nombre de poteaux, de panneaux et de rouleaux, puis méthode pour calculer le prix.",
-    "priority": "0.7"
+    "priority": "0.7",
+    "updated": "2026-11-04"
+  },
+  "/outils/calcul-marge": {
+    "title": "Calcul de marge chantier et prix de vente | Paysapro AI",
+    "description": "Calculateur gratuit de marge : taux de marge, taux de marque, coefficient et prix de vente HT à partir du coût de revient d’un chantier ou d’une prestation.",
+    "priority": "0.7",
+    "updated": "2026-11-10"
   },
   "/tarifs": {
     "title": "Tarifs : essai gratuit, dès 19 € HT/mois | Paysapro AI",
@@ -106,8 +129,9 @@
   },
   "/faq": {
     "title": "FAQ — Logiciel de devis paysagiste | Paysapro AI",
-    "description": "Réponses aux questions des paysagistes sur Paysapro AI : IA, tarifs, signature en ligne, utilisation sur smartphone et sur chantier.",
-    "priority": "0.7"
+    "description": "Réponses aux questions des paysagistes sur Paysapro AI : IA, tarifs, factures, signature en ligne, travail en équipe, utilisation sur smartphone.",
+    "priority": "0.7",
+    "updated": "2026-11-10"
   },
   "/contact": {
     "title": "Contact : une question sur nos devis ? | Paysapro AI",
@@ -117,7 +141,8 @@
   "/a-propos": {
     "title": "À propos : un outil pensé avec les pros | Paysapro AI",
     "description": "Paysapro AI est développé avec les paysagistes et artisans du bâtiment, à partir de leurs besoins réels sur le terrain : devis, chantiers, signature.",
-    "priority": "0.5"
+    "priority": "0.5",
+    "updated": "2026-11-10"
   },
   "/aide": {
     "title": "Aide et support : bien démarrer | Paysapro AI",
@@ -156,6 +181,7 @@
   "/comparatif-logiciel-devis-paysagiste": {
     "title": "Comparatif logiciel devis paysagiste 2026 | Paysapro AI",
     "description": "Paysapro AI, Robbin, Extrabat Paysage, Obat, Tolteck, Henrri : fonctions, usage sur chantier, SAP et prix publics des logiciels de devis paysagiste.",
-    "priority": "0.8"
+    "priority": "0.8",
+    "updated": "2026-10-30"
   }
 }

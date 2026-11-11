@@ -27,6 +27,8 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
       { label: 'Devis peintre', to: '/logiciel-devis-peintre' },
       { label: 'Devis maçonnerie', to: '/logiciel-devis-maconnerie' },
       { label: 'Logiciel de gestion', to: '/logiciel-gestion-paysagiste' },
+      { label: 'Suivi de chantier', to: '/logiciel-gestion-chantier-paysagiste' },
+      { label: 'Gestion des clients (CRM)', to: '/crm-paysagiste' },
       { label: 'Application mobile', to: '/application-paysagiste' },
       { label: 'Services à la personne (SAP)', to: '/logiciel-paysagiste-services-a-la-personne' },
       { label: 'Fonctionnalités', to: '/fonctionnalites' },
@@ -48,6 +50,7 @@ export const FOOTER_NAV: { title: string; links: NavItem[] }[] = [
     links: [
       { label: 'Outils de calcul', to: '/outils' },
       { label: 'Modèle de devis', to: '/modele-devis-paysagiste' },
+      { label: 'Comparatif des logiciels', to: '/comparatif-logiciel-devis-paysagiste' },
       { label: 'Blog', to: '/blog' },
       { label: 'FAQ', to: '/faq' },
       { label: 'Aide', to: '/aide' },
