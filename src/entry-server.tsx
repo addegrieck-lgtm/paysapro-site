@@ -64,6 +64,10 @@ const faqPage = (items: { question: string; answer: string }[]) => ({
   mainEntity: items.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.answer } })),
 });
 
+/** Offres payantes affichées sur /tarifs : source unique des prix du JSON-LD. */
+export const PAID_PLANS = FUTURE_PLANS.filter((p): p is typeof p & { price: number } => typeof p.price === 'number' && p.price > 0);
+const PAID_PRICES = PAID_PLANS.map((p) => p.price);
+
 /** Fiche logiciel : uniquement sur l'accueil. Aucune note ni avis inventés. */
 const softwareApplication = (siteUrl: string) => ({
   '@context': 'https://schema.org',
@@ -83,11 +87,41 @@ const softwareApplication = (siteUrl: string) => ({
   offers: {
     '@type': 'AggregateOffer',
     priceCurrency: 'EUR',
-    lowPrice: '19',
-    highPrice: '69',
-    offerCount: 3,
-    description: 'Essai gratuit de 15 jours sans carte bancaire, puis offres Starter, Pro et Business (prix HT par mois)',
+    lowPrice: String(Math.min(...PAID_PRICES)),
+    highPrice: String(Math.max(...PAID_PRICES)),
+    offerCount: PAID_PLANS.length,
+    description: `Essai gratuit de 15 jours sans carte bancaire, puis offres ${PAID_PLANS.map((p) => p.name).join(', ').replace(/, ([^,]+)$/, ' et $1')} (prix HT par mois)`,
   },
+});
+
+/**
+ * Offres détaillées pour /tarifs : mêmes prix que la page, lus dans config/pricing.ts (jamais tapés ici).
+ * Même @id que la fiche logiciel de l'accueil : Google relie les deux.
+ */
+const pricingOffers = (siteUrl: string) => ({
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': `${siteUrl}/#software`,
+  name: 'Paysapro AI',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, iOS, Android',
+  url: `${siteUrl}/`,
+  offers: PAID_PLANS.map((p) => ({
+    '@type': 'Offer',
+    name: `Paysapro AI ${p.name}`,
+    description: p.description,
+    url: `${siteUrl}/tarifs`,
+    price: String(p.price),
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: String(p.price),
+      priceCurrency: 'EUR',
+      valueAddedTaxIncluded: false,
+      referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
+    },
+  })),
 });
 
 /** Toutes les pages à pré-rendre. Celles marquées noindex sont exclues du sitemap. */
@@ -110,6 +144,7 @@ export function seoPages(): SeoPage[] {
         else if (path.startsWith('/outils/')) out.push(crumbs(siteUrl, [['Accueil', '/'], ['Outils', '/outils'], [toolPaths.get(path)?.name ?? label, path]]));
         else out.push(crumbs(siteUrl, [['Accueil', '/'], [label, path]]));
 
+        if (path === '/tarifs') out.push(pricingOffers(siteUrl));
         if (path === '/faq') out.push(faqPage(FAQ));
         if (path === '/aide') out.push(faqPage(HELP_FAQ));
         if (path === '/outils') out.push(faqPage(TOOLS_FAQ));

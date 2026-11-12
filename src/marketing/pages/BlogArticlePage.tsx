@@ -7,6 +7,7 @@ import { Container } from '../components/ui';
 import { MARKETING_CONFIG } from '../config/marketing';
 import NotFoundPage from './NotFoundPage';
 import { Essentiel } from '../components/Essentiel';
+import { linkArticleBody, segmentsText, type Segment } from '../data/blogLinks';
 
 const dateFmt = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
@@ -23,6 +24,7 @@ function Article({ article }: { article: BlogArticle }) {
   const others = published.filter((a) => a.slug !== article.slug);
   // Liens choisis pour l'article (sauf vers un article pas encore paru), puis les autres articles, sans doublon.
   const live = new Set(published.map((a) => `/blog/${a.slug}`));
+  const body = linkArticleBody(article, live);
   const related = [...(article.links ?? []).filter((l) => !l.to.startsWith('/blog/') || live.has(l.to)), ...others.map((a) => ({ label: a.title, to: `/blog/${a.slug}` }))].filter(
     (l, i, all) => all.findIndex((x) => x.to === l.to) === i,
   );
@@ -77,14 +79,20 @@ function Article({ article }: { article: BlogArticle }) {
         )}
 
         <div className="mt-10 space-y-8 text-[1.08rem] leading-[1.75] text-ink">
-          {article.body?.map((block, i) => (
+          {body.map((block, i) => (
             <section key={i} className="space-y-4">
               {block.heading && <h2 className="pt-2 font-display text-2xl font-extrabold sm:text-[1.7rem]">{block.heading}</h2>}
-              {block.paragraphs?.map((p, j) => <p key={j}>{p}</p>)}
+              {block.paragraphs?.map((p, j) => (
+                <p key={j}>
+                  <Inline segments={p} />
+                </p>
+              ))}
               {block.list && (
                 <ul className="list-disc space-y-2 pl-6 marker:text-brand">
                   {block.list.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={segmentsText(item)}>
+                      <Inline segments={item} />
+                    </li>
                   ))}
                 </ul>
               )}
@@ -119,5 +127,18 @@ function Article({ article }: { article: BlogArticle }) {
         )}
       </Container>
     </article>
+  );
+}
+
+/** Texte d'un paragraphe avec ses liens internes (voir data/blogLinks.ts). */
+function Inline({ segments }: { segments: Segment[] }) {
+  return segments.map((s, i) =>
+    typeof s === 'string' ? (
+      s
+    ) : (
+      <Link key={i} to={s.to} className="font-semibold text-brand underline decoration-brand/30 underline-offset-2 hover:decoration-brand">
+        {s.text}
+      </Link>
+    ),
   );
 }
