@@ -136,7 +136,7 @@ function Inline({ segments }: { segments: Segment[] }) {
     typeof s === 'string' ? (
       s
     ) : (
-      <Link key={i} to={s.to} className="font-semibold text-brand underline decoration-brand/30 underline-offset-2 hover:decoration-brand">
+      <Link key={i} to={s.to} className="font-semibold text-brand underline decoration-2 decoration-brand/70 underline-offset-[3px] hover:decoration-brand">
         {s.text}
       </Link>
     ),

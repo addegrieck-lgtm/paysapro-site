@@ -109,18 +109,12 @@ const pricingOffers = (siteUrl: string) => ({
   offers: PAID_PLANS.map((p) => ({
     '@type': 'Offer',
     name: `Paysapro AI ${p.name}`,
-    description: p.description,
+    // Pas de priceSpecification : Google la refuse pour un SoftwareApplication. « HT par mois » va dans la description.
+    description: `${p.price} € HT par mois, sans engagement, après 15 jours d’essai gratuit. ${p.description}`,
     url: `${siteUrl}/tarifs`,
     price: String(p.price),
     priceCurrency: 'EUR',
     availability: 'https://schema.org/InStock',
-    priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: String(p.price),
-      priceCurrency: 'EUR',
-      valueAddedTaxIncluded: false,
-      referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' },
-    },
   })),
 });
 
