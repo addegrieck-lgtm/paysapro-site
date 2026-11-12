@@ -19,7 +19,7 @@ export function DashboardMockup({ className = '' }: { className?: string }) {
           <span className="h-2.5 w-2.5 rounded-full bg-[#b9d8c1]" />
         </span>
         <span className="mx-auto flex items-center gap-1.5 rounded-md bg-white px-3 py-1 text-[10px] text-muted ring-1 ring-line">
-          <LogoMark className="h-3 w-3" /> app.paysapro.ai
+          <LogoMark className="h-3 w-3" /> app.paysapro-ai.fr
         </span>
       </div>
       <div className="grid grid-cols-[auto_1fr]">
