@@ -3,6 +3,8 @@
 Audit SEO du 14/11/2026. Les articles sont lus dans la base Supabase à chaque build (`scripts/fetch-blog.mjs`) :
 modifier `src/marketing/data/blog.generated.json` ne servirait à rien, il est réécrit depuis la base.
 
+Les changements sont déjà dans `blog.generated.json` (utilisé tant que la table `blog_posts` n'existe pas : migration 0010 de l'application non appliquée). Si la table existe un jour, ce sont les articles de la base qui comptent : appliquer alors le script ci-dessous.
+
 Deux façons de les appliquer :
 
 1. **En une fois** : exécuter [`blog-back-office.sql`](blog-back-office.sql) dans Supabase → *SQL Editor*, puis *Mettre en ligne* dans le back-office.

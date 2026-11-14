@@ -156,7 +156,7 @@
   {
     "slug": "mentions-obligatoires-facture-artisan",
     "title": "Mentions obligatoires d’une facture d’artisan",
-    "excerpt": "La liste des informations à faire figurer sur une facture de travaux, y compris les nouvelles mentions liées à la facture électronique.",
+    "excerpt": "Les mentions obligatoires d’une facture de travaux pour un artisan, y compris les nouvelles mentions liées à la facture électronique de 2026-2027.",
     "keywords": [
       "mentions obligatoires facture",
       "facture artisan obligatoire",
@@ -191,7 +191,7 @@
         ]
       },
       {
-        "heading": "Le document",
+        "heading": "Les mentions obligatoires de la facture elle-même",
         "list": [
           "Le mot « Facture » (ou « Avoir »).",
           "Un numéro unique, dans une séquence chronologique et continue.",
@@ -251,7 +251,7 @@
   {
     "slug": "numerotation-factures-avoir",
     "title": "Numérotation des factures et avoirs : les règles",
-    "excerpt": "Séquence continue, pas de trou, pas de suppression : comment numéroter ses factures et corriger une erreur avec un avoir.",
+    "excerpt": "Numérotation des factures : séquence continue, pas de trou, pas de suppression. Les règles à suivre et comment corriger une erreur avec un avoir.",
     "keywords": [
       "numérotation factures",
       "avoir facture erreur",
@@ -286,7 +286,7 @@
         ]
       },
       {
-        "heading": "Une séquence continue",
+        "heading": "Numérotation des factures : une séquence continue",
         "paragraphs": [
           "Chaque facture reçoit un numéro unique, attribué dans l’ordre chronologique. Vous pouvez utiliser des séries distinctes, par exemple en préfixant par l’année (F2026-0001, puis F2027-0001 au 1er janvier), mais chaque série doit rester continue."
         ]
@@ -316,7 +316,7 @@
   {
     "slug": "tva-travaux-renovation-taux-reduit",
     "title": "TVA travaux : 20 %, 10 % ou 5,5 % sur un devis ?",
-    "excerpt": "Quel taux appliquer sur un devis de rénovation, comment combiner 10 % et 5,5 %, et ce qui remplace les attestations 1300-SD depuis 2025.",
+    "excerpt": "TVA des travaux : quel taux appliquer sur un devis de rénovation, comment combiner 10 % et 5,5 %, et ce qui remplace les attestations 1300-SD.",
     "keywords": [
       "tva travaux rénovation",
       "tva 10 % travaux",
@@ -372,7 +372,7 @@
         ]
       },
       {
-        "heading": "Plusieurs taux dans le même devis",
+        "heading": "TVA des travaux : plusieurs taux dans le même devis",
         "paragraphs": [
           "Une rénovation mélange souvent les taux : l’isolation des combles à 5,5 %, le reste des travaux à 10 %. Le devis doit alors indiquer le taux de chaque ligne et un récapitulatif de la TVA par taux, pour que le total TTC soit exact et vérifiable."
         ]
@@ -397,7 +397,7 @@
   {
     "slug": "mentions-obligatoires-devis-travaux",
     "title": "Mentions obligatoires d’un devis de travaux en 2026",
-    "excerpt": "La liste des informations à faire figurer sur un devis du bâtiment : entreprise, assurance, client, prestations, prix, délais et conditions.",
+    "excerpt": "Les mentions obligatoires d’un devis de travaux : entreprise, assurance décennale, client, prestations, prix, délais et conditions de paiement.",
     "keywords": [
       "mentions obligatoires devis",
       "devis travaux mentions",
@@ -470,7 +470,7 @@
         ]
       },
       {
-        "heading": "Les mentions selon le chantier",
+        "heading": "Les mentions obligatoires d’un devis selon le chantier",
         "paragraphs": [
           "Selon les cas, d’autres mentions s’ajoutent : la certification du client pour la TVA à taux réduit, l’autoliquidation de la TVA en sous-traitance, ou la retenue de garantie dans un marché avec un professionnel."
         ]
@@ -521,7 +521,7 @@
         ]
       },
       {
-        "heading": "Les informations à faire figurer",
+        "heading": "L’assurance décennale : les informations à faire figurer",
         "list": [
           "Le nom de l’assureur (ou du garant).",
           "Ses coordonnées.",
@@ -553,7 +553,7 @@
   {
     "slug": "facturation-electronique-artisans",
     "title": "Facture électronique : ce qui change en 2026-2027",
-    "excerpt": "Réception dès septembre 2026, émission en septembre 2027 pour les TPE : le calendrier de la réforme et comment s’y préparer.",
+    "excerpt": "Facture électronique : réception dès septembre 2026, émission en septembre 2027 pour les TPE. Le calendrier de la réforme et comment s’y préparer.",
     "keywords": [
       "facturation électronique artisan",
       "facture électronique 2026",
@@ -593,7 +593,7 @@
         ]
       },
       {
-        "heading": "Ce que ça change concrètement",
+        "heading": "Ce que la facture électronique change concrètement",
         "paragraphs": [
           "Les factures entre professionnels transiteront par une plateforme de dématérialisation agréée, dans un format structuré. Pour recevoir les factures de vos fournisseurs, il faut dès maintenant avoir choisi une plateforme, souvent proposée par votre banque, votre logiciel de comptabilité ou votre expert-comptable.",
           "Les ventes aux particuliers ne sont pas des factures électroniques au sens de la réforme, mais leurs données font l’objet d’un e-reporting."
@@ -616,7 +616,7 @@
   {
     "slug": "comment-faire-un-devis-paysagiste",
     "title": "Comment faire un devis paysagiste ?",
-    "excerpt": "Les éléments indispensables d’un devis paysagiste clair : métrés, prestations, main-d’œuvre, TVA, acompte et conditions, avec un exemple chiffré.",
+    "excerpt": "Pour faire un devis paysagiste clair : métrés, prestations, main-d’œuvre, TVA, acompte et conditions. La méthode pas à pas, avec un exemple chiffré.",
     "keywords": [
       "devis paysagiste",
       "logiciel devis paysagiste"
@@ -677,7 +677,7 @@
         ]
       },
       {
-        "heading": "4. Les informations à faire figurer",
+        "heading": "4. Faire un devis paysagiste : les informations à faire figurer",
         "paragraphs": [
           "Un devis professionnel comporte généralement :"
         ],
@@ -728,7 +728,7 @@
   {
     "slug": "calculer-surface-terrasse",
     "title": "Comment calculer la surface d’une terrasse ?",
-    "excerpt": "Méthode simple pour mesurer une terrasse en m², y compris les formes irrégulières (L, cercle, triangle), et en déduire les matériaux à commander.",
+    "excerpt": "Calculer la surface d’une terrasse en m², y compris les formes irrégulières (L, cercle, triangle), et en déduire les matériaux à commander.",
     "keywords": [
       "surface terrasse",
       "devis aménagement extérieur"
@@ -757,7 +757,7 @@
         ]
       },
       {
-        "heading": "Terrasse rectangulaire",
+        "heading": "Surface d’une terrasse rectangulaire",
         "paragraphs": [
           "C’est le cas le plus simple : surface = longueur × largeur. Une terrasse de 4 m sur 3 m fait 4 × 3 = 12 m².",
           "Mesurez toujours deux fois, et vérifiez que les angles sont bien droits en comparant les deux diagonales : si elles sont égales, votre rectangle est d’équerre."
@@ -805,7 +805,7 @@
   {
     "slug": "calculer-prix-cloture",
     "title": "Comment calculer le prix d’une clôture ?",
-    "excerpt": "Mètres linéaires, poteaux, panneaux, portail, terrassement et pose : la méthode pour chiffrer une clôture sans oublier de poste sur le devis.",
+    "excerpt": "Mètres linéaires, poteaux, panneaux, portail, pose : la méthode pour calculer le prix d’une clôture sans oublier de poste sur le devis.",
     "keywords": [
       "prix clôture",
       "devis jardin"
@@ -875,7 +875,7 @@
         ]
       },
       {
-        "heading": "6. La formule complète",
+        "heading": "6. Le prix d’une clôture : la formule complète",
         "paragraphs": [
           "Prix de la clôture = fournitures + travaux annexes + main-d’œuvre + déplacements, le tout avec votre marge, puis la TVA applicable.",
           "Vous pouvez ensuite ramener ce total au mètre linéaire pour vos prochains chantiers similaires : c’est ainsi que se construit un catalogue de prix fiable, basé sur votre propre expérience.",
@@ -887,7 +887,7 @@
   {
     "slug": "attestation-fiscale-sap-jardinage",
     "title": "Attestation fiscale SAP jardinage : le guide",
-    "excerpt": "Services à la personne et jardinage : à quoi sert l’attestation fiscale annuelle, ce qu’elle contient et comment la préparer sans y passer vos soirées.",
+    "excerpt": "Attestation fiscale SAP en jardinage : à quoi elle sert, ce qu’elle contient et comment la préparer pour vos clients sans y passer vos soirées.",
     "keywords": [
       "attestation fiscale SAP",
       "services à la personne jardinage",
@@ -931,7 +931,7 @@
         ]
       },
       {
-        "heading": "Que contient l’attestation ?",
+        "heading": "Que contient l’attestation fiscale SAP ?",
         "paragraphs": [
           "Une attestation fiscale reprend habituellement :"
         ],
@@ -970,7 +970,7 @@
   {
     "slug": "choisir-logiciel-devis-paysagiste",
     "title": "Comment choisir un logiciel de devis paysagiste ?",
-    "excerpt": "Les critères qui comptent vraiment pour un paysagiste : unités métier, usage sur le chantier, catalogue de prix, signature, SAP, prix et données.",
+    "excerpt": "Comment choisir un logiciel de devis paysagiste : unités métier, usage sur le chantier, catalogue de prix, signature, SAP, prix et données.",
     "keywords": [
       "logiciel devis paysagiste",
       "choisir logiciel paysagiste",
@@ -1051,7 +1051,7 @@
         ]
       },
       {
-        "heading": "7. Tester sur un vrai devis",
+        "heading": "7. Choisir un logiciel de devis paysagiste : le tester sur un vrai devis",
         "paragraphs": [
           "Le meilleur test reste de refaire un devis récent avec le logiciel : combien de temps faut-il, le résultat est-il présentable, le client comprend-il le document ? Une version d’essai gratuite permet de le faire sans risque.",
           "Paysapro AI est conçu autour de ces critères pour les paysagistes : mesures et unités du métier, usage sur téléphone, catalogue de prix, devis signé en ligne, factures d’acompte et de solde, et mode services à la personne. Il ne tient pas votre comptabilité. Il s’essaie gratuitement pendant 15 jours."
@@ -1062,7 +1062,7 @@
   {
     "slug": "gagner-du-temps-sur-ses-devis",
     "title": "Comment gagner du temps sur ses devis ?",
-    "excerpt": "Catalogue de prestations, modèles, photos rangées : organiser sa préparation commerciale pour chiffrer plus vite sans perdre en précision.",
+    "excerpt": "Catalogue de prestations, modèles, photos rangées : comment gagner du temps sur ses devis et chiffrer plus vite sans perdre en précision.",
     "keywords": [
       "application paysagiste",
       "logiciel gestion paysagiste"
@@ -1096,7 +1096,7 @@
         ]
       },
       {
-        "heading": "Où passe vraiment le temps d’un devis ?",
+        "heading": "Où gagner du temps sur ses devis ?",
         "paragraphs": [
           "Rarement dans le calcul lui-même. Le temps se perd plutôt :"
         ],
@@ -1155,7 +1155,7 @@
   {
     "slug": "organiser-ses-chantiers",
     "title": "Comment organiser ses chantiers ?",
-    "excerpt": "Centraliser les informations de chaque chantier pour moins d’oublis, moins d’allers-retours et des clients mieux informés.",
+    "excerpt": "Organiser ses chantiers en centralisant les informations de chacun : moins d’oublis, moins d’allers-retours et des clients mieux informés.",
     "keywords": [
       "logiciel chantier paysagiste"
     ],
@@ -1188,7 +1188,7 @@
         ]
       },
       {
-        "heading": "1. Un seul dossier par chantier",
+        "heading": "1. Organiser ses chantiers : un seul dossier par chantier",
         "paragraphs": [
           "Pour chaque chantier, rassemblez au même endroit :"
         ],
@@ -1255,7 +1255,7 @@
   {
     "slug": "presenter-un-devis-professionnel",
     "title": "Comment présenter un devis professionnel ?",
-    "excerpt": "Mise en page, photos, conditions : ce qui rassure un client au moment de signer, et les erreurs qui font hésiter.",
+    "excerpt": "Mise en page, photos, conditions : comment présenter un devis professionnel qui rassure le client au moment de signer, et les erreurs à éviter.",
     "keywords": [
       "devis paysagiste logiciel"
     ],
@@ -1288,7 +1288,7 @@
         ]
       },
       {
-        "heading": "1. Une identité visible dès le premier coup d’œil",
+        "heading": "1. Présenter un devis professionnel : une identité visible",
         "paragraphs": [
           "En haut du devis : votre logo, le nom de l’entreprise, vos coordonnées complètes et votre numéro SIRET. Utilisez toujours la même couleur et la même mise en page, sur le devis comme sur les factures. Cette cohérence paraît anodine, elle signale pourtant une entreprise installée."
         ]
@@ -1349,7 +1349,7 @@
   {
     "slug": "comment-chiffrer-creation-pelouse",
     "title": "Comment chiffrer la création d’une pelouse ?",
-    "excerpt": "Préparation du sol, apport de terre, semis ou gazon en rouleau, arrosage : les postes à prévoir pour un devis de pelouse juste et complet.",
+    "excerpt": "Préparation du sol, terre, semis ou gazon en rouleau, arrosage : les postes à prévoir pour chiffrer la création d’une pelouse sur un devis juste.",
     "keywords": [
       "devis création pelouse",
       "devis paysagiste"
@@ -1421,7 +1421,7 @@
         ]
       },
       {
-        "heading": "4. Semis ou gazon en rouleau",
+        "heading": "4. Création d’une pelouse : semis ou gazon en rouleau",
         "paragraphs": [
           "Les deux solutions ne se chiffrent pas de la même façon. Le semis demande moins de fournitures mais un délai avant d’obtenir une pelouse utilisable, et sa réussite dépend de la saison et de l’arrosage. Le gazon en rouleau donne un résultat immédiat, avec un coût de fournitures plus élevé et une pose à organiser dès la livraison.",
           "Si le client hésite, proposez les deux options sur le même devis, en lignes séparées. Il compare clairement, et vous évitez un second rendez-vous."
@@ -1445,7 +1445,7 @@
   {
     "slug": "relancer-un-devis-sans-reponse",
     "title": "Comment relancer un devis sans réponse ?",
-    "excerpt": "Quand relancer, par quel moyen et avec quels mots : une méthode simple pour obtenir une réponse sans paraître insistant.",
+    "excerpt": "Comment relancer un devis sans réponse : quand relancer, par quel moyen et avec quels mots, pour obtenir une réponse sans paraître insistant.",
     "keywords": [
       "relance devis",
       "suivi devis artisan"
@@ -1496,7 +1496,7 @@
         ]
       },
       {
-        "heading": "Quand relancer",
+        "heading": "Quand relancer un devis",
         "paragraphs": [
           "Une première relance quelques jours après l’envoi laisse au client le temps de lire, sans que le projet sorte de sa tête. Une seconde, une semaine ou deux plus tard, peut s’appuyer sur une information utile : un créneau qui se libère dans votre planning, une précision technique, la date de fin de validité du devis.",
           "Au-delà, mieux vaut une dernière prise de nouvelles avant l’expiration du devis, puis classer le dossier. Un client qui revient plus tard appréciera d’avoir été suivi sans être harcelé."
