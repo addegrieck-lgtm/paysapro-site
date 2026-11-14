@@ -27,19 +27,22 @@
     "updated": "2026-11-04"
   },
   "/logiciel-facturation-artisan": {
-    "title": "Logiciel devis et factures pour artisans | Paysapro AI",
-    "description": "Devis et factures d’artisan sur mobile : acompte et solde en un clic, numérotation continue, mentions obligatoires, avoirs. Essai gratuit 15 jours.",
-    "priority": "0.9"
+    "title": "Logiciel de facturation pour artisan | Paysapro AI",
+    "description": "Logiciel de facturation pour artisan, sur mobile : acompte et solde depuis le devis signé, numérotation continue, avoirs. Essai gratuit 15 jours.",
+    "priority": "0.9",
+    "updated": "2026-11-14"
   },
   "/logiciel-facture-electronique": {
-    "title": "Facture électronique Factur-X pour artisans | Paysapro AI",
-    "description": "Factures d’artisan au format électronique Factur-X (EN 16931), prêtes pour la réforme de 2027 : PDF lisible et données structurées. Essai gratuit 15 jours.",
-    "priority": "0.9"
+    "title": "Logiciel de facture électronique Factur-X | Paysapro AI",
+    "description": "Logiciel de facture électronique pour artisans : factures Factur-X (EN 16931) prêtes pour la réforme de 2027, PDF lisible et données intégrées.",
+    "priority": "0.9",
+    "updated": "2026-11-14"
   },
   "/logiciel-devis-batiment": {
     "title": "Logiciel de devis bâtiment pour artisans BTP | Paysapro AI",
-    "description": "Logiciel de devis pour artisans du BTP, tous corps de métier : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Essai gratuit 15 jours.",
-    "priority": "0.9"
+    "description": "Logiciel de devis bâtiment pour artisans du BTP : lots, TVA 20 / 10 / 5,5 %, décennale, métrés et signature du client. Essai gratuit 15 jours.",
+    "priority": "0.9",
+    "updated": "2026-11-14"
   },
   "/logiciel-devis-electricien": {
     "title": "Logiciel de devis électricien sur mobile | Paysapro AI",
@@ -48,18 +51,21 @@
   },
   "/logiciel-devis-plombier": {
     "title": "Logiciel de devis plombier chauffagiste | Paysapro AI",
-    "description": "Devis plombier chauffagiste : salle de bains, points d’eau, chauffe-eau, radiateurs, TVA 10 % ou 5,5 % et signature en ligne. Essai gratuit 15 jours.",
-    "priority": "0.8"
+    "description": "Logiciel de devis plombier chauffagiste : salle de bains, chauffe-eau, radiateurs, TVA 10 % ou 5,5 % et signature en ligne. Essai gratuit 15 jours.",
+    "priority": "0.8",
+    "updated": "2026-11-14"
   },
   "/logiciel-devis-peintre": {
     "title": "Logiciel de devis peintre en bâtiment | Paysapro AI",
-    "description": "Devis peintre en bâtiment : surfaces de murs ouvertures déduites, litres de peinture, préparation des supports et signature. Essai gratuit 15 jours.",
-    "priority": "0.8"
+    "description": "Logiciel de devis peintre en bâtiment : surfaces de murs ouvertures déduites, litres de peinture et signature du client. Essai gratuit 15 jours.",
+    "priority": "0.8",
+    "updated": "2026-11-14"
   },
   "/logiciel-devis-maconnerie": {
     "title": "Logiciel de devis maçonnerie et gros œuvre | Paysapro AI",
-    "description": "Logiciel de devis pour maçon : dalle, murs en parpaings, chape, ouverture de mur porteur, volume de béton et sacs de ciment, décennale. Essai gratuit 15 jours.",
-    "priority": "0.8"
+    "description": "Logiciel de devis maçonnerie : dalle, murs en parpaings, chape, mur porteur, volume de béton et sacs de ciment, décennale. Essai gratuit 15 jours.",
+    "priority": "0.8",
+    "updated": "2026-11-14"
   },
   "/logiciel-gestion-paysagiste": {
     "title": "Logiciel de gestion pour paysagiste | Paysapro AI",
@@ -68,10 +74,10 @@
     "updated": "2026-11-10"
   },
   "/logiciel-gestion-chantier-paysagiste": {
-    "title": "Logiciel de suivi de chantier paysagiste | Paysapro AI",
-    "description": "Suivi de chantier pour paysagiste : planning, photos avant et après, notes, liste de tâches et paiements reçus, du devis signé à la fin des travaux.",
+    "title": "Logiciel de gestion de chantier paysagiste | Paysapro AI",
+    "description": "Logiciel de gestion de chantier paysagiste : planning, photos avant et après, notes, tâches et paiements reçus, du devis signé à la fin des travaux.",
     "priority": "0.8",
-    "updated": "2026-11-10"
+    "updated": "2026-11-14"
   },
   "/crm-paysagiste": {
     "title": "CRM paysagiste : gestion des clients | Paysapro AI",
@@ -90,9 +96,10 @@
     "priority": "0.8"
   },
   "/logiciel-paysagiste-services-a-la-personne": {
-    "title": "Logiciel paysagiste SAP : attestation fiscale | Paysapro AI",
+    "title": "Logiciel paysagiste services à la personne | Paysapro AI",
     "description": "Logiciel pour paysagiste en services à la personne : devis avec mentions SAP et attestation fiscale annuelle générée en PDF pour chaque client.",
-    "priority": "0.8"
+    "priority": "0.8",
+    "updated": "2026-11-14"
   },
   "/outils": {
     "title": "Calculateurs gratuits pour paysagistes | Paysapro AI",
@@ -102,25 +109,27 @@
   },
   "/outils/calcul-surface": {
     "title": "Calcul de surface terrasse et gazon (m²) | Paysapro AI",
-    "description": "Calculateur gratuit de surface en m² : rectangle, forme en L, triangle, cercle. Ajoutez la marge de chutes pour connaître la quantité à commander.",
-    "priority": "0.7"
+    "description": "Calcul de surface gratuit en m² : rectangle, forme en L, triangle, cercle. Ajoutez la marge de chutes pour connaître la quantité à commander.",
+    "priority": "0.7",
+    "updated": "2026-11-14"
   },
   "/outils/calcul-volume": {
     "title": "Calcul de volume terre végétale, gravier (m³) | Paysapro AI",
-    "description": "Calculateur gratuit de volume en m³ pour la terre végétale, le gravier, le paillage ou le béton, avec estimation du poids en tonnes.",
-    "priority": "0.7"
+    "description": "Calcul de volume gratuit en m³ pour la terre végétale, le gravier, le paillage ou le béton, avec estimation du poids en tonnes pour la livraison.",
+    "priority": "0.7",
+    "updated": "2026-11-14"
   },
   "/outils/calcul-cloture": {
     "title": "Calcul clôture grillage ou panneaux : poteaux | Paysapro AI",
-    "description": "Calculateur gratuit pour clôture en panneaux ou en grillage : nombre de poteaux, de panneaux et de rouleaux, puis méthode pour calculer le prix.",
+    "description": "Calcul de clôture gratuit, en panneaux ou en grillage : nombre de poteaux, de panneaux et de rouleaux, puis la méthode pour calculer le prix.",
     "priority": "0.7",
-    "updated": "2026-11-04"
+    "updated": "2026-11-14"
   },
   "/outils/calcul-marge": {
     "title": "Calcul de marge chantier et prix de vente | Paysapro AI",
-    "description": "Calculateur gratuit de marge : taux de marge, taux de marque, coefficient et prix de vente HT à partir du coût de revient d’un chantier ou d’une prestation.",
+    "description": "Calcul de marge gratuit : taux de marge, taux de marque, coefficient et prix de vente HT à partir du coût de revient d’un chantier ou d’une prestation.",
     "priority": "0.7",
-    "updated": "2026-11-10"
+    "updated": "2026-11-14"
   },
   "/tarifs": {
     "title": "Tarifs : essai gratuit, dès 19 € HT/mois | Paysapro AI",
@@ -180,8 +189,8 @@
   },
   "/comparatif-logiciel-devis-paysagiste": {
     "title": "Comparatif logiciel devis paysagiste 2026 | Paysapro AI",
-    "description": "Paysapro AI, Robbin, Extrabat Paysage, Obat, Tolteck, Henrri : fonctions, usage sur chantier, SAP et prix publics des logiciels de devis paysagiste.",
+    "description": "Comparatif des logiciels de devis paysagiste : Paysapro AI, Robbin, Extrabat, Obat, Tolteck, Henrri. Fonctions, chantier, SAP et prix publics.",
     "priority": "0.8",
-    "updated": "2026-10-30"
+    "updated": "2026-11-14"
   }
 }

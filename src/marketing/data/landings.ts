@@ -37,8 +37,8 @@ export const LANDINGS: Landing[] = [
     path: '/logiciel-facturation-artisan',
     btpSample: 'renovation',
     eyebrow: 'Devis et factures pour artisans',
-    h1: 'Devis et factures d’artisan, depuis votre téléphone.',
-    intro: 'Le devis signé devient une facture d’acompte, puis une facture de solde, en un clic. Numérotation continue, mentions obligatoires, PDF à vos couleurs et suivi des encaissements : pour les artisans du bâtiment comme pour les paysagistes.',
+    h1: 'Logiciel de facturation pour artisan : devis et factures sur mobile.',
+    intro: 'Avec Paysapro AI, logiciel de facturation pour artisan, le devis signé devient une facture d’acompte, puis une facture de solde, en un clic. Numérotation continue, mentions obligatoires, PDF à vos couleurs et suivi des encaissements : pour les artisans du bâtiment comme pour les paysagistes.',
     summary: [
       'Paysapro AI établit vos factures d’acompte, de solde et vos avoirs directement depuis le devis signé, sans ressaisie.',
       'Les factures sont numérotées automatiquement dans une séquence continue et ne peuvent plus être modifiées une fois émises, comme l’exige la loi.',
@@ -56,7 +56,7 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
-        heading: 'Une facture conforme, sans y penser',
+        heading: 'Un logiciel de facturation d’artisan conforme, sans y penser',
         list: [
           'Numérotation chronologique et continue, attribuée automatiquement (F2026-0001, F2026-0002…).',
           'Coordonnées de l’entreprise et du client figées au moment de l’émission.',
@@ -104,7 +104,7 @@ export const LANDINGS: Landing[] = [
     path: '/logiciel-facture-electronique',
     btpSample: 'renovation',
     eyebrow: 'Facture électronique Factur-X',
-    h1: 'Vos factures d’artisan au format électronique Factur-X.',
+    h1: 'Logiciel de facture électronique Factur-X pour artisans.',
     intro: 'La facture électronique devient obligatoire entre professionnels pour les TPE et micro-entreprises le 1er septembre 2027. Paysapro AI produit déjà chaque facture au format Factur-X : un PDF que votre client lit normalement, avec les données de la facture intégrées pour les logiciels.',
     summary: [
       'Paysapro AI produit chaque facture, facture d’acompte et avoir au format Factur-X, profil EN 16931, l’un des formats retenus par la réforme française.',
@@ -123,7 +123,7 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
-        heading: 'Ce que Paysapro AI produit déjà',
+        heading: 'Ce que ce logiciel de facture électronique produit déjà',
         list: [
           'Facture, facture d’acompte et avoir au format Factur-X, profil EN 16931 (le profil complet de la norme européenne).',
           'TVA ventilée par taux (20 %, 10 %, 5,5 %), franchise en base de TVA ou autoliquidation en sous-traitance, avec le motif d’exonération attendu.',
@@ -187,7 +187,7 @@ export const LANDINGS: Landing[] = [
     visual: 'quote',
     sections: [
       {
-        heading: 'Un devis du bâtiment, organisé par lots',
+        heading: 'Un logiciel de devis bâtiment organisé par lots',
         paragraphs: [
           'Un chantier de rénovation mélange souvent plusieurs corps d’état : démolition, plomberie, électricité, carrelage, peinture. Batipro AI range chaque prestation dans son lot et affiche un sous-total par lot : votre client comprend ce qu’il paie, et vous retrouvez votre chiffrage d’un coup d’œil.',
           'Le catalogue de départ contient des prestations types pour chaque lot — installation de chantier, maçonnerie, plâtrerie et isolation, électricité, plomberie et chauffage, menuiserie, peinture, carrelage, couverture, façade — avec unité, prix de vente et coût. Vous les adaptez à vos tarifs.',
@@ -271,7 +271,7 @@ export const LANDINGS: Landing[] = [
     visual: 'quote',
     sections: [
       {
-        heading: 'Un devis d’électricité structuré, sans recopier vos prix',
+        heading: 'Un logiciel de devis électricien structuré, sans recopier vos prix',
         paragraphs: [
           'Un devis d’électricité se construit à l’unité et au mètre : des points lumineux, des prises, un tableau, des longueurs de câble. Vous enregistrez une fois vos prestations avec leur prix de vente et leur coût, puis vous les ajoutez au devis en quelques touches.',
           'Le modèle « Rénovation électrique » regroupe tableau, prises, points lumineux, câblage et mise en conformité : vous ajustez les quantités et le devis est prêt.',
@@ -341,7 +341,7 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
-        heading: 'Vos prix, vos marges',
+        heading: 'Un logiciel de devis plombier avec vos prix et vos marges',
         paragraphs: [
           'Chaque prestation porte un prix de vente et un coût d’achat. Ajustez le catalogue de départ à vos tarifs et à vos fournisseurs : la marge de chaque devis s’affiche pour vous seul, jamais sur le document du client.',
         ],
@@ -385,7 +385,7 @@ export const LANDINGS: Landing[] = [
     visual: 'quote',
     sections: [
       {
-        heading: 'Des surfaces justes, ouvertures déduites',
+        heading: 'Logiciel de devis peintre : des surfaces justes, ouvertures déduites',
         paragraphs: [
           'Le devis d’un peintre se joue sur les mètres carrés. Saisissez le périmètre et la hauteur sous plafond de chaque pièce, déduisez portes et fenêtres : la surface nette alimente directement les lignes du devis, préparation comprise.',
           'Plafonds et murs gardent chacun leur surface : la peinture des plafonds ne se calcule pas sur les murs, et inversement.',
@@ -430,7 +430,7 @@ export const LANDINGS: Landing[] = [
     metier: 'btp',
     btpSample: 'macon',
     eyebrow: 'Logiciel de devis maçonnerie',
-    h1: 'Le logiciel de devis pour les maçons.',
+    h1: 'Le logiciel de devis maçonnerie et gros œuvre.',
     intro: 'Dalles, murs, chapes, ouvertures : chiffrez vos travaux de maçonnerie au m², au m³ et au forfait, avec vos prix, et faites signer le devis depuis le chantier.',
     summary: [
       'Batipro AI, la version BTP de Paysapro AI, est un logiciel de devis utilisable sur smartphone, adapté à la maçonnerie et au gros œuvre.',
@@ -442,7 +442,7 @@ export const LANDINGS: Landing[] = [
     visual: 'quote',
     sections: [
       {
-        heading: 'Surfaces, volumes et forfaits dans le même devis',
+        heading: 'Logiciel de devis maçonnerie : surfaces, volumes et forfaits',
         paragraphs: [
           'Une dalle se chiffre au m², le béton fourni au m³ selon l’épaisseur, une ouverture de mur porteur au forfait. Batipro AI calcule les quantités à partir de vos mesures et applique les pertes prévues.',
           'L’installation de chantier, la location d’échafaudage et l’évacuation des gravats s’ajoutent en un geste depuis le catalogue.',
@@ -497,7 +497,7 @@ export const LANDINGS: Landing[] = [
     visual: 'quote',
     sections: [
       {
-        heading: 'Un logiciel de devis qui parle le langage du paysage',
+        heading: 'Un logiciel de devis paysagiste qui parle le langage du paysage',
         paragraphs: [
           'Un logiciel de devis généraliste vous laisse devant une page blanche. Un devis de paysagiste, lui, se construit à partir du terrain : des surfaces de gazon, des mètres linéaires de clôture, des volumes de terre végétale, des végétaux à l’unité et des heures de main-d’œuvre.',
           'Paysapro AI est construit autour de ces unités. Vous saisissez vos dimensions sur place, les quantités sont calculées, et chaque ligne du devis reprend la bonne unité : m², ml, m³, unité ou heure.',
@@ -564,7 +564,7 @@ export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-gestion-paysagiste',
     eyebrow: 'Logiciel de gestion pour paysagiste',
-    h1: 'Clients, chantiers, devis : tout au même endroit.',
+    h1: 'Logiciel de gestion paysagiste : clients, chantiers, devis.',
     intro:
       'Paysapro AI est un logiciel de gestion simple pour les entreprises du paysage : chaque chantier regroupe son client, ses photos, ses métrés, son devis et son suivi, accessibles depuis le téléphone comme depuis le bureau.',
     summary: [
@@ -583,7 +583,7 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
-        heading: 'Ce que vous gérez avec Paysapro AI',
+        heading: 'Ce que vous gérez avec ce logiciel de gestion paysagiste',
         list: [
           'Les clients : coordonnées, adresse du chantier, historique des devis.',
           'Les chantiers : photos, dimensions, notes, prestations et avancement.',
@@ -630,9 +630,9 @@ export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-gestion-chantier-paysagiste',
     eyebrow: 'Suivi de chantier pour paysagiste',
-    h1: 'Le suivi de chantier du paysagiste, du devis signé à la fin des travaux.',
+    h1: 'Logiciel de gestion de chantier paysagiste',
     intro:
-      'Une fois le devis signé, le chantier reste à planifier, à réaliser et à encaisser. Dans Paysapro AI, chaque chantier garde son devis, ses photos, ses notes, sa liste de tâches et ses paiements au même endroit, sur le téléphone comme au bureau.',
+      'Une fois le devis signé, le chantier reste à planifier, à réaliser et à encaisser. Dans Paysapro AI, logiciel de gestion de chantier paysagiste, chaque chantier garde son devis, ses photos, ses notes, sa liste de tâches et ses paiements au même endroit, sur le téléphone comme au bureau.',
     summary: [
       'Paysapro AI suit chaque chantier de paysage par étapes : devis signé, planifié, en cours, terminé.',
       'La fiche du chantier réunit le devis, les photos avant et après, les notes internes, une liste de tâches à cocher et les paiements reçus.',
@@ -649,7 +649,7 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
-        heading: 'Ce que contient la fiche d’un chantier',
+        heading: 'La fiche chantier du logiciel de gestion paysagiste',
         list: [
           'Le client, l’adresse et le devis signé, avec ses prestations et ses quantités.',
           'Les photos du chantier, étiquetées avant et après, avec un curseur de comparaison.',
@@ -711,7 +711,7 @@ export const LANDINGS: Landing[] = [
   {
     path: '/crm-paysagiste',
     eyebrow: 'CRM et gestion des clients pour paysagiste',
-    h1: 'Le fichier clients du paysagiste, relié à ses devis et à ses chantiers.',
+    h1: 'CRM pour paysagiste : vos clients reliés à leurs devis et chantiers',
     intro:
       'Un CRM de paysagiste n’a pas besoin d’être compliqué : il doit dire qui est le client, ce qui lui a été proposé, ce qu’il a signé et quand le rappeler. Dans Paysapro AI, chaque fiche client rassemble ses chantiers, ses devis, ses montants et son historique.',
     summary: [
@@ -801,7 +801,7 @@ export const LANDINGS: Landing[] = [
     visual: 'phone',
     sections: [
       {
-        heading: 'Conçue d’abord pour le téléphone',
+        heading: 'Une application pour paysagiste conçue d’abord pour le téléphone',
         paragraphs: [
           'Un paysagiste travaille rarement derrière un bureau. L’interface a donc été pensée pour l’écran d’un téléphone : de gros boutons, peu de saisie, une lecture possible en extérieur.',
           'Il n’y a rien à installer depuis un magasin d’applications : Paysapro AI s’ouvre dans le navigateur de votre téléphone et peut être ajouté à l’écran d’accueil.',
@@ -853,7 +853,7 @@ export const LANDINGS: Landing[] = [
   {
     path: '/modele-devis-paysagiste',
     eyebrow: 'Modèle de devis paysagiste',
-    h1: 'Exemple de devis paysagiste, commenté ligne par ligne.',
+    h1: 'Modèle de devis paysagiste : exemple commenté ligne par ligne',
     intro:
       'Voici à quoi ressemble un devis de paysagiste complet, et pourquoi chaque rubrique s’y trouve. Vous pouvez vous en inspirer pour votre propre modèle, ou le générer directement dans Paysapro AI avec vos prestations et vos prix.',
     summary: [
@@ -871,7 +871,7 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
-        heading: '2. Le détail des prestations',
+        heading: '2. Le détail des prestations du modèle de devis paysagiste',
         paragraphs: [
           'C’est le cœur du devis. Chaque ligne indique une désignation claire, une quantité, une unité et un montant. Dans l’exemple : préparation du terrain et gazon au m², terrasse au m², clôture au mètre linéaire, plantations à l’unité.',
           'Un devis détaillé rassure le client et vous protège : ce qui est écrit est ce qui sera réalisé.',
@@ -932,9 +932,9 @@ export const LANDINGS: Landing[] = [
   {
     path: '/logiciel-paysagiste-services-a-la-personne',
     eyebrow: 'Services à la personne (SAP)',
-    h1: 'Devis SAP et attestation fiscale, générés pour vous.',
+    h1: 'Logiciel pour paysagiste en services à la personne (SAP)',
     intro:
-      'Vous êtes déclaré en services à la personne pour l’entretien de jardins ? Paysapro AI ajoute les informations SAP sur vos devis et génère lui-même, en PDF, l’attestation fiscale annuelle de chaque client.',
+      'Vous êtes déclaré en SAP pour l’entretien de jardins ? Paysapro AI, logiciel pour paysagiste en services à la personne, ajoute les informations SAP sur vos devis et génère lui-même, en PDF, l’attestation fiscale annuelle de chaque client.',
     summary: [
       "Paysapro AI propose un mode SAP pour les entreprises déclarées en services à la personne.",
       "Vous marquez vos prestations éligibles ; le devis reprend votre numéro SAP et distingue les montants concernés.",
@@ -944,7 +944,7 @@ export const LANDINGS: Landing[] = [
     visual: 'sap',
     sections: [
       {
-        heading: 'Un mode SAP pour les entreprises déclarées',
+        heading: 'Un mode services à la personne dans votre logiciel de paysagiste',
         paragraphs: [
           'Le mode SAP est une option. Vous l’activez dans les réglages de votre entreprise, puis vous renseignez votre numéro de déclaration SAP, sa date d’enregistrement et l’activité déclarée.',
           'Il est sans effet sur vos devis habituels : si vous ne l’activez pas, ou si un devis ne contient aucune prestation SAP, aucune mention n’apparaît.',
@@ -1104,7 +1104,7 @@ export const LANDINGS: Landing[] = [
     visual: 'quote',
     sections: [
       {
-        heading: 'Comment nous avons comparé',
+        heading: 'Comment nous avons fait ce comparatif des logiciels de devis paysagiste',
         paragraphs: [
           'Nous sommes l’éditeur de Paysapro AI : ce comparatif n’est donc pas neutre, et nous le disons. Pour qu’il reste utile, il ne s’appuie que sur des éléments vérifiables publiés par chaque éditeur sur son site (fonctionnalités annoncées, prix publics, durée d’essai), relevés le 30 octobre 2026. Les prix sont hors taxes ; ils peuvent évoluer et des promotions ponctuelles peuvent s’appliquer : vérifiez-les sur le site de chaque éditeur avant de choisir.',
           'Une information est inexacte ou a changé ? Écrivez-nous depuis la page Contact : nous la corrigeons rapidement.',

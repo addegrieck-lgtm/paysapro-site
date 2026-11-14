@@ -22,11 +22,11 @@ export const TOOLS: Tool[] = [
     path: '/outils/calcul-surface',
     name: 'Calcul de surface',
     short: 'Terrasse, gazon, massif : surface en m² et quantité à commander avec les chutes.',
-    h1: 'Calculateur de surface : terrasse, gazon, massif',
+    h1: 'Calcul de surface : terrasse, gazon, massif',
     intro: 'Calculez une surface en m² pour un rectangle, une forme en L, un triangle ou un cercle, puis la quantité de matériau à commander en tenant compte des chutes.',
     method: [
       {
-        heading: 'Les formules utilisées',
+        heading: 'Les formules du calcul de surface',
         list: [
           'Rectangle : longueur × largeur.',
           'Forme en L : somme de deux rectangles.',
@@ -57,11 +57,11 @@ export const TOOLS: Tool[] = [
     path: '/outils/calcul-volume',
     name: 'Calcul de volume',
     short: 'Terre végétale, gravier, paillage, béton : volume en m³ et poids estimé.',
-    h1: 'Calculateur de volume : terre végétale, gravier, paillage',
+    h1: 'Calcul de volume : terre végétale, gravier, paillage',
     intro: 'Calculez le volume à commander en m³ à partir d’une surface et d’une épaisseur, et estimez le poids correspondant pour organiser la livraison.',
     method: [
       {
-        heading: 'La formule',
+        heading: 'La formule du calcul de volume',
         paragraphs: ['Volume (m³) = surface (m²) × épaisseur (m). Une épaisseur de 10 cm correspond à 0,10 m : 48 m² sur 10 cm représentent 48 × 0,10 = 4,8 m³.'],
       },
       {
@@ -87,11 +87,11 @@ export const TOOLS: Tool[] = [
     path: '/outils/calcul-cloture',
     name: 'Calcul de clôture',
     short: 'Nombre de poteaux, de panneaux ou de rouleaux de grillage à partir du linéaire.',
-    h1: 'Calculateur de clôture : poteaux, panneaux et grillage',
+    h1: 'Calcul de clôture : poteaux, panneaux et grillage',
     intro: 'Indiquez la longueur à clôturer et l’entraxe entre poteaux : l’outil calcule le nombre d’intervalles, de panneaux et de poteaux à prévoir. Pour une clôture en grillage, la méthode ci-dessous donne aussi les rouleaux et le prix.',
     method: [
       {
-        heading: 'La méthode de calcul',
+        heading: 'La méthode de calcul de clôture',
         paragraphs: [
           'On retire d’abord la largeur des ouvertures (portail, portillon) de la longueur totale. On divise ensuite la longueur restante par l’entraxe et on arrondit à l’entier supérieur : c’est le nombre d’intervalles, donc de panneaux. Il faut un poteau de plus que d’intervalles.',
           'Exemple : 22 m avec un entraxe de 2,5 m donnent 22 ÷ 2,5 = 8,8, soit 9 panneaux et 10 poteaux.',
@@ -126,7 +126,7 @@ export const TOOLS: Tool[] = [
     path: '/outils/calcul-marge',
     name: 'Calcul de marge',
     short: 'Marge d’un chantier, taux de marge, taux de marque et prix de vente à partir du coût de revient.',
-    h1: 'Calculateur de marge : chantier, prestation, prix de vente',
+    h1: 'Calcul de marge : chantier, prestation, prix de vente',
     intro: 'Saisissez le coût de revient et le prix de vente d’une prestation ou d’un chantier : l’outil calcule la marge, le taux de marge, le taux de marque et le coefficient. Dans l’autre sens, il donne le prix de vente à pratiquer pour atteindre la marge que vous visez.',
     method: [
       {
@@ -137,7 +137,7 @@ export const TOOLS: Tool[] = [
         ],
       },
       {
-        heading: 'Les formules utilisées',
+        heading: 'Les formules du calcul de marge',
         list: [
           'Marge = prix de vente HT − coût de revient.',
           'Taux de marge = marge ÷ coût de revient × 100.',

@@ -4,6 +4,8 @@ Mise à jour : 10 novembre 2026.
 
 **Une intention = une page.** Avant de créer une page ou un article, vérifier dans ce tableau que l'intention n'a pas déjà sa page cible : sinon, enrichir la page existante.
 
+Table prête à coller dans l'audit SEO du back-office (une ligne par page, en français naturel) : [`seo/mots-cles-audit.txt`](../seo/mots-cles-audit.txt).
+
 ## Comment lire ce tableau
 
 - **Difficulté** et **potentiel** sont des estimations qualitatives, faites à partir de la page de résultats (qui y figure : éditeurs installés, comparateurs, banques) et non d'un outil de volumes. **Aucun volume de recherche n'est indiqué : nous n'en avons pas de fiable.** Les seuls chiffres réels sont ceux de Search Console (colonne « Constaté »), relevés le 4 novembre 2026 sur 3 mois.
