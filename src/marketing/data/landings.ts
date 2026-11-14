@@ -1141,9 +1141,9 @@ export const LANDINGS: Landing[] = [
         heading: 'JardiSoft (JardiContacts et JardiCAD)',
         paragraphs: ['Éditeur de logiciels consacrés aux entreprises du paysage : JardiContacts pour la gestion, JardiCAD pour les plans.'],
         list: [
-          'Points forts annoncés : devis avec calcul des marges, factures, acomptes et situations de travaux, suivi de chantier, contrats d’entretien, achats auprès des fournisseurs, lien avec les logiciels de comptabilité ; avec JardiCAD, plans de jardin en 2D, bibliothèque de végétaux et métrés repris dans le devis.',
+          'Points forts annoncés : étude de prix et devis, factures, acomptes et situations de travaux, signature électronique, facturation électronique et dépôt sur Chorus Pro, attestations fiscales des services à la personne, achats auprès des fournisseurs, bibliothèque de végétaux et de matériaux ; avec JardiCAD, plans de jardin dont les quantités sont reprises dans le devis.',
           'Pour qui : entreprises du paysage qui conçoivent des aménagements sur plan et veulent une gestion complète, du bureau d’études à la facture.',
-          'Prix publics : non affichés ; tarif et démonstration sur demande auprès de l’éditeur.',
+          'Prix publics : non affichés ; démonstration gratuite sur demande, pas de version gratuite.',
         ],
       },
       {
@@ -1170,7 +1170,7 @@ export const LANDINGS: Landing[] = [
         list: [
           'Points forts annoncés : devis et factures, factures d’acompte et de situation, planning des interventions, application mobile pour les équipes avec rapports et photos, signature des devis en ligne, suivi de la rentabilité.',
           'Pour qui : artisans et petites entreprises avec des techniciens en intervention ; les paysagistes font partie des métiers cités, sans fonctions propres au paysage.',
-          'Prix publics : deux offres annoncées, à 24,50 € et 49,50 € HT par mois et par licence.',
+          'Prix publics : deux offres à 24,50 € et 49,50 € HT par mois, une licence gestionnaire incluse ; 9,50 € HT par mois par intervenant supplémentaire ; sans engagement, essai gratuit de 15 jours.',
         ],
       },
       {
@@ -1186,7 +1186,7 @@ export const LANDINGS: Landing[] = [
         heading: 'Quel logiciel choisir ?',
         list: [
           'Vous faites vos devis sur le chantier et voulez les envoyer le jour même : un outil pensé pour le téléphone, avec photos, mesures et signature en ligne, comme Paysapro AI.',
-          'Votre activité repose surtout sur les services à la personne : vérifiez l’attestation fiscale et l’avance immédiate, proposées par Robbin et Extrabat Paysage, l’attestation par Paysapro AI.',
+          'Votre activité repose surtout sur les services à la personne : vérifiez l’attestation fiscale et l’avance immédiate, proposées par Robbin et Extrabat Paysage, l’attestation par Paysapro AI et JardiSoft.',
           'Vous dirigez plusieurs équipes et beaucoup de contrats d’entretien : une suite de gestion complète comme Extrabat Paysage.',
           'Vous concevez vos aménagements sur plan : JardiSoft, avec JardiCAD, relie le plan au devis.',
           'Vous faites aussi beaucoup de maçonnerie ou de rénovation : Obat, Tolteck ou Tomas couvrent le bâtiment, Paysapro AI propose aussi un mode bâtiment.',
@@ -1212,7 +1212,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         question: 'Quel logiciel gère l’attestation fiscale des services à la personne ?',
-        answer: 'Parmi les logiciels comparés, Paysapro AI, Robbin et Extrabat Paysage annoncent la gestion des services à la personne. Paysapro AI génère l’attestation fiscale annuelle de chaque client à partir des paiements enregistrés ; Robbin et Extrabat Paysage annoncent aussi l’avance immédiate.',
+        answer: 'Parmi les logiciels comparés, Paysapro AI, Robbin, JardiSoft et Extrabat Paysage annoncent la gestion des services à la personne. Paysapro AI génère l’attestation fiscale annuelle de chaque client à partir des paiements enregistrés ; JardiSoft annonce aussi la génération des attestations fiscales ; Robbin et Extrabat Paysage annoncent aussi l’avance immédiate.',
       },
     ],
     related: [
