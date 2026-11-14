@@ -1093,12 +1093,12 @@ export const LANDINGS: Landing[] = [
     path: '/comparatif-logiciel-devis-paysagiste',
     eyebrow: 'Comparatif 2026',
     h1: 'Logiciel de devis pour paysagiste : le comparatif 2026',
-    intro: 'Six logiciels de devis et de facturation utilisés par les paysagistes, comparés sur ce qui compte au quotidien : spécialisation paysage, usage sur le chantier, signature en ligne, services à la personne et prix publics. Comparatif rédigé par l’éditeur de Paysapro AI, à partir des informations publiées par chaque éditeur et vérifiées le 30 octobre 2026.',
+    intro: 'Huit logiciels de devis et de facturation utilisés par les paysagistes, comparés sur ce qui compte au quotidien : spécialisation paysage, usage sur le chantier, signature en ligne, services à la personne et prix publics. Comparatif rédigé par l’éditeur de Paysapro AI, à partir des informations publiées par chaque éditeur, vérifiées le 30 octobre 2026 et complétées le 14 novembre 2026.',
     summary: [
-      'Trois logiciels sont pensés pour le paysage : Paysapro AI, Robbin et Extrabat Paysage. Obat et Tolteck visent les artisans du bâtiment, Henrri la facturation de toutes les petites entreprises.',
+      'Quatre logiciels sont pensés pour le paysage : Paysapro AI, Robbin, JardiSoft et Extrabat Paysage. Obat, Tolteck et Tomas visent les artisans du bâtiment, Henrri la facturation de toutes les petites entreprises.',
       'Paysapro AI se distingue par le devis fait sur le chantier : photos, mesures au m² et au mètre linéaire qui calculent les quantités, puis signature du client en ligne.',
-      'Robbin est un logiciel de devis et facturation en ligne pour jardiniers paysagistes, avec attestation SAP et avance immédiate ; Extrabat Paysage est une suite de gestion plus large (CRM, interventions, contrats d’entretien).',
-      'Prix publics d’entrée : de la version gratuite d’Henrri à 49 € HT par mois pour Extrabat Paysage ; Paysapro AI commence à 19 € HT par mois, avec 15 jours d’essai gratuit.',
+      'Robbin est un logiciel de devis et facturation en ligne pour jardiniers paysagistes, avec attestation SAP et avance immédiate ; Extrabat Paysage est une suite de gestion plus large (CRM, interventions, contrats d’entretien) ; JardiSoft associe la gestion (JardiContacts) et les plans de jardin (JardiCAD).',
+      'Prix publics d’entrée : de la version gratuite d’Henrri à 49 € HT par mois pour Extrabat Paysage ; Paysapro AI commence à 19 € HT par mois, avec 15 jours d’essai gratuit. JardiSoft ne publie pas ses prix.',
       'Le meilleur choix dépend de votre activité : taille de l’équipe, part d’entretien et de services à la personne, besoin d’une gestion complète ou d’un outil de devis rapide.',
     ],
     visual: 'quote',
@@ -1106,7 +1106,7 @@ export const LANDINGS: Landing[] = [
       {
         heading: 'Comment nous avons fait ce comparatif des logiciels de devis paysagiste',
         paragraphs: [
-          'Nous sommes l’éditeur de Paysapro AI : ce comparatif n’est donc pas neutre, et nous le disons. Pour qu’il reste utile, il ne s’appuie que sur des éléments vérifiables publiés par chaque éditeur sur son site (fonctionnalités annoncées, prix publics, durée d’essai), relevés le 30 octobre 2026. Les prix sont hors taxes ; ils peuvent évoluer et des promotions ponctuelles peuvent s’appliquer : vérifiez-les sur le site de chaque éditeur avant de choisir.',
+          'Nous sommes l’éditeur de Paysapro AI : ce comparatif n’est donc pas neutre, et nous le disons. Pour qu’il reste utile, il ne s’appuie que sur des éléments vérifiables publiés par chaque éditeur sur son site (fonctionnalités annoncées, prix publics, durée d’essai), relevés le 30 octobre 2026 ; JardiSoft et Tomas ont été ajoutés le 14 novembre 2026. Les prix sont hors taxes ; ils peuvent évoluer et des promotions ponctuelles peuvent s’appliquer : vérifiez-les sur le site de chaque éditeur avant de choisir.',
           'Une information est inexacte ou a changé ? Écrivez-nous depuis la page Contact : nous la corrigeons rapidement.',
         ],
       },
@@ -1138,6 +1138,15 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
+        heading: 'JardiSoft (JardiContacts et JardiCAD)',
+        paragraphs: ['Éditeur de logiciels consacrés aux entreprises du paysage : JardiContacts pour la gestion, JardiCAD pour les plans.'],
+        list: [
+          'Points forts annoncés : devis avec calcul des marges, factures, acomptes et situations de travaux, suivi de chantier, contrats d’entretien, achats auprès des fournisseurs, lien avec les logiciels de comptabilité ; avec JardiCAD, plans de jardin en 2D, bibliothèque de végétaux et métrés repris dans le devis.',
+          'Pour qui : entreprises du paysage qui conçoivent des aménagements sur plan et veulent une gestion complète, du bureau d’études à la facture.',
+          'Prix publics : non affichés ; tarif et démonstration sur demande auprès de l’éditeur.',
+        ],
+      },
+      {
         heading: 'Obat',
         paragraphs: ['Logiciel de devis et facturation pour les artisans et entreprises du bâtiment.'],
         list: [
@@ -1156,6 +1165,15 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
+        heading: 'Tomas',
+        paragraphs: ['Logiciel de devis, d’interventions et de facturation pour les artisans et les petites entreprises du bâtiment.'],
+        list: [
+          'Points forts annoncés : devis et factures, factures d’acompte et de situation, planning des interventions, application mobile pour les équipes avec rapports et photos, signature des devis en ligne, suivi de la rentabilité.',
+          'Pour qui : artisans et petites entreprises avec des techniciens en intervention ; les paysagistes font partie des métiers cités, sans fonctions propres au paysage.',
+          'Prix publics : deux offres annoncées, à 24,50 € et 49,50 € HT par mois et par licence.',
+        ],
+      },
+      {
         heading: 'Henrri',
         paragraphs: ['Logiciel de facturation en ligne généraliste, pour les petites entreprises de tous secteurs.'],
         list: [
@@ -1170,7 +1188,8 @@ export const LANDINGS: Landing[] = [
           'Vous faites vos devis sur le chantier et voulez les envoyer le jour même : un outil pensé pour le téléphone, avec photos, mesures et signature en ligne, comme Paysapro AI.',
           'Votre activité repose surtout sur les services à la personne : vérifiez l’attestation fiscale et l’avance immédiate, proposées par Robbin et Extrabat Paysage, l’attestation par Paysapro AI.',
           'Vous dirigez plusieurs équipes et beaucoup de contrats d’entretien : une suite de gestion complète comme Extrabat Paysage.',
-          'Vous faites aussi beaucoup de maçonnerie ou de rénovation : Obat ou Tolteck couvrent le bâtiment, Paysapro AI propose aussi un mode bâtiment.',
+          'Vous concevez vos aménagements sur plan : JardiSoft, avec JardiCAD, relie le plan au devis.',
+          'Vous faites aussi beaucoup de maçonnerie ou de rénovation : Obat, Tolteck ou Tomas couvrent le bâtiment, Paysapro AI propose aussi un mode bâtiment.',
           'Vous voulez seulement facturer au moindre coût : Henrri et sa version gratuite.',
         ],
         paragraphs: [
@@ -1189,7 +1208,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         question: 'Ce comparatif est-il indépendant ?',
-        answer: 'Non : il est rédigé par l’éditeur de Paysapro AI. Il se limite aux informations publiées par chaque éditeur, vérifiées le 30 octobre 2026, et toute erreur signalée est corrigée.',
+        answer: 'Non : il est rédigé par l’éditeur de Paysapro AI. Il se limite aux informations publiées par chaque éditeur, vérifiées le 30 octobre 2026 et complétées le 14 novembre 2026, et toute erreur signalée est corrigée.',
       },
       {
         question: 'Quel logiciel gère l’attestation fiscale des services à la personne ?',
