@@ -1,0 +1,32 @@
+# Garde le projet Supabase de PaysaPro AI éveillé : l'offre gratuite met un projet en pause après
+# ~7 jours sans activité (l'app affiche alors « Connexion au serveur impossible »). Une petite requête
+# par jour suffit. Placée ici (dépôt public) car les Actions des dépôts publics sont gratuites et ne sont
+# jamais bloquées par le quota du compte, contrairement à paysapro-ai (privé).
+# La clé utilisée est la clé PUBLIQUE (publishable), déjà présente dans le site : aucun secret ici.
+# À supprimer si le projet passe en offre payante (Pro), qui ne se met jamais en pause.
+name: Garder Supabase actif
+
+on:
+  schedule:
+    - cron: '17 6 * * *' # chaque jour vers 8 h (heure de Paris)
+  workflow_dispatch: {}
+
+permissions: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Requête légère sur la base
+        env:
+          SUPABASE_URL: https://zyxnpytmccmllxwhzvih.supabase.co
+          SUPABASE_KEY: sb_publishable_k5i8_JjrfgHDLc9rZiVgqA_1AUTGnSc
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' --retry 3 --retry-delay 10 \
+            "$SUPABASE_URL/rest/v1/companies?select=id&limit=1" \
+            -H "apikey: $SUPABASE_KEY")
+          echo "Réponse de Supabase : $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::Supabase ne répond pas ($code) : le projet est peut-être en pause. Réactivez-le sur https://supabase.com/dashboard/project/zyxnpytmccmllxwhzvih"
+            exit 1
+          fi
