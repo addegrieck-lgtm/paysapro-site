@@ -32,7 +32,7 @@ export const FAQ: FaqItem[] = [
     id: 'signature',
     question: 'Mon client peut-il signer en ligne ?',
     answer:
-      'Oui. Vous lui envoyez un lien : il consulte le devis sur son téléphone, avec les photos et le détail des prestations, puis le signe en ligne. Ce lien client est inclus dans l’essai gratuit et à partir de l’offre Pro ; l’offre Starter comprend la signature du devis, sans lien client.',
+      'Oui. Vous lui envoyez un lien : il consulte le devis sur son téléphone, avec les photos et le détail des prestations, puis le signe en ligne. Ce lien client est inclus dans toutes les offres, dès Starter.',
   },
   {
     id: 'plusieurs-clients',

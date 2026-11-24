@@ -75,7 +75,7 @@ export const FUTURE_PLANS: PricingPlan[] = [
     price: 19,
     period: 'mois',
     description: 'Pour le paysagiste ou l’artisan indépendant qui démarre.',
-    features: ['Devis et PDF à vos couleurs', 'Clients et chantiers', 'Photos chantier', 'Catalogue tarifaire', 'Signature du devis', '1 utilisateur'],
+    features: ['Devis et PDF à vos couleurs', 'Clients et chantiers', 'Photos chantier', 'Catalogue tarifaire', 'Signature du devis', 'Lien client et signature en ligne', 'Mode SAP', '1 utilisateur'],
     cta: { label: 'Essayer 15 jours gratuits', target: 'signup' },
   },
   {
@@ -84,7 +84,7 @@ export const FUTURE_PLANS: PricingPlan[] = [
     price: 39,
     period: 'mois',
     description: 'Pour les entreprises qui envoient des devis chaque semaine.',
-    features: ['Tout Starter', 'Mesures et calculs', 'Modèles de devis', 'Lien client et signature en ligne', 'Planning et statistiques', 'Mode SAP', '3 utilisateurs'],
+    features: ['Tout Starter', 'Mesures et calculs', 'Modèles de devis', 'Planning et statistiques', '3 utilisateurs'],
     highlight: true,
     badge: 'Recommandé',
     cta: { label: 'Essayer 15 jours gratuits', target: 'signup' },

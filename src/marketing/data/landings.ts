@@ -792,7 +792,7 @@ export const LANDINGS: Landing[] = [
       },
       {
         question: 'La gestion des clients est-elle incluse dans l’offre Starter ?',
-        answer: 'Oui. Les clients et les chantiers sont inclus dans toutes les offres, dès Starter à 19 € HT par mois. Le lien client avec signature en ligne et les statistiques sont inclus à partir de l’offre Pro.',
+        answer: 'Oui. Les clients et les chantiers sont inclus dans toutes les offres, dès Starter à 19 € HT par mois. Le lien client avec signature en ligne est inclus aussi dès Starter ; les statistiques le sont à partir de l’offre Pro.',
       },
     ],
     related: [
@@ -1169,7 +1169,7 @@ export const LANDINGS: Landing[] = [
         list: [
           'Points forts : photos et mesures du chantier (surfaces, longueurs, volumes) qui calculent les quantités du devis ; catalogue de prix avec coût et marge ; devis en ligne que le client signe sur son téléphone ; factures d’acompte et de solde au format Factur-X ; mode services à la personne avec attestation fiscale annuelle.',
           'Pour qui : paysagistes seuls ou petites équipes qui veulent faire leurs devis plus vite, sur place.',
-          'Prix publics : Starter 19 €, Pro 39 €, Business 69 € HT par mois, 25 % de moins à l’année ; essai gratuit de 15 jours sans carte bancaire. Le mode SAP est inclus à partir de l’offre Pro.',
+          'Prix publics : Starter 19 €, Pro 39 €, Business 69 € HT par mois, 25 % de moins à l’année ; essai gratuit de 15 jours sans carte bancaire. Le mode SAP est inclus dans toutes les offres, dès Starter.',
         ],
       },
       {
