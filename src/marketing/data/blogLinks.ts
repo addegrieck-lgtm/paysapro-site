@@ -23,13 +23,15 @@ const DEFAULT_PRODUCT_PAGE = '/logiciel-devis-paysagiste';
 
 /** Expression métier → page qui la traite. À position égale dans le texte, la règle placée la première l'emporte. */
 export const AUTO_LINKS: { pattern: RegExp; to: string }[] = [
-  { pattern: /attestations? fiscales?/i, to: '/logiciel-paysagiste-services-a-la-personne' },
+  { pattern: /attestations? fiscales?|avance immédiate|crédit d[’']impôt/i, to: '/logiciel-paysagiste-services-a-la-personne' },
+  { pattern: /contrats? d[’']entretien/i, to: '/logiciel-contrat-entretien-espaces-verts' },
   { pattern: /Factur-X|facturation électronique|factures? électroniques?/i, to: '/logiciel-facture-electronique' },
   { pattern: /factures? d[’']acompte|factures? de solde|numérotation continue|\bun avoir\b/i, to: '/logiciel-facturation-artisan' },
   { pattern: /artisans? du BTP|(?:assurance|garantie) décennale/i, to: '/logiciel-devis-batiment' },
   { pattern: /taux réduits?(?: de TVA)?/i, to: '/blog/tva-travaux-renovation-taux-reduit' },
   { pattern: /terre végétale/i, to: '/outils/calcul-volume' },
   { pattern: /photos du chantier/i, to: '/application-paysagiste' },
+  { pattern: /fichiers? clients?|fiches? clients?/i, to: '/crm-paysagiste' },
 ];
 
 const BRAND = /Paysapro AI/;

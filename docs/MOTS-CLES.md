@@ -1,6 +1,6 @@
 # Cartographie des mots-clés — Paysapro AI
 
-Mise à jour : 10 novembre 2026.
+Mise à jour : 24 novembre 2026 (positions Search Console du 24/11, 3 mois).
 
 **Une intention = une page.** Avant de créer une page ou un article, vérifier dans ce tableau que l'intention n'a pas déjà sa page cible : sinon, enrichir la page existante.
 
@@ -33,7 +33,12 @@ Table prête à coller dans l'audit SEO du back-office (une ligne par page, en f
 | CRM paysagiste, logiciel gestion clients paysagiste | Achat | Moyenne (Sellsy, Extrabat) | Moyen à fort | `/crm-paysagiste` (créée le 10/11/2026) | Moyenne | **1** |
 | application paysagiste, application devis chantier | Achat | Moyenne | Fort | `/application-paysagiste` | Moyenne | 2 |
 | logiciel aménagement extérieur | Mixte : souvent des logiciels de plans 3D | Élevée, intention floue | Faible à moyen | `/logiciel-gestion-paysagiste` (mention dans le texte, pas de page dédiée) | Faible | 3 |
-| logiciel paysagiste services à la personne, attestation fiscale SAP | Achat | Faible à moyenne | Fort (niche) | `/logiciel-paysagiste-services-a-la-personne` | Forte : peu de concurrents précis | 2 |
+| logiciel paysagiste services à la personne, attestation fiscale SAP, crédit d'impôt jardinage | Achat | Faible à moyenne | Fort (niche) | `/logiciel-paysagiste-services-a-la-personne` (sections crédit d'impôt et avance immédiate ajoutées le 24/11) | Forte : peu de concurrents précis | **1** |
+| logiciel avance immédiate paysagiste, avance immédiate jardinage | Information puis achat | Faible | Moyen : Paysapro AI ne gère pas l'avance immédiate | `/blog/avance-immediate-credit-impot-jardinage` (brouillon, `seo/blog-back-office-2026-11-24.sql`) ; la page SAP le dit clairement | Moyenne | 2 |
+| logiciel contrat entretien espaces verts, logiciel tonte taille contrat, logiciel entretien espaces verts | Achat | Moyenne | Fort | `/logiciel-contrat-entretien-espaces-verts` (créée le 24/11/2026) | Moyenne | **1** |
+| extrabat paysage, alternative extrabat | Comparaison | Faible | Moyen | `/alternative-extrabat-paysage` (créée le 24/11/2026) | Moyenne | 2 |
+| logiciel devis entreprise du paysage | Achat | Moyenne | Fort | `/logiciel-devis-paysagiste` (expression ajoutée le 24/11) | Moyenne | 1 |
+| facture électronique paysagiste | Information puis achat | Faible | Moyen, croissant jusqu'en 2027 | `/facture-electronique-paysagiste` (créée le 24/11/2026) | Forte | 2 |
 | comparatif logiciel paysagiste, meilleur logiciel paysagiste | Comparaison | Élevée (comparateurs) | Très fort | `/comparatif-logiciel-devis-paysagiste` | Forte, mais les IA citent d'abord les comparatifs tiers | **1** |
 | logiciel paysagiste gratuit | Comparaison | Élevée (Obat, Henrri) | Moyen | `/comparatif-logiciel-devis-paysagiste` (question de la FAQ) | Moyenne | 3 |
 | logiciel devis bâtiment, électricien, plombier, peintre, maçon | Achat | Très élevée | Moyen (hors cœur de cible) | pages `/logiciel-devis-…` existantes | Faible | 3 |
@@ -66,6 +71,8 @@ Table prête à coller dans l'audit SEO du back-office (une ligne par page, en f
 |---|---|---|
 | `/logiciel-gestion-paysagiste`, `/logiciel-gestion-chantier-paysagiste`, `/crm-paysagiste` | Trois pages « gestion » | La première est la vue d'ensemble et renvoie vers les deux autres ; chacune a son propre H1, sa propre FAQ et son propre contenu. Ne pas répéter les mêmes paragraphes. |
 | `/logiciel-devis-paysagiste` et `/logiciel-facturation-artisan` | « facturation » | La première vise les paysagistes, la seconde les artisans du bâtiment. Ne pas créer de page « logiciel facturation paysagiste ». |
+| `/logiciel-facture-electronique` et `/facture-electronique-paysagiste` | « facture électronique » | La première présente le logiciel pour tous les artisans (exemple bâtiment) ; la seconde répond aux paysagistes selon leurs clients (particuliers, entreprises, mairies). Elles se renvoient l'une à l'autre. |
+| `/logiciel-contrat-entretien-espaces-verts` et `/blog/contrat-entretien-jardin` | « contrat d'entretien » | La page logiciel vise l'outil ; l'article explique quoi écrire dans le contrat. |
 | `/comparatif-logiciel-devis-paysagiste` et `/blog/choisir-logiciel-devis-paysagiste` | « quel logiciel » | Le comparatif compare des produits nommés ; l'article explique les critères de choix. Ils se renvoient l'un à l'autre. |
 | Pages paysage et pages bâtiment | Dilution du positionnement | Les pages bâtiment existent ; ne pas en ajouter tant que le cœur « paysagiste » n'est pas en première page. |
 
