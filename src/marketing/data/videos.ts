@@ -20,10 +20,13 @@ export const DEVIS_VIDEO: SiteVideo = {
   description:
     'Comment faire un devis paysagiste directement sur son téléphone, sur un vrai chantier : photos du jardin, mesures, prestations, puis devis envoyé et signé par le client en ligne.',
   uploadDate: '2026-11-24T18:00:00+01:00',
-  pages: ['/logiciel-devis-paysagiste', '/comment-ca-marche'],
+  pages: ['/logiciel-devis-paysagiste', '/comment-ca-marche', '/blog/comment-faire-un-devis-paysagiste'],
 };
 
 export const VIDEOS: SiteVideo[] = [DEVIS_VIDEO];
+
+/** Vidéo à afficher sur une page (articles du blog : choisie ici, pas dans le back-office). */
+export const videoForPath = (path: string) => VIDEOS.find((v) => v.pages.includes(path));
 
 export const youtubeThumbnail = (v: Pick<SiteVideo, 'id'>) => `https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`;
 export const youtubeWatchUrl = (v: Pick<SiteVideo, 'id'>) => `https://www.youtube.com/watch?v=${v.id}`;

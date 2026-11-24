@@ -14,6 +14,11 @@ describe('vidéo YouTube', () => {
     expect(document.querySelector('iframe')?.getAttribute('src')).toBe(`https://www.youtube-nocookie.com/embed/${DEVIS_VIDEO.id}?autoplay=1&rel=0`);
   });
 
+  it('l’article « Comment faire un devis paysagiste » affiche la vidéo', async () => {
+    await renderPage('/blog/comment-faire-un-devis-paysagiste');
+    expect(screen.getByRole('button', { name: `Lire la vidéo : ${DEVIS_VIDEO.title}` })).toBeInTheDocument();
+  });
+
   it('les pages qui affichent la vidéo la décrivent en VideoObject', () => {
     const pages = seoPages();
     for (const path of DEVIS_VIDEO.pages) {

@@ -7,6 +7,8 @@ import { Container } from '../components/ui';
 import { MARKETING_CONFIG } from '../config/marketing';
 import NotFoundPage from './NotFoundPage';
 import { Essentiel } from '../components/Essentiel';
+import { YouTubeVideo } from '../components/YouTubeVideo';
+import { videoForPath } from '../data/videos';
 import { linkArticleBody, segmentsText, type Segment } from '../data/blogLinks';
 
 const dateFmt = new Intl.DateTimeFormat('fr-FR', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
@@ -25,6 +27,7 @@ function Article({ article }: { article: BlogArticle }) {
   // Liens choisis pour l'article (sauf vers un article pas encore paru), puis les autres articles, sans doublon.
   const live = new Set(published.map((a) => `/blog/${a.slug}`));
   const body = linkArticleBody(article, live);
+  const video = videoForPath(`/blog/${article.slug}`);
   const related = [...(article.links ?? []).filter((l) => !l.to.startsWith('/blog/') || live.has(l.to)), ...others.map((a) => ({ label: a.title, to: `/blog/${a.slug}` }))].filter(
     (l, i, all) => all.findIndex((x) => x.to === l.to) === i,
   );
@@ -76,6 +79,15 @@ function Article({ article }: { article: BlogArticle }) {
           <div className="mt-8">
             <Essentiel items={article.summary} />
           </div>
+        )}
+
+        {video && (
+          <section className="mt-10" aria-labelledby="video-title">
+            <h2 id="video-title" className="mb-4 font-display text-2xl font-extrabold sm:text-[1.7rem]">
+              La méthode en vidéo
+            </h2>
+            <YouTubeVideo video={video} />
+          </section>
         )}
 
         <div className="mt-10 space-y-8 text-[1.08rem] leading-[1.75] text-ink">
