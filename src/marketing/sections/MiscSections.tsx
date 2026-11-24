@@ -15,11 +15,12 @@ export function TestimonialsSection() {
   return (
     <Section labelledBy="temoignages-title">
       <Container>
-        <SectionHeading id="temoignages-title" eyebrow="Témoignages" title="Ils utilisent Paysapro AI." />
-        <div className="mt-12">
-          <Testimonials />
-        </div>
+        <SectionHeading id="temoignages-title" eyebrow="Témoignages" title="Ils ont essayé Paysapro AI." />
       </Container>
+      {/* Bandeau pleine largeur : les avis défilent d'un bord à l'autre de l'écran */}
+      <div className="mt-12">
+        <Testimonials />
+      </div>
     </Section>
   );
 }
