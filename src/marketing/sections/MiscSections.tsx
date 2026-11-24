@@ -15,7 +15,7 @@ export function TestimonialsSection() {
   return (
     <Section labelledBy="temoignages-title">
       <Container>
-        <SectionHeading id="temoignages-title" eyebrow="Témoignages" title="Ils utilisent Paysapro AI." />
+        <SectionHeading id="temoignages-title" eyebrow="Témoignages" title="Ils ont essayé Paysapro AI." />
         <div className="mt-12">
           <Testimonials />
         </div>
