@@ -25,7 +25,7 @@ if (!appUrl && env.DEV && env.MODE !== 'test') {
 export const MARKETING_CONFIG = {
   betaMode: false,
   showPricing: true,
-  showTestimonials: false,
+  showTestimonials: true,
   showDemo: clean(env.VITE_ENABLE_DEMO_CTA) === 'true',
   showBlog: true,
   showAmbassador: false,
