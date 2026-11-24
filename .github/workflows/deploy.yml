@@ -12,6 +12,11 @@ on:
   schedule:
     - cron: '23 4 * * *'
   workflow_dispatch:
+    inputs:
+      indexnow_all:
+        description: 'IndexNow : envoyer toutes les pages du sitemap (sinon seulement celles modifiées hier ou aujourd’hui)'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -61,3 +66,21 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # IndexNow : prévient Bing et les autres moteurs IndexNow des pages modifiées (scripts/indexnow.mjs).
+  # Un échec ici ne remet pas en cause la mise en ligne.
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+    env:
+      VITE_SITE_URL: ${{ vars.VITE_SITE_URL || 'https://www.paysapro-ai.fr' }}
+      INDEXNOW_ALL: ${{ inputs.indexnow_all && '1' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/indexnow.mjs
