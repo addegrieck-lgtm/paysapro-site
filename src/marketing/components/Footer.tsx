@@ -1,64 +1,67 @@
 import { Link } from 'react-router';
 import { Play } from 'lucide-react';
-import { FOOTER_NAV } from '../data/navigation';
+import { FOOTER_NAV, LEGAL_NAV } from '../data/navigation';
 import { CONTACT, SITE } from '../config/marketing';
 import { AppCta } from './AppLink';
 import { Logo } from './Logo';
 import { useSiteBrand } from './useSiteBrand';
 import { NewsletterForm } from './NewsletterForm';
-import { BetaBadge, Container } from './ui';
+import { Container } from './ui';
 
+/** Pied de page compact : marque et essai, cinq colonnes courtes, newsletter, ligne légale. */
 export function Footer() {
   const brand = useSiteBrand();
   return (
     <footer className="bg-forest text-white">
-      <Container className="py-16 sm:py-20">
-        <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
-          <div className="max-w-sm">
+      <Container className="py-12 sm:py-14">
+        <div className="flex flex-col gap-6 border-b border-white/10 pb-10 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-md">
             <Link to="/" className="inline-block rounded-lg">
               <Logo tone="light" brand={brand} />
             </Link>
-            <p className="mt-4 text-white/70">{brand === 'batipro' ? 'Devis, chantiers et factures pour les artisans du BTP.' : SITE.tagline}</p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <BetaBadge tone="light" />
-              <span className="text-sm text-white/60">15 jours d’essai, sans carte bancaire</span>
-            </div>
-            <div className="mt-6">
-              <AppCta location="footer" variant="light" size="md">
-                Essayer Paysapro AI
-              </AppCta>
-            </div>
+            <p className="mt-3 text-white/70">{brand === 'batipro' ? 'Devis, chantiers et factures pour les artisans du BTP.' : SITE.tagline}</p>
           </div>
-
-          <nav aria-label="Pied de page" className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-            {FOOTER_NAV.map((col) => (
-              <div key={col.title}>
-                <h2 className="font-sans text-sm font-semibold tracking-normal text-white">{col.title}</h2>
-                <ul className="mt-4 space-y-1">
-                  {col.links.map((l) => (
-                    <li key={l.to}>
-                      <Link to={l.to} className="inline-block py-1.5 text-[0.93rem] text-white/65 transition-colors hover:text-white">
-                        {l.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </nav>
+          <div className="flex flex-col gap-2 md:items-end">
+            <AppCta location="footer" variant="light" size="md">
+              Essayer gratuitement
+            </AppCta>
+            <span className="text-sm text-white/60">15 jours d’essai, sans carte bancaire</span>
+          </div>
         </div>
 
-        <div className="mt-14 grid gap-6 rounded-3xl bg-white/[0.06] p-6 ring-1 ring-white/10 sm:p-8 lg:grid-cols-[1fr_1.3fr] lg:items-center">
+        <nav aria-label="Pied de page" className="grid grid-cols-2 gap-x-6 gap-y-8 py-10 sm:grid-cols-3 lg:grid-cols-5">
+          {FOOTER_NAV.map((col) => (
+            <div key={col.title}>
+              <h2 className="font-sans text-xs font-bold tracking-[0.14em] text-leaf uppercase">{col.title}</h2>
+              <ul className="mt-3">
+                {col.links.map((l) => (
+                  <li key={l.to}>
+                    <Link to={l.to} className="inline-block py-1 text-sm text-white/70 transition-colors hover:text-white">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </nav>
+
+        <div className="grid gap-4 rounded-2xl bg-white/[0.06] p-5 ring-1 ring-white/10 lg:grid-cols-[1fr_1.4fr] lg:items-center">
           <div>
-            <h2 className="font-display text-xl font-bold text-white">Recevoir les nouveautés Paysapro AI</h2>
-            <p className="mt-1 text-sm text-white/65">Les nouvelles fonctionnalités, directement dans votre boîte mail.</p>
+            <h2 className="font-display text-lg font-bold text-white">Recevoir les nouveautés</h2>
+            <p className="text-sm text-white/65">Les nouvelles fonctionnalités, directement dans votre boîte mail.</p>
           </div>
           <NewsletterForm tone="light" />
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-3 text-sm text-white/55 lg:flex-row lg:items-center lg:justify-between">
           <p>© {new Date().getFullYear()} Paysapro AI. Tous droits réservés.</p>
           <p className="flex flex-wrap gap-x-4 gap-y-1">
+            {LEGAL_NAV.map((l) => (
+              <Link key={l.to} to={l.to} className="hover:text-white">
+                {l.label}
+              </Link>
+            ))}
             {CONTACT.email && (
               <a href={`mailto:${CONTACT.email}`} className="hover:text-white">
                 {CONTACT.email}
@@ -71,7 +74,6 @@ export function Footer() {
                 <span className="sr-only"> (nouvel onglet)</span>
               </a>
             ))}
-            <span>{brand === 'batipro' ? 'Conçu pour les artisans du bâtiment.' : 'Conçu pour les professionnels du paysage.'}</span>
           </p>
         </div>
       </Container>

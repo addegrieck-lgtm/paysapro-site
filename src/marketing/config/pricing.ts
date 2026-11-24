@@ -68,14 +68,14 @@ export function yearlyPrice(plan: PricingPlan): number | null {
   return plan.price === null ? null : Math.round(plan.price * 12 * (100 - YEARLY_DISCOUNT_PERCENT)) / 100;
 }
 
-const euros = (n: number) =>
+export const formatEuros = (n: number) =>
   new Intl.NumberFormat('fr-FR', { minimumFractionDigits: Number.isInteger(n) ? 0 : 2, maximumFractionDigits: 2 }).format(n).replace(/[\u202f\u00a0]/g, ' ');
 
 /** « 351 € HT / an, soit 29,25 € HT / mois » — null si le plan n'a pas de prix. */
 export function formatYearlyPrice(plan: PricingPlan): { yearly: string; monthlyEquivalent: string } | null {
   const yearly = yearlyPrice(plan);
   if (yearly === null || yearly === 0) return null;
-  return { yearly: `${euros(yearly)} € HT / an`, monthlyEquivalent: `soit ${euros(Math.round((yearly / 12) * 100) / 100)} € HT / mois` };
+  return { yearly: `${formatEuros(yearly)} € HT / an`, monthlyEquivalent: `soit ${formatEuros(Math.round((yearly / 12) * 100) / 100)} € HT / mois` };
 }
 
 /** Offres payantes (après les 15 jours d’essai gratuit). */
@@ -108,6 +108,67 @@ export const FUTURE_PLANS: PricingPlan[] = [
     description: 'Pour les équipes et le suivi de la rentabilité.',
     features: ['Tout Pro', 'Marge et rentabilité des devis', '10 utilisateurs'],
     cta: { label: 'Essayer 15 jours gratuits', target: 'signup' },
+  },
+];
+
+/** Accroche et nombre d'utilisateurs de chaque offre (page Tarifs). Mêmes droits que l'application (plans.ts). */
+export const PLAN_DETAILS: Record<string, { tagline: string; users: number; plus: string[] }> = {
+  starter: {
+    tagline: 'Le paysagiste ou l’artisan indépendant',
+    users: 1,
+    plus: ['Devis et factures illimités', 'Lien client et signature en ligne', 'Photos de chantier', 'Catalogue de vos prix', 'Mode SAP et attestation fiscale', 'Assistant : prestations et description'],
+  },
+  pro: {
+    tagline: 'L’entreprise qui chiffre chaque semaine',
+    users: 3,
+    plus: ['Mesures et calculs de quantités', 'Modèles de devis', 'Planning des chantiers', 'Statistiques', 'Travail en équipe (3 utilisateurs)'],
+  },
+  business: {
+    tagline: 'L’équipe qui pilote sa rentabilité',
+    users: 10,
+    plus: ['Marge et rentabilité des devis', 'Jusqu’à 10 utilisateurs avec rôles', 'Idéal pour plusieurs équipes de chantier'],
+  },
+};
+
+/** Inclus dans toutes les offres. */
+export const INCLUDED_IN_ALL: { title: string; text: string }[] = [
+  { title: 'Devis, factures et clients illimités', text: 'Aucun plafond, aucun supplément au nombre de documents.' },
+  { title: 'Facture électronique Factur-X', text: 'Format EN 16931 de la réforme, acomptes, soldes et avoirs.' },
+  { title: 'PDF à vos couleurs', text: 'Logo, mentions obligatoires, TVA par taux (20 / 10 / 5,5 %).' },
+  { title: 'Application mobile', text: 'Sur le chantier, sur téléphone, tablette et ordinateur.' },
+  { title: 'Paysagistes et artisans du BTP', text: 'Catalogue, modèles et calculs adaptés à votre métier.' },
+  { title: 'Vos données vous appartiennent', text: 'Export à tout moment, consultables même sans abonnement.' },
+];
+
+/** Tableau comparatif : true = inclus, false = non inclus, texte = valeur. */
+export const PLAN_COMPARISON: { group: string; rows: { label: string; values: [boolean | string, boolean | string, boolean | string] }[] }[] = [
+  {
+    group: 'Devis et factures',
+    rows: [
+      { label: 'Devis et factures illimités', values: [true, true, true] },
+      { label: 'Facture électronique Factur-X', values: [true, true, true] },
+      { label: 'Signature du devis', values: [true, true, true] },
+      { label: 'Lien client et signature en ligne', values: [true, true, true] },
+      { label: 'Mode SAP et attestation fiscale', values: [true, true, true] },
+      { label: 'Modèles de devis', values: [false, true, true] },
+    ],
+  },
+  {
+    group: 'Chantier',
+    rows: [
+      { label: 'Clients, chantiers et photos', values: [true, true, true] },
+      { label: 'Catalogue de vos prix', values: [true, true, true] },
+      { label: 'Mesures et calculs de quantités', values: [false, true, true] },
+      { label: 'Planning des chantiers', values: [false, true, true] },
+    ],
+  },
+  {
+    group: 'Pilotage',
+    rows: [
+      { label: 'Statistiques', values: [false, true, true] },
+      { label: 'Marge et rentabilité des devis', values: [false, false, true] },
+      { label: 'Utilisateurs', values: ['1', '3', '10'] },
+    ],
   },
 ];
 

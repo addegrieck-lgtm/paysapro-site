@@ -33,7 +33,7 @@ export const PAGES: [path: string, h1: RegExp][] = [
   ['/', /Logiciel de devis pour paysagistes/],
   ['/fonctionnalites', /Tout ce qu’il faut, du chantier au devis signé/],
   ['/comment-ca-marche', /Six étapes/],
-  ['/tarifs', /Essayez gratuitement pendant 15 jours/],
+  ['/tarifs', /Des prix simples, sans engagement/],
   ['/faq', /Questions fréquentes/],
   ['/contact', /Une question \? Parlons-en/],
   ['/a-propos', /Un outil moderne/],

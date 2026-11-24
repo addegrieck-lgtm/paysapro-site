@@ -31,9 +31,14 @@ describe('Tarifs', () => {
     for (const p of FUTURE_PLANS) expect(p.stripePriceId).toBeFalsy(); // aucun paiement sur le site
 
     await renderPage('/tarifs');
+    // Annuel affiché par défaut : prix mensuel équivalent, total annuel et cadeau
     const pro = screen.getByRole('article', { name: 'Pro' });
+    expect(within(pro).getByText('29,25 €')).toBeInTheDocument();
+    expect(within(pro).getByText(/351 € HT facturés une fois par an/)).toBeInTheDocument();
+    // Bascule en mensuel
+    await userEvent.setup().click(screen.getByRole('radio', { name: 'Mensuel' }));
     expect(within(pro).getByText('39 €')).toBeInTheDocument();
-    expect(within(pro).getByText(/351 € HT \/ an \(−25 %\), soit 29,25 € HT \/ mois/)).toBeInTheDocument();
+    expect(screen.getByRole('table')).toBeInTheDocument();
     expect(within(pro).getByRole('link', { name: /Essayer 15 jours gratuits/ })).toHaveAttribute('href', SIGNUP);
     expect(screen.getAllByText(/15 jours d’essai gratuit/).length).toBeGreaterThan(0);
   });
