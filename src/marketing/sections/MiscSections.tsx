@@ -13,7 +13,7 @@ import { MARKETING_CONFIG } from '../config/marketing';
 export function TestimonialsSection() {
   if (!MARKETING_CONFIG.showTestimonials) return null;
   return (
-    <Section labelledBy="temoignages-title">
+    <Section id="avis" labelledBy="temoignages-title" className="pt-4 sm:pt-8">
       <Container>
         <SectionHeading id="temoignages-title" eyebrow="Témoignages" title="Ils ont essayé Paysapro AI." />
       </Container>

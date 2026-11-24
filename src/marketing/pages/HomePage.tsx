@@ -28,6 +28,7 @@ export function HomePage() {
   return (
     <>
       <Hero />
+      <TestimonialsSection />
       <ProblemSection />
       <SolutionSection />
       <DemoSection />
@@ -43,7 +44,6 @@ export function HomePage() {
       <AudienceSection />
       <TimeSection />
       <TrustSection />
-      <TestimonialsSection />
       <PricingSection />
       <BetaSection />
       <AmbassadorSection />

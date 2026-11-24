@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Check, FileText, PenLine, Camera, Sparkles, ArrowRight, ArrowDown } from 'lucide-react';
+import { Check, FileText, PenLine, Camera, Sparkles, ArrowRight, ArrowDown, Star } from 'lucide-react';
+import { testimonialsSummary } from '../data/testimonials';
+import { MARKETING_CONFIG } from '../config/marketing';
 import { AppCta } from './AppLink';
 import { DemoCta } from './DemoCta';
 import { DemoChoice } from './DemoChoice';
@@ -73,6 +75,7 @@ export function Hero() {
             </li>
           ))}
         </ul>
+        <ReviewsBadge />
       </Container>
 
       <Container className="pb-16 sm:pb-24">
@@ -149,5 +152,26 @@ function FlowPill({ icon: Icon, label, active, small }: { icon: typeof Camera; l
       <Icon className={small ? 'h-3.5 w-3.5' : 'h-4 w-4'} aria-hidden="true" />
       {label}
     </span>
+  );
+}
+
+/** Preuve sociale dès le haut de page : note moyenne et nombre d'avis publiés, lien vers la section des avis. */
+function ReviewsBadge() {
+  const summary = testimonialsSummary();
+  if (!MARKETING_CONFIG.showTestimonials || !summary) return null;
+  const note = summary.average.toLocaleString('fr-FR');
+  return (
+    <a
+      href="#avis"
+      className="animate-fade-up mx-auto mt-5 inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm ring-1 ring-line backdrop-blur [animation-delay:320ms] hover:ring-brand/40"
+    >
+      <span className="flex gap-0.5 text-amber" role="img" aria-label={`Note moyenne : ${note} sur 5`}>
+        {Array.from({ length: 5 }, (_, i) => (
+          <Star key={i} className={`h-4 w-4 ${i < Math.round(summary.average) ? 'fill-current' : 'opacity-30'}`} aria-hidden="true" />
+        ))}
+      </span>
+      <span className="font-semibold text-ink">{note}/5</span>
+      <span className="text-muted">· {summary.count} avis de professionnels</span>
+    </a>
   );
 }
