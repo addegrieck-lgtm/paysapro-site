@@ -57,7 +57,13 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-8 text-sm text-white/55 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Paysapro AI. Tous droits réservés.</p>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+            <p>© {new Date().getFullYear()} Paysapro AI. Tous droits réservés.</p>
+            {/* Badge demandé par l'annuaire FranceSaaS en échange de la fiche gratuite : garder ce lien tel quel. */}
+            <a href="https://francesaas.fr/saas/paysapro-ai" target="_blank" rel="noopener" title="Profil du SaaS Paysapro AI sur FranceSaaS.fr" className="inline-block shrink-0">
+              <img src="https://francesaas.fr/badge-francesaas.svg" alt="Badge FranceSaaS" width="200" height="44" loading="lazy" style={{ height: 'auto' }} />
+            </a>
+          </div>
           <p className="flex flex-wrap gap-x-4 gap-y-1">
             {CONTACT.email && (
               <a href={`mailto:${CONTACT.email}`} className="hover:text-white">
