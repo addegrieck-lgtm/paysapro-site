@@ -20,6 +20,14 @@ export interface Testimonial {
 export const TESTIMONIALS_NOTE =
   'Avis recueillis auprès de professionnels rencontrés sur le terrain, après leur essai gratuit de 15 jours, et publiés avec leur accord.';
 
+/** Note moyenne et nombre d'avis notés, calculés sur les avis publiés (null si aucun). */
+export function testimonialsSummary(list: Testimonial[] = TESTIMONIALS): { average: number; count: number } | null {
+  const rated = list.filter((t) => typeof t.rating === 'number');
+  if (rated.length === 0) return null;
+  const average = Math.round((rated.reduce((s, t) => s + t.rating!, 0) / rated.length) * 10) / 10;
+  return { average, count: rated.length };
+}
+
 export const TESTIMONIALS: Testimonial[] = [
   {
     name: 'Thomas M.',
