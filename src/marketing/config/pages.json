@@ -22,9 +22,9 @@
   },
   "/logiciel-devis-paysagiste": {
     "title": "Logiciel devis et facture paysagiste | Paysapro AI",
-    "description": "Logiciel de devis et facturation pour paysagiste : métrés au m² et au ml, catalogue de prix, devis signé puis facture en un clic. Essai gratuit 15 jours.",
+    "description": "Logiciel de devis et facture pour paysagistes et entreprises du paysage : métrés au m² et au ml, catalogue de prix, devis signé, facture Factur-X.",
     "priority": "0.9",
-    "updated": "2026-11-04"
+    "updated": "2026-11-24"
   },
   "/logiciel-facturation-artisan": {
     "title": "Logiciel de facturation pour artisan | Paysapro AI",
@@ -36,7 +36,7 @@
     "title": "Logiciel de facture électronique Factur-X | Paysapro AI",
     "description": "Logiciel de facture électronique pour artisans : factures Factur-X (EN 16931) prêtes pour la réforme de 2027, PDF lisible et données intégrées.",
     "priority": "0.9",
-    "updated": "2026-11-14"
+    "updated": "2026-11-24"
   },
   "/logiciel-devis-batiment": {
     "title": "Logiciel de devis bâtiment pour artisans BTP | Paysapro AI",
@@ -91,15 +91,16 @@
     "priority": "0.8"
   },
   "/modele-devis-paysagiste": {
-    "title": "Modèle de devis paysagiste : exemple commenté | Paysapro AI",
-    "description": "Exemple de devis paysagiste commenté : en-tête, prestations, quantités, TVA, acompte, gestion des déchets et signature. Un modèle clair à reprendre.",
-    "priority": "0.8"
+    "title": "Exemple de devis paysagiste : modèle commenté | Paysapro AI",
+    "description": "Modèle et exemple de devis paysagiste commenté : prestations, TVA, acompte, déchets, signature. Exemples pour jardinier, création et entretien d’espaces verts.",
+    "priority": "0.8",
+    "updated": "2026-11-24"
   },
   "/logiciel-paysagiste-services-a-la-personne": {
     "title": "Logiciel paysagiste services à la personne | Paysapro AI",
-    "description": "Logiciel pour paysagiste en services à la personne : devis avec mentions SAP et attestation fiscale annuelle générée en PDF pour chaque client.",
+    "description": "Logiciel paysagiste en services à la personne : devis avec mentions SAP, attestation fiscale annuelle en PDF, crédit d’impôt jardinage et avance immédiate.",
     "priority": "0.8",
-    "updated": "2026-11-14"
+    "updated": "2026-11-24"
   },
   "/outils": {
     "title": "Calculateurs gratuits pour paysagistes | Paysapro AI",
@@ -120,10 +121,10 @@
     "updated": "2026-11-14"
   },
   "/outils/calcul-cloture": {
-    "title": "Calcul clôture grillage ou panneaux : poteaux | Paysapro AI",
-    "description": "Calcul de clôture gratuit, en panneaux ou en grillage : nombre de poteaux, de panneaux et de rouleaux, puis la méthode pour calculer le prix.",
+    "title": "Calcul clôture : poteaux, grillage et prix | Paysapro AI",
+    "description": "Calcul de clôture gratuit : poteaux, panneaux et rouleaux de grillage, terrain en pente, puis la méthode pour calculer le prix au mètre linéaire posé.",
     "priority": "0.7",
-    "updated": "2026-11-14"
+    "updated": "2026-11-24"
   },
   "/outils/calcul-marge": {
     "title": "Calcul de marge chantier et prix de vente | Paysapro AI",
@@ -191,6 +192,24 @@
     "title": "Comparatif logiciel devis paysagiste 2026 | Paysapro AI",
     "description": "Comparatif des logiciels de devis paysagiste : Paysapro AI, Robbin, Extrabat, Obat, Tolteck, Henrri. Fonctions, chantier, SAP et prix publics.",
     "priority": "0.8",
-    "updated": "2026-11-14"
+    "updated": "2026-11-24"
+  },
+  "/logiciel-contrat-entretien-espaces-verts": {
+    "title": "Logiciel contrat d’entretien espaces verts | Paysapro AI",
+    "description": "Chiffrez vos contrats d’entretien de jardin et d’espaces verts : prestations par passage, signature en ligne, règlements suivis et attestation fiscale SAP.",
+    "priority": "0.8",
+    "updated": "2026-11-24"
+  },
+  "/alternative-extrabat-paysage": {
+    "title": "Alternative à Extrabat Paysage | Paysapro AI",
+    "description": "Alternative à Extrabat Paysage : différences de fonctions et de prix publics avec Paysapro AI, et les cas où Extrabat reste le meilleur choix.",
+    "priority": "0.7",
+    "updated": "2026-11-24"
+  },
+  "/facture-electronique-paysagiste": {
+    "title": "Facture électronique paysagiste 2027 | Paysapro AI",
+    "description": "Facture électronique pour paysagistes : ce qui change en 2027 selon vos clients (particuliers, entreprises, mairies) et vos factures déjà en Factur-X.",
+    "priority": "0.8",
+    "updated": "2026-11-24"
   }
 }

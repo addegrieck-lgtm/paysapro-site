@@ -164,6 +164,7 @@ export const LANDINGS: Landing[] = [
     ],
     related: [
       { label: 'Factur-X expliqué aux artisans', to: '/blog/factur-x-artisan' },
+      { label: 'Facture électronique : ce qui change pour les paysagistes', to: '/facture-electronique-paysagiste' },
       { label: 'Facture électronique : ce qui change en 2026-2027', to: '/blog/facturation-electronique-artisans' },
       { label: 'Devis et factures pour artisans', to: '/logiciel-facturation-artisan' },
       { label: 'Tarifs', to: '/tarifs' },
@@ -487,9 +488,9 @@ export const LANDINGS: Landing[] = [
     eyebrow: 'Logiciel de devis et facturation paysagiste',
     h1: 'Le logiciel de devis et factures pensé pour les paysagistes.',
     intro:
-      'Paysapro AI transforme votre visite de chantier en devis professionnel : photos, métrés, prestations issues de votre catalogue, total TTC et signature du client, puis facture en un clic. Le tout depuis votre téléphone.',
+      'Paysapro AI, logiciel de devis pour paysagistes et entreprises du paysage, transforme votre visite de chantier en devis professionnel : photos, métrés, prestations issues de votre catalogue, total TTC et signature du client, puis facture en un clic. Le tout depuis votre téléphone.',
     summary: [
-      "Paysapro AI est un logiciel de devis et de facturation conçu pour les paysagistes, utilisable depuis un smartphone.",
+      "Paysapro AI est un logiciel de devis et de facturation conçu pour les paysagistes, jardiniers et entreprises du paysage, utilisable depuis un smartphone.",
       "Il calcule les surfaces, linéaires et volumes à partir de vos mesures, et applique les prix de votre propre catalogue.",
       "Le devis reprend vos informations d’entreprise, la TVA, l’acompte et vos conditions ; le client peut le signer en ligne.",
       "L’essai est gratuit pendant 15 jours, sans carte bancaire."
@@ -528,6 +529,13 @@ export const LANDINGS: Landing[] = [
         ],
       },
       {
+        heading: 'Pour les entreprises du paysage, de l’indépendant à la petite équipe',
+        paragraphs: [
+          'Paysapro AI s’adresse aux entreprises du paysage d’une à vingt personnes : création de jardins, entretien d’espaces verts, élagage, maçonnerie paysagère. Le même logiciel sert au devis de création, chiffré au m² et au mètre linéaire, et au devis d’entretien, chiffré au passage sur une saison.',
+          'Vos factures sont produites au format électronique Factur-X, prêt pour la réforme de septembre 2027, et le mode services à la personne génère l’attestation fiscale de vos clients particuliers.',
+        ],
+      },
+      {
         heading: 'Une IA qui assiste, sans décider à votre place',
         paragraphs: [
           'L’assistant vous aide à structurer le chiffrage et à ne pas oublier de prestations, comme la préparation du terrain ou l’évacuation des déchets verts. Une photo ne suffit pas à chiffrer un chantier avec certitude : chaque suggestion est à valider, et vous restez maître des quantités, des prix et du devis final.',
@@ -558,6 +566,9 @@ export const LANDINGS: Landing[] = [
       { label: 'Voir un exemple de devis paysagiste commenté', to: '/modele-devis-paysagiste' },
       { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
       { label: 'Calculer la marge d’un chantier (outil gratuit)', to: '/outils/calcul-marge' },
+      { label: 'Gestion des clients (CRM paysagiste)', to: '/crm-paysagiste' },
+      { label: 'Contrats d’entretien d’espaces verts', to: '/logiciel-contrat-entretien-espaces-verts' },
+      { label: 'Facture électronique pour paysagistes', to: '/facture-electronique-paysagiste' },
       { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
     ],
   },
@@ -907,6 +918,15 @@ export const LANDINGS: Landing[] = [
           'Selon votre statut et vos activités, d’autres mentions peuvent être exigées (assurance professionnelle, franchise de TVA…). Faites valider votre modèle par votre expert-comptable ou votre chambre de métiers.',
         ],
       },
+      {
+        heading: '7. Exemples de devis selon le chantier : création, jardinier, espaces verts',
+        list: [
+          'Exemple de devis de création de jardin : préparation du sol et engazonnement au m², bordures et clôture au mètre linéaire, terre végétale au m³, végétaux à l’unité, évacuation des déchets.',
+          'Exemple de devis de jardinier : tonte, taille de haies et désherbage à l’heure ou au passage ; en services à la personne, les prestations éligibles sont distinguées et le numéro SAP figure sur le devis.',
+          'Exemple de devis d’entretien d’espaces verts : chaque prestation multipliée par le nombre de passages de la saison, la période couverte et ce qui sera facturé en plus.',
+          'Exemple de devis d’élagage ou d’abattage : nombre d’arbres et hauteur, évacuation ou broyage des branches, accès et sécurisation du chantier.',
+        ],
+      },
     ],
     faq: [
       {
@@ -926,6 +946,8 @@ export const LANDINGS: Landing[] = [
     related: [
       { label: 'Comment faire un devis paysagiste ?', to: '/blog/comment-faire-un-devis-paysagiste' },
       { label: 'Calculer une surface de terrasse', to: '/outils/calcul-surface' },
+      { label: 'Comment présenter un devis professionnel ?', to: '/blog/presenter-un-devis-professionnel' },
+      { label: 'Devis de contrat d’entretien d’espaces verts', to: '/logiciel-contrat-entretien-espaces-verts' },
       { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
     ],
   },
@@ -979,6 +1001,20 @@ export const LANDINGS: Landing[] = [
           'Paysapro AI ne remplace ni votre déclaration SAP, ni votre expert-comptable : vous restez responsable des informations portées sur vos documents. L’application ne gère pas l’avance immédiate de crédit d’impôt.',
         ],
       },
+      {
+        heading: 'Crédit d’impôt jardinage : ce que votre client récupère',
+        paragraphs: [
+          'C’est l’argument commercial du SAP : votre client particulier bénéficie d’un crédit d’impôt égal à 50 % des sommes versées pour les petits travaux de jardinage, dans la limite de 5 000 € de dépenses par an et par foyer, soit 2 500 € de crédit d’impôt au maximum.',
+          'Sur le devis, le total des prestations SAP indiqué à part permet à votre client de voir ce qui ouvre droit au crédit d’impôt. Les travaux de création (plantation d’un nouveau jardin, terrasse, clôture) n’y ouvrent pas droit : ils restent hors SAP, sur le même devis si besoin. Les plafonds peuvent évoluer : vérifiez-les chaque année sur impots.gouv.fr.',
+        ],
+      },
+      {
+        heading: 'Et l’avance immédiate du crédit d’impôt ?',
+        paragraphs: [
+          'Avec l’avance immédiate, service proposé par l’Urssaf, votre client ne paie que sa part, après déduction du crédit d’impôt, au lieu d’avancer la totalité et d’attendre le remboursement l’année suivante. Pour la proposer, l’entreprise s’inscrit auprès de l’Urssaf et déclare chaque prestation, que le client valide en ligne.',
+          'Paysapro AI ne gère pas l’avance immédiate : si vos clients l’utilisent, vous la déclarez sur l’espace Urssaf ou par l’outil d’un intermédiaire habilité, et vous continuez à faire vos devis et vos attestations dans Paysapro AI. Si l’avance immédiate est au cœur de votre activité, vérifiez ce point dans votre choix de logiciel : notre comparatif indique quels logiciels l’annoncent.',
+        ],
+      },
     ],
     faq: [
       {
@@ -1001,11 +1037,23 @@ export const LANDINGS: Landing[] = [
         question: 'Le mode SAP est-il payant ?',
         answer: 'Il est inclus dans les offres Pro et Business, et pendant les 15 jours d’essai gratuit.',
       },
+      {
+        question: 'Paysapro AI gère-t-il l’avance immédiate de crédit d’impôt ?',
+        answer:
+          'Non. Paysapro AI prépare les devis SAP et génère l’attestation fiscale annuelle, mais ne déclare pas les prestations à l’Urssaf pour l’avance immédiate. Si vos clients l’utilisent, la déclaration se fait sur l’espace Urssaf ou par un intermédiaire habilité.',
+      },
+      {
+        question: 'Quel crédit d’impôt pour l’entretien du jardin ?',
+        answer:
+          'Le crédit d’impôt est de 50 % des sommes versées pour les petits travaux de jardinage, dans la limite de 5 000 € de dépenses par an et par foyer, soit 2 500 € au maximum. Les plafonds peuvent évoluer : vérifiez-les chaque année sur impots.gouv.fr.',
+      },
     ],
     related: [
       { label: 'Attestation fiscale SAP jardinage : le guide du paysagiste', to: '/blog/attestation-fiscale-sap-jardinage' },
+      { label: 'Logiciel pour les contrats d’entretien d’espaces verts', to: '/logiciel-contrat-entretien-espaces-verts' },
+      { label: 'Contrat d’entretien de jardin : que prévoir ?', to: '/blog/contrat-entretien-jardin' },
+      { label: 'Gestion des clients (CRM paysagiste)', to: '/crm-paysagiste' },
       { label: 'Le logiciel de devis paysagiste', to: '/logiciel-devis-paysagiste' },
-      { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
     ],
   },
   {
@@ -1085,6 +1133,7 @@ export const LANDINGS: Landing[] = [
       { label: 'Toutes les fonctionnalités', to: '/fonctionnalites' },
       { label: 'Tarifs', to: '/tarifs' },
       { label: 'Comment choisir un logiciel de devis paysagiste ?', to: '/blog/choisir-logiciel-devis-paysagiste' },
+      { label: 'Alternative à Extrabat Paysage', to: '/alternative-extrabat-paysage' },
     ],
   },
   {
@@ -1198,8 +1247,275 @@ export const LANDINGS: Landing[] = [
     ],
     related: [
       { label: 'Comment choisir un logiciel de devis paysagiste ?', to: '/blog/choisir-logiciel-devis-paysagiste' },
+      { label: 'Alternative à Extrabat Paysage', to: '/alternative-extrabat-paysage' },
       { label: 'Le logiciel de devis paysagiste Paysapro AI', to: '/logiciel-devis-paysagiste' },
       { label: 'Tarifs et essai gratuit', to: '/tarifs' },
+    ],
+  },
+  {
+    path: '/logiciel-contrat-entretien-espaces-verts',
+    eyebrow: 'Contrats d’entretien de jardins et d’espaces verts',
+    h1: 'Logiciel pour vos contrats d’entretien d’espaces verts',
+    intro:
+      'Tonte, taille de haies, désherbage, ramassage des feuilles : un contrat d’entretien se chiffre au passage et sur une saison. Paysapro AI vous aide à en faire un devis clair, à le faire signer en ligne, à suivre les règlements et, si vous êtes déclaré en services à la personne, à remettre l’attestation fiscale de vos clients.',
+    summary: [
+      'Paysapro AI sert à chiffrer un contrat d’entretien de jardin ou d’espaces verts : chaque prestation avec son unité, sa quantité et son nombre de passages sur la période.',
+      'Le client consulte le devis du contrat en ligne et le signe ; il devient un chantier suivi dans l’application, avec ses notes, ses photos et ses règlements.',
+      'En services à la personne, les prestations éligibles sont repérées sur le devis et l’attestation fiscale annuelle est générée en PDF à partir des règlements enregistrés.',
+      'Paysapro AI ne crée pas de factures périodiques automatiques et ne planifie pas les passages à votre place : c’est un outil de devis et de suivi simple, pour les petites entreprises du paysage.',
+    ],
+    visual: 'catalog',
+    sections: [
+      {
+        heading: 'Chiffrer un contrat d’entretien de jardin sans rien oublier',
+        paragraphs: [
+          'Un contrat d’entretien se perd rarement sur le prix d’une tonte, mais souvent sur ce qui n’a pas été écrit : la fréquence, la période, l’évacuation des déchets verts, les passages supplémentaires après un orage. Le devis est l’endroit où tout cela se fixe.',
+          'Dans Paysapro AI, vous enregistrez une fois vos prestations d’entretien dans votre catalogue, avec leur unité (m², ml, heure, unité ou forfait) et votre prix. Pour un contrat, il suffit ensuite d’indiquer la quantité et le nombre de passages prévus sur la saison.',
+        ],
+      },
+      {
+        heading: 'Les prestations d’un contrat d’entretien d’espaces verts',
+        list: [
+          'Tonte de la pelouse, au m² ou au forfait par passage, avec le nombre de passages de la saison.',
+          'Taille des haies au mètre linéaire, une à deux fois par an selon les essences.',
+          'Désherbage des massifs et des allées, entretien des plantations.',
+          'Ramassage des feuilles et évacuation des déchets verts, à chiffrer à part.',
+          'Interventions ponctuelles hors contrat, facturées en plus : à prévoir dans les conditions du devis.',
+        ],
+      },
+      {
+        heading: 'Un contrat signé, puis suivi sur toute la saison',
+        paragraphs: [
+          'Le devis du contrat s’envoie par lien : votre client le lit sur son téléphone et le signe en ligne. Il devient alors un chantier, que vous retrouvez dans le planning et qui garde ses notes internes, ses photos et l’historique des échanges.',
+          'Les règlements reçus s’enregistrent au fil de la saison : vous voyez ce qui a été payé et ce qui reste dû. Les factures partent du devis signé : une facture d’acompte au pourcentage de votre choix, puis la facture de solde, qui déduit les acomptes.',
+        ],
+      },
+      {
+        heading: 'Contrat d’entretien et services à la personne',
+        paragraphs: [
+          'Pour un particulier, l’entretien courant du jardin peut relever des services à la personne si votre entreprise est déclarée : votre client bénéficie alors d’un crédit d’impôt sur les sommes versées. Dans Paysapro AI, vous cochez les prestations éligibles ; le devis reprend votre numéro SAP et distingue les montants concernés.',
+          'En début d’année, l’attestation fiscale de chaque client est générée en PDF, à partir des règlements réellement enregistrés. Les travaux de création, eux, ne sont pas des services à la personne : ils restent hors SAP sur le même devis.',
+        ],
+      },
+      {
+        heading: 'Ce que Paysapro AI ne fait pas (encore)',
+        list: [
+          'Il ne génère pas de facture automatiquement à chaque mois ou à chaque passage.',
+          'Il ne planifie pas les tournées et ne répartit pas les passages entre vos équipes.',
+          'Il ne gère pas la reconduction tacite du contrat : vous refaites un devis pour la saison suivante, en dupliquant celui de l’année.',
+          'Il ne gère pas l’avance immédiate du crédit d’impôt.',
+        ],
+        paragraphs: [
+          'Si votre activité repose sur des dizaines de contrats et plusieurs équipes, une suite de gestion plus complète peut mieux vous convenir : notre comparatif des logiciels pour paysagistes vous aide à choisir.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Comment chiffrer un contrat d’entretien de jardin ?',
+        answer:
+          'Listez chaque prestation avec son unité et sa quantité (surface de pelouse, longueur de haie, temps de désherbage), multipliez par le nombre de passages prévus sur la période, puis ajoutez l’évacuation des déchets verts et les déplacements. Notre calculateur de marge vous aide à vérifier que le prix couvre vos coûts.',
+      },
+      {
+        question: 'Paysapro AI facture-t-il automatiquement chaque mois ?',
+        answer:
+          'Non. Les factures partent du devis signé : une facture d’acompte au pourcentage de votre choix, puis la facture de solde. Les règlements intermédiaires s’enregistrent sur le chantier pour suivre ce qui reste dû.',
+      },
+      {
+        question: 'Un contrat d’entretien peut-il mêler SAP et travaux hors SAP ?',
+        answer:
+          'Oui. Les prestations éligibles sont repérées sur le devis et leur total est indiqué à part ; les règlements sont répartis au prorata pour l’attestation fiscale.',
+      },
+      {
+        question: 'Le mode services à la personne est-il inclus ?',
+        answer: 'Il est inclus dans les offres Pro et Business, comme le planning des chantiers, et pendant les 15 jours d’essai gratuit.',
+      },
+    ],
+    related: [
+      { label: 'Contrat d’entretien de jardin : que prévoir ?', to: '/blog/contrat-entretien-jardin' },
+      { label: 'Logiciel paysagiste et services à la personne', to: '/logiciel-paysagiste-services-a-la-personne' },
+      { label: 'Gestion des clients (CRM paysagiste)', to: '/crm-paysagiste' },
+      { label: 'Calculer la marge d’un chantier (outil gratuit)', to: '/outils/calcul-marge' },
+      { label: 'Comparatif des logiciels pour paysagistes', to: '/comparatif-logiciel-devis-paysagiste' },
+    ],
+  },
+  {
+    path: '/alternative-extrabat-paysage',
+    eyebrow: 'Alternative à Extrabat Paysage',
+    h1: 'Une alternative à Extrabat Paysage pour les petites entreprises du paysage',
+    intro:
+      'Extrabat Paysage est une suite de gestion complète, pensée pour les entreprises du paysage structurées. Si vous cherchez surtout à faire vos devis sur le chantier et à les faire signer vite, Paysapro AI est une alternative plus simple. Voici les différences, y compris là où Extrabat va plus loin. Comparaison rédigée par l’éditeur de Paysapro AI, à partir des informations publiques relevées le 30 octobre 2026.',
+    summary: [
+      'Extrabat Paysage est une suite de gestion : CRM, devis et factures, planning, rapports d’intervention hors connexion, contrats d’entretien, commandes fournisseurs et services à la personne.',
+      'Paysapro AI est centré sur le devis fait sur le chantier : photos, mesures qui calculent les surfaces et les linéaires, catalogue de prix, signature en ligne, puis factures au format Factur-X.',
+      'Prix publics d’entrée : à partir de 49 € HT par mois pour Extrabat Paysage, 19 € HT par mois pour Paysapro AI, avec 15 jours d’essai gratuit sans carte bancaire.',
+      'Extrabat convient mieux aux entreprises de plusieurs équipes avec beaucoup de contrats d’entretien ; Paysapro AI aux indépendants et petites équipes qui veulent un outil rapide à prendre en main.',
+    ],
+    visual: 'phone',
+    sections: [
+      {
+        heading: 'Pourquoi chercher une alternative à Extrabat ?',
+        paragraphs: [
+          'Une suite de gestion complète a un prix et demande du temps de mise en place : paramétrage, formation, habitudes à changer. Pour une entreprise de paysage d’une à cinq personnes, l’essentiel se joue souvent ailleurs : envoyer le devis le jour de la visite, avant le concurrent, et le faire signer sans relances interminables.',
+          'C’est la question à vous poser avant de comparer les fonctions : avez-vous besoin de tout gérer dans un seul logiciel, ou d’abord de gagner du temps sur vos devis ?',
+        ],
+      },
+      {
+        heading: 'Extrabat Paysage et Paysapro AI : les différences',
+        list: [
+          'Devis sur le chantier : dans Paysapro AI, vous photographiez le jardin et saisissez vos dimensions sur le téléphone ; surfaces, linéaires et volumes sont calculés et repris dans le devis.',
+          'Signature : les deux logiciels annoncent la signature électronique du devis.',
+          'Planning et équipes : Extrabat Paysage annonce un planning avec la charge de travail des équipes et des rapports d’intervention, y compris hors connexion ; Paysapro AI propose un planning simple des chantiers, à partir de l’offre Pro.',
+          'Contrats d’entretien : Extrabat Paysage annonce le suivi des contrats d’entretien ; Paysapro AI permet de chiffrer et de suivre un contrat, sans facturation périodique automatique.',
+          'Services à la personne : les deux gèrent le SAP ; Paysapro AI génère l’attestation fiscale annuelle en PDF, mais ne gère pas l’avance immédiate.',
+          'Facture électronique : Paysapro AI produit déjà chaque facture au format Factur-X (profil EN 16931).',
+          'Commandes fournisseurs : annoncées par Extrabat Paysage ; absentes de Paysapro AI.',
+        ],
+      },
+      {
+        heading: 'Les prix publics',
+        paragraphs: [
+          'Extrabat Paysage annonce un abonnement à partir de 49 € HT par mois, sans engagement de durée, avec une démonstration sur demande. Paysapro AI commence à 19 € HT par mois (Starter), puis 39 € (Pro) et 69 € (Business), sans engagement, après 15 jours d’essai gratuit sans carte bancaire.',
+          'Les prix peuvent évoluer : vérifiez-les sur le site de chaque éditeur avant de choisir.',
+        ],
+      },
+      {
+        heading: 'Quand Extrabat Paysage reste le meilleur choix',
+        list: [
+          'Vous dirigez plusieurs équipes et devez répartir leur charge de travail chaque semaine.',
+          'Une grande partie de votre chiffre d’affaires vient de contrats d’entretien récurrents.',
+          'Vos clients en services à la personne utilisent l’avance immédiate du crédit d’impôt.',
+          'Vous voulez gérer vos commandes fournisseurs dans le même outil.',
+        ],
+      },
+      {
+        heading: 'Quand Paysapro AI est une meilleure alternative',
+        list: [
+          'Vous êtes indépendant ou travaillez en petite équipe, et c’est vous qui faites les devis.',
+          'Vous voulez chiffrer sur place, à partir des photos et des mesures, et envoyer le devis le jour même.',
+          'Vous cherchez un outil prêt en une soirée, sans formation.',
+          'Vous voulez des factures déjà au format électronique Factur-X pour la réforme de 2027.',
+        ],
+        paragraphs: [
+          'Le plus simple reste d’essayer : refaites un de vos derniers devis avec Paysapro AI pendant l’essai gratuit, et comparez le temps passé et le résultat envoyé au client.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Paysapro AI est-il moins cher qu’Extrabat Paysage ?',
+        answer:
+          'Sur les prix publics d’entrée relevés le 30 octobre 2026 : Paysapro AI commence à 19 € HT par mois, Extrabat Paysage à 49 € HT par mois. Les deux logiciels n’ont pas le même périmètre : comparez à fonctions égales.',
+      },
+      {
+        question: 'Puis-je importer mes clients depuis un autre logiciel ?',
+        answer:
+          'Vous pouvez créer vos fiches clients au fil des nouveaux devis. Pour une reprise de nombreuses fiches, contactez-nous : nous vous dirons ce qui est possible selon le format de votre export.',
+      },
+      {
+        question: 'Paysapro AI gère-t-il l’avance immédiate du crédit d’impôt ?',
+        answer:
+          'Non. Paysapro AI gère le mode services à la personne sur les devis et génère l’attestation fiscale annuelle, mais pas l’avance immédiate. Si vos clients l’utilisent, c’est un critère important dans votre choix.',
+      },
+      {
+        question: 'Ce comparatif est-il neutre ?',
+        answer:
+          'Non : il est rédigé par l’éditeur de Paysapro AI, et nous le disons. Il ne repose que sur les informations publiées par Extrabat sur son site, relevées le 30 octobre 2026, et indique les cas où Extrabat Paysage est le meilleur choix.',
+      },
+    ],
+    related: [
+      { label: 'Comparatif 2026 des logiciels de devis pour paysagistes', to: '/comparatif-logiciel-devis-paysagiste' },
+      { label: 'Comment choisir un logiciel de devis paysagiste ?', to: '/blog/choisir-logiciel-devis-paysagiste' },
+      { label: 'Logiciel pour les contrats d’entretien', to: '/logiciel-contrat-entretien-espaces-verts' },
+      { label: 'Tarifs et essai gratuit', to: '/tarifs' },
+    ],
+  },
+  {
+    path: '/facture-electronique-paysagiste',
+    eyebrow: 'Facture électronique pour paysagistes',
+    h1: 'Facture électronique : ce qui change pour les paysagistes en 2027',
+    intro:
+      'Particuliers, entreprises, syndics, mairies : un paysagiste facture des clients très différents, et la réforme de la facture électronique ne les traite pas de la même façon. Voici ce qui change pour chacun au 1er septembre 2027, et comment Paysapro AI vous y prépare : vos factures sont déjà au format Factur-X.',
+    summary: [
+      'À partir du 1er septembre 2027, les paysagistes en TPE ou micro-entreprise devront émettre leurs factures à leurs clients professionnels au format électronique, via une plateforme agréée.',
+      'Pour les clients particuliers, la facture reste un PDF classique ; ce sont ses données, et celles des paiements reçus pour les prestations de services, qui doivent être transmises à l’administration (e-reporting).',
+      'Pour les mairies et les collectivités, la facture électronique est déjà obligatoire depuis 2020, sur le portail Chorus Pro.',
+      'Paysapro AI produit déjà chaque facture, facture d’acompte et avoir au format Factur-X (profil EN 16931) ; le raccordement à une plateforme agréée est en préparation pour septembre 2027.',
+    ],
+    visual: 'quote',
+    sections: [
+      {
+        heading: 'Paysagiste : quels clients sont concernés par la facture électronique ?',
+        list: [
+          'Clients professionnels (entreprises, commerces, gestionnaires d’immeubles assujettis à la TVA) : facture électronique obligatoire, transmise par une plateforme agréée.',
+          'Clients particuliers : facture PDF ou papier comme aujourd’hui ; les données de l’opération sont transmises à l’administration par e-reporting.',
+          'Mairies, collectivités et établissements publics : facture électronique déjà obligatoire, déposée sur Chorus Pro.',
+          'Clients étrangers : e-reporting des données de l’opération.',
+        ],
+        paragraphs: [
+          'Un doute sur la situation d’un client, par exemple une copropriété ou une association ? Vérifiez avec votre expert-comptable : c’est sa qualité d’assujetti à la TVA qui compte, pas la nature des travaux.',
+        ],
+      },
+      {
+        heading: 'Le calendrier pour une entreprise du paysage',
+        list: [
+          'Depuis le 1er septembre 2026 : toutes les entreprises, y compris les micro-entreprises, doivent pouvoir recevoir des factures électroniques, par exemple celles de leurs fournisseurs de végétaux ou de matériaux.',
+          '1er septembre 2027 : les PME, TPE et micro-entreprises doivent émettre leurs factures électroniques et transmettre leurs données (e-reporting).',
+          'D’ici là : choisir sa plateforme agréée et vérifier que son logiciel de facturation produit un format accepté.',
+        ],
+      },
+      {
+        heading: 'Vos factures de paysagiste déjà au format Factur-X',
+        paragraphs: [
+          'Dans Paysapro AI, chaque facture part du devis signé : facture d’acompte, facture de solde ou avoir. Le bouton PDF produit directement un fichier Factur-X : un PDF lisible par votre client, qui contient aussi les données structurées de la facture (vendeur, client, lignes, TVA, échéance).',
+          'Les unités du paysage sont converties dans les codes officiels du format : m² de gazon, mètres linéaires de haie ou de clôture, m³ de terre végétale, heures de main-d’œuvre, forfaits. Chaque fichier est contrôlé avec un outil de validation de référence, qui vérifie l’archivage PDF/A-3 et les règles de la norme EN 16931.',
+        ],
+      },
+      {
+        heading: 'TVA, SAP, franchise : les cas fréquents chez les paysagistes',
+        list: [
+          'TVA à 20 % dans la plupart des cas pour la création et l’entretien de jardins, ventilée par taux si un même chantier en mêle plusieurs.',
+          'Franchise en base de TVA pour les micro-entrepreneurs : la mention et le motif d’exonération sont repris dans le fichier Factur-X.',
+          'Services à la personne : les factures restent au même format ; l’attestation fiscale annuelle de vos clients est générée à part, en PDF.',
+          'Sous-traitance pour une autre entreprise du paysage ou du bâtiment : autoliquidation de la TVA lorsque les conditions sont réunies.',
+        ],
+      },
+      {
+        heading: 'Et la plateforme agréée ?',
+        paragraphs: [
+          'Le format ne suffit pas : à partir de septembre 2027, une facture entre professionnels ne pourra plus partir par simple e-mail. Elle passera par une plateforme agréée par l’administration, qui la transmet à votre client et déclare les données au fisc. Le portail public ne propose pas d’émission de factures : chaque entreprise devra choisir une plateforme agréée.',
+          'Paysapro AI prépare ce raccordement pour l’échéance de septembre 2027. Vos factures étant déjà au bon format, vous n’aurez pas à changer d’outil.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Je ne travaille que pour des particuliers : suis-je concerné ?',
+        answer:
+          'Oui, mais différemment. Vos factures aux particuliers restent des PDF classiques ; à partir de septembre 2027, les données de vos opérations et des paiements reçus devront être transmises à l’administration par e-reporting. Vous devez aussi pouvoir recevoir les factures électroniques de vos fournisseurs depuis septembre 2026.',
+      },
+      {
+        question: 'Les micro-entrepreneurs paysagistes sont-ils concernés ?',
+        answer:
+          'Oui, au même calendrier que les TPE : réception depuis septembre 2026, émission et e-reporting à partir de septembre 2027. Paysapro AI gère la franchise en base de TVA dans le format Factur-X.',
+      },
+      {
+        question: 'Puis-je déposer mes factures Paysapro AI sur Chorus Pro ?',
+        answer:
+          'Le portail Chorus Pro, utilisé pour facturer les collectivités, accepte notamment le dépôt de factures au format Factur-X. Téléchargez le PDF de la facture depuis Paysapro AI et déposez-le sur votre compte Chorus Pro.',
+      },
+      {
+        question: 'Mes devis doivent-ils aussi être électroniques ?',
+        answer:
+          'Non. La réforme concerne les factures, pas les devis : vous continuez à établir vos devis et à les faire signer comme aujourd’hui, en ligne ou sur papier.',
+      },
+    ],
+    related: [
+      { label: 'Logiciel de facture électronique Factur-X', to: '/logiciel-facture-electronique' },
+      { label: 'Factur-X expliqué aux artisans', to: '/blog/factur-x-artisan' },
+      { label: 'Facture électronique : ce qui change en 2026-2027', to: '/blog/facturation-electronique-artisans' },
+      { label: 'Le logiciel de devis et facture paysagiste', to: '/logiciel-devis-paysagiste' },
+      { label: 'Tarifs', to: '/tarifs' },
     ],
   },
 ];

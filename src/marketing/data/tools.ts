@@ -106,6 +106,13 @@ export const TOOLS: Tool[] = [
         ],
       },
       {
+        heading: 'Calcul d’une clôture sur un terrain en pente',
+        paragraphs: [
+          'En grillage, le treillis suit le terrain : mesurez la longueur au sol, le long de la pente, pour calculer les rouleaux et les poteaux. En panneaux rigides, la pose se fait en redans, par marches successives : comptez les panneaux et les poteaux sur la longueur horizontale, puis ajoutez la hauteur de chaque redan aux poteaux, plus longs du côté bas.',
+          'Exemple : un terrain de 20 m de long horizontalement, avec 2 m de dénivelé, mesure environ 20,1 m le long de la pente (√(20² + 2²)). L’écart est faible tant que la pente reste douce ; au-delà de 15 à 20 %, prévoyez des poteaux plus longs et un temps de pose plus important.',
+        ],
+      },
+      {
         heading: 'Ce que le calcul ne voit pas',
         list: [
           'les poteaux d’angle ou de portail spécifiques à votre système ;',
