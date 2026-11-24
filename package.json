@@ -15,7 +15,8 @@
     "check:secrets": "node scripts/check-secrets.mjs",
     "images": "node scripts/generate-images.mjs",
     "favicons": "node scripts/favicons.mjs",
-    "fetch:blog": "node scripts/fetch-blog.mjs"
+    "fetch:blog": "node scripts/fetch-blog.mjs",
+    "indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
