@@ -10,6 +10,7 @@ import pages from './marketing/config/pages.json';
 import { FAQ } from './marketing/data/faq';
 import { FEATURES } from './marketing/data/features';
 import { LANDINGS } from './marketing/data/landings';
+import { VIDEOS, videoObject } from './marketing/data/videos';
 import { TOOLS, TOOLS_FAQ } from './marketing/data/tools';
 import { HELP_FAQ } from './marketing/data/help';
 import { articleSeoTitle, publishedArticles } from './marketing/data/blog';
@@ -144,6 +145,7 @@ export function seoPages(): SeoPage[] {
         if (path === '/outils') out.push(faqPage(TOOLS_FAQ));
         const lf = landingFaq.get(path);
         if (lf) out.push(faqPage(lf));
+        for (const v of VIDEOS) if (v.pages.includes(path)) out.push(videoObject(v));
 
         const tool = toolPaths.get(path);
         if (tool) {
