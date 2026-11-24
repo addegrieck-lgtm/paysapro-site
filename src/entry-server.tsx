@@ -205,6 +205,7 @@ export function seoPages(): SeoPage[] {
             author: { '@type': 'Organization', name: 'Paysapro AI', url: `${siteUrl}/` },
             publisher: { '@id': `${siteUrl}/#organization` },
           },
+          ...VIDEOS.filter((v) => v.pages.includes(path)).map(videoObject),
         ],
       });
     }
