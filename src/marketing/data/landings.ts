@@ -5,6 +5,7 @@
  * Title / description : src/marketing/config/pages.json.
  */
 import type { BtpSampleId } from './sampleBtp';
+import { DEVIS_VIDEO, type SiteVideo } from './videos';
 
 export type LandingVisual = 'quote' | 'dashboard' | 'phone' | 'catalog' | 'sap';
 
@@ -30,6 +31,8 @@ export interface Landing {
   metier?: 'btp';
   /** Devis d'exemple du bâtiment affiché à la place du devis de paysagiste */
   btpSample?: BtpSampleId;
+  /** Vidéo YouTube affichée sous « L’essentiel » (et décrite en VideoObject si la page est listée dans videos.ts) */
+  video?: SiteVideo;
 }
 
 export const LANDINGS: Landing[] = [
@@ -485,6 +488,7 @@ export const LANDINGS: Landing[] = [
   },
   {
     path: '/logiciel-devis-paysagiste',
+    video: DEVIS_VIDEO,
     eyebrow: 'Logiciel de devis et facturation paysagiste',
     h1: 'Le logiciel de devis et factures pensé pour les paysagistes.',
     intro:

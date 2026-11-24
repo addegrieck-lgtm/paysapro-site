@@ -202,7 +202,7 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
   cookies: {
     path: '/cookies',
     title: 'Politique cookies',
-    updated: <>30 octobre 2026</>,
+    updated: <>24 novembre 2026</>,
     sections: [
       {
         heading: 'Cookies utilisés',
@@ -221,6 +221,16 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
             statistiques internes, conservées 13 mois. Ce dispositif est exempté de consentement selon les recommandations de la CNIL. Le signal « Do Not Track » ou
             « Global Privacy Control » de votre navigateur est respecté ; vous pouvez aussi désactiver la mesure sur votre appareil en ajoutant{' '}
             <code>?stats=off</code> à l’adresse d’une page du site.
+          </p>
+        ),
+      },
+      {
+        heading: 'Vidéos YouTube',
+        body: (
+          <p>
+            Certaines pages présentent une vidéo hébergée sur YouTube. Seule son image est affichée : le lecteur YouTube, en mode « confidentialité renforcée »
+            (youtube-nocookie.com), ne se charge que si vous cliquez pour lancer la vidéo. YouTube (Google) peut alors enregistrer des informations sur votre
+            appareil, selon sa propre politique de confidentialité.
           </p>
         ),
       },

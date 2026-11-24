@@ -1,12 +1,12 @@
-import { Play } from 'lucide-react';
 import { DEMO_VIDEO_URL } from '../config/marketing';
-import { GardenPhoto } from './mockups/GardenPhoto';
+import { YouTubeVideo } from './YouTubeVideo';
+import { DEVIS_VIDEO } from '../data/videos';
 
 /**
  * Vidéo de démonstration. Renseigner VITE_DEMO_VIDEO_URL :
  *  - fichier .mp4/.webm (ex. /videos/demo.mp4 dans public/) → lecteur natif ;
  *  - URL d'intégration (YouTube « embed », Vimeo « player ») → iframe chargée à la demande.
- * Vide → placeholder propre.
+ * Vide → la vidéo YouTube de démonstration (data/videos.ts).
  */
 export function VideoPlaceholder({ url = DEMO_VIDEO_URL }: { url?: string }) {
   const frame = 'relative aspect-video w-full overflow-hidden rounded-[2rem] bg-forest shadow-float ring-1 ring-black/10';
@@ -32,17 +32,5 @@ export function VideoPlaceholder({ url = DEMO_VIDEO_URL }: { url?: string }) {
       </div>
     );
   }
-  return (
-    <div className={frame}>
-      <GardenPhoto className="absolute inset-0 opacity-40" title="" />
-      <div className="absolute inset-0 bg-gradient-to-t from-forest via-forest/60 to-transparent" aria-hidden="true" />
-      <div className="relative flex h-full flex-col items-center justify-center gap-4 p-6 text-center text-white">
-        <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/15 ring-1 ring-white/30 backdrop-blur">
-          <Play className="ml-1 h-7 w-7" aria-hidden="true" />
-        </span>
-        <p className="font-display text-xl font-bold sm:text-2xl">Vidéo de démonstration bientôt disponible</p>
-        <p className="max-w-md text-sm text-white/70">En attendant, parcourez les étapes ci-dessous ou essayez directement l’application.</p>
-      </div>
-    </div>
-  );
+  return <YouTubeVideo video={DEVIS_VIDEO} />;
 }

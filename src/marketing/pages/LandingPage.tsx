@@ -17,6 +17,7 @@ import { SapAttestationMockup } from '../components/mockups/SapAttestationMockup
 import { BtpQuoteMockup } from '../components/mockups/BtpQuoteMockup';
 import { FinalCTA } from '../sections/FinalCTA';
 import { Essentiel } from '../components/Essentiel';
+import { YouTubeVideo } from '../components/YouTubeVideo';
 import NotFoundPage from './NotFoundPage';
 
 function Visual({ kind }: { kind: LandingVisual }) {
@@ -56,6 +57,14 @@ export default function LandingPage({ path }: { path: string }) {
 
       <Container className="max-w-4xl pb-14">
         <Essentiel items={landing.summary} />
+        {landing.video && (
+          <section className="mt-12" aria-labelledby="video-title">
+            <h2 id="video-title" className="mb-5 font-display text-2xl leading-tight font-extrabold text-ink sm:text-3xl">
+              Voir un devis réalisé en vidéo
+            </h2>
+            <YouTubeVideo video={landing.video} />
+          </section>
+        )}
       </Container>
 
       {/* grid-cols-1 (minmax(0, 1fr)) : sinon la colonne prend la largeur de l’illustration et le texte déborde sur mobile. */}
