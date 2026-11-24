@@ -52,6 +52,8 @@ export function Hero() {
           Photographiez votre chantier, renseignez les quelques informations nécessaires et construisez un devis professionnel prêt à envoyer à votre client.
         </p>
 
+        <ReviewsBadge />
+
         <div className="animate-fade-up mt-9 flex flex-col items-stretch justify-center gap-3 [animation-delay:240ms] sm:flex-row sm:items-center">
           <AppCta location="hero" event="hero_cta_clicked">
             Essayer gratuitement
@@ -75,7 +77,6 @@ export function Hero() {
             </li>
           ))}
         </ul>
-        <ReviewsBadge />
       </Container>
 
       <Container className="pb-16 sm:pb-24">
@@ -163,7 +164,7 @@ function ReviewsBadge() {
   return (
     <a
       href="#avis"
-      className="animate-fade-up mx-auto mt-5 inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm ring-1 ring-line backdrop-blur [animation-delay:320ms] hover:ring-brand/40"
+      className="animate-fade-up mx-auto mt-6 inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm ring-1 ring-line backdrop-blur [animation-delay:200ms] hover:ring-brand/40"
     >
       <span className="flex gap-0.5 text-amber" role="img" aria-label={`Note moyenne : ${note} sur 5`}>
         {Array.from({ length: 5 }, (_, i) => (
