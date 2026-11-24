@@ -8,6 +8,7 @@ import { PhotoToQuoteSection } from '../sections/PhotoToQuoteSection';
 import { CatalogSection } from '../sections/CatalogSection';
 import { QuoteSection } from '../sections/QuoteSection';
 import { ClientSection } from '../sections/ClientSection';
+import { EInvoicingSection } from '../sections/EInvoicingSection';
 import { MobileSection } from '../sections/MobileSection';
 import { BeforeAfterSection } from '../sections/BeforeAfterSection';
 import { AISection } from '../sections/AISection';
@@ -35,6 +36,7 @@ export function HomePage() {
       <CatalogSection />
       <QuoteSection />
       <ClientSection />
+      <EInvoicingSection />
       <MobileSection />
       <BeforeAfterSection />
       <AISection />

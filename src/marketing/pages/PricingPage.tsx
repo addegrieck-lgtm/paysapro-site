@@ -11,7 +11,11 @@ export default function PricingPage() {
   usePageMeta('/tarifs');
   return (
     <>
-      <PageHeader eyebrow="Tarifs" title="Essayez gratuitement pendant 15 jours." intro="Toutes les fonctionnalités pendant 15 jours, sans carte bancaire. Ensuite, choisissez votre offre : sans engagement, résiliable à tout moment.">
+      <PageHeader
+        eyebrow="Tarifs"
+        title="Des prix simples, sans engagement."
+        intro="Essayez gratuitement pendant 15 jours, avec toutes les fonctionnalités et sans carte bancaire. Ensuite, choisissez l’offre qui vous convient."
+      >
         <span className="mx-auto">
           <BetaBadge>Essai gratuit 15 jours</BetaBadge>
         </span>
@@ -19,7 +23,7 @@ export default function PricingPage() {
       <Container className="pb-20">
         {/* Titre pour la structure (H1 → H2 → H3 des offres), invisible à l'écran */}
         <h2 className="sr-only">Nos offres</h2>
-        <Pricing location="pricing_page" />
+        <Pricing location="pricing_page" full />
       </Container>
       <BetaSection />
       <Container className="max-w-3xl pb-24">
