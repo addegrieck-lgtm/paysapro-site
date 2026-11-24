@@ -49,6 +49,17 @@ export const BETA_PLAN: PricingPlan = {
   cta: { label: 'Essayer gratuitement', target: 'signup' },
 };
 
+/**
+ * Cadeau de l'abonnement annuel : mêmes textes que dans l'application
+ * (paysapro-ai : ANNUAL_GIFT dans src/features/plans/plans.ts).
+ */
+export const ANNUAL_GIFT = {
+  name: 'Télémètre laser',
+  headline: 'Télémètre laser offert avec tout abonnement annuel',
+  conditions:
+    'Offert pour tout abonnement annuel payé (Starter, Pro ou Business), un par entreprise, livré en France métropolitaine. Expédition 30 jours après le paiement, dans la limite des stocks disponibles ; le modèle peut varier, à valeur équivalente. Pas de cadeau si l’abonnement est remboursé avant l’envoi.',
+} as const;
+
 /** Réduction pour un paiement à l'année (en %). Même valeur que dans l'application. */
 export const YEARLY_DISCOUNT_PERCENT = 25;
 
