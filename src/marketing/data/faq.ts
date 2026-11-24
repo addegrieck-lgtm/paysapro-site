@@ -74,6 +74,12 @@ export const FAQ: FaqItem[] = [
     pricing: true,
   },
   {
+    id: 'cadeau-annuel',
+    question: 'Y a-t-il un cadeau avec l’abonnement annuel ?',
+    answer: 'Oui : un télémètre laser est offert pour tout abonnement annuel, Starter, Pro ou Business (un par entreprise, livré en France métropolitaine). Vous indiquez l’adresse de livraison dans l’application ; le colis part 30 jours après le paiement, dans la limite des stocks disponibles.',
+    pricing: true,
+  },
+  {
     id: 'evolution-tarifs',
     question: 'Que se passe-t-il à la fin des 15 jours d’essai ?',
     answer: 'Rien n’est prélevé automatiquement : aucune carte n’est demandée. Si vous ne choisissez pas d’offre, votre compte passe en lecture seule : vos clients, devis et PDF restent consultables et exportables, et vous pouvez vous abonner à tout moment pour reprendre là où vous en étiez.',

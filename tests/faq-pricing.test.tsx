@@ -18,9 +18,9 @@ describe('FAQ', () => {
     expect(q).toHaveAttribute('aria-expanded', 'false');
   });
 
-  it('contient les 13 questions', async () => {
+  it('contient les 14 questions', async () => {
     await renderPage('/faq');
-    expect(within(screen.getByRole('main')).getAllByRole('button', { expanded: false })).toHaveLength(13);
+    expect(within(screen.getByRole('main')).getAllByRole('button', { expanded: false })).toHaveLength(14);
   });
 });
 

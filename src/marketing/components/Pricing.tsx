@@ -1,5 +1,5 @@
-import { Check } from 'lucide-react';
-import { FUTURE_PLANS, PRICING_CONFIG, YEARLY_DISCOUNT_PERCENT, formatPlanPrice, formatYearlyPrice, visiblePlans, type PricingPlan } from '../config/pricing';
+import { Check, Gift } from 'lucide-react';
+import { ANNUAL_GIFT, FUTURE_PLANS, PRICING_CONFIG, YEARLY_DISCOUNT_PERCENT, formatPlanPrice, formatYearlyPrice, visiblePlans, type PricingPlan } from '../config/pricing';
 import { AppCta } from './AppLink';
 import { ButtonLink } from './ui';
 import { useAnalytics } from '../analytics/AnalyticsProvider';
@@ -12,6 +12,15 @@ export function Pricing({ plans = visiblePlans(), location = 'pricing' }: { plan
   const single = plans.length === 1;
   return (
     <div>
+      {PRICING_CONFIG.mode === 'plans' && (
+        <div className="mx-auto mb-7 flex max-w-2xl items-start gap-3 rounded-3xl bg-mint p-5 text-forest">
+          <Gift className="mt-0.5 h-7 w-7 shrink-0" aria-hidden="true" />
+          <div>
+            <p className="font-bold">{ANNUAL_GIFT.headline}</p>
+            <p className="mt-1 text-sm leading-relaxed text-forest/80">{ANNUAL_GIFT.conditions}</p>
+          </div>
+        </div>
+      )}
       <div className={`grid gap-5 ${single ? 'mx-auto max-w-xl' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
         {plans.map((plan) => (
           <PlanCard key={plan.id} plan={plan} location={location} />
@@ -99,6 +108,11 @@ function PlanCard({ plan, location }: { plan: PricingPlan; location: string }) {
       {formatYearlyPrice(plan) && (
         <p className={`mt-1 text-sm ${hl ? 'text-white/75' : 'text-muted'}`}>
           ou {formatYearlyPrice(plan)!.yearly} (−{YEARLY_DISCOUNT_PERCENT} %), {formatYearlyPrice(plan)!.monthlyEquivalent}
+        </p>
+      )}
+      {formatYearlyPrice(plan) && PRICING_CONFIG.mode === 'plans' && (
+        <p className={`mt-1 inline-flex items-center gap-1.5 text-sm font-semibold ${hl ? 'text-leaf' : 'text-forest'}`}>
+          <Gift className="h-4 w-4" aria-hidden="true" /> {ANNUAL_GIFT.name} offert à l’année
         </p>
       )}
       <p className={`mt-2 ${hl ? 'text-white/75' : 'text-muted'}`}>{plan.description}</p>

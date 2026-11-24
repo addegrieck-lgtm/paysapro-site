@@ -169,6 +169,12 @@ export const LEGAL_DOCS: Record<LegalDocId, LegalDoc> = {
               il se renouvelle automatiquement et se résilie à tout moment depuis l’application, avec effet à la fin de la période payée. Toute évolution de prix est
               annoncée au moins 30 jours à l’avance. Le service est réservé aux professionnels.
             </p>
+            <p>
+              Offre « télémètre laser offert » : un télémètre laser est offert pour tout abonnement annuel payé (Starter, Pro ou Business), à raison d’un par entreprise,
+              livré en France métropolitaine à l’adresse indiquée dans l’application. Il est expédié 30 jours après le paiement, dans la limite des stocks disponibles ; le
+              modèle peut varier, à valeur équivalente. Il n’est pas dû si l’abonnement est remboursé ou annulé avant l’envoi. L’éditeur peut mettre fin à l’offre à tout
+              moment pour les nouveaux abonnements ; les abonnements annuels déjà payés conservent leur cadeau.
+            </p>
           </>
         ),
       },
